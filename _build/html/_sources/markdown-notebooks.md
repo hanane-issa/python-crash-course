@@ -24,7 +24,8 @@ With MyST Markdown, you can define code cells with a directive like so:
 
 ```{code-cell} python
 :tags: [thebe]
-print(2 + 2)
+
+print(2 + 3)
 ```
 
 When your book is built, the contents of any `{code-cell}` blocks will be
