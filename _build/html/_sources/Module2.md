@@ -2,6 +2,7 @@
 
 ## 2.1. What is Python?
 
+*Blah blah blah...*
 
 ---
 
@@ -107,6 +108,7 @@ Variable names must start with a letter or underscore (`_`) and cannot contain s
 
 
 ---
+
 
 ## 2.4. Operators and Expressions
 

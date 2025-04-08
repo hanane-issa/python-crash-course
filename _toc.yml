@@ -3,8 +3,20 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: Module2
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+parts:
+  - caption: Module2 - Foundations
+    chapters:
+    - file: Module2_Files/Module2_Intro
+    - file: Module2_Files/Module2_Variables
+    - file: Module2_Files/Module2_Strings
+    - file: Module2_Files/Module2_DataStructures
+    - file: Module2_Files/Module2_Operations
+    - file: Module2_Files/Module2_ConditionalBlocks
+    - file: Module2_Files/Module2_ErrorHandling
+    
+    
+  - caption: Inital Notebook files
+    chapters: 
+    - file: markdown
+    - file: notebooks
+    - file: markdown-notebooks
