@@ -23,7 +23,7 @@ bibtex_bibfiles:
 repository:
   url: https://github.com/hanane-issa/python-crash-course # Online location of your book
   #path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: artur  # Which branch of the repository should be used when creating links (optional)
+  branch: melinda_module2foundations  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository

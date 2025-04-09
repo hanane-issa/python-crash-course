@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module2_Files/Module2_Intro';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="M2: Variables" href="Module2_Variables.html" />
+    <link rel="next" title="Example" href="Module2_FirstExample.html" />
     <link rel="prev" title="Welcome to your Jupyter Book" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -182,8 +182,13 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module2 - Foundations</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">M2: Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_FirstExample.html">Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module2_Variables.html">M2: Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_Strings.html">M2: Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_DataStructures.html">M2: Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module2_Operations.html">M2: Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_ConditionalBlocks.html">M2: Conditional Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_ErrorHandling.html">M2: Error Handling</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Inital Notebook files</span></p>
 <ul class="nav bd-sidenav">
@@ -407,36 +412,51 @@ document.write(`
 <h1>M2: Introduction<a class="headerlink" href="#m2-introduction" title="Link to this heading">#</a></h1>
 <section id="what-is-python">
 <h2>1 What is Python?<a class="headerlink" href="#what-is-python" title="Link to this heading">#</a></h2>
-<p><em>Blah blah blah…</em></p>
+<p>Python is one of the most common programming languages currently in various fields including Bioinformatics. This is due to its simple, easy to learn syntax which mimics natural languages, which makes it easy to write, learn, and read. Python is a general purpose programming language suitable for many different tasks. There exists a large collection of open-source Python packages/libraries to support its usage for any purpose. Through this course you will get to know some of these which are very handy for Bioinformatics, e.g. <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
+<p>Python is a object-oriented programming (OOP) language. This means that the code is organised around data, i.e. objects, instead of functions or logic. This helps to maintain and keep an overview over complex code. If you not familiar with OOP and this explanation does not make fully sense yet, don’t worry about it. We will get back to it in chapter … .</p>
+<p>For now we will concentrate on getting familiar with basic Python syntax and elements, before carrying on to more complex aspects in the later chapters. Through all of this we will be using examples from Bioinformatics to help you learn the language in the context of our interests.</p>
 </section>
-<hr class="docutils" />
 <section id="python-syntax-basics">
 <h2>2 Python Syntax Basics<a class="headerlink" href="#python-syntax-basics" title="Link to this heading">#</a></h2>
+<p>The first thing needed to understand is how Python code is organised and structured, i.e. its syntax.</p>
 <section id="indentation-and-code-blocks">
 <h3>2.1. Indentation and Code Blocks<a class="headerlink" href="#indentation-and-code-blocks" title="Link to this heading">#</a></h3>
-<p>In Python, <strong>indentation</strong> is not just for making the code look neat – it defines the <strong>code blocks</strong>. Other languages might use curly braces { } or keywords to group statements, but Python uses <strong>whitespace</strong> (spaces or tabs) at the start of lines.</p>
-<p>Below is an example of an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement with indentation. The line <code class="docutils literal notranslate"><span class="pre">print(&quot;You</span> <span class="pre">are</span> <span class="pre">an</span> <span class="pre">adult.&quot;)</span></code> is indented to indicate it belongs to the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement’s code block.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example of a simple if statement with indentation</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
+<p>Python assumes that each new statement start on a new line. This eliminates the need of a semicolon <code class="docutils literal notranslate"><span class="pre">;</span></code> at the end of the statement, as is the standard in many other programming language.</p>
+<p>Similarly, <strong>code blocks</strong> are defined in Python by using <strong>indentation</strong>. Other languages might use curly braces <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code> or keywords to group statements, but Python uses <strong>whitespace</strong> (spaces or tabs) at the start of lines. One ident corresponds with one tab (<kbd>tab</kbd>) or four spaces (<kbd>space</kbd>). When indenting you create a child of the previous line. Often the parents have a colon <code class="docutils literal notranslate"><span class="pre">:</span></code> at the end (see chapter <a class="reference internal" href="Module2_ConditionalBlocks.html#m2-conditional-blocks-header"><span class="std std-ref">M2: Conditional Blocks</span></a> for statement examples which use colons). One can have multiple indentation/blocks nested within each other. To end a block, simply outdent (<kbd>tab</kbd> + <kbd>Shift</kbd>). At the end of a parent block it is common to leave a line of whitespace before starting the next block.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">im_a_parent</span><span class="p">:</span>
+    <span class="n">im_a_child</span><span class="p">:</span>
+        <span class="n">im_a_grandchild</span>
+        <span class="n">im_a_second_grandchild</span>
+    <span class="n">im_a_second_child</span><span class="p">:</span>
+        <span class="n">im_a_third__grand_child</span>
+
+<span class="n">im_a_new_parent</span><span class="p">:</span>
+    <span class="n">im_a_new_child</span>
+</pre></div>
+</div>
+<p>These syntax rules do not only keep your code need but makes it easier and quicker to write it and eliminates easy to make mistakes (e.g. forgetting to put a semicolon at the end).</p>
+<p>Below is an example of an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement with indentation. The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement checks whether the <code class="docutils literal notranslate"><span class="pre">age</span></code> variable is over 18. The line <code class="docutils literal notranslate"><span class="pre">print(&quot;You</span> <span class="pre">are</span> <span class="pre">an</span> <span class="pre">adult.&quot;)</span></code> is indented to indicate it belongs to/ is a child of the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement’s code block. It is only carried out if <code class="docutils literal notranslate"><span class="pre">age</span></code> is over 18. Do not worry if you are not familiar with the specific details in the code snipped yet, we will learn them throughout this course! The most important takeaway here is that <strong>consistent indentation is crucial</strong>. If the indentation in your code is inconsistent, Python will raise an <em>error</em>!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
+
 <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You are an adult.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Do not worry if you are not familiar with the specific details in the code above yet, we will learn them throughout this course! The most important takeaway here is that <strong>consistent indentation is crucial</strong>. If the indentation in your code is inconsistent, Python will raise an <em>error</em>!</p>
 </section>
 <section id="comments">
 <h3>2.2. Comments<a class="headerlink" href="#comments" title="Link to this heading">#</a></h3>
-<p><strong>Comments</strong> are lines or parts of lines that Python does not execute. They can be use to explain your code or to temporarily disable it.</p>
-<p>We find two types of comments: <strong>single-line comments</strong> and <strong>multi-line comments</strong>.</p>
+<p><strong>Comments</strong> are lines or parts of lines that Python does not execute. They can be use to explain your code. It is very useful to have them through out ones code. When other people read your code (or even when you read it in the future) it is often hard to understand what it is trying to achieve based on the executable lines alone. Having comments alongside them, explaining their purpose, makes understanding the code a lot easier.</p>
+<p>Comments are also useful when debugging code since they can be used to temporarily disable lines. Just remember to either uncomment or delete the disabled line later to keep your code need!</p>
+<p>There are two types of comments: <strong>single-line comments</strong> and <strong>multi-line comments</strong>.</p>
 <ul class="simple">
-<li><p><strong>Single-line comments:</strong> Start with <code class="docutils literal notranslate"><span class="pre">#</span></code>, for example:</p></li>
+<li><p><strong>Single-line comments:</strong> Start the comment text with a hashtag <code class="docutils literal notranslate"><span class="pre">#</span></code>, for example:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a single-line comment.</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>  <span class="c1"># This part is also a comment.</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p><strong>Multi-line comments:</strong> Use triple quotes <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">'''</span></code>, for example:</p></li>
+<li><p><strong>Multi-line comments:</strong> Use triple quotes (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">'''</span></code>) around the comment text, for example:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">This is a multi-line comment.</span>
@@ -447,11 +467,10 @@ document.write(`
 </section>
 <section id="basic-print-statements">
 <h3>2.3. Basic Print Statements<a class="headerlink" href="#basic-print-statements" title="Link to this heading">#</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">print()</span></code> function is handy for displaying output on the screen. You can quickly test if your code is doing what you expect by printing results at various stages.</p>
+<p>While not technically syntax, the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function is a very useful statement, which is why we introduce it now. It is used for displaying output on the screen. You can quickly test if your code is doing what you expect by printing results at various stages.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, Python!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<hr class="docutils" />
 </section>
 </section>
 </section>
@@ -461,7 +480,7 @@ document.write(`
         requestKernel: true,
         binderOptions: {
             repo: "hanane-issa/python-crash-course",
-            ref: "artur",
+            ref: "melinda_module2foundations",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -496,11 +515,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="Module2_Variables.html"
+       href="Module2_FirstExample.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">M2: Variables</p>
+        <p class="prev-next-title">Example</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
