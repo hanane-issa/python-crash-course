@@ -4,6 +4,10 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+- title: "Module 1: Setting Up"
+  file: module_1a_settingup
+  sections:
+  - file: module_1b_vscode
+  - file: module_1c_anaconda
+  - file: module_1d_googlecolab
+
