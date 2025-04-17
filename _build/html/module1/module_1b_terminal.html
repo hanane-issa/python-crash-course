@@ -184,7 +184,7 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Python in Terminal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_1c_vscode.html">Python in VSCode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_1d_anaconda.html">Python in Anaconda Navigator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_1e_googlecolab.html">Executing the notebook exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_1e_notebook-execution.html">Executing the Notebook Exercices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module1_exercice.html">Exercice 1: check your Python version</a></li>
 </ul>
 </details></li>
@@ -426,7 +426,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -442,6 +444,17 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-python">1. Install Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-your-terminal">2. Open Your Terminal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-python-version">3. Check your Python version</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-python-interpreter">4. Using the Python interpreter</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -453,6 +466,43 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-in-terminal">
 <h1>Python in Terminal<a class="headerlink" href="#python-in-terminal" title="Link to this heading">#</a></h1>
+<p>Before we dive into fancy tools like VS Code and Anaconda, let’s start with the basics: running Python from your terminal or command prompt.</p>
+<p>This gives you a better feel for how Python works behind the scenes.</p>
+<section id="install-python">
+<h2>1. Install Python<a class="headerlink" href="#install-python" title="Link to this heading">#</a></h2>
+<p>If you don’t have Python yet, follow these steps:</p>
+<p>Go to the official website: <a class="reference external" href="https://www.python.org/downloads">https://www.python.org/downloads</a></p>
+<p>Download the latest stable version (e.g., Python 3.13.2).</p>
+<p>On Windows, make sure you check the box that says:</p>
+<p>✅ “Add Python to PATH”</p>
+</section>
+<section id="open-your-terminal">
+<h2>2. Open Your Terminal<a class="headerlink" href="#open-your-terminal" title="Link to this heading">#</a></h2>
+<p>On Windows: Open the Command Prompt or Anaconda Prompt</p>
+<p>On Mac: Open the Terminal app (command key (⌘) + space bar).</p>
+<p>On Linux: Open your default terminal (ctrl + alt + T).</p>
+</section>
+<section id="check-your-python-version">
+<h2>3. Check your Python version<a class="headerlink" href="#check-your-python-version" title="Link to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>--version
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Depending on your operating system and how Python is installed, this might not work.
+In this case, use “python3” instead of “python”.</p>
+</div>
+</section>
+<section id="using-the-python-interpreter">
+<h2>4. Using the Python interpreter<a class="headerlink" href="#using-the-python-interpreter" title="Link to this heading">#</a></h2>
+<p>You can now run Python in interactive mode via your terminal by typing <code class="docutils literal notranslate"><span class="pre">python</span></code> (or <code class="docutils literal notranslate"><span class="pre">python3</span></code>).
+You should see something like “Python 3.13.2….
+Type “help”, “copyright”, “credits” or “license” for more information.”</p>
+<p>To quit, simply type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>exit<span class="o">()</span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -509,6 +559,24 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-python">1. Install Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-your-terminal">2. Open Your Terminal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-python-version">3. Check your Python version</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-python-interpreter">4. Using the Python interpreter</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

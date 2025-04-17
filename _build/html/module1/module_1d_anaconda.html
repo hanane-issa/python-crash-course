@@ -463,7 +463,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <a class="bg-primary mb-1 reference internal image-reference" href="module1/images/anaconda_secondary_logo.png"><img alt="vscode logo" class="bg-primary mb-1 align-center" src="module1/images/anaconda_secondary_logo.png" style="width: 200px;" />
+  <a class="bg-primary mb-1 reference internal image-reference" href="../_images/anaconda_secondary_logo.svg"><img alt="anaconda navigator" class="bg-primary mb-1 align-center" src="../_images/anaconda_secondary_logo.svg" style="width: 200px;" />
 </a>
 <section class="tex2jax_ignore mathjax_ignore" id="python-in-anaconda-navigator">
 <h1>Python in Anaconda Navigator<a class="headerlink" href="#python-in-anaconda-navigator" title="Link to this heading">#</a></h1>
@@ -486,7 +486,7 @@ document.write(`
 </section>
 <section id="explore-the-interface">
 <h2>2. Explore the Interface<a class="headerlink" href="#explore-the-interface" title="Link to this heading">#</a></h2>
-<p><img alt="anaconda_page" src="images/nav-tabs.png" /></p>
+<p><img alt="anaconda_page" src="../_images/nav-tabs.png" /></p>
 <p>The following applications can be launched from/installed on Anaconda Navigator and allow you to write Python code:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/latest/">Jupyter Notebook</a></p></li>
@@ -502,54 +502,18 @@ document.write(`
 </section>
 <section id="create-your-working-environment">
 <h2>3. Create your working environment<a class="headerlink" href="#create-your-working-environment" title="Link to this heading">#</a></h2>
-<p><img alt="anaconda-nav gif" src="module1/images/anaconda_create_env.gif" /></p>
+<p><img alt="anaconda-nav gif" src="../_images/anaconda_create_env.gif" /></p>
 <p>You can create a new environment through the Anaconda Navigator interface. Go to the Environments tab, and press the Create button. Choose a name for your environment, and select which Python version you want to work with.</p>
-<p><img alt="anaconda-prompt" src="module1/images/anaconda_prompt/png" /></p>
+<p><img alt="anaconda-prompt" src="../_images/anaconda_prompt.png" /></p>
 <p>Alternatively, you can do this through the Anaconda prompt with conda commands. Conda is the package and environment manager that comes with Anaconda.</p>
 <p>You can find the prompt tool through your computer’s search bar, or through the Anaconda Navigator.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">my_env</span> <span class="n">python</span><span class="o">==</span><span class="mf">3.13.2</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>my_env<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.13.2<span class="w"> </span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;conda&#39;</span><span class="p">,</span> <span class="s1">&#39;create --name my_env python==3.13.2&#39;</span><span class="p">)</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\interactiveshell.py:2478,</span> in <span class="ni">InteractiveShell.run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2476</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2477</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">2478</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2480</span> <span class="c1"># The code below prevents the output from being displayed</span>
-<span class="g g-Whitespace">   </span><span class="mi">2481</span> <span class="c1"># when using magics with decorator @output_can_be_silenced</span>
-<span class="g g-Whitespace">   </span><span class="mi">2482</span> <span class="c1"># when the last Python token in the expression is a &#39;;&#39;.</span>
-<span class="g g-Whitespace">   </span><span class="mi">2483</span> <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">magic</span><span class="o">.</span><span class="n">MAGIC_OUTPUT_CAN_BE_SILENCED</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\magics\packaging.py:27,</span> in <span class="ni">is_conda_environment.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="c1"># TODO: does this need to change on windows?</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">Path</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">prefix</span><span class="p">,</span> <span class="s2">&quot;conda-meta&quot;</span><span class="p">,</span> <span class="s2">&quot;history&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
-<span class="ne">---&gt; </span><span class="mi">27</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span>         <span class="s2">&quot;The python kernel does not appear to be a conda environment.  &quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span>         <span class="s2">&quot;Please use ``%pip install`` instead.&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span>     <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="ne">ValueError</span>: The python kernel does not appear to be a conda environment.  Please use ``%pip install`` instead.
-</pre></div>
-</div>
-</div>
 </div>
 <p>This will create a new environment named “my_env” with Python version 3.13.2 .
 Afterwards, you can activate this new environment and start working in it through the following command:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">my_env</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>my_env<span class="w"> </span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>You can find more useful commands in the conda documentation <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html">here</a>.
 You can also find tutorials on Anaconda Navigator on the <a class="reference external" href="https://www.anaconda.com/docs/tools/anaconda-navigator/tutorials/main">official website</a>.</p>

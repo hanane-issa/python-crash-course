@@ -13,7 +13,7 @@ kernelspec:
 ---
 
 
-```{image} images/vscode-alt.png
+```{image} ../_static/images/vscode-alt.png
 :alt: vscode logo
 :class: bg-primary mb-1
 :width: 200px
@@ -40,15 +40,15 @@ Let's start by downloading the code editor [here](https://code.visualstudio.com/
 
 You will need to install the Python extension as well as the Jupyter extension.
 
-![vscode_extensions](images/vscode_guide1.png)
+![vscode_extensions](../_static/images/vscode_guide1.png)
 
 ## 3. Create a New File
 
 Once you have set up VS Code with the necessary extensions, you can create any file by selecting the following:
 File > New File
 
-```{image} images/vscode_newfile.png
-:alt: vscode logo
+```{image} ../_static/images/vscode_newfile.png
+:alt: vscode new file
 :class: bg-primary mb-1
 :width: 500px
 :align: center
@@ -60,7 +60,7 @@ Let's start with a new jupyter notebook file to start writing your first Python 
 
 ## 4. Writing your first Python code
 
-![ipynb gif](images/vscode_firstcode.gif)
+![ipynb gif](../_static/images/vscode_firstcode.gif)
 
 As mentioned before, jupyter notebooks allow you to interactively write code (including Python code) and combine it wiht text, images, and graphs.
 

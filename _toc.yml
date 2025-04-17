@@ -10,6 +10,6 @@ chapters:
   - file: module1/module_1b_terminal
   - file: module1/module_1c_vscode
   - file: module1/module_1d_anaconda
-  - file: module1/module_1e_googlecolab
+  - file: module1/module_1e_notebook-execution
   - file: module1/module1_exercice
 
