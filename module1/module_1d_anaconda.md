@@ -13,7 +13,7 @@ kernelspec:
 ---
 
 
-```{image} images/anaconda_secondary_logo.png
+```{image} _static/images/anaconda_secondary_logo.png
 :alt: vscode logo
 :class: bg-primary mb-1
 :width: 200px
@@ -46,7 +46,7 @@ As an 'all-in-one' toolbox, it will install the following applications:
 
 ## 2. Explore the Interface
 
-![anaconda_page](../images/nav-tabs.png)
+![anaconda_page](_static/images/nav-tabs.png)
 
 The following applications can be launched from/installed on Anaconda Navigator and allow you to write Python code:
 - [Jupyter Notebook](https://jupyter-notebook.readthedocs.io/en/latest/)
@@ -62,27 +62,23 @@ You can launch RStudio from Anaconda Navigator!
 
 ## 3. Create your working environment
 
-![anaconda-nav gif](images/anaconda_create_env.gif)
+![anaconda-nav gif](_static/images/anaconda_create_env.gif)
 
 You can create a new environment through the Anaconda Navigator interface. Go to the Environments tab, and press the Create button. Choose a name for your environment, and select which Python version you want to work with.
 
 
-![anaconda-prompt](images/anaconda_prompt/png)
+![anaconda-prompt](_static/images/anaconda_prompt/png)
 
 Alternatively, you can do this through the Anaconda prompt with conda commands. Conda is the package and environment manager that comes with Anaconda. 
 
 You can find the prompt tool through your computer's search bar, or through the Anaconda Navigator.
 
-```{code-cell}
-conda create --name my_env python==3.13.2
-```
+<pre> ```bash conda create --name my_env python=3.10 conda activate my_env ``` </pre>
 
 This will create a new environment named "my_env" with Python version 3.13.2 . 
 Afterwards, you can activate this new environment and start working in it through the following command:
 
-```{code-cell}
-conda activate my_env
-```
+<pre> ```bash conda activate my_env ``` </pre>
 
 You can find more useful commands in the conda documentation [here](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html).
 You can also find tutorials on Anaconda Navigator on the [official website](https://www.anaconda.com/docs/tools/anaconda-navigator/tutorials/main).
