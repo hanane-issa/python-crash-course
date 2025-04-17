@@ -13,7 +13,7 @@ kernelspec:
 ---
 
 
-```{image} images/anaconda_secondary_logo.png
+```{image} ../images/vscode.png
 :alt: vscode logo
 :class: bg-primary mb-1
 :width: 200px
@@ -33,7 +33,7 @@ In this case, you can build a working environment specifically for your machine 
 
 Anaconda is available for Windows, Linux, and macOS.
 
-## 1. Download and Install Anaconda Nagivator
+#### 1. Download and Install Anaconda Nagivator
 
 Download and run the Anaconda Distribution installer from [here](https://www.anaconda.com/download/success)
 
@@ -44,7 +44,7 @@ As an 'all-in-one' toolbox, it will install the following applications:
 - Jupyter Notebook: an interactive coding environment, described in (vscode page link)
 - Spyder: a Python IDE
 
-## 2. Explore the Interface
+#### 2. Explore the Interface
 
 ![anaconda_page](../images/nav-tabs.png)
 
@@ -60,14 +60,14 @@ The following applications can be launched from/installed on Anaconda Navigator 
 You can launch RStudio from Anaconda Navigator!
 ```
 
-## 3. Create your working environment
+#### 3. Create your working environment
 
-![anaconda-nav gif](images/anaconda_create_env.gif)
+![anaconda-nav gif](../images/anaconda_create_env.gif)
 
 You can create a new environment through the Anaconda Navigator interface. Go to the Environments tab, and press the Create button. Choose a name for your environment, and select which Python version you want to work with.
 
 
-![anaconda-prompt](images/anaconda_prompt/png)
+![anaconda-prompt](../images/anaconda_prompt/png)
 
 Alternatively, you can do this through the Anaconda prompt with conda commands. Conda is the package and environment manager that comes with Anaconda. 
 
