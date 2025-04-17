@@ -1,0 +1,59 @@
+Traceback (most recent call last):
+  File "C:\Users\hanan\AppData\Local\Programs\Python\Python313\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\hanan\AppData\Local\Programs\Python\Python313\Lib\site-packages\nbclient\client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hanan\AppData\Local\Programs\Python\Python313\Lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\hanan\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\hanan\AppData\Local\Programs\Python\Python313\Lib\site-packages\nbclient\client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "C:\Users\hanan\AppData\Local\Programs\Python\Python313\Lib\site-packages\nbclient\client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\hanan\AppData\Local\Programs\Python\Python313\Lib\site-packages\nbclient\client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+conda create --name my_env python==3.13.2
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mValueError[39m                                Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m [43mget_ipython[49m[43m([49m[43m)[49m[43m.[49m[43mrun_line_magic[49m[43m([49m[33;43m'[39;49m[33;43mconda[39;49m[33;43m'[39;49m[43m,[49m[43m [49m[33;43m'[39;49m[33;43mcreate --name my_env python==3.13.2[39;49m[33;43m'[39;49m[43m)[49m
+
+[36mFile [39m[32m~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\interactiveshell.py:2478[39m, in [36mInteractiveShell.run_line_magic[39m[34m(self, magic_name, line, _stack_depth)[39m
+[32m   2476[39m     kwargs[[33m'[39m[33mlocal_ns[39m[33m'[39m] = [38;5;28mself[39m.get_local_scope(stack_depth)
+[32m   2477[39m [38;5;28;01mwith[39;00m [38;5;28mself[39m.builtin_trap:
+[32m-> [39m[32m2478[39m     result = [43mfn[49m[43m([49m[43m*[49m[43margs[49m[43m,[49m[43m [49m[43m*[49m[43m*[49m[43mkwargs[49m[43m)[49m
+[32m   2480[39m [38;5;66;03m# The code below prevents the output from being displayed[39;00m
+[32m   2481[39m [38;5;66;03m# when using magics with decorator @output_can_be_silenced[39;00m
+[32m   2482[39m [38;5;66;03m# when the last Python token in the expression is a ';'.[39;00m
+[32m   2483[39m [38;5;28;01mif[39;00m [38;5;28mgetattr[39m(fn, magic.MAGIC_OUTPUT_CAN_BE_SILENCED, [38;5;28;01mFalse[39;00m):
+
+[36mFile [39m[32m~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\magics\packaging.py:27[39m, in [36mis_conda_environment.<locals>.wrapper[39m[34m(*args, **kwargs)[39m
+[32m     25[39m [38;5;66;03m# TODO: does this need to change on windows?[39;00m
+[32m     26[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m Path(sys.prefix, [33m"[39m[33mconda-meta[39m[33m"[39m, [33m"[39m[33mhistory[39m[33m"[39m).exists():
+[32m---> [39m[32m27[39m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
+[32m     28[39m         [33m"[39m[33mThe python kernel does not appear to be a conda environment.  [39m[33m"[39m
+[32m     29[39m         [33m"[39m[33mPlease use ``[39m[33m%[39m[33mpip install`` instead.[39m[33m"[39m
+[32m     30[39m     )
+[32m     31[39m [38;5;28;01mreturn[39;00m func(*args, **kwargs)
+
+[31mValueError[39m: The python kernel does not appear to be a conda environment.  Please use ``%pip install`` instead.
+

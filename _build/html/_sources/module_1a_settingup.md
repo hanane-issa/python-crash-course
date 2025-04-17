@@ -27,9 +27,7 @@ By the end of this module, you will be able to:
 
 ## Why Python?
 
-Python is often described as a "beginner-friendly" programming language, and for good reason. Its clean, readable syntax gives it a close resemblance to natural human language, making it an ideal choice for those just starting their coding journey or diving into data science for the first time.
-
-But Python isn't just for beginners—it's a powerhouse used by developers and data scientists worldwide for a vast range of tasks. Here's a quick look on a view things it can do: 
+Python is a beginner-friendly programming language with clean, readable synthax that resembles natural human language. It's used for a wide range of tasks, including: 
 
 
 - Data analysis and manipulation (using libraries like Pandas, NumPy).
@@ -73,17 +71,9 @@ N.B. Jupyter Notebook refers to both a file format and an application. You can e
 
 ## Where can I write my Python code?
 
-You can open and edit .ipynb files in various applications like Jupyter Notebook, JupyterLab, VS Code, or even Google Colab.
+You can write and edit Python code through your terminal. However, you might find it easier and more manageable to use applications like Jupyter Notebook, JupyterLab, VS Code, or even Google Colab.
 
-You can write Python code in .py or .ipynb format using any code editor or Integrated Development Environment (IDE). The key difference between the two is that code editors are primarily used to writing and editing code, while IDEs integrate a suite of programming and software development tools in one interface. However, the line can get blurred as some code editors like VSCode are highly customisable thanks to community plugins. Ultimately, both code editors and IDEs can significantly boost your coding efficiency, simplify your workflow, and make debugging more effective. We'll go over two main examples to work with Python, and you can choose whichever you like based on your preferences. We're using jupyter notebooks to run code so it doesn't matter what editor/environment you end up choosing. 
+Code editors or Integrated Development Environments (IDE) let you write Python code in .py or .ipynb format. The key difference between the two is that code editors are primarily used to writing and editing code, while IDEs integrate a suite of programming and software development tools in one interface. However, the line can get blurred as some code editors like VSCode are highly customisable thanks to community plugins. Ultimately, both code editors and IDEs can significantly boost your coding efficiency, simplify your workflow, and make debugging more effective. We'll go over two main examples to work with Python, and you can choose whichever you like based on your preferences. We're using jupyter notebooks to run code so it doesn't matter what editor/environment you end up choosing. 
 
+We'll first talk about how to work with Python in a terminal before moving onto more useful tools like VS Code.
 
-
-
-
-### Setting up Python in Google Colab
-
-
-
-
-### Setting up Python in Anaconda

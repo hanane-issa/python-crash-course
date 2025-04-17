@@ -7,7 +7,9 @@ chapters:
 - title: "Module 1: Setting Up"
   file: module_1a_settingup
   sections:
-  - file: module_1b_vscode
-  - file: module_1c_anaconda
-  - file: module_1d_googlecolab
+  - file: module_1b_terminal
+  - file: module_1c_vscode
+  - file: module_1d_anaconda
+  - file: module_1e_googlecolab
+  - file: module1_exercice
 
