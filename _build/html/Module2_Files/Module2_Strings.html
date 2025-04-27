@@ -182,19 +182,12 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module2 - Foundations</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Module2_Intro.html">M2: Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Module2_FirstExample.html">Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module2_Variables.html">M2: Variables</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">M2: Strings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module2_DataStructures.html">M2: Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module2_Operations.html">M2: Operations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module2_ConditionalBlocks.html">M2: Conditional Blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module2_ErrorHandling.html">M2: Error Handling</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Inital Notebook files</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 </ul>
 
     </div>
@@ -236,6 +229,55 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/melinda_module2foundations?urlpath=tree/Module2_Files/Module2_Strings.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -296,7 +338,7 @@
       
       
       
-      <li><a href="../_sources/Module2_Files/Module2_Strings.md" target="_blank"
+      <li><a href="../_sources/Module2_Files/Module2_Strings.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -306,7 +348,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -367,7 +409,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -383,6 +427,25 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings">4. Strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-string">4.1. What is a String?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-string-operations">4.2. Basic String Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenation-joining-strings">Concatenation (joining strings)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#repetition-repeating-strings">Repetition (repeating strings)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-characters-indexing">Accessing characters (indexing)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-string-methods">4.3. Common String Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">4.4. Quick Practice</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -394,6 +457,135 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="m2-strings">
 <h1>M2: Strings<a class="headerlink" href="#m2-strings" title="Link to this heading">#</a></h1>
+<section id="strings">
+<h2>4. Strings<a class="headerlink" href="#strings" title="Link to this heading">#</a></h2>
+<section id="what-is-a-string">
+<h3>4.1. What is a String?<a class="headerlink" href="#what-is-a-string" title="Link to this heading">#</a></h3>
+<p>A <strong>string</strong> is a sequence of characters enclosed in single (<code class="docutils literal notranslate"><span class="pre">'</span></code>) or double (<code class="docutils literal notranslate"><span class="pre">&quot;</span></code>) quotation marks. Both styles work the same way in Python.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span>
+<span class="n">another_string</span> <span class="o">=</span> <span class="s1">&#39;Python is fun!&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also create multi-line strings using triple quotes (<code class="docutils literal notranslate"><span class="pre">'''</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">multi_line</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;This is</span>
+<span class="s2">a string</span>
+<span class="s2">spanning multiple lines.&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Strings are used whenever you need to work with text data.</p>
+</section>
+<section id="basic-string-operations">
+<h3>4.2. Basic String Operations<a class="headerlink" href="#basic-string-operations" title="Link to this heading">#</a></h3>
+<p>You can combine, repeat, and access parts of strings in Python.</p>
+<section id="concatenation-joining-strings">
+<h4>Concatenation (joining strings)<a class="headerlink" href="#concatenation-joining-strings" title="Link to this heading">#</a></h4>
+<p>You can join two strings together using the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">greeting</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="c1"># Output: Hello, Alice!</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello, Alice!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="repetition-repeating-strings">
+<h4>Repetition (repeating strings)<a class="headerlink" href="#repetition-repeating-strings" title="Link to this heading">#</a></h4>
+<p>You can repeat a string multiple times using the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">laugh</span> <span class="o">=</span> <span class="s2">&quot;ha&quot;</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">laugh</span><span class="p">)</span>  <span class="c1"># Output: hahaha</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hahahahaha
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="accessing-characters-indexing">
+<h4>Accessing characters (indexing)<a class="headerlink" href="#accessing-characters-indexing" title="Link to this heading">#</a></h4>
+<p>You can access individual characters in a string using square brackets <code class="docutils literal notranslate"><span class="pre">[</span></code> <code class="docutils literal notranslate"><span class="pre">]</span></code>. Remember that Python indexing starts at 0.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Output: P</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Output: y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P
+y
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="common-string-methods">
+<h3>4.3. Common String Methods<a class="headerlink" href="#common-string-methods" title="Link to this heading">#</a></h3>
+<p>Python provides many useful methods to work with strings. Some of the most common ones are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.lower()</span></code>: Converts all characters to lowercase.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.upper()</span></code>: Converts all characters to uppercase.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.strip()</span></code>: Removes spaces from the beginning and end.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.replace(old,</span> <span class="pre">new)</span></code>: Replaces part of a string with something else.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.find(substring)</span></code>: Finds the index of the first occurrence of a substring.</p></li>
+</ul>
+<p>Example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;   This is Python!   &quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="c1"># Output: &quot;this is python!&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>this is python!
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also chain methods together, as shown above.</p>
+</section>
+<section id="quick-practice">
+<h3>4.4. Quick Practice<a class="headerlink" href="#quick-practice" title="Link to this heading">#</a></h3>
+<p>Try these small challenges:</p>
+<ul class="simple">
+<li><p>Create a variable called quote and assign your favourite quote as a string.</p></li>
+<li><p>Print the quote in <strong>uppercase letters</strong>.</p></li>
+<li><p>Print the quote with <strong>no extra spaces</strong> at the start or end.</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Click here to see a possible solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">quote</span> <span class="o">=</span> <span class="s2">&quot;  The only limit to our realisation of tomorrow is our doubts of today.  &quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">quote</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">quote</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -450,6 +642,32 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings">4. Strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-string">4.1. What is a String?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-string-operations">4.2. Basic String Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenation-joining-strings">Concatenation (joining strings)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#repetition-repeating-strings">Repetition (repeating strings)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-characters-indexing">Accessing characters (indexing)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-string-methods">4.3. Common String Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">4.4. Quick Practice</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

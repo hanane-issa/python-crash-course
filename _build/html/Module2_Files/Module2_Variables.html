@@ -61,7 +61,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="M2: Strings" href="Module2_Strings.html" />
-    <link rel="prev" title="Example" href="Module2_FirstExample.html" />
+    <link rel="prev" title="M2: Introduction" href="Module2_Intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,19 +182,12 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module2 - Foundations</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Module2_Intro.html">M2: Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Module2_FirstExample.html">Example</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">M2: Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module2_Strings.html">M2: Strings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module2_DataStructures.html">M2: Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module2_Operations.html">M2: Operations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module2_ConditionalBlocks.html">M2: Conditional Blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module2_ErrorHandling.html">M2: Error Handling</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Inital Notebook files</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 </ul>
 
     </div>
@@ -236,6 +229,55 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/melinda_module2foundations?urlpath=tree/Module2_Files/Module2_Variables.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -296,7 +338,7 @@
       
       
       
-      <li><a href="../_sources/Module2_Files/Module2_Variables.md" target="_blank"
+      <li><a href="../_sources/Module2_Files/Module2_Variables.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -306,7 +348,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -390,10 +432,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">3 Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">3. Variables</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.1. Variables</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">3.2. Data Types</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#case-sensitivity">3.3. Case Sensitivity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">3.4. Quick Practice</a></li>
 </ul>
 </li>
 </ul>
@@ -410,11 +453,13 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="m2-variables">
 <h1>M2: Variables<a class="headerlink" href="#m2-variables" title="Link to this heading">#</a></h1>
 <section id="variables">
-<h2>3 Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h2>
+<h2>3. Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h2>
 <section id="id1">
 <h3>3.1. Variables<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
-<p>A <strong>variable</strong> is a name that refers to a value. In Python, you do not declare the type – just assign a value and Python figures out the type behind the scenes.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assigning values to variables</span>
+<p>A <strong>variable</strong> is a name that refers to a value. In Python, you do not need to declare the type — you simply assign a value, and Python determines the type automatically.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assigning values to variables</span>
 <span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
 <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
 
@@ -422,20 +467,30 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Name:&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Age: 25
+Name: Alice
+</pre></div>
+</div>
+</div>
+</div>
 <p>You can change (reassign) variables at any time.</p>
-<p>Variable names must start with a letter or underscore (<code class="docutils literal notranslate"><span class="pre">_</span></code>) and cannot contain spaces or special punctuation (aside from <code class="docutils literal notranslate"><span class="pre">_</span></code>).</p>
+<p>Variable names must start with a letter or an underscore (<code class="docutils literal notranslate"><span class="pre">_</span></code>) and cannot contain spaces or special punctuation (other than underscores).</p>
 </section>
 <section id="data-types">
 <h3>3.2. Data Types<a class="headerlink" href="#data-types" title="Link to this heading">#</a></h3>
-<p>Before diving into variables, let’s see the most common <strong>built-in</strong> data types in Python:</p>
+<p>Before diving deeper into variables, let’s explore some of the most common <strong>built-in</strong> data types in Python:</p>
 <ol class="arabic simple">
 <li><p><strong>Integer</strong>: Whole numbers, e.g., <code class="docutils literal notranslate"><span class="pre">42</span></code>, <code class="docutils literal notranslate"><span class="pre">-3</span></code>.</p></li>
 <li><p><strong>Float</strong>: Numbers with a decimal point, e.g., <code class="docutils literal notranslate"><span class="pre">3.14</span></code>, <code class="docutils literal notranslate"><span class="pre">-0.001</span></code>.</p></li>
 <li><p><strong>String</strong>: Sequences of characters, written inside quotes, e.g., <code class="docutils literal notranslate"><span class="pre">&quot;Hello,</span> <span class="pre">Python!&quot;</span></code>.</p></li>
-<li><p><strong>Boolean</strong>: <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>NonType</strong>: Represented by <code class="docutils literal notranslate"><span class="pre">None</span></code>, means “no value” or “nothing here yet”.</p></li>
+<li><p><strong>Boolean</strong>: Values representing <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>NoneType</strong>: Represented by <code class="docutils literal notranslate"><span class="pre">None</span></code>, means “no value” or “nothing here yet”.</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integers, floats, strings, booleans, and None</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integers, floats, strings, booleans, and None</span>
 <span class="n">my_int</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">my_float</span> <span class="o">=</span> <span class="mf">3.14</span>
 <span class="n">my_str</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
@@ -449,12 +504,46 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">my_none</span><span class="p">))</span>  <span class="c1"># &lt;class &#39;NoneType&#39;&gt;</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;int&#39;&gt;
+&lt;class &#39;float&#39;&gt;
+&lt;class &#39;str&#39;&gt;
+&lt;class &#39;bool&#39;&gt;
+&lt;class &#39;NoneType&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="case-sensitivity">
 <h3>3.3. Case Sensitivity<a class="headerlink" href="#case-sensitivity" title="Link to this heading">#</a></h3>
-<p>Python is <strong>case-sensitive</strong>. For example, <code class="docutils literal notranslate"><span class="pre">myVariable</span></code> and <code class="docutils literal notranslate"><span class="pre">myvariable</span></code> would be treated as different names. Stick to one consistent naming style (<em>snake_case</em> is common in Python: <code class="docutils literal notranslate"><span class="pre">my_variable</span></code>).</p>
-<hr class="docutils" />
+<p>Python is <strong>case-sensitive</strong>. This means that <code class="docutils literal notranslate"><span class="pre">myVariable</span></code> and <code class="docutils literal notranslate"><span class="pre">myvariable</span></code> would be treated as two different names.</p>
+<p>It is good practice to stick to one consistent naming style. In Python, the most common style is <em>snake_case</em>, where words are separated by underscores, for example: <code class="docutils literal notranslate"><span class="pre">my_variable</span></code>.</p>
 </section>
+<section id="quick-practice">
+<h3>3.4. Quick Practice<a class="headerlink" href="#quick-practice" title="Link to this heading">#</a></h3>
+<p>Try these simple challenges:</p>
+<ul class="simple">
+<li><p>Create a variable called <code class="docutils literal notranslate"><span class="pre">city</span></code> and assign your favourite city name as a string.</p></li>
+<li><p>Create a variable called <code class="docutils literal notranslate"><span class="pre">temperature</span></code> and assign a decimal number (float).</p></li>
+<li><p>Create a variable called <code class="docutils literal notranslate"><span class="pre">is_raining</span></code> and assign either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+</ul>
+<p>Print the values of all your variables using the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function!</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Click here to see a possible solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">city</span> <span class="o">=</span> <span class="s2">&quot;London&quot;</span>
+<span class="n">temperature</span> <span class="o">=</span> <span class="mf">18.5</span>
+<span class="n">is_raining</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;City:&quot;</span><span class="p">,</span> <span class="n">city</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temperature:&quot;</span><span class="p">,</span> <span class="n">temperature</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Is it raining?&quot;</span><span class="p">,</span> <span class="n">is_raining</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details></section>
 </section>
 </section>
 
@@ -489,12 +578,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Module2_FirstExample.html"
+       href="Module2_Intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Example</p>
+        <p class="prev-next-title">M2: Introduction</p>
       </div>
     </a>
     <a class="right-next"
@@ -522,10 +611,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">3 Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">3. Variables</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.1. Variables</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">3.2. Data Types</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#case-sensitivity">3.3. Case Sensitivity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">3.4. Quick Practice</a></li>
 </ul>
 </li>
 </ul>
