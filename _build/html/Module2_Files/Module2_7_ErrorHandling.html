@@ -233,6 +233,55 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/melinda_module2foundations?urlpath=tree/Module2_Files/Module2_7_ErrorHandling.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -288,7 +337,7 @@
       
       
       
-      <li><a href="../_sources/Module2_Files/Module2_7_ErrorHandling.md" target="_blank"
+      <li><a href="../_sources/Module2_Files/Module2_7_ErrorHandling.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -298,7 +347,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -359,7 +408,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -375,6 +426,22 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">7. Error Handling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-errors">7.1. What are Errors?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-try-except-blocks">7.2. Using try-except Blocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catching-multiple-exception-types">7.3. Catching Multiple Exception Types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-finally-block">7.4. The finally Block</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-else-block-optional">7.5. The <code class="docutils literal notranslate"><span class="pre">else</span></code> Block (optional)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">7.6. Quick Practice</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -386,6 +453,179 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="m2-error-handling">
 <h1>M2: Error Handling<a class="headerlink" href="#m2-error-handling" title="Link to this heading">#</a></h1>
+<section id="error-handling">
+<h2>7. Error Handling<a class="headerlink" href="#error-handling" title="Link to this heading">#</a></h2>
+<p>In the previous chapter, we saw how conditional blocks (<code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code>) allow a programme to choose between different actions. Similarly, <code class="docutils literal notranslate"><span class="pre">try-except</span></code> blocks allow a programme to react differently depending on whether an error occurs during execution.</p>
+<section id="what-are-errors">
+<h3>7.1. What are Errors?<a class="headerlink" href="#what-are-errors" title="Link to this heading">#</a></h3>
+<p>In programming, <strong>errors</strong> (also called <strong>exceptions</strong>) are problems that occur during the execution of a programme.</p>
+<p>If errors are not handled, they can cause the programme to crash.</p>
+<p>There are different types of errors. Here are two important categories:</p>
+<ul class="simple">
+<li><p><strong>Syntax errors</strong>: Mistakes in the code that prevent Python from understanding it (e.g., missing a colon).</p></li>
+<li><p><strong>Runtime errors</strong>: Problems that happen while the programme is running (e.g., dividing by zero).</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Syntax error example (missing colon):</span>
+<span class="k">if</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Five is greater than two&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">2</span>
+            <span class="o">^</span>
+<span class="ne">SyntaxError</span>: expected &#39;:&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Runtime error example (dividing by zero):</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># This will cause a ZeroDivisionError</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ZeroDivisionError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># This will cause a ZeroDivisionError</span>
+
+<span class="ne">ZeroDivisionError</span>: division by zero
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="using-try-except-blocks">
+<h3>7.2. Using try-except Blocks<a class="headerlink" href="#using-try-except-blocks" title="Link to this heading">#</a></h3>
+<p>You can <strong>catch and handle</strong> errors using a <code class="docutils literal notranslate"><span class="pre">try-except</span></code> block. This allows the programme to continue running even if something goes wrong.</p>
+<p>Python tries to execute the code inside the <code class="docutils literal notranslate"><span class="pre">try:</span></code> block. If an error occurs, it jumps to the <code class="docutils literal notranslate"><span class="pre">except:</span></code> block.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cannot divide by zero!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cannot divide by zero!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Tip About Specific Exceptions</p>
+<p>It is good practice to catch <strong>specific</strong> exceptions, like <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code>, instead of using a general <code class="docutils literal notranslate"><span class="pre">except:</span></code> whenever possible. This avoids hiding unexpected errors that you did not intend to catch.</p>
+</div>
+</section>
+<section id="catching-multiple-exception-types">
+<h3>7.3. Catching Multiple Exception Types<a class="headerlink" href="#catching-multiple-exception-types" title="Link to this heading">#</a></h3>
+<p>You can handle multiple different errors by using multiple except blocks.</p>
+<p>Python checks each <code class="docutils literal notranslate"><span class="pre">except</span></code> block in order and runs the first one that matches the error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a number: &quot;</span><span class="p">))</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="n">x</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That was not a valid number.&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You cannot divide by zero.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-finally-block">
+<h3>7.4. The finally Block<a class="headerlink" href="#the-finally-block" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">finally</span></code> block always runs — whether an error occurred or not.
+You can use it to clean up actions, such as closing files or displaying a final message.</p>
+<p>In the following example, <code class="docutils literal notranslate"><span class="pre">&quot;Execution</span> <span class="pre">complete.&quot;</span></code> is printed no matter what happens inside the try.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">0</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cannot divide by zero!&quot;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Execution complete.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cannot divide by zero!
+Execution complete.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-else-block-optional">
+<h3>7.5. The <code class="docutils literal notranslate"><span class="pre">else</span></code> Block (optional)<a class="headerlink" href="#the-else-block-optional" title="Link to this heading">#</a></h3>
+<p>You can also add an <code class="docutils literal notranslate"><span class="pre">else</span></code> block after a <code class="docutils literal notranslate"><span class="pre">try-except</span></code>. The <code class="docutils literal notranslate"><span class="pre">else</span></code> block runs <strong>only if no exception was raised</strong>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">else</span></code> block is useful when you want to separate the code that runs when everything goes smoothly from the code that handles errors.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a number: &quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid input.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You entered: </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You entered: 2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="quick-practice">
+<h3>7.6. Quick Practice<a class="headerlink" href="#quick-practice" title="Link to this heading">#</a></h3>
+<p>Try this challenge:</p>
+<ul class="simple">
+<li><p>Create two variables, <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>, where <code class="docutils literal notranslate"><span class="pre">b</span></code> is initially set to 0.</p></li>
+<li><p>Write a <code class="docutils literal notranslate"><span class="pre">try-except</span></code> block that tries to divide <code class="docutils literal notranslate"><span class="pre">a</span></code> by <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></li>
+<li><p>Catch and handle the <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code> by printing a friendly error message.</p></li>
+<li><p>Add a finally block that prints <code class="docutils literal notranslate"><span class="pre">&quot;Finished</span> <span class="pre">division</span> <span class="pre">attempt.&quot;</span></code>.</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Click here to see a possible solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You tried to divide by zero.&quot;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Finished division attempt.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -433,6 +673,29 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">7. Error Handling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-errors">7.1. What are Errors?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-try-except-blocks">7.2. Using try-except Blocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catching-multiple-exception-types">7.3. Catching Multiple Exception Types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-finally-block">7.4. The finally Block</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-else-block-optional">7.5. The <code class="docutils literal notranslate"><span class="pre">else</span></code> Block (optional)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">7.6. Quick Practice</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
