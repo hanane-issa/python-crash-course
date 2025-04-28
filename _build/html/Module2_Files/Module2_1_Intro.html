@@ -437,7 +437,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indentation-and-code-blocks">2.1. Indentation and Code Blocks</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">2.2. Comments</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-print-statements">2.3. Basic Print Statements</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-example">2.4. Practice Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">2.4. Quick Practice</a></li>
 </ul>
 </li>
 </ul>
@@ -455,7 +455,7 @@ document.write(`
 <h1>M2: Introduction<a class="headerlink" href="#m2-introduction" title="Link to this heading">#</a></h1>
 <section id="what-is-python">
 <h2>1. What is Python?<a class="headerlink" href="#what-is-python" title="Link to this heading">#</a></h2>
-<p>Python is one of the most popular programming languages in the world today, and it’s used across all kinds of fields, including Bioinformatics. One big reason for its popularity is its simple, easy-to-learn syntax that feels a bit like natural language. This makes Python straightforward to write, learn, and read.</p>
+<p>Python is one of the most popular programming languages in the world today and is used across all kinds of fields, including Bioinformatics. One big reason for its popularity is its simple, easy-to-learn syntax that feels a bit like a natural language. This makes Python straightforward to write, learn, and read.</p>
 <p>Python is a general-purpose language, which means you can use it for lots of different tasks. There’s also a huge collection of free, open-source Python packages and libraries that make it even more powerful. During this course, you’ll get to know some of the ones that are especially handy for Bioinformatics, like <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
 <p>Python is also an object-oriented programming (OOP) language. This means that code is organised around “objects” (i.e., pieces of data) rather than just functions or logical steps. This way of organising things can make it much easier to manage more complex projects. If this idea doesn’t quite make sense yet, don’t worry! We’ll come back to it later in Chapter … .</p>
 <p>For now, let’s focus on getting comfortable with Python’s basic syntax and building blocks. As we go along, we’ll use examples from Bioinformatics so you can see how everything connects to real-world problems you’re interested in.</p>
@@ -465,39 +465,39 @@ document.write(`
 <p>Before we dive deeper, it’s important to get a feel for how Python code is organised — in other words, its syntax.</p>
 <section id="indentation-and-code-blocks">
 <h3>2.1. Indentation and Code Blocks<a class="headerlink" href="#indentation-and-code-blocks" title="Link to this heading">#</a></h3>
-<p>In Python, each new statement normally starts on a new line. This means you don’t need to end each line with a semicolon <code class="docutils literal notranslate"><span class="pre">;</span></code>, unlike in some other programming languages.</p>
+<p>In Python, each new statement normally starts on a new line. This means you don’t need to end each line with a semicolon <code class="docutils literal notranslate"><span class="pre">;</span></code>, unlike some other programming languages.</p>
 <p>Python also uses <strong>indentation</strong> to define blocks of code. In other languages, you might see curly braces <code class="docutils literal notranslate"><span class="pre">{}</span></code> or keywords to group code together. In Python, you just add spaces or a tab at the beginning of a line to show that it belongs to a block. One indent is usually either one tab (<kbd>Tab</kbd>) or four spaces (<kbd>Space</kbd>).</p>
-<p>When you indent a line, you’re creating a “child” of the previous line. Usually, a “parent” line ends with a colon <code class="docutils literal notranslate"><span class="pre">:</span></code> (you’ll see more examples when we cover conditionals later in Chapter <a class="reference internal" href="Module2_6_ConditionalBlocks.html#m2-conditional-blocks-header"><span class="std std-ref">M2: Conditional Blocks</span></a>). You can also have multiple blocks nested inside each other.</p>
+<p>When you indent a line, you’re creating a “child” of the previous line. Usually, a “parent” line ends with a colon <code class="docutils literal notranslate"><span class="pre">:</span></code> (you’ll see more examples of when colons are used when we cover conditionals later in Chapter <a class="reference internal" href="#M2-conditional-blocks-header"><code class="xref myst docutils literal notranslate"><span class="pre">M2-conditional-blocks-header</span></code></a>). You can also have multiple blocks nested inside each other.</p>
 <p>To end a block, just remove the indentation (using <kbd>Shift</kbd> + <kbd>Tab</kbd>). It’s also a good habit to leave a blank line between big blocks of code to make everything easier to read.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">im_a_parent</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">im_a_child</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">im_a_grandchild</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">im_a_parent</span><span class="p">:</span>
+    <span class="n">im_a_child</span><span class="p">:</span>
+        <span class="n">im_a_grandchild</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am a grandchild!&quot;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">im_a_second_grandchild</span><span class="p">:</span>
+        <span class="n">im_a_second_grandchild</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am another grandchild!&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">im_a_second_child</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">im_a_third_grandchild</span><span class="p">:</span>
+    <span class="n">im_a_second_child</span><span class="p">:</span>
+        <span class="n">im_a_third_grandchild</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am the third grandchild!&quot;</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">im_a_new_parent</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">im_a_new_child</span><span class="p">:</span>
+<span class="n">im_a_new_parent</span><span class="p">:</span>
+    <span class="n">im_a_new_child</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am a new child!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>These syntax rules not only help to keep your code neat, but also make it easier and quicker to write, and eliminate common mistakes (such as forgetting to put a semicolon at the end of a line).</p>
-<p>Below is an example of an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement using indentation. The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement checks whether the <code class="docutils literal notranslate"><span class="pre">age</span></code> variable is greater than 18. The line <code class="docutils literal notranslate"><span class="pre">print(&quot;You</span> <span class="pre">are</span> <span class="pre">an</span> <span class="pre">adult.&quot;)</span></code> is indented to show that it belongs to — or is a child of — the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement’s code block. This line is only executed if <code class="docutils literal notranslate"><span class="pre">age</span></code> is greater than 18.</p>
+<p>These syntax rules do not only help to keep your code neat, but also make it easier and quicker to write them, eliminating common mistakes (such as forgetting to put a semicolon at the end of a line).</p>
+<p>Below is an example of an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement using indentation. The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement checks whether the <code class="docutils literal notranslate"><span class="pre">age</span></code> variable is greater than 18. The line <code class="docutils literal notranslate"><span class="pre">print(&quot;The</span> <span class="pre">patient</span> <span class="pre">is</span> <span class="pre">an</span> <span class="pre">adult.&quot;)</span></code> is indented to show that it belongs to — or is a child of — the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement’s code block. This line is only executed if <code class="docutils literal notranslate"><span class="pre">age</span></code> is greater than 18.</p>
 <p>Do not worry if you are not yet familiar with the specific details in the code snippet — we will learn them throughout this course! The most important takeaway here is that <strong>consistent indentation is crucial</strong>. If the indentation in your code is inconsistent, Python will raise an <em>error</em>!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
 
 <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You are an adult.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is an adult.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You are an adult.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The patient is an adult.
 </pre></div>
 </div>
 </div>
@@ -514,7 +514,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a single-line comment.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>  <span class="c1"># This part is also a comment.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span> <span class="c1"># This part is also a comment.</span>
 </pre></div>
 </div>
 </div>
@@ -536,52 +536,62 @@ document.write(`
 </section>
 <section id="basic-print-statements">
 <h3>2.3. Basic Print Statements<a class="headerlink" href="#basic-print-statements" title="Link to this heading">#</a></h3>
-<p>While not technically part of the syntax rules, the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function is a very useful feature, which is why we introduce it early. It is used to display output on the screen. You can quickly check whether your code is working as expected by printing results at different stages.</p>
+<p>While not technically part of the syntax rules, the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function is a very useful feature, which is why we introduce it early on. It is used to display output on the screen. In a jupyter notebook it will display everything in a print statement underneath the code cell. When running code in the terminal it will show all your print statements in the terminal. Print statements are very useful for keeping track of where you are in your code, preliminary results, and whether your code is working as expected. Note: in Jupyter notebook the last line of a cell will also always be displayed. But it is a good habit to always use a print statement and to not rely on the automatic output since your code structure can change easily.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, Python!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Hello, from the first line in the cell&#39;</span> <span class="c1">#this string will not be printed</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, Python!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, User!&quot;</span><span class="p">)</span>
+<span class="s1">&#39;Hello, from the last line in the cell&#39;</span> <span class="c1"># this string will be printed since it is the last line in a jupyter notebook cell</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello, Python!
+Hello, World!
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello, from the last line in the cell&#39;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="practice-example">
-<h3>2.4. Practice Example<a class="headerlink" href="#practice-example" title="Link to this heading">#</a></h3>
+<section id="quick-practice">
+<h3>2.4. Quick Practice<a class="headerlink" href="#quick-practice" title="Link to this heading">#</a></h3>
 <p>We have reached the end of the first chapter! You should now be able to write your first snippet of Python code. Let’s start with the standard first programme: printing ‘Hello, World!’.</p>
-<p>To practise the syntax, we will create an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement (similar to the example before) that calls the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function if the variable <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>. We will also add both multi-line and single-line comments to explain our code.</p>
-<p>Putting this all together, we get the following:</p>
+<p>To practise the syntax, you will create an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement (similar to the example before). The code should have a variable called <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> which is set to <code class="docutils literal notranslate"><span class="pre">True</span></code> (can be defined the same way as <code class="docutils literal notranslate"><span class="pre">age</span></code> in the above example - you will learn what variables are in the next chapter). It should have then an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement that calls the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function if <code class="docutils literal notranslate"><span class="pre">say_hello</span> <span class="pre">==</span> <span class="pre">True</span> </code>. The <code class="docutils literal notranslate"><span class="pre">print()</span></code> function should output <code class="docutils literal notranslate"><span class="pre">'Hello,</span> <span class="pre">World!'</span></code>. Try to also add both multi-line and single-line comments to explain your code.</p>
+<p>Try creating the code in the following empty code block. Remember that you can click the spaceship symbol at the top right hand side of the page and then ‘Live Code’ to be able to write and run your code directly in this book. If you get stuck or what to compare solutions, open the hidden solution code block underneath.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Example of a simple if statement with indentation.</span>
 <span class="sd">It will print &#39;Hello, World!&#39; if say_hello is True.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="n">say_hello</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">say_hello</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># we want to say hello</span>
 
-<span class="k">if</span> <span class="n">say_hello</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">say_hello</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello World!
-</pre></div>
-</div>
-</div>
-</div>
-<div class="tip admonition">
+</details><div class="tip admonition">
 <p class="admonition-title">🎯 Mini-Challenge: Test Your Code</p>
 <p>Try changing the value of <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <p>What happens when you run the code now?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">💡 Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Because the condition in the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is no longer <code class="docutils literal notranslate"><span class="pre">True</span></code>, the <code class="docutils literal notranslate"><span class="pre">print()</span></code> line will not be executed!</p>
 </div>
 </details></div>
@@ -658,7 +668,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indentation-and-code-blocks">2.1. Indentation and Code Blocks</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">2.2. Comments</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-print-statements">2.3. Basic Print Statements</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-example">2.4. Practice Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">2.4. Quick Practice</a></li>
 </ul>
 </li>
 </ul>

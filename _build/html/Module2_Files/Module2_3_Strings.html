@@ -475,7 +475,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">multi_line</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;This is</span>
 <span class="s2">a string</span>
-<span class="s2">spanning multiple lines.&quot;&quot;&quot;</span>
+<span class="s2">spanning 3 lines.&quot;&quot;&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -484,15 +484,15 @@ document.write(`
 </section>
 <section id="basic-string-operations">
 <h3>4.2. Basic String Operations<a class="headerlink" href="#basic-string-operations" title="Link to this heading">#</a></h3>
-<p>You can combine, repeat, and access parts of strings in Python.</p>
+<p>You can combine, repeat, and access parts of strings in Python. For this, mathematical operators are often used, resembling operations of numerical variables.</p>
 <section id="concatenation-joining-strings">
 <h4>Concatenation (joining strings)<a class="headerlink" href="#concatenation-joining-strings" title="Link to this heading">#</a></h4>
-<p>You can join two strings together using the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator.</p>
+<p>You can join strings together using the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
 <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
-<span class="n">message</span> <span class="o">=</span> <span class="n">greeting</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">greeting</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span> <span class="c1"># joining the two string variables with the strings &quot;, &quot; and &quot;!&quot;; Note that &quot;, &quot; has a space </span>
 <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="c1"># Output: Hello, Alice!</span>
 </pre></div>
 </div>
@@ -506,11 +506,11 @@ document.write(`
 </section>
 <section id="repetition-repeating-strings">
 <h4>Repetition (repeating strings)<a class="headerlink" href="#repetition-repeating-strings" title="Link to this heading">#</a></h4>
-<p>You can repeat a string multiple times using the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator.</p>
+<p>You can repeat a string multiple times using the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator and an integer value stating how often it should be repeated.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">laugh</span> <span class="o">=</span> <span class="s2">&quot;ha&quot;</span> <span class="o">*</span> <span class="mi">5</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">laugh</span><span class="p">)</span>  <span class="c1"># Output: hahaha</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">laugh</span><span class="p">)</span> <span class="c1"># Output: hahaha</span>
 </pre></div>
 </div>
 </div>
@@ -523,12 +523,12 @@ document.write(`
 </section>
 <section id="accessing-characters-indexing">
 <h4>Accessing characters (indexing)<a class="headerlink" href="#accessing-characters-indexing" title="Link to this heading">#</a></h4>
-<p>You can access individual characters in a string using square brackets <code class="docutils literal notranslate"><span class="pre">[</span></code> <code class="docutils literal notranslate"><span class="pre">]</span></code>.</p>
+<p>You can access individual characters in a string by putting square brackets <code class="docutils literal notranslate"><span class="pre">[</span></code> <code class="docutils literal notranslate"><span class="pre">]</span></code> after the string with the index of the character that you want to access inside it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Output: P</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Output: y</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># Output: P</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># Output: y</span>
 </pre></div>
 </div>
 </div>
@@ -553,42 +553,92 @@ Letter:   P   y   t   h   o   n
 </section>
 <section id="common-string-methods">
 <h3>4.3. Common String Methods<a class="headerlink" href="#common-string-methods" title="Link to this heading">#</a></h3>
-<p>Python provides many useful methods to work with strings. Some of the most common ones are:</p>
+<p>Python provides many useful methods to work with strings.</p>
+<p>A method is a function that is defined specifically for a certain data type (or class - you will learn exactly what they are in Chapter …). It is not used like a standard function where you just write the function name and put your variable name inside as an argument, e.g. <code class="docutils literal notranslate"><span class="pre">print(text)</span></code>, but by adding it to the end of your variable name separated with a period <code class="docutils literal notranslate"><span class="pre">.</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">text.method()</span></code>. Methods still have the brackets in the end where you might have to insert additional arguments needed to run it.</p>
+<p>Some of the most common methods that are defined for string variables are:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.lower()</span></code>: Converts all characters to lowercase.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.upper()</span></code>: Converts all characters to uppercase.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.strip()</span></code>: Removes spaces from the beginning and end.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.replace(old,</span> <span class="pre">new)</span></code>: Replaces part of a string with something else.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.find(substring)</span></code>: Finds the index of the first occurrence of a substring.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.replace(old,</span> <span class="pre">new)</span></code>: Replaces part of a string with something else for every occurrence of it. Parameters:</p>
+<ul>
+<li><p>old: The part of the string you want replaced</p></li>
+<li><p>new: What you replace it with</p></li>
 </ul>
-<p>Example:</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.find(substring)</span></code>: Finds the index of the first occurrence of a substring. Parameters:</p>
+<ul>
+<li><p>substring: The substring/character that you want to find in your string</p></li>
+</ul>
+</li>
+</ul>
+<p>You can also chain methods together</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;   This is Python!   &quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="c1"># Output: &quot;this is python!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Original sentence: </span><span class="si">{</span><span class="n">sentence</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># Output: &quot;   This is Python!   &quot;</span>
+
+<span class="n">stripped_sentence</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1"># removes leading and trailing whitespace</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Stripped sentence without whitespace: </span><span class="si">{</span><span class="n">stripped_sentence</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># Output: &quot;This is Python!&quot;</span>
+
+<span class="n">lowercase_sentence</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1"># converts all characters to lowercase</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Lowercase sentence: </span><span class="si">{</span><span class="n">lowercase_sentence</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># Output: &quot;   this is python!   &quot;</span>
+
+<span class="n">uppercase_sentence</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="c1"># converts all characters to uppercase</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Uppercase sentence: </span><span class="si">{</span><span class="n">uppercase_sentence</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># Output: &quot;   THIS IS PYTHON!   &quot;</span>
+
+<span class="n">replaced_word_sentence</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;Magic&quot;</span><span class="p">)</span> <span class="c1"># replaces &quot;Python&quot; with &quot;Magic&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Replaced a full word in the sentence: </span><span class="si">{</span><span class="n">replaced_word_sentence</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># Output: &quot;   This is Magic!   &quot;</span>
+
+<span class="n">replaced_character_sentence</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span> <span class="c1"># replaces all spaces with underscores</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Replaced white space with underscore: </span><span class="si">{</span><span class="n">replaced_character_sentence</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># Output: &quot;___This_is_Python!___&quot;</span>
+
+<span class="n">found_unique_word</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">)</span> <span class="c1"># finds the index of the first occurrence of &quot;Python&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found &quot;Python&quot; at index: </span><span class="si">{</span><span class="n">found_unique_word</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># Output: 7</span>
+
+<span class="n">found_multiple_character</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span> <span class="c1"># finds the index of the first occurrence of &quot;i&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found &quot;i&quot; for the first time at index: </span><span class="si">{</span><span class="n">found_multiple_character</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># Output: 5</span>
+
+<span class="c1">#you can also chain methods</span>
+<span class="n">lowercase_stripped_sentence</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1"># removes leading and trailing whitespace and converts all characters to lowercase</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Stripped and lowercase sentence (in one step): </span><span class="si">{</span><span class="n">lowercase_stripped_sentence</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># Output: &quot;this is python!&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>this is python!
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original sentence:    This is Python!   
+Stripped sentence without whitespace: This is Python!
+Lowercase sentence:    this is python!   
+Uppercase sentence:    THIS IS PYTHON!   
+Replaced a full word in the sentence:    This is Magic!   
+Replaced white space with underscore: ___This_is_Python!___
+Found &quot;Python&quot; at index: 11
+Found &quot;i&quot; for the first time at index: 5
+Stripped and lowercase sentence (in one step): this is python!
 </pre></div>
 </div>
 </div>
 </div>
-<p>You can also chain methods together, as shown above.</p>
 </section>
 <section id="quick-practice">
 <h3>4.4. Quick Practice<a class="headerlink" href="#quick-practice" title="Link to this heading">#</a></h3>
 <p>Try these small challenges:</p>
 <ul class="simple">
-<li><p>Create a variable called quote and assign your favourite quote as a string.</p></li>
+<li><p>Create a variable called quote and assign your favourite quote as a string. Add extra space at either the start or end.</p></li>
 <li><p>Print the quote in <strong>uppercase letters</strong>.</p></li>
 <li><p>Print the quote with <strong>no extra spaces</strong> at the start or end.</p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">💡 Click here to see a possible solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">quote</span> <span class="o">=</span> <span class="s2">&quot;  The only limit to our realisation of tomorrow is our doubts of today.  &quot;</span>
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">quote</span> <span class="o">=</span> <span class="s2">&quot;  Machine learning is transforming how we diagnose, predict, and understand diseases.  &quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">quote</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">quote</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
 </pre></div>
