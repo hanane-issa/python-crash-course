@@ -435,8 +435,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-errors">8.1. What are Errors?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-try-except-blocks">8.2. Using try-except Blocks</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catching-multiple-exception-types">8.3. Catching Multiple Exception Types</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-finally-block">8.4. The finally Block</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-else-block">8.5. The <code class="docutils literal notranslate"><span class="pre">else</span></code> Block</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-try-except-associated-blocks">8.4. Other try-except associated blocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logic-errors">8.5. Logic errors</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">8.6. Quick Practice</a></li>
 </ul>
 </li>
@@ -455,15 +455,16 @@ document.write(`
 <h1>M2: Error Handling<a class="headerlink" href="#m2-error-handling" title="Link to this heading">#</a></h1>
 <section id="error-handling">
 <h2>8. Error Handling<a class="headerlink" href="#error-handling" title="Link to this heading">#</a></h2>
-<p>In the previous chapter, we saw how conditional blocks (<code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code>) allow a programme to choose between different actions. Similarly, <code class="docutils literal notranslate"><span class="pre">try-except</span></code> blocks allow a programme to react differently depending on whether an error occurs during execution.</p>
 <section id="what-are-errors">
 <h3>8.1. What are Errors?<a class="headerlink" href="#what-are-errors" title="Link to this heading">#</a></h3>
 <p>In programming, <strong>errors</strong> (also called <strong>exceptions</strong>) are problems that occur during the execution of a programme.</p>
-<p>If errors are not handled, they can cause the programme to crash.</p>
-<p>There are different types of errors. Here are two important categories:</p>
+<p>If errors are not handled, they can cause the programme to crash or to not carry out the code as intended.</p>
+<p>There are different types of errors which can be sorted into the following categories:</p>
 <ul class="simple">
-<li><p><strong>Syntax errors</strong>: Mistakes in the code that prevent Python from understanding it (e.g., missing a colon).</p></li>
-<li><p><strong>Runtime errors</strong>: Problems that happen while the programme is running (e.g., dividing by zero).</p></li>
+<li><p><strong>Syntax errors</strong>: Mistakes in the code that prevent Python from understanding it since it violates its rules (e.g., missing a colon).</p></li>
+<li><p><strong>Logical errors</strong>: Mistakes in using the correct logic leading to wrong outputs (e.g. using &gt; instead of &lt;)</p></li>
+<li><p><strong>Runtime errors</strong>: Problems that happen while the programme is running preventing it from compiling (e.g. dividing by zero).</p></li>
+<li><p><strong>Time Limit Exceeded error</strong>: Error when the code take to long to execute (e.g stuck in a while loop)</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -474,7 +475,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
     <span class="k">if</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">2</span>
             <span class="o">^</span>
 <span class="ne">SyntaxError</span>: expected &#39;:&#39;
@@ -508,7 +509,7 @@ document.write(`
 <section id="using-try-except-blocks">
 <h3>8.2. Using try-except Blocks<a class="headerlink" href="#using-try-except-blocks" title="Link to this heading">#</a></h3>
 <p>You can <strong>catch and handle</strong> errors using a <code class="docutils literal notranslate"><span class="pre">try-except</span></code> block. This allows the programme to continue running even if something goes wrong.</p>
-<p>Python tries to execute the code inside the <code class="docutils literal notranslate"><span class="pre">try:</span></code> block. If an error occurs, it jumps to the <code class="docutils literal notranslate"><span class="pre">except:</span></code> block.</p>
+<p>In the previous chapter, we saw how conditional blocks (<code class="docutils literal notranslate"><span class="pre">if-else</span></code>) allow a programme to choose between different actions. Similarly, <code class="docutils literal notranslate"><span class="pre">try-except</span></code> blocks allow a programme to react differently depending on whether an error occurs during execution. Python tries to execute the code inside the <code class="docutils literal notranslate"><span class="pre">try:</span></code> block. If an error occurs while executing the code in the block, it jumps to the <code class="docutils literal notranslate"><span class="pre">except:</span></code> block.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
@@ -517,7 +518,7 @@ document.write(`
 <span class="k">try</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+<span class="k">except</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cannot divide by zero!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -535,26 +536,34 @@ document.write(`
 </section>
 <section id="catching-multiple-exception-types">
 <h3>8.3. Catching Multiple Exception Types<a class="headerlink" href="#catching-multiple-exception-types" title="Link to this heading">#</a></h3>
-<p>You can handle multiple different errors by using multiple except blocks.</p>
-<p>Python checks each <code class="docutils literal notranslate"><span class="pre">except</span></code> block in order and runs the first one that matches the error.</p>
+<p>You can handle multiple different errors using multiple except blocks with each stating the <code class="docutils literal notranslate"><span class="pre">ErrorName</span></code> (e.g. ValueError) in the condition statement. Python checks each <code class="docutils literal notranslate"><span class="pre">except</span></code> block in order and runs the first one that matches the error.</p>
+<p>The exact error message can also be saved in a variable <code class="docutils literal notranslate"><span class="pre">error_variable</span></code> by adding an <code class="docutils literal notranslate"><span class="pre">as</span> <span class="pre">error_variable</span></code> at the end of the <code class="docutils literal notranslate"><span class="pre">except</span></code> statement, e.g. <code class="docutils literal notranslate"><span class="pre">except</span> <span class="pre">ValueError</span> <span class="pre">as</span> <span class="pre">value_error:</span></code>. You can also just write <code class="docutils literal notranslate"><span class="pre">except:</span></code> or <code class="docutils literal notranslate"><span class="pre">except</span> <span class="pre">Exception</span> <span class="pre">as</span> <span class="pre">error_variable:</span></code> to handle any error (and capture it).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a number: &quot;</span><span class="p">))</span>
     <span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="n">x</span>
-<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That was not a valid number.&quot;</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You cannot divide by zero.&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">value_error</span><span class="p">:</span>
+    <span class="c1"># This will catch the ValueError if the input is not a valid integer</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is not a valid number. Error message:&quot;</span><span class="p">,</span> <span class="n">value_error</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">zero_division_error</span><span class="p">:</span>
+    <span class="c1"># This will catch the ZeroDivisionError if x is zero</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You cannot divide by zero. Error message:&quot;</span><span class="p">,</span> <span class="n">zero_division_error</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">expected_error</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;An unexpected error occurred: </span><span class="si">{</span><span class="n">expected_error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x is not a valid number. Error message: invalid literal for int() with base 10: &#39;d&#39;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="the-finally-block">
-<h3>8.4. The finally Block<a class="headerlink" href="#the-finally-block" title="Link to this heading">#</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">finally</span></code> block always runs — whether an error occurred or not.
-You can use it to clean up actions, such as closing files or displaying a final message.</p>
+<section id="other-try-except-associated-blocks">
+<h3>8.4. Other try-except associated blocks<a class="headerlink" href="#other-try-except-associated-blocks" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">finally</span></code> block <strong>always runs — whether an error occurred or not</strong>. It can be added as a block after <code class="docutils literal notranslate"><span class="pre">try-except</span></code>. You can use it to clean up actions, such as closing files or displaying a final message.</p>
 <p>In the following example, <code class="docutils literal notranslate"><span class="pre">&quot;Execution</span> <span class="pre">complete.&quot;</span></code> is printed no matter what happens inside the try.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -563,20 +572,19 @@ You can use it to clean up actions, such as closing files or displaying a final 
 <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cannot divide by zero!&quot;</span><span class="p">)</span>
 <span class="k">finally</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Execution complete.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Execution completed.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cannot divide by zero!
-Execution complete.
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+    <span class="k">finally</span><span class="p">:</span>
+    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="the-else-block">
-<h3>8.5. The <code class="docutils literal notranslate"><span class="pre">else</span></code> Block<a class="headerlink" href="#the-else-block" title="Link to this heading">#</a></h3>
 <p>You can also add an <code class="docutils literal notranslate"><span class="pre">else</span></code> block after a <code class="docutils literal notranslate"><span class="pre">try-except</span></code>. The <code class="docutils literal notranslate"><span class="pre">else</span></code> block runs <strong>only if no exception was raised</strong>.</p>
 <div class="tip admonition">
 <p class="admonition-title">Tip</p>
@@ -600,25 +608,37 @@ Execution complete.
 </div>
 </div>
 </section>
+<section id="logic-errors">
+<h3>8.5. Logic errors<a class="headerlink" href="#logic-errors" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">try-except</span></code> statements are very useful but they can only capture errors that interrupt the code / hinder it from being carried out. Often the code syntax is completely correct but its output is still wrong. These are due the code having a logic error somewhere. These errors are often a lot harder to capture or one might not even be aware of them. Make sure that you output your intermediate results, double-check all your code (for example by testing a sub-part of it whether it does what it should do - these are called <em>Unit tests</em> which are out of the scope of this tutorial but there exist various sources online), and add useful comments and variable names to reduced the chance of getting a logic error and/ or not being able to identify where it comes from.</p>
+</section>
 <section id="quick-practice">
 <h3>8.6. Quick Practice<a class="headerlink" href="#quick-practice" title="Link to this heading">#</a></h3>
 <p>Try this challenge:</p>
 <ul class="simple">
 <li><p>Create two variables, <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>, where <code class="docutils literal notranslate"><span class="pre">b</span></code> is initially set to 0.</p></li>
 <li><p>Write a <code class="docutils literal notranslate"><span class="pre">try-except</span></code> block that tries to divide <code class="docutils literal notranslate"><span class="pre">a</span></code> by <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></li>
-<li><p>Catch and handle the <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code> by printing a friendly error message.</p></li>
+<li><p>Catch and handle the <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code> by printing a friendly error message and the actual message returned.</p></li>
 <li><p>Add a finally block that prints <code class="docutils literal notranslate"><span class="pre">&quot;Finished</span> <span class="pre">division</span> <span class="pre">attempt.&quot;</span></code>.</p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">💡 Click here to see a possible solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
-<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">error_message</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You tried to divide by zero.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The error message was:&quot;</span><span class="p">,</span> <span class="n">error_message</span><span class="p">)</span>
 <span class="k">finally</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Finished division attempt.&quot;</span><span class="p">)</span>
 </pre></div>
@@ -687,8 +707,8 @@ Execution complete.
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-errors">8.1. What are Errors?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-try-except-blocks">8.2. Using try-except Blocks</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catching-multiple-exception-types">8.3. Catching Multiple Exception Types</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-finally-block">8.4. The finally Block</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-else-block">8.5. The <code class="docutils literal notranslate"><span class="pre">else</span></code> Block</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-try-except-associated-blocks">8.4. Other try-except associated blocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logic-errors">8.5. Logic errors</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">8.6. Quick Practice</a></li>
 </ul>
 </li>

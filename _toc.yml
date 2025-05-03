@@ -13,3 +13,5 @@ parts:
     - file: Module2_Files/Module2_6_DataStructures
     - file: Module2_Files/Module2_7_ConditionalBlocks
     - file: Module2_Files/Module2_8_ErrorHandling
+    - file: Module2_Files/Module2_PracticeSheet1
+    
