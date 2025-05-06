@@ -188,6 +188,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Module2_6_DataStructures.html">M2: Data Structures</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">M2: Conditional Blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module2_8_ErrorHandling.html">M2: Error Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_PracticeSheet1.html">M2: Practice Sheet</a></li>
 </ul>
 
     </div>
@@ -510,7 +511,7 @@ Lines that are part of a block must be indented, usually by 4 spaces or 1 tab.</
 </div>
 </div>
 <p>Sometimes you do not only have a binary choice but you have several possible code blocks to run. For this the
-<code class="docutils literal notranslate"><span class="pre">elif</span></code> (short for “else if”) key exist to test for additional conditions after the initial <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. You can have as many <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements, each with a different condition, as you want, as long as they are after the <code class="docutils literal notranslate"><span class="pre">if</span></code> and before the <code class="docutils literal notranslate"><span class="pre">else</span></code>. Python checks each condition from top to bottom and runs the first block where the condition is <code class="docutils literal notranslate"><span class="pre">True</span></code> (all other blocks are ignored) - if none of the <code class="docutils literal notranslate"><span class="pre">if</span></code> or <code class="docutils literal notranslate"><span class="pre">elif</span></code> conditions are met than the <code class="docutils literal notranslate"><span class="pre">else</span></code> block is run (if it exists - otherwise none of the blocks are run). Remember, if you use <code class="docutils literal notranslate"><span class="pre">elif</span></code> or <code class="docutils literal notranslate"><span class="pre">else</span></code> you first need the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p>
+<code class="docutils literal notranslate"><span class="pre">elif</span></code> (short for “else if”) key exist to test for additional conditions after the initial <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. You can have as many <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements, each with a different condition, as you want, as long as they are after the <code class="docutils literal notranslate"><span class="pre">if</span></code> and before the <code class="docutils literal notranslate"><span class="pre">else</span></code>. Python checks each condition from top to bottom and runs the first block where the condition is <code class="docutils literal notranslate"><span class="pre">True</span></code> (all other blocks are ignored) - if none of the <code class="docutils literal notranslate"><span class="pre">if</span></code> or <code class="docutils literal notranslate"><span class="pre">elif</span></code> conditions are met than the <code class="docutils literal notranslate"><span class="pre">else</span></code> block is run (if it exists - otherwise none of the blocks are run).</p>
 <p>Try to play around with different ages and see which block will be run in the following example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -586,14 +587,14 @@ The patient is an adult. They are 18 years old.
 <p>To iterate through these different possible variables, the conditional statement consist of variable + the condition <code class="docutils literal notranslate"><span class="pre">in</span></code> + data structure: e.g. <code class="docutils literal notranslate"><span class="pre">age</span> <span class="pre">in</span> <span class="pre">['child','adult']</span></code>. You do not need to define the variable before mentioning it in the condition like you have to in the <code class="docutils literal notranslate"><span class="pre">if</span></code> or <code class="docutils literal notranslate"><span class="pre">while</span></code> statement since it immediately assigns it the first value from the data structure any ways.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#iterate over a list</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Iterate over a list</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Iterating over a list&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;child&#39;</span><span class="p">,</span> <span class="s1">&#39;teenager&#39;</span><span class="p">,</span> <span class="s1">&#39;adult&#39;</span><span class="p">,</span> <span class="s1">&#39;senior&#39;</span><span class="p">]:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is a(n)&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Iterating over a set&#39;</span><span class="p">)</span>
-<span class="c1"># iterate over a set - remember that sets are unordered so the variable is assigned randomly to each value</span>
+<span class="c1"># Iterate over a set - remember that sets are unordered so the variable is assigned randomly to each value</span>
 <span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;child&#39;</span><span class="p">,</span> <span class="s1">&#39;teenager&#39;</span><span class="p">,</span> <span class="s1">&#39;adult&#39;</span><span class="p">,</span> <span class="s1">&#39;senior&#39;</span><span class="p">}:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is a(n)&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
 </pre></div>
@@ -631,7 +632,7 @@ The patient is a(n) senior
 <span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Range without defined step size (default is 1) or start value (default is 0)&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="s2">&quot;years old.&quot;</span><span class="p">)</span> <span class="c1">#Note that the last number is not included in the range</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="s2">&quot;years old.&quot;</span><span class="p">)</span> <span class="c1"># Note that the last number is not included in the range</span>
 </pre></div>
 </div>
 </div>
