@@ -1,2 +1,34 @@
 Outline
 
+Background:
+- explain how to get data --> link & import in python
+- explain what data is about
+- goal: classifiying what heart disease type a person has based on its features of the patient --> classic Ml example --> wont go that deep into ML but the inital steps you would do first to understand and get info from the d --> inital exploration
+
+Inital exploration / understand the given data
+-  look at what happens when follwoing the code
+- heart_disease = class --> see when doing type() & dir()
+- start looking at metdata --> heart_disease.metadata --> print it --> see its a dict --> see number of datapoints (303) & num_features (13) --> get to know the target name, feature types, name of demographic features, that is has missing values (and that they are NaN), info about puplication
+- reflect learned from the metadata
+- get info about features/variables --> heart_disease.variables --> see there are 14 rows --> 13 features & 1 target --> know each row is about one of the variables --> get f. each variable some info e.g. type, if its demographic,description, units, if it has missing value --> can use this info when analysing the data to know what u can do with the dif variables
+- look at actual feature values --> print X --> 303 rows (1 f each dp) & 13 columns --> so each of the features for each dp --> can compare values of the columns with the feature type
+- print target / y --> see target value for each dp
+- task: put X and y into one pandas frame such that each row is a datapoint, the first 13 columns are features, and the last the target --> tipp: check the type of X and y and based on that what pandas command you want
+
+Look at values
+- remove missing values using metadata
+- remove missing values based on just feature dataframe
+-check for duplicates
+- crreate new target feature --> 0 or 1 / have disease or not
+
+Visualisation:
+- do histogram for all continous (real)
+- do barplots for categorial
+- do one or two histogram plots where we seperate between sex
+
+Inital analyses
+- correlation tests --> between each feature --> get a heatmap
+- try clustering based on correlations
+- do pca --> get 2 PC with heart disease colour
+- do stats test for correlations --> add significant values to the heat map/or only display correlations if significant
+- do t-tests f. have or do not have heart disease
