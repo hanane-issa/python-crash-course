@@ -41,7 +41,7 @@ As an 'all-in-one' toolbox, it will install the following applications:
 - Anaconda Navigator
 - Anaconda Prompt: a command-line tool to run Python and manage Anaconda environments with conda commands.
 - Anaconda Powershell Prompt: Same as Anaconda Prompt, but uses PowerShell for advanced Windows scripting capabilities.
-- Jupyter Notebook: an interactive coding environment, described in (vscode page link)
+- Jupyter Notebook: an interactive coding environment.
 - Spyder: a Python IDE
 
 ## 2. Explore the Interface
@@ -69,7 +69,7 @@ You can create a new environment through the Anaconda Navigator interface. Go to
 
 ![anaconda-prompt](../_static/images/anaconda_prompt.png)
 
-Alternatively, you can do this through the Anaconda prompt with conda commands. Conda is the package and environment manager that comes with Anaconda. 
+Alternatively, you can do this through the Anaconda Prompt with conda commands. Conda is the package and environment manager that comes with Anaconda. 
 
 You can find the prompt tool through your computer's search bar, or through the Anaconda Navigator.
 

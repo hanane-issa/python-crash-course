@@ -17,7 +17,7 @@ kernelspec:
 
 Before we dive into fancy tools like VS Code and Anaconda, let’s start with the basics: running Python from your terminal or command prompt.
 
-This gives you a better feel for how Python works behind the scenes.
+
 
 ## 1. Install Python
 

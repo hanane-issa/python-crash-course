@@ -60,6 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'module1/module1_exercice';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Introduction to NumPy" href="../module3/module3.html" />
     <link rel="prev" title="Executing the Notebook Exercices" href="module_1e_notebook-execution.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -187,6 +188,7 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercice 1: check your Python version</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 2: introduction to Numpy</a></li>
 </ul>
 
     </div>
@@ -241,7 +243,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=tree/module1/module1_exercice.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module1/module1_exercice.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -272,6 +274,24 @@
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
 </li>
       
   </ul>
@@ -432,10 +452,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-checking-python-version-via-terminal">Optional: checking Python version via terminal</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
 </ul>
             </nav>
         </div>
@@ -474,45 +491,69 @@ and the ability to control how your program runs.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Import sys module</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#1. Import sys module</span>
+
+<span class="c1">### Your code here ###</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Test out function that gives you the current Python version.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#2. Try the function that gives you the current Python version.</span>
+
+<span class="c1">### Your code here ###</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Print a statement combining a description and your Python version.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#3. Print a statement combining a description and your Python version.</span>
+
+<span class="c1">### Your code here ###</span>
 </pre></div>
 </div>
 </div>
 </div>
-<details>
-<summary>Click here for hint 1</summary>
-<p><strong>Hint 1</strong>: check the <code class="docutils literal notranslate"><span class="pre">sys</span></code> module [documentation] (<a class="reference external" href="https://docs.python.org/3/library/sys.html">https://docs.python.org/3/library/sys.html</a>) to find the function that gives you the Python version.</p>
-</details><details>
-<summary>Click here for hint 2</summary>
-<p><strong>Hint 2</strong>: <code class="docutils literal notranslate"><span class="pre">print()</span></code> statements allow you to combine descriptive strings with outputs, e.g. print(“your descriptive string “, sys function)</p>
-</details><details>
-    <summary>Click here to see the solution</summary>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>### Solution:
-To print your Python version, you can use the following code:
-
-```python
-
+<div style="margin-bottom: 15px;">
+  <details>
+    <summary>
+      <i class="fa fa-lightbulb-o" aria-hidden="true" style="color: yellow; font-size: 20px;"></i> 
+      Hint 1
+    </summary>
+    <p style="padding-left: 20px;">
+      Check the <code>sys </code> module <a href="https://docs.python.org/3/library/sys.html" target="_blank">documentation</a> to find the function that gives you the Python version.
+    </p>
+  </details>
+</div>
+<div style="margin-bottom: 15px;">
+  <details>
+    <summary>
+      <i class="fa fa-lightbulb-o" aria-hidden="true" style="color: yellow; font-size: 20px;"></i> 
+      Hint 2
+    </summary>
+    <p style="padding-left: 20px;">
+      <code>print()</code> statements allow you to combine descriptive strings with outputs, e.g. `print("your descriptive string ", sys function)`.
+    </p>
+  </details>
+</div>
+<div style="margin-bottom: 15px;">
+  <details>
+    <summary>
+      <i class="fa fa-lightbulb" aria-hidden="true" style="color: yellow; font-size: 20px;"></i> 
+      Solution
+    </summary>
+    <p style="padding-left: 20px;">
+      To print your Python version, you can use the following code:
+    </p>
+    <pre><code class="python">
 import sys
-print(&#39;My Python version is &#39;, sys.version)
-</pre></div>
+sys.version
+print('My Python version is ', sys.version)
+    </code></pre>
+  </details>
 </div>
-<section id="optional-checking-python-version-via-terminal">
-<h3>Optional: checking Python version via terminal<a class="headerlink" href="#optional-checking-python-version-via-terminal" title="Link to this heading">#</a></h3>
-</section>
 </section>
 </section>
 
@@ -520,8 +561,8 @@ print(&#39;My Python version is &#39;, sys.version)
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "hanane-issa/python-crash-course",
+            ref: "hanane",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -555,6 +596,15 @@ print(&#39;My Python version is &#39;, sys.version)
         <p class="prev-next-title">Executing the Notebook Exercices</p>
       </div>
     </a>
+    <a class="right-next"
+       href="../module3/module3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introduction to NumPy</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -572,10 +622,7 @@ print(&#39;My Python version is &#39;, sys.version)
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-checking-python-version-via-terminal">Optional: checking Python version via terminal</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
 </ul>
   </nav></div>
 

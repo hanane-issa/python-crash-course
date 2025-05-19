@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'module1/module_1d_anaconda';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Executing the notebook exercices" href="module_1e_googlecolab.html" />
+    <link rel="next" title="Executing the Notebook Exercices" href="module_1e_notebook-execution.html" />
     <link rel="prev" title="Python in VSCode" href="module_1c_vscode.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -184,10 +184,10 @@
 <li class="toctree-l2"><a class="reference internal" href="module_1b_terminal.html">Python in Terminal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_1c_vscode.html">Python in VSCode</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Python in Anaconda Navigator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_1e_googlecolab.html">Executing the notebook exercices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module1_exercice.html">Exercice 1: check your Python version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_1e_notebook-execution.html">Executing the Notebook Exercices</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 2: introduction to Numpy</a></li>
 </ul>
 
     </div>
@@ -242,7 +242,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=tree/module1/module_1d_anaconda.md" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module1/module_1d_anaconda.md" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -273,6 +273,24 @@
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
 </li>
       
   </ul>
@@ -480,7 +498,7 @@ document.write(`
 <li><p>Anaconda Navigator</p></li>
 <li><p>Anaconda Prompt: a command-line tool to run Python and manage Anaconda environments with conda commands.</p></li>
 <li><p>Anaconda Powershell Prompt: Same as Anaconda Prompt, but uses PowerShell for advanced Windows scripting capabilities.</p></li>
-<li><p>Jupyter Notebook: an interactive coding environment, described in (vscode page link)</p></li>
+<li><p>Jupyter Notebook: an interactive coding environment.</p></li>
 <li><p>Spyder: a Python IDE</p></li>
 </ul>
 </section>
@@ -505,7 +523,7 @@ document.write(`
 <p><img alt="anaconda-nav gif" src="../_images/anaconda_create_env.gif" /></p>
 <p>You can create a new environment through the Anaconda Navigator interface. Go to the Environments tab, and press the Create button. Choose a name for your environment, and select which Python version you want to work with.</p>
 <p><img alt="anaconda-prompt" src="../_images/anaconda_prompt.png" /></p>
-<p>Alternatively, you can do this through the Anaconda prompt with conda commands. Conda is the package and environment manager that comes with Anaconda.</p>
+<p>Alternatively, you can do this through the Anaconda Prompt with conda commands. Conda is the package and environment manager that comes with Anaconda.</p>
 <p>You can find the prompt tool through your computer’s search bar, or through the Anaconda Navigator.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>my_env<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.13.2<span class="w"> </span>
 </pre></div>
@@ -524,8 +542,8 @@ You can also find tutorials on Anaconda Navigator on the <a class="reference ext
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "hanane-issa/python-crash-course",
+            ref: "hanane",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -560,11 +578,11 @@ You can also find tutorials on Anaconda Navigator on the <a class="reference ext
       </div>
     </a>
     <a class="right-next"
-       href="module_1e_googlecolab.html"
+       href="module_1e_notebook-execution.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Executing the notebook exercices</p>
+        <p class="prev-next-title">Executing the Notebook Exercices</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

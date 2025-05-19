@@ -15,11 +15,10 @@ kernelspec:
 # Module 1: Setting Up
 
 Objectives:
+
 By the end of this module, you will be able to:
 
-- Set up Python in various environments (e.g., terminal, VSC, Colab).
-
-- Install and use key Python packages (Jupyter Notebook, matplotlib, pandas, numpy).
+- Set up Python in various work environments (e.g., terminal, VSCode, Anaconda).
 
 - Understand how to execute Python scripts and work within Jupyter notebooks.
 
@@ -50,7 +49,7 @@ There are two main files format used for Python codes.
 Python scripts (with a .py extension) are plain text files containing Python code. They are used ideally for production code, writing applications and libraries/packages, and reusing functions and classes. However, they have no built-in output visualization and are executed as one whole script.
 
 If you're interested in seeing what your code is doing, you can instead use Jupyter Notebook files (with a .ipynb extension). 
-Jupyter notebook files (previously known as Ipython notebook) allow you to create computational notebooks and write your code interatively (not limited to Python). Quoting the official documentation, "A computational notebook is a shareable document that combines computer code, plain language descriptions, data, rich visualizations like 3D models, charts, graphs and figures, and interactive controls".
+Jupyter notebook files (previously known as Ipython notebook) allow you to create computational notebooks and write your code interatively (not limited to Python). Quoting the [official documentation](https://docs.jupyter.org/en/latest/#what-is-a-notebook), "*A computational notebook is a shareable document that combines computer code, plain language descriptions, data, rich visualizations like 3D models, charts, graphs and figures, and interactive controls*".
 
 In other words,  it's interactive, which allows for step-by-step code execution and for viewing your outputs. It's great for data exploration and analysis since you can easily experiment with Python code and visualize results, as well as add text-based explanations (Markdown).
 
@@ -73,7 +72,8 @@ N.B. Jupyter Notebook refers to both a file format and an application. You can e
 
 You can write and edit Python code through your terminal. However, you might find it easier and more manageable to use applications like Jupyter Notebook, JupyterLab, VS Code, or even Google Colab.
 
-Code editors or Integrated Development Environments (IDE) let you write Python code in .py or .ipynb format. The key difference between the two is that code editors are primarily used to writing and editing code, while IDEs integrate a suite of programming and software development tools in one interface. However, the line can get blurred as some code editors like VSCode are highly customisable thanks to community plugins. Ultimately, both code editors and IDEs can significantly boost your coding efficiency, simplify your workflow, and make debugging more effective. We'll go over two main examples to work with Python, and you can choose whichever you like based on your preferences. We're using jupyter notebooks to run code so it doesn't matter what editor/environment you end up choosing. 
+Code editors or Integrated Development Environments (IDE) let you write Python code in .py or .ipynb format. The key difference between the two is that code editors are primarily used to writing and editing code, while IDEs integrate a suite of programming and software development tools in one interface. However, the line can get blurred as some code editors like VSCode are highly customisable thanks to community plugins. Ultimately, both code editors and IDEs can significantly boost your coding efficiency, simplify your workflow, and make debugging more effective. 
+We're using jupyter notebooks to run code so it doesn't matter what editor/environment you end up choosing. 
 
 We'll first talk about how to work with Python in a terminal before moving onto more useful tools like VS Code.
 

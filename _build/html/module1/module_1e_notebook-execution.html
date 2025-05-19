@@ -60,7 +60,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'module1/module_1e_notebook-execution';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Exercice 1: check your Python version" href="module1_exercice.html" />
     <link rel="prev" title="Python in Anaconda Navigator" href="module_1d_anaconda.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -185,9 +184,9 @@
 <li class="toctree-l2"><a class="reference internal" href="module_1c_vscode.html">Python in VSCode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_1d_anaconda.html">Python in Anaconda Navigator</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Executing the Notebook Exercices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module1_exercice.html">Exercice 1: check your Python version</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 2: introduction to Numpy</a></li>
 </ul>
 
     </div>
@@ -242,7 +241,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=tree/module1/module_1e_notebook-execution.md" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module1/module_1e_notebook-execution.md" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -273,6 +272,24 @@
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
 </li>
       
   </ul>
@@ -463,6 +480,8 @@ You can run the notebooks in three different ways, depending on your preference 
 <li><p>Just click the “Open in Colab” button at the top of each exercice notebook page in this book.</p></li>
 <li><p>It runs in your browser and saves changes to your Google Drive (if you sign in).</p></li>
 </ul>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/launch_buttons.png"><img alt="jupyter launch button" class="bg-primary mb-1 align-center" src="../_images/launch_buttons.png" style="width: 500px;" />
+</a>
 <ol class="arabic simple" start="2">
 <li><p>Run on Binder</p></li>
 </ol>
@@ -486,8 +505,8 @@ You can run the notebooks in three different ways, depending on your preference 
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "hanane-issa/python-crash-course",
+            ref: "hanane",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -520,15 +539,6 @@ You can run the notebooks in three different ways, depending on your preference 
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Python in Anaconda Navigator</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="module1_exercice.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exercice 1: check your Python version</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

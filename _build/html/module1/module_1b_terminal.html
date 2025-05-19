@@ -188,6 +188,7 @@
 <li class="toctree-l2"><a class="reference internal" href="module1_exercice.html">Exercice 1: check your Python version</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 2: introduction to Numpy</a></li>
 </ul>
 
     </div>
@@ -242,7 +243,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=tree/module1/module_1b_terminal.md" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module1/module_1b_terminal.md" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -273,6 +274,24 @@
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
 </li>
       
   </ul>
@@ -467,7 +486,6 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="python-in-terminal">
 <h1>Python in Terminal<a class="headerlink" href="#python-in-terminal" title="Link to this heading">#</a></h1>
 <p>Before we dive into fancy tools like VS Code and Anaconda, let’s start with the basics: running Python from your terminal or command prompt.</p>
-<p>This gives you a better feel for how Python works behind the scenes.</p>
 <section id="install-python">
 <h2>1. Install Python<a class="headerlink" href="#install-python" title="Link to this heading">#</a></h2>
 <p>If you don’t have Python yet, follow these steps:</p>
@@ -509,8 +527,8 @@ Type “help”, “copyright”, “credits” or “license” for more inform
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "hanane-issa/python-crash-course",
+            ref: "hanane",
         },
         codeMirrorConfig: {
             theme: "abcdef",

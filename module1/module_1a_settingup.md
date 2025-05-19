@@ -42,6 +42,8 @@ For beginners, this choice might seem more critical, but in the long term, learn
 
 For instance, R is highly specialized in statistical tests and models like mixed-effects models, survival analysis, or time-series forecasting, while Python is ideal for tasks related to deep learning, web development, automation, or deploying models.
 
+(source: {cite}`datacamp_python_vs_r`)
+
 ## Python + Jupyter Notebook = ...?
 
 There are two main files format used for Python codes.

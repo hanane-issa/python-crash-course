@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -184,10 +184,11 @@
 <li class="toctree-l2"><a class="reference internal" href="module_1b_terminal.html">Python in Terminal</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Python in VSCode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_1d_anaconda.html">Python in Anaconda Navigator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_1e_googlecolab.html">Executing the notebook exercices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module1_exercice.html">Exercice 1: check your Python version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_1e_notebook-execution.html">Executing the Notebook Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_1f_packages.html">Installing Python Packages</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 2: introduction to Numpy</a></li>
 </ul>
 
     </div>
@@ -242,7 +243,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=tree/module1/module_1c_vscode.md" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module1/module_1c_vscode.md" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -273,6 +274,24 @@
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
 </li>
       
   </ul>
@@ -468,9 +487,8 @@ document.write(`
 </a>
 <section class="tex2jax_ignore mathjax_ignore" id="python-in-vscode">
 <h1>Python in VSCode<a class="headerlink" href="#python-in-vscode" title="Link to this heading">#</a></h1>
-<p>Virtual Studio Code (VSCode) is a lightweight, open-source code editor  developed by Microsoft for a wide range of programming languages, including Python. It contains a vast library of extensions which allows you to customize your work environment to your needs.</p>
-<p>With support for version control (Git), debugging, and code editing, VSC is a comprehensive tool that enables Python developers to write, test, and debug code seamlessly.</p>
-<p>Moreover, it has a very active community and plenty of tutorials and documentation available online.</p>
+<p>Virtual Studio Code (VSCode) is a lightweight, open-source code editor  developed by Microsoft for a wide range of programming languages, including Python. It contains a vast library of extensions which allows you to customize your work environment.</p>
+<p>As a comprehensive tool, it has support for version control (Git), debugging, and code editing. Moreover, it has a very active community and plenty of tutorials and documentation available online.</p>
 <p>VSCode works across all major platforms: Windows, macOS, and Linux.</p>
 <section id="download-vscode">
 <h2>1. Download VSCode<a class="headerlink" href="#download-vscode" title="Link to this heading">#</a></h2>
@@ -479,7 +497,7 @@ document.write(`
 <section id="install-necessary-plugins">
 <h2>2. Install Necessary Plugins<a class="headerlink" href="#install-necessary-plugins" title="Link to this heading">#</a></h2>
 <p>You will need to install the Python extension as well as the Jupyter extension.</p>
-<p><img alt="vscode_extensions" src="../_images/vscode_guide1.png" /></p>
+<p><img alt="vscode_extensions" src="../_images/vscode_guide1.png" />{: style=”width: 80%; height: auto;”}</p>
 </section>
 <section id="create-a-new-file">
 <h2>3. Create a New File<a class="headerlink" href="#create-a-new-file" title="Link to this heading">#</a></h2>
@@ -492,7 +510,7 @@ File &gt; New File</p>
 </section>
 <section id="writing-your-first-python-code">
 <h2>4. Writing your first Python code<a class="headerlink" href="#writing-your-first-python-code" title="Link to this heading">#</a></h2>
-<p><img alt="ipynb gif" src="../_images/vscode_firstcode.gif" /></p>
+<p><img alt="ipynb gif" src="../_images/vscode_firstcode.gif" />{: style=”width: 80%; height: auto;”}</p>
 <p>As mentioned before, jupyter notebooks allow you to interactively write code (including Python code) and combine it wiht text, images, and graphs.</p>
 <p>You can add text and headers to your notebook by selecting Markdown as the programming language for your cell, or selecting “Add Markdown”. You can find more information on basic Markdown syntax <a class="reference external" href="https://www.markdownguide.org/basic-syntax/">here</a>.</p>
 <p>To begin writing Python code in your notebook, simply change the cell type to Code, or insert a new code cell with Python as the language.</p>
@@ -522,8 +540,8 @@ File &gt; New File</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "hanane-issa/python-crash-course",
+            ref: "hanane",
         },
         codeMirrorConfig: {
             theme: "abcdef",

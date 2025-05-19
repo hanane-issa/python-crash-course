@@ -27,6 +27,12 @@ You can run the notebooks in three different ways, depending on your preference 
 
 - It runs in your browser and saves changes to your Google Drive (if you sign in).
 
+```{image} ../_static/images/launch_buttons.png
+:alt: jupyter launch button
+:class: bg-primary mb-1
+:width: 500px
+:align: center
+```
 
 2. Run on Binder
 

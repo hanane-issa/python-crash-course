@@ -11,5 +11,10 @@ chapters:
   - file: module1/module_1c_vscode
   - file: module1/module_1d_anaconda
   - file: module1/module_1e_notebook-execution
+  - file: module1/module_1f_packages
   - file: module1/module1_exercice
+- title: "Module 2: introduction to Numpy"
+  file: module3/module3
+
+
 
