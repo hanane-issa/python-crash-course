@@ -5,7 +5,7 @@ Background:
 - explain what data is about
 - goal: classifiying what heart disease type a person has based on its features of the patient --> classic Ml example --> wont go that deep into ML but the inital steps you would do first to understand and get info from the d --> inital exploration
 
-Inital exploration / understand the given data
+Initial exploration / understand the given data
 -  look at what happens when follwoing the code
 - heart_disease = class --> see when doing type() & dir()
 - start looking at metdata --> heart_disease.metadata --> print it --> see its a dict --> see number of datapoints (303) & num_features (13) --> get to know the target name, feature types, name of demographic features, that is has missing values (and that they are NaN), info about puplication
