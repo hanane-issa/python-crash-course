@@ -13,7 +13,7 @@ We will be using the [Stroke Prediction Dataset](https://www.kaggle.com/datasets
 This module assumes that you have gone through module 4 and learned how to load data and handle a dataframe in Python.
 
 
-# Data visualization with Matpotlib and Seaborn
+# Data visualization with Matplotlib and Seaborn
 
 To get started, in your Jupyter notebook or your Python environment, import the necessary packages:
 
@@ -72,7 +72,7 @@ We used the function `plt.hist()` from the Matplotlib package to make the plot. 
 
 `plt.xlabel()` and `plt.ylabel()` will set the labels of your x-axis and y-axis respectively. `plt.title()` will set the title of the plot. Finally `plt.show()` will actually display the plot.
 
-If you want to know more about the `matplotlib.pyplot.hist()` function and its arguments, go the the [matplotlib documentation](https://matplotlib.org/stable/).
+If you want to know more about the `matplotlib.pyplot.hist()` function and its arguments, go to the [matplotlib documentation](https://matplotlib.org/stable/).
 
 
 ### Changing font size and plot size
@@ -84,7 +84,7 @@ What we will change:
 2. font size of the x-axis and y-axis label
 3. font size of ticks on the x and y-axis
 
-Here are the codes:
+Here is the code:
 ```
 plt.figure(figsize=(6, 4))
 plt.hist(stroke_data.avg_glucose_level, bins=30, alpha=0.6, edgecolor='black')
@@ -96,7 +96,7 @@ plt.title('Normalized Histogram (Density)', fontsize=18)
 plt.show()
 ```
 
-As you can see, it is quite straightforward. We just have to add the argument `fontsize` in some functions, the number indicate how big you want the font to be (the higher, the bigger). 
+As you can see, it is quite straightforward. We just have to add the argument `fontsize` in some functions, the number indicate how large you want the font to be (the higher, the bigger). 
 The `plt.figure()` function was added at the beginning to control the size of the plot. The two numbers 6 and 4 tell Python that I want the plot to be 6 inches wide and 4 inches high.
 
 ### Saving the plot
@@ -129,7 +129,7 @@ plt.show()
 
 We used the function `sns.scatterplot()` from the `seaborn` package. Here we can put the entire dataframe as the input, then we specify the columns on in the dataframe that we want as x-axis and y-axis like so: `x='age', y='bmi'`
 
-An advantage of using `seaborn` is that, we do not have to explicitly set axis labels, it is automatically done. You can still cutomize the labels by adding the following lines before `plt.show()`:
+An advantage of using `seaborn` is that, we do not have to explicitly set axis labels, it is automatically done. You can still customize the labels by adding the following lines before `plt.show()`:
 
 ```
 plt.xlabel('AGE', fontsize=14)
@@ -139,7 +139,7 @@ plt.ylabel('BMI',fontsize=14)
 
 ### Color
 
-If you want to display another information on the scatter plot, you can try by adding color to it. We can do this by adding an argument to the function like so:
+If you want to display additional information on the scatter plot, you can try by adding color to it. We can do this by adding an argument to the function like so:
 
 ```
 sns.scatterplot(data=stroke_data, x='age', y='bmi', hue='stroke', alpha=0.6)
@@ -182,7 +182,7 @@ axes[1].set_title('Scatter plot of avg_glucose_level vs age')
 plt.tight_layout()
 plt.show()
 ```
-As you can see, we added the argument `sharex=True` to the function `plt.subplots()` to tell Python the subplots are sharing the x-axis. We also added the optional `plt.tight_layout()` to reduce spacing between the plots and improve the overall aethestic.
+As you can see, we added the argument `sharex=True` to the function `plt.subplots()` to tell Python the subplots are sharing the x-axis. We also added the optional `plt.tight_layout()` to reduce spacing between the plots and improve the overall aesthestic.
 
 
 ## Seaborn and distribution visualization
@@ -191,13 +191,13 @@ If you think that the histogram is not enough to visualize the distribution, you
 
 ### Box plot
 
-We simply use the `sns.boxplot()` function to do the boxplot. 
+We use the `sns.boxplot()` function to do the boxplot. 
 ```
 sns.boxplot(data=stroke_data, x="heart_disease", y="bmi", hue="stroke", fill=False, gap=.1)
 plt.title('Box Plot of BMI by Heart Disease and Stroke Status')
 plt.show()
 ```
-With the box plot, we can identify the outliers more easily. `fill=False` will tell `seaborn` not to fill solid color inside the boxes, `gagp=.1` is the gap between the boxes for each category of the x-axis.
+With the box plot, we can identify the outliers more easily. `fill=False` will tell `seaborn` not to fill solid color inside the boxes, `gap=.1` is the gap between the boxes for each category of the x-axis.
 
 
 ### Violin plot
@@ -224,7 +224,7 @@ We can plot pairwise scatterplots to try and see if there is any correlations th
 df_pairplot = stroke_data[['age', 'bmi', 'avg_glucose_level', 'stroke']]
 ```
 
-Now, we can use the `sns.pairplot()` function to make the pairplot. We will color the datapoint according to the 'stroke' status.
+Now, we can use the `sns.pairplot()` function to make the pairplot. We will color the data point according to the 'stroke' status.
 
 ```
 sns.pairplot(
@@ -236,7 +236,7 @@ sns.pairplot(
 plt.suptitle("Pairwise Relationships in stroke data", y =1.02)
 plt.show()
 ```
-The argument `hue="stroke"` tells `seaborn` which information it should use to color the data points. `diag_kind="kde"` will get you kernel density estimation (kde)`*` on the diagonal, `seaborn` also support other types such as histogram. `markers=["o","s"]` will specify what marker shapes you want. Finally, `plot_kws={'s':10}` will set the size of the data point. `sns.pairplot()` returns a `PairGrid` object, that is to say the usual `matplotlib` function `plt.title()` will not work, so we use `plt.suptitle()` to add a title for all subplots at the top.  
+The argument `hue="stroke"` tells `seaborn` which information it should use to color the data points. `diag_kind="kde"` will get you kernel density estimation (kde)`*` on the diagonal, `seaborn` also supports other types such as histogram. `markers=["o","s"]` will specify what marker shapes you want. Finally, `plot_kws={'s':10}` will set the size of the data point. `sns.pairplot()` returns a `PairGrid` object, that is to say the usual `matplotlib` function `plt.title()` will not work, so we use `plt.suptitle()` to add a title for all subplots at the top.  
 If you want more details of the arguments of the function, please check the [seaborn](https://seaborn.pydata.org/index.html) documentation.
 
 Once you have made the pairplot, you will notice that the data points of the '0's are being plotted on top of the '1's. We can solve this by reordering the dataframe like so:
@@ -256,7 +256,7 @@ sns.pairplot(
 plt.suptitle("Pairwise Relationships in stroke data", y =1.02)
 plt.show()
 ```
-Now the figure looks slightly better.
+This improves the clarity of the visualization.
 
 `*` KDE is a non-parametric algorithm that will estimate the shape of the density of the data. [KDE](https://arxiv.org/abs/1704.03924#)
 
@@ -268,9 +268,9 @@ If we want a bit more details on their relationships, we can try getting the Pea
 ```
 stroke_numerical = stroke_data.select_dtypes(include=['float64'])
 ```
-We are selecting columns that with the data type being a 'float', which is a real number with a decimal point. The other columns contain categorical data represented as an 'object' or 'int64', so we will exclude them. We use the function that comes with a `pandas` dataframe object `select_dtypes()` to select only `float64`.
+We are selecting columns that have the data type being a 'float', which is a real number with a decimal point. The other columns contain categorical data represented as an 'object' or 'int64', so we will exclude them. We use the function that comes with a `pandas` dataframe object `select_dtypes()` to select only `float64`.
 
-Next, we will use another `pandas` dataframe object function `corr()`. It will compute the pairwise correlation between the the columns that are in the dataframe. If you want more information about `corr()`, please visit the [Pandas](https://pandas.pydata.org/docs/index.html). We will leave every argument as default and get the pearson correlations:
+Next, we will use another `pandas` dataframe object function `corr()`. It will compute the pairwise correlation between the columns that are in the dataframe. If you want more information about `corr()`, please visit the [Pandas](https://pandas.pydata.org/docs/index.html). We will leave every argument as default and get the pearson correlations:
 
 ```
 correlations_df = stroke_numerical.corr()
@@ -295,7 +295,7 @@ plt.show()
 
 ## Conclusion
 
-In this tutorial, you have learned how to visualize data with the `matplotlib` and `seaborn` package. There are other packages available and maybe other ways to make the same figure, but at least now you know the basics. 
+In this tutorial, you have learned how to visualize data with the `matplotlib` and `seaborn` package. There are other packages available and other ways to make the same figure, but at least now you know the basics. 
 
 
 
