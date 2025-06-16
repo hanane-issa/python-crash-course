@@ -1,0 +1,16 @@
+name: jupyterbook-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13.0
+  - jupyter-book
+  - notebook
+  - ipykernel
+  - pip
+  - numpy
+  - pandas
+  - kagglehub
+  - ucimlrepo
+  - matplotlib
+  - seaborn
+  

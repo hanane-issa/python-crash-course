@@ -28,14 +28,16 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-pip install pandas==2.2.3
-#replace 2.2.3 with the version you want.
+name: myenv
+dependencies:
+  - numpy
+  - pandas
 ------------------
 
 
-  [36mCell[39m[36m [39m[32mIn[2][39m[32m, line 1[39m
-[31m    [39m[31mpip install pandas==2.2.3[39m
-        ^
+  [36mCell[39m[36m [39m[32mIn[1][39m[32m, line 2[39m
+[31m    [39m[31mdependencies:[39m
+                 ^
 [31mSyntaxError[39m[31m:[39m invalid syntax
 
 

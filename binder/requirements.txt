@@ -1,5 +1,11 @@
 jupyter-book
+notebook
+ipykernel
+pip
 numpy
 pandas
 matplotlib
 seaborn
+kagglehub
+ucimlrepo
+

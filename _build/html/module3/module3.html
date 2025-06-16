@@ -60,7 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'module3/module3';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Exercice 1: check your Python version" href="../module1/module1_exercice.html" />
+    <link rel="next" title="Outline for Pandas section (module 4)" href="../module4/module4_outline.html" />
+    <link rel="prev" title="M2: Practice Sheet" href="../module2/Module2_PracticeSheet1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -183,11 +184,45 @@
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1b_terminal.html">Python in Terminal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1c_vscode.html">Python in VSCode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1d_anaconda.html">Python in Anaconda Navigator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module1/module_1e_notebook-execution.html">Executing the Notebook Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1f_packages.html">Installing Python Packages</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Exercice 1: check your Python version</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module 2: introduction to Numpy</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module2/Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_3_Variables.html">M2: Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_4_Operations.html">M2: Arimetic and Logical Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_5_Strings.html">M2: Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_6_DataStructures.html">M2: Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_7_ConditionalBlocks.html">M2: Conditional Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_8_ErrorHandling.html">M2: Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_PracticeSheet1.html">M2: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module4/module4_outline.html">Module 4: Introduction to Pandas</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module5/intro.html">Module 5: Introduction to Data Visualization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module5/data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/module5_examples.html">importing packages</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module6/module_6_functions.html">Module 6: Introduction to Functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6a_basics.html">Module 6: Introduction to Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6b_return-vs-print.html">Module 6: Return Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6c_local-vs-global.html">Module 6: Local vs Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6d_docstrings.html">Module 6: Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6e_params-args.html">Module 6: Parameters and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6f_extras.html">Module 6: Extra (OPTIONAL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -477,17 +512,6 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># let us first import the package, np is a common shortening </span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># let us first import the package, np is a common shortening </span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
 </pre></div>
 </div>
 </div>
@@ -1388,7 +1412,7 @@ Argmax positons?
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0, 0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(np.int64(0), np.int64(0))
 </pre></div>
 </div>
 </div>
@@ -1524,13 +1548,22 @@ Standard deviation for all elements in arr2:
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../module1/module1_exercice.html"
+       href="../module2/Module2_PracticeSheet1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Exercice 1: check your Python version</p>
+        <p class="prev-next-title">M2: Practice Sheet</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../module4/module4_outline.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Outline for Pandas section (module 4)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

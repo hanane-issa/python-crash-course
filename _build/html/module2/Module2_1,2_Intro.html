@@ -1,0 +1,784 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>M2: Introduction &#8212; Python Crash Course</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'module2/Module2_1,2_Intro';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="M2: Variables" href="Module2_3_Variables.html" />
+    <link rel="prev" title="Exercice 1: check your Python version" href="../module1/module1_exercice.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Python Crash Course - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Python Crash Course - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to this mini Python crash course
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module1/module_1a_settingup.html">Module 1: Setting Up</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1b_terminal.html">Python in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1c_vscode.html">Python in VSCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1d_anaconda.html">Python in Anaconda Navigator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1f_packages.html">Installing Python Packages</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Exercice 1: check your Python version</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Module 2: Python Foundations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Module2_3_Variables.html">M2: Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_4_Operations.html">M2: Arimetic and Logical Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_5_Strings.html">M2: Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_6_DataStructures.html">M2: Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_7_ConditionalBlocks.html">M2: Conditional Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_8_ErrorHandling.html">M2: Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_PracticeSheet1.html">M2: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module4/module4_outline.html">Module 4: Introduction to Pandas</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module5/intro.html">Module 5: Introduction to Data Visualization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module5/data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/module5_examples.html">importing packages</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module6/module_6_functions.html">Module 6: Introduction to Functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6a_basics.html">Module 6: Introduction to Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6b_return-vs-print.html">Module 6: Return Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6c_local-vs-global.html">Module 6: Local vs Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6d_docstrings.html">Module 6: Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6e_params-args.html">Module 6: Parameters and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6f_extras.html">Module 6: Extra (OPTIONAL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module2/Module2_1,2_Intro.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/hanane/module2/Module2_1,2_Intro.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanane-issa/python-crash-course" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanane-issa/python-crash-course/issues/new?title=Issue%20on%20page%20%2Fmodule2/Module2_1,2_Intro.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/module2/Module2_1,2_Intro.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>M2: Introduction</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-foundations">1. Python Foundations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-syntax-basics">2. Python Syntax Basics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indentation-and-code-blocks">2.1. Indentation and Code Blocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">2.2. Comments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-print-statements">2.3. Basic Print Statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">2.4. Quick Practice</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="m2-introduction">
+<h1>M2: Introduction<a class="headerlink" href="#m2-introduction" title="Link to this heading">#</a></h1>
+<section id="python-foundations">
+<h2>1. Python Foundations<a class="headerlink" href="#python-foundations" title="Link to this heading">#</a></h2>
+<p>We’ve talked about what makes Python a popular language for data science and bioinformatics.</p>
+<p>Python is also an object-oriented programming (OOP) language. This means that code is organised around “objects” (i.e., pieces of data) rather than just functions or logical steps. This way of organising things can make it much easier to manage more complex projects. If this idea doesn’t quite make sense yet, don’t worry! We’ll come back to it later in Chapter 7 (to add link).</p>
+<p>For now, let’s focus on getting comfortable with Python’s basic syntax and building blocks. As we go along, we’ll use examples from Bioinformatics so you can see how everything connects to real-world problems you’re interested in.</p>
+</section>
+<section id="python-syntax-basics">
+<h2>2. Python Syntax Basics<a class="headerlink" href="#python-syntax-basics" title="Link to this heading">#</a></h2>
+<p>Before we dive deeper, it’s important to get a feel for how Python code is organised — in other words, its syntax.</p>
+<section id="indentation-and-code-blocks">
+<h3>2.1. Indentation and Code Blocks<a class="headerlink" href="#indentation-and-code-blocks" title="Link to this heading">#</a></h3>
+<p>In Python, each new statement normally starts on a new line. This means you don’t need to end each line with a semicolon <code class="docutils literal notranslate"><span class="pre">;</span></code>, unlike some other programming languages.</p>
+<p>Python also uses <strong>indentation</strong> to define blocks of code. In other languages, you might see curly braces <code class="docutils literal notranslate"><span class="pre">{}</span></code> or keywords to group code together. In Python, you just add spaces or a tab at the beginning of a line to show that it belongs to a block. One indent is usually either one tab (<kbd>Tab</kbd>) or four spaces (<kbd>Space</kbd>).</p>
+<p>When you indent a line, you’re creating a “child” of the previous line. Usually, a “parent” line ends with a colon <code class="docutils literal notranslate"><span class="pre">:</span></code> (you’ll see more examples of when colons are used when we cover conditionals later in Chapter <a class="reference internal" href="#M2-conditional-blocks-header"><code class="xref myst docutils literal notranslate"><span class="pre">M2-conditional-blocks-header</span></code></a>). You can also have multiple blocks nested inside each other.</p>
+<p>To end a block, just remove the indentation (using <kbd>Shift</kbd> + <kbd>Tab</kbd>). It’s also a good habit to leave a blank line between big blocks of code to make everything easier to read.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">im_a_parent</span><span class="p">:</span>
+    <span class="n">im_a_child</span><span class="p">:</span>
+        <span class="n">im_a_grandchild</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am a grandchild!&quot;</span><span class="p">)</span>
+        <span class="n">im_a_second_grandchild</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am another grandchild!&quot;</span><span class="p">)</span>
+    <span class="n">im_a_second_child</span><span class="p">:</span>
+        <span class="n">im_a_third_grandchild</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am the third grandchild!&quot;</span><span class="p">)</span>
+
+<span class="n">im_a_new_parent</span><span class="p">:</span>
+    <span class="n">im_a_new_child</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am a new child!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>These syntax rules do not only help to keep your code neat, but also make it easier and quicker to write them, eliminating common mistakes (such as forgetting to put a semicolon at the end of a line).</p>
+<p>Below is an example of an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement using indentation. The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement checks whether the <code class="docutils literal notranslate"><span class="pre">age</span></code> variable is greater than 18. The line <code class="docutils literal notranslate"><span class="pre">print(&quot;The</span> <span class="pre">patient</span> <span class="pre">is</span> <span class="pre">an</span> <span class="pre">adult.&quot;)</span></code> is indented to show that it belongs to — or is a child of — the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement’s code block. This line is only executed if <code class="docutils literal notranslate"><span class="pre">age</span></code> is greater than 18.</p>
+<p>Do not worry if you are not yet familiar with the specific details in the code snippet — we will learn them throughout this course! The most important takeaway here is that <strong>consistent indentation is crucial</strong>. If the indentation in your code is inconsistent, Python will raise an <em>error</em>!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is an adult.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The patient is an adult.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="comments">
+<h3>2.2. Comments<a class="headerlink" href="#comments" title="Link to this heading">#</a></h3>
+<p><strong>Comments</strong> are lines or parts of lines that Python does not execute. They can be used to explain your code. It is very useful to have comments throughout your code. When other people read your code (or even when you read it yourself later), it is often difficult to understand what it is trying to achieve based on the executable lines alone. Having comments alongside the code, explaining its purpose, makes understanding it a lot easier.</p>
+<p>Comments are also useful when debugging, as they can be used to temporarily disable lines of code. Just remember to either uncomment or delete these lines later to keep your code neat!</p>
+<p>There are two types of comments: <strong>single-line comments</strong> and <strong>multi-line comments</strong>.</p>
+<ul class="simple">
+<li><p><strong>Single-line comments:</strong> Start the comment text with a hashtag <code class="docutils literal notranslate"><span class="pre">#</span></code>, for example:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a single-line comment.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span> <span class="c1"># This part is also a comment.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello, World!
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>Multi-line comments:</strong> Use triple quotes (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">'''</span></code>) around the comment text, for example:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This is a multi-line comment.</span>
+<span class="sd">It can span multiple lines.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="basic-print-statements">
+<h3>2.3. Basic Print Statements<a class="headerlink" href="#basic-print-statements" title="Link to this heading">#</a></h3>
+<p>While not technically part of the syntax rules, the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function is a very useful feature, which is why we introduce it early on. It is used to display output on the screen. In a jupyter notebook it will display everything in a print statement underneath the code cell. When running code in the terminal it will show all your print statements in the terminal. Print statements are very useful for keeping track of where you are in your code, preliminary results, and whether your code is working as expected. Note: in Jupyter notebook the last line of a cell will also always be displayed. But it is a good habit to always use a print statement and to not rely on the automatic output since your code structure can change easily.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Hello, from the first line in the cell&#39;</span> <span class="c1">#this string will not be printed</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, Python!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, User!&quot;</span><span class="p">)</span>
+<span class="s1">&#39;Hello, from the last line in the cell&#39;</span> <span class="c1"># this string will be printed since it is the last line in a jupyter notebook cell</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello, Python!
+Hello, User!
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello, from the last line in the cell&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="quick-practice">
+<h3>2.4. Quick Practice<a class="headerlink" href="#quick-practice" title="Link to this heading">#</a></h3>
+<p>We have reached the end of the first chapter! You should now be able to write your first snippet of Python code. Let’s start with the standard first programme: printing ‘Hello, World!’.</p>
+<p>To practise the syntax, you will create an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement (similar to the example before). The code should have a variable called <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> which is set to <code class="docutils literal notranslate"><span class="pre">True</span></code> (can be defined the same way as <code class="docutils literal notranslate"><span class="pre">age</span></code> in the above example - you will learn what variables are in the next chapter). It should have then an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement that calls the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function if <code class="docutils literal notranslate"><span class="pre">say_hello</span> <span class="pre">==</span> <span class="pre">True</span> </code>. The <code class="docutils literal notranslate"><span class="pre">print()</span></code> function should output <code class="docutils literal notranslate"><span class="pre">'Hello,</span> <span class="pre">World!'</span></code>. Try to also add both multi-line and single-line comments to explain your code.</p>
+<p>Try creating the code in the following empty code block. Remember that you can click the spaceship symbol at the top right hand side of the page and then ‘Live Code’ to be able to write and run your code directly in this book. If you get stuck or what to compare solutions, open the hidden solution code block underneath.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Example of a simple if statement with indentation.</span>
+<span class="sd">It will print &#39;Hello, World!&#39; if say_hello is True.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">say_hello</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># we want to say hello</span>
+
+<span class="k">if</span> <span class="n">say_hello</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><div class="tip admonition">
+<p class="admonition-title">🎯 Mini-Challenge: Test Your Code</p>
+<p>Try changing the value of <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>What happens when you run the code now?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Because the condition in the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is no longer <code class="docutils literal notranslate"><span class="pre">True</span></code>, the <code class="docutils literal notranslate"><span class="pre">print()</span></code> line will not be executed!</p>
+</div>
+</details></div>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanane-issa/python-crash-course",
+            ref: "hanane",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./module2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../module1/module1_exercice.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Exercice 1: check your Python version</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Module2_3_Variables.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">M2: Variables</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-foundations">1. Python Foundations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-syntax-basics">2. Python Syntax Basics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indentation-and-code-blocks">2.1. Indentation and Code Blocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">2.2. Comments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-print-statements">2.3. Basic Print Statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">2.4. Quick Practice</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By python crash course team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -23,6 +23,13 @@ kernelspec:
 
 # Python in VSCode
 
+<div class="alert alert-block alert-success">
+<b>Section Objectives:</b><br> 
+- Set up and customize VS Code.<br> 
+- Write your first Python code.<br> 
+</div>
+
+
 Virtual Studio Code (VSCode) is a lightweight, open-source code editor  developed by Microsoft for a wide range of programming languages, including Python. It contains a vast library of extensions which allows you to customize your work environment.
 
 As a comprehensive tool, it has support for version control (Git), debugging, and code editing. Moreover, it has a very active community and plenty of tutorials and documentation available online. 
@@ -40,8 +47,7 @@ Let's start by downloading the code editor [here](https://code.visualstudio.com/
 
 You will need to install the Python extension as well as the Jupyter extension.
 
-![vscode_extensions](../_static/images/vscode_guide1.png){: style="width: 80%; height: auto;"}
-
+<img src="../_static/images/vscode_guide1.png" alt="vscode_extensions" style="width: 1700px; height: 500px"/>
 
 ## 3. Create a New File
 
@@ -61,7 +67,7 @@ Let's start with a new jupyter notebook file to start writing your first Python 
 
 ## 4. Writing your first Python code
 
-![ipynb gif](../_static/images/vscode_firstcode.gif){: style="width: 80%; height: auto;"}
+<img src="../_static/images/vscode_firstcode.gif" alt="ipynb gif" style="width: 1200px; height: 300px"/>
 
 As mentioned before, jupyter notebooks allow you to interactively write code (including Python code) and combine it wiht text, images, and graphs.
 

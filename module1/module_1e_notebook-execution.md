@@ -12,20 +12,19 @@ kernelspec:
   name: python3
 ---
 
+<div class="alert alert-block alert-success">
+<b>Section Objectives:</b><br> 
+- Learn how to execute the code in each module.<br> 
+</div>
 
 
-
-# Executing the Notebook Exercices
+# How to Run the Notebook Exercices
 
 After each module, you can test your knowledge with a coding exercice in a jupyter notebook file.
-You can run the notebooks in three different ways, depending on your preference and setup:
+You can run the notebooks in three different ways, depending on your preference and setup. 
+Select the rocket sign on the top right side of the page to see your three options:
 
-1. Run in Google Colab
-- Easiest option — no setup needed.
 
-- Just click the “Open in Colab” button at the top of each exercice notebook page in this book.
-
-- It runs in your browser and saves changes to your Google Drive (if you sign in).
 
 ```{image} ../_static/images/launch_buttons.png
 :alt: jupyter launch button
@@ -34,24 +33,38 @@ You can run the notebooks in three different ways, depending on your preference 
 :align: center
 ```
 
-2. Run on Binder
+1. Live Code
+  - Easiest option — no setup needed.
+  - Just click the “Live Code” button at the top of each exercice notebook page in this book.
+  - This allows you to execute the code cells directly in the jupyter book.
 
-- Great if you want a full coding environment in your browser.
+2. Run in Google Colab
 
-- Just click the “Open in Binder” button at the top of each exercice notebook page in this book.
+  - Just click the “Open in Colab” button at the top of each exercice notebook page in this book.
 
-- Binder launches a temporary Jupyter environment.
+  - It runs in your browser and saves changes to your Google Drive (if you sign in).
 
-- No installation required, but it takes a minute to load.
+  - Make sure the required packages are imported.
 
 
-3. Download and Run Locally
+3. Run on Binder
 
-- Best for learning how to run Python on your own machine.
+  - Great if you want a full coding environment in your browser.
 
-- Download the notebook (.ipynb) from GitHub.
+  - Just click the “Open in Binder” button at the top of each exercice notebook page in this book.
 
-- Open it using your preferred code editor/IDE, e.g. VSCode.
+  - Binder launches a temporary Jupyter environment.
+
+  - No installation required, but it takes a minute to load.
+
+
+4. Download and Run Locally
+
+  - Best for learning how to run Python on your own machine.
+
+  - Download the notebook (.ipynb) from GitHub.
+
+  - Open it using your preferred code editor/IDE.
 
 
 

@@ -17,7 +17,13 @@ kernelspec:
 
 # Installing Python Packages
 
+<div class="alert alert-block alert-success">
+<b>Section Objectives:</b><br> 
+- Install and import Python packages.<br> 
+- Keep track of package versions.<br> 
+</div>
 
+Python has a wide range of packages (pre-installed or third-party) that offer extra features like functions, data, and code to your programs.
 When you install Python, it comes with a standard library containing pre-installed packages such as:
 - os (for interacting with the operating system)
 
@@ -29,7 +35,7 @@ When you install Python, it comes with a standard library containing pre-install
 
 However, you still need to import them since Python needs to know which tools you're planning to use.
 Think of it as your workshop—you have access to all the tools in the toolbox, but you still have to take the right tool out before you can use it.
-
+You can find a list of built-in Python modules [here](https://docs.python.org/3/py-modindex.html).
 
 ```{note}
 Why doesn't Python load modules by default?
@@ -57,6 +63,8 @@ Where `pandas` is a package for data manipulation and analysis that you'll learn
 You can also run this shell command in your jupyter notebook, by adding a ! or % before pip ( [see more on stackoverflow] (https://stackoverflow.com/questions/45784499/what-is-the-difference-between-and-in-jupyter-notebooks) ).
 
 ```{code-cell}
+:tags: [skip-execution]
+
 !pip install pandas
 #same as: %pip install pandas
 ```
@@ -64,12 +72,15 @@ You can also run this shell command in your jupyter notebook, by adding a ! or %
 
 We've mentioned before that, in some cases, you might be working with projects that rely on specific versions of a package. You can specify the package version you want to install:
 ```{code-cell}
-pip install pandas==2.2.3
+:tags: [skip-execution]
+
+!pip install pandas==2.2.3
 #replace 2.2.3 with the version you want.
 ```
 A quick way of checking and verifying your package version is via:
 
 ```{code-cell}
+:tags: [skip-execution]
 
 #import your package
 import pandas 
@@ -84,6 +95,8 @@ print(pandas.__version__)
 You can also install Python packages directly from remote URLs or local files like .tar.gz and .whl using pip.
 
 ```{code-cell}
+:tags: [skip-execution]
+
 ## from a URL (fake):
 #!pip install https://example.com/package.tar.gz
 
@@ -91,7 +104,21 @@ You can also install Python packages directly from remote URLs or local files li
 #!pip install /path/to/package.tar.gz
 ```
 
-## Creating a requirements file
+## `pip` vs `conda` for Package Installation
+
+
+We've seen in the Anaconda section that `conda` can also be used to install and manage packages.
+So what's the difference between `pip` and `conda`?
+
+Although they are very similar, these tools are built for different purposes.
+
+The first key difference to remember is that Pip installs Python packages only, whereas conda can install packages which can contain software written in any language.
+
+Conda also has built-in support for creating isolated environments that can contain different versions of Python and packages, while Pip doesn't and has to depend on other tools like `virtualenv` or `venv`.
+
+You can read more about the differences between conda and pip in this [Anaconda article](https://www.anaconda.com/blog/understanding-conda-and-pip).
+
+## Creating a requirements file (pip)
 
 At some point, you will have a list of packages you often install and import. A nice way to streamline this process, especially if you want to share your work with other programmers, is creating a requirements file.
 
@@ -110,6 +137,7 @@ numpy==2.2.4
 If you've already installed the packages in your current environment, you can automatically generate the requirements.txt file with this command:
 
 ```{code-cell}
+:tags: [skip-execution]
 !pip freeze > requirements.txt
 ```
 
@@ -117,11 +145,63 @@ This command lists all the installed packages and their versions in the current 
 
 
 ```{code-cell}
+:tags: [skip-execution]
 !pip install -r requirements.txt
 ```
 
 This will read the requirements.txt file and install the packages listed in it, ensuring that the environment is set up with the correct dependencies.
 (Note:this assumes the text file is in the same working directory as your notebook.)
+
+## Creating an environment file (conda)
+
+If you are using conda, you can create a `environment.yml` file.
+
+### Manually
+
+A simple environment YAML file has the `.yml` extension and follows this format:
+
+```{code-cell}
+name: myenv
+dependencies:
+  - numpy
+  - pandas
+```
+
+You can read more about it [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually).
+
+### Automatically
+
+In your terminal, you can create the `environment.yml` file using the following steps:
+
+1) Create your file:
+```bash
+conda env create -f environment.yml
+```
+
+2) Activate your new environment:
+```bash
+conda activate myenv
+```
+
+3) Verify that your installation was successful:
+```bash
+conda env list
+```
+
+4) Update your enrivonment:
+If one of your core dependencies updates, you need an additional package, or you want to replace a package, you can update the contents of your `environment.yml` file accordingly then run this command:
+
+```bash
+conda env update --file environment.yml  --prune
+```
+
+```{note}
+The `--prune` option tells conda to remove any dependencies you no longer require in your environment.
+```
+
+You can learn more about commands to manage your conda environments [here] (https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
+
+# Importing Python Packages
 
 ## Importing packages in the next modules
 
@@ -132,6 +212,7 @@ The basic syntax for creating an import alias is:
 
 
 ```{code-cell}
+:tags: [skip-execution]
 import <module_name> as <alias_name>
 ```
 
@@ -153,4 +234,51 @@ Why use aliases for imports?
 
 ```
 
+## Importing specific items from packages
 
+Now you have your workbench ready, and you know how to get your toolbox!
+To make things more tidy and easier to work with, it might be more useful to specify what tools you need.
+
+Think of it like in a biology lab. When you’re preparing equipment for a DNA extraction, you don’t bring out the entire lab cabinet. You just take the pipette, buffer, and centrifuge—the tools you need.
+In the same way, in Python, importing only what you need keeps your workspace clean and avoids confusion.
+
+### Importing a single item
+
+The syntax we're looking for is `from <module_name> import <item_name>`.
+We'll use the `statistics` built-in module as an example.
+
+Let's say you want to calculate the Body Mass Index (BMI) of a patient. You'll need the `pow()` function the `math` module to raise the height value to the power of 2.
+
+```{code-cell}
+
+from math import pow  
+
+weight_kg = 70
+height_m = 1.75
+
+bmi = weight_kg / pow(height_m, 2)
+
+```
+You can also use an alias for the imported item, e.g.:  `from math import pow as power`.
+
+### Importing several items at once
+
+Some modules are especially useful for your analysis, and while you may not need the entire module, you might still want to import several specific functions from it.
+
+To take the previous example a step further, you want to make sure your BMI value is rounded up to the nearest whole integer using the  `ceil` function. 
+
+```{code-cell}
+from math import pow, ceil  
+
+weight_kg = 70
+height_m = 1.75
+
+bmi = weight_kg / pow(height_m, 2)
+bmi_ceil = ceil(bmi)
+
+```
+
+```{note}
+While not recommended, another way to import a whole package is through the syntax:
+`from <module_name> import * `
+```

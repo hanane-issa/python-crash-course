@@ -60,8 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'module1/module_1f_packages';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction to NumPy" href="../module3/module3.html" />
-    <link rel="prev" title="Executing the Notebook Exercices" href="module_1e_notebook-execution.html" />
+    <link rel="next" title="Exercice 1: check your Python version" href="module1_exercice.html" />
+    <link rel="prev" title="How to Run the Notebook Exercices" href="module_1e_notebook-execution.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,11 +184,45 @@
 <li class="toctree-l2"><a class="reference internal" href="module_1b_terminal.html">Python in Terminal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_1c_vscode.html">Python in VSCode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_1d_anaconda.html">Python in Anaconda Navigator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_1e_notebook-execution.html">Executing the Notebook Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Installing Python Packages</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="module1_exercice.html">Exercice 1: check your Python version</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 2: introduction to Numpy</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module2/Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_3_Variables.html">M2: Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_4_Operations.html">M2: Arimetic and Logical Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_5_Strings.html">M2: Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_6_DataStructures.html">M2: Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_7_ConditionalBlocks.html">M2: Conditional Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_8_ErrorHandling.html">M2: Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_PracticeSheet1.html">M2: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module4/module4_outline.html">Module 4: Introduction to Pandas</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module5/intro.html">Module 5: Introduction to Data Visualization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module5/data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/module5_examples.html">importing packages</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module6/module_6_functions.html">Module 6: Introduction to Functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6a_basics.html">Module 6: Introduction to Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6b_return-vs-print.html">Module 6: Return Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6c_local-vs-global.html">Module 6: Local vs Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6d_docstrings.html">Module 6: Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6e_params-args.html">Module 6: Parameters and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6f_extras.html">Module 6: Extra (OPTIONAL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -468,16 +502,34 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Installing Python Packages</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-packages-with-pip">Installing packages with pip</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-specific-versions-of-packages">Installing Specific Versions of Packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-packages-from-a-tar-gz-whl-or-other-file-formats">Installing Packages from a .tar.gz, .whl, or other file formats</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-requirements-file">Creating a requirements file</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pip-vs-conda-for-package-installation"><code class="docutils literal notranslate"><span class="pre">pip</span></code> vs <code class="docutils literal notranslate"><span class="pre">conda</span></code> for Package Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-requirements-file-pip">Creating a requirements file (pip)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manually">Manually</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automatically">Automatically</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-packages-in-the-next-modules">Importing packages in the next modules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-environment-file-conda">Creating an environment file (conda)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Manually</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Automatically</a></li>
 </ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-python-packages">Importing Python Packages</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-packages-in-the-next-modules">Importing packages in the next modules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-specific-items-from-packages">Importing specific items from packages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-a-single-item">Importing a single item</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-several-items-at-once">Importing several items at once</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -490,7 +542,13 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="installing-python-packages">
 <h1>Installing Python Packages<a class="headerlink" href="#installing-python-packages" title="Link to this heading">#</a></h1>
-<p>When you install Python, it comes with a standard library containing pre-installed packages such as:</p>
+<div class="alert alert-block alert-success">
+<b>Section Objectives:</b><br> 
+- Install and import Python packages.<br> 
+- Keep track of package versions.<br> 
+</div>
+<p>Python has a wide range of packages (pre-installed or third-party) that offer extra features like functions, data, and code to your programs.
+When you install Python, it comes with a standard library containing pre-installed packages such as:</p>
 <ul class="simple">
 <li><p>os (for interacting with the operating system)</p></li>
 <li><p>math (for mathematical operations)</p></li>
@@ -498,7 +556,8 @@ document.write(`
 <li><p>datetime (for date and time manipulation)</p></li>
 </ul>
 <p>However, you still need to import them since Python needs to know which tools you’re planning to use.
-Think of it as your workshop—you have access to all the tools in the toolbox, but you still have to take the right tool out before you can use it.</p>
+Think of it as your workshop—you have access to all the tools in the toolbox, but you still have to take the right tool out before you can use it.
+You can find a list of built-in Python modules <a class="reference external" href="https://docs.python.org/3/py-modindex.html">here</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Why doesn’t Python load modules by default?</p>
@@ -517,24 +576,10 @@ Think of it as your workshop—you have access to all the tools in the toolbox, 
 </div>
 <p>Where <code class="docutils literal notranslate"><span class="pre">pandas</span></code> is a package for data manipulation and analysis that you’ll learn about in module 4.</p>
 <p>You can also run this shell command in your jupyter notebook, by adding a ! or % before pip ( [see more on stackoverflow] (<a class="reference external" href="https://stackoverflow.com/questions/45784499/what-is-the-difference-between-and-in-jupyter-notebooks">https://stackoverflow.com/questions/45784499/what-is-the-difference-between-and-in-jupyter-notebooks</a>) ).</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pandas
 <span class="c1">#same as: %pip install pandas</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pandas in c:\users\hanan\appdata\local\programs\python\python313\lib\site-packages (2.2.3)
-Requirement already satisfied: numpy&gt;=1.26.0 in c:\users\hanan\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2.2.5)
-Requirement already satisfied: python-dateutil&gt;=2.8.2 in c:\users\hanan\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2.9.0.post0)
-Requirement already satisfied: pytz&gt;=2020.1 in c:\users\hanan\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2025.2)
-Requirement already satisfied: tzdata&gt;=2022.7 in c:\users\hanan\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2025.2)
-Requirement already satisfied: six&gt;=1.5 in c:\users\hanan\appdata\local\programs\python\python313\lib\site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.17.0)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 25.0.1 -&gt; 25.1.1
-[notice] To update, run: python.exe -m pip install --upgrade pip
 </pre></div>
 </div>
 </div>
@@ -543,24 +588,16 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\hanan\appdata\local\progr
 <section id="installing-specific-versions-of-packages">
 <h2>Installing Specific Versions of Packages<a class="headerlink" href="#installing-specific-versions-of-packages" title="Link to this heading">#</a></h2>
 <p>We’ve mentioned before that, in some cases, you might be working with projects that rely on specific versions of a package. You can specify the package version you want to install:</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">2.2.3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">pandas</span><span class="o">==</span><span class="m">2</span>.2.3
 <span class="c1">#replace 2.2.3 with the version you want.</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-    <span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">2.2.3</span>
-        <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
 </div>
 </div>
 <p>A quick way of checking and verifying your package version is via:</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import your package</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span> 
@@ -575,7 +612,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\hanan\appdata\local\progr
 <section id="installing-packages-from-a-tar-gz-whl-or-other-file-formats">
 <h2>Installing Packages from a .tar.gz, .whl, or other file formats<a class="headerlink" href="#installing-packages-from-a-tar-gz-whl-or-other-file-formats" title="Link to this heading">#</a></h2>
 <p>You can also install Python packages directly from remote URLs or local files like .tar.gz and .whl using pip.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## from a URL (fake):</span>
 <span class="c1">#!pip install https://example.com/package.tar.gz</span>
@@ -587,8 +624,17 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\hanan\appdata\local\progr
 </div>
 </div>
 </section>
-<section id="creating-a-requirements-file">
-<h2>Creating a requirements file<a class="headerlink" href="#creating-a-requirements-file" title="Link to this heading">#</a></h2>
+<section id="pip-vs-conda-for-package-installation">
+<h2><code class="docutils literal notranslate"><span class="pre">pip</span></code> vs <code class="docutils literal notranslate"><span class="pre">conda</span></code> for Package Installation<a class="headerlink" href="#pip-vs-conda-for-package-installation" title="Link to this heading">#</a></h2>
+<p>We’ve seen in the Anaconda section that <code class="docutils literal notranslate"><span class="pre">conda</span></code> can also be used to install and manage packages.
+So what’s the difference between <code class="docutils literal notranslate"><span class="pre">pip</span></code> and <code class="docutils literal notranslate"><span class="pre">conda</span></code>?</p>
+<p>Although they are very similar, these tools are built for different purposes.</p>
+<p>The first key difference to remember is that Pip installs Python packages only, whereas conda can install packages which can contain software written in any language.</p>
+<p>Conda also has built-in support for creating isolated environments that can contain different versions of Python and packages, while Pip doesn’t and has to depend on other tools like <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> or <code class="docutils literal notranslate"><span class="pre">venv</span></code>.</p>
+<p>You can read more about the differences between conda and pip in this <a class="reference external" href="https://www.anaconda.com/blog/understanding-conda-and-pip">Anaconda article</a>.</p>
+</section>
+<section id="creating-a-requirements-file-pip">
+<h2>Creating a requirements file (pip)<a class="headerlink" href="#creating-a-requirements-file-pip" title="Link to this heading">#</a></h2>
 <p>At some point, you will have a list of packages you often install and import. A nice way to streamline this process, especially if you want to share your work with other programmers, is creating a requirements file.</p>
 <p>A requirements.txt file is a simple text file that lists all of the packages your project depends on. It’s common to include the versions of each package you’ve used, ensuring that others who work on the project (or even you, in the future) can install the exact same dependencies.</p>
 <section id="manually">
@@ -600,7 +646,7 @@ numpy==2.2.4</p>
 <section id="automatically">
 <h3>Automatically<a class="headerlink" href="#automatically" title="Link to this heading">#</a></h3>
 <p>If you’ve already installed the packages in your current environment, you can automatically generate the requirements.txt file with this command:</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
 </pre></div>
@@ -608,7 +654,7 @@ numpy==2.2.4</p>
 </div>
 </div>
 <p>This command lists all the installed packages and their versions in the current Python environment and saves them in requirements.txt.</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </pre></div>
@@ -619,12 +665,76 @@ numpy==2.2.4</p>
 (Note:this assumes the text file is in the same working directory as your notebook.)</p>
 </section>
 </section>
+<section id="creating-an-environment-file-conda">
+<h2>Creating an environment file (conda)<a class="headerlink" href="#creating-an-environment-file-conda" title="Link to this heading">#</a></h2>
+<p>If you are using conda, you can create a <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file.</p>
+<section id="id1">
+<h3>Manually<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>A simple environment YAML file has the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> extension and follows this format:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">myenv</span>
+<span class="n">dependencies</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">numpy</span>
+  <span class="o">-</span> <span class="n">pandas</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+    <span class="n">dependencies</span><span class="p">:</span>
+                 <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can read more about it <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually">here</a>.</p>
+</section>
+<section id="id2">
+<h3>Automatically<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>In your terminal, you can create the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file using the following steps:</p>
+<ol class="arabic simple">
+<li><p>Create your file:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Activate your new environment:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>myenv
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Verify that your installation was successful:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>list
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Update your enrivonment:
+If one of your core dependencies updates, you need an additional package, or you want to replace a package, you can update the contents of your <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file accordingly then run this command:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>update<span class="w"> </span>--file<span class="w"> </span>environment.yml<span class="w">  </span>--prune
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">--prune</span></code> option tells conda to remove any dependencies you no longer require in your environment.</p>
+</div>
+<p>You can learn more about commands to manage your conda environments [here] (<a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html</a>).</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="importing-python-packages">
+<h1>Importing Python Packages<a class="headerlink" href="#importing-python-packages" title="Link to this heading">#</a></h1>
 <section id="importing-packages-in-the-next-modules">
 <h2>Importing packages in the next modules<a class="headerlink" href="#importing-packages-in-the-next-modules" title="Link to this heading">#</a></h2>
 <p>In Python, you can use the <em>as</em> keyword to give a module or package an alias, which means you can refer to it by a shorter or more convenient name. This is especially helpful when the package name is long, or when you want to use a commonly accepted alias.</p>
 <p>Syntax for Import Aliases
 The basic syntax for creating an import alias is:</p>
-<div class="cell docutils container">
+<div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="o">&lt;</span><span class="n">module_name</span><span class="o">&gt;</span> <span class="k">as</span> <span class="o">&lt;</span><span class="n">alias_name</span><span class="o">&gt;</span>
 </pre></div>
@@ -650,6 +760,55 @@ The basic syntax for creating an import alias is:</p>
 <li><p>Avoiding name conflicts</p></li>
 </ul>
 </div>
+</section>
+<section id="importing-specific-items-from-packages">
+<h2>Importing specific items from packages<a class="headerlink" href="#importing-specific-items-from-packages" title="Link to this heading">#</a></h2>
+<p>Now you have your workbench ready, and you know how to get your toolbox!
+To make things more tidy and easier to work with, it might be more useful to specify what tools you need.</p>
+<p>Think of it like in a biology lab. When you’re preparing equipment for a DNA extraction, you don’t bring out the entire lab cabinet. You just take the pipette, buffer, and centrifuge—the tools you need.
+In the same way, in Python, importing only what you need keeps your workspace clean and avoids confusion.</p>
+<section id="importing-a-single-item">
+<h3>Importing a single item<a class="headerlink" href="#importing-a-single-item" title="Link to this heading">#</a></h3>
+<p>The syntax we’re looking for is <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">&lt;module_name&gt;</span> <span class="pre">import</span> <span class="pre">&lt;item_name&gt;</span></code>.
+We’ll use the <code class="docutils literal notranslate"><span class="pre">statistics</span></code> built-in module as an example.</p>
+<p>Let’s say you want to calculate the Body Mass Index (BMI) of a patient. You’ll need the <code class="docutils literal notranslate"><span class="pre">pow()</span></code> function the <code class="docutils literal notranslate"><span class="pre">math</span></code> module to raise the height value to the power of 2.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="nb">pow</span>  
+
+<span class="n">weight_kg</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">height_m</span> <span class="o">=</span> <span class="mf">1.75</span>
+
+<span class="n">bmi</span> <span class="o">=</span> <span class="n">weight_kg</span> <span class="o">/</span> <span class="nb">pow</span><span class="p">(</span><span class="n">height_m</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also use an alias for the imported item, e.g.:  <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">math</span> <span class="pre">import</span> <span class="pre">pow</span> <span class="pre">as</span> <span class="pre">power</span></code>.</p>
+</section>
+<section id="importing-several-items-at-once">
+<h3>Importing several items at once<a class="headerlink" href="#importing-several-items-at-once" title="Link to this heading">#</a></h3>
+<p>Some modules are especially useful for your analysis, and while you may not need the entire module, you might still want to import several specific functions from it.</p>
+<p>To take the previous example a step further, you want to make sure your BMI value is rounded up to the nearest whole integer using the  <code class="docutils literal notranslate"><span class="pre">ceil</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="nb">pow</span><span class="p">,</span> <span class="n">ceil</span>  
+
+<span class="n">weight_kg</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">height_m</span> <span class="o">=</span> <span class="mf">1.75</span>
+
+<span class="n">bmi</span> <span class="o">=</span> <span class="n">weight_kg</span> <span class="o">/</span> <span class="nb">pow</span><span class="p">(</span><span class="n">height_m</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">bmi_ceil</span> <span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="n">bmi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While not recommended, another way to import a whole package is through the syntax:
+<code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">&lt;module_name&gt;</span> <span class="pre">import</span> <span class="pre">*</span> </code></p>
+</div>
+</section>
 </section>
 </section>
 
@@ -689,15 +848,15 @@ The basic syntax for creating an import alias is:</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Executing the Notebook Exercices</p>
+        <p class="prev-next-title">How to Run the Notebook Exercices</p>
       </div>
     </a>
     <a class="right-next"
-       href="../module3/module3.html"
+       href="module1_exercice.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction to NumPy</p>
+        <p class="prev-next-title">Exercice 1: check your Python version</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -717,16 +876,34 @@ The basic syntax for creating an import alias is:</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Installing Python Packages</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-packages-with-pip">Installing packages with pip</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-specific-versions-of-packages">Installing Specific Versions of Packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-packages-from-a-tar-gz-whl-or-other-file-formats">Installing Packages from a .tar.gz, .whl, or other file formats</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-requirements-file">Creating a requirements file</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pip-vs-conda-for-package-installation"><code class="docutils literal notranslate"><span class="pre">pip</span></code> vs <code class="docutils literal notranslate"><span class="pre">conda</span></code> for Package Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-requirements-file-pip">Creating a requirements file (pip)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manually">Manually</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automatically">Automatically</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-packages-in-the-next-modules">Importing packages in the next modules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-environment-file-conda">Creating an environment file (conda)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Manually</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Automatically</a></li>
 </ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-python-packages">Importing Python Packages</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-packages-in-the-next-modules">Importing packages in the next modules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-specific-items-from-packages">Importing specific items from packages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-a-single-item">Importing a single item</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-several-items-at-once">Importing several items at once</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>

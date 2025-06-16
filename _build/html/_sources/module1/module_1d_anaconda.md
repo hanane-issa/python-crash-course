@@ -23,6 +23,12 @@ kernelspec:
 
 # Python in Anaconda Navigator
 
+<div class="alert alert-block alert-success">
+<b>Section Objectives:</b><br> 
+- Set up and explore Anaconda Navigator.<br> 
+- Create your first working environment.<br> 
+</div>
+
 Anaconda Navigator is a graphical user interface (GUI) designed to make managing Python projects and environments easier.
 
 It simplifies package and environment management. Many scientific packages depend on specific versions of other packages, and Navigator helps manage these dependencies across multiple environments. 

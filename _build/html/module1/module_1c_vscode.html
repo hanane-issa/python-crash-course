@@ -184,11 +184,45 @@
 <li class="toctree-l2"><a class="reference internal" href="module_1b_terminal.html">Python in Terminal</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Python in VSCode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_1d_anaconda.html">Python in Anaconda Navigator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_1e_notebook-execution.html">Executing the Notebook Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_1f_packages.html">Installing Python Packages</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="module1_exercice.html">Exercice 1: check your Python version</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 2: introduction to Numpy</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module2/Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_3_Variables.html">M2: Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_4_Operations.html">M2: Arimetic and Logical Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_5_Strings.html">M2: Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_6_DataStructures.html">M2: Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_7_ConditionalBlocks.html">M2: Conditional Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_8_ErrorHandling.html">M2: Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_PracticeSheet1.html">M2: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module4/module4_outline.html">Module 4: Introduction to Pandas</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module5/intro.html">Module 5: Introduction to Data Visualization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module5/data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/module5_examples.html">importing packages</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module6/module_6_functions.html">Module 6: Introduction to Functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6a_basics.html">Module 6: Introduction to Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6b_return-vs-print.html">Module 6: Return Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6c_local-vs-global.html">Module 6: Local vs Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6d_docstrings.html">Module 6: Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6e_params-args.html">Module 6: Parameters and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6f_extras.html">Module 6: Extra (OPTIONAL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -487,6 +521,11 @@ document.write(`
 </a>
 <section class="tex2jax_ignore mathjax_ignore" id="python-in-vscode">
 <h1>Python in VSCode<a class="headerlink" href="#python-in-vscode" title="Link to this heading">#</a></h1>
+<div class="alert alert-block alert-success">
+<b>Section Objectives:</b><br> 
+- Set up and customize VS Code.<br> 
+- Write your first Python code.<br> 
+</div>
 <p>Virtual Studio Code (VSCode) is a lightweight, open-source code editor  developed by Microsoft for a wide range of programming languages, including Python. It contains a vast library of extensions which allows you to customize your work environment.</p>
 <p>As a comprehensive tool, it has support for version control (Git), debugging, and code editing. Moreover, it has a very active community and plenty of tutorials and documentation available online.</p>
 <p>VSCode works across all major platforms: Windows, macOS, and Linux.</p>
@@ -497,7 +536,7 @@ document.write(`
 <section id="install-necessary-plugins">
 <h2>2. Install Necessary Plugins<a class="headerlink" href="#install-necessary-plugins" title="Link to this heading">#</a></h2>
 <p>You will need to install the Python extension as well as the Jupyter extension.</p>
-<p><img alt="vscode_extensions" src="../_images/vscode_guide1.png" />{: style=”width: 80%; height: auto;”}</p>
+<img src="../_static/images/vscode_guide1.png" alt="vscode_extensions" style="width: 1700px; height: 500px"/>
 </section>
 <section id="create-a-new-file">
 <h2>3. Create a New File<a class="headerlink" href="#create-a-new-file" title="Link to this heading">#</a></h2>
@@ -510,7 +549,7 @@ File &gt; New File</p>
 </section>
 <section id="writing-your-first-python-code">
 <h2>4. Writing your first Python code<a class="headerlink" href="#writing-your-first-python-code" title="Link to this heading">#</a></h2>
-<p><img alt="ipynb gif" src="../_images/vscode_firstcode.gif" />{: style=”width: 80%; height: auto;”}</p>
+<img src="../_static/images/vscode_firstcode.gif" alt="ipynb gif" style="width: 1200px; height: 300px"/>
 <p>As mentioned before, jupyter notebooks allow you to interactively write code (including Python code) and combine it wiht text, images, and graphs.</p>
 <p>You can add text and headers to your notebook by selecting Markdown as the programming language for your cell, or selecting “Add Markdown”. You can find more information on basic Markdown syntax <a class="reference external" href="https://www.markdownguide.org/basic-syntax/">here</a>.</p>
 <p>To begin writing Python code in your notebook, simply change the cell type to Code, or insert a new code cell with Python as the language.</p>

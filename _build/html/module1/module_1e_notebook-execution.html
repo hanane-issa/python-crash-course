@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Executing the Notebook Exercices &#8212; Python Crash Course</title>
+    <title>How to Run the Notebook Exercices &#8212; Python Crash Course</title>
   
   
   
@@ -60,6 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'module1/module_1e_notebook-execution';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Installing Python Packages" href="module_1f_packages.html" />
     <link rel="prev" title="Python in Anaconda Navigator" href="module_1d_anaconda.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -183,10 +184,45 @@
 <li class="toctree-l2"><a class="reference internal" href="module_1b_terminal.html">Python in Terminal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_1c_vscode.html">Python in VSCode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_1d_anaconda.html">Python in Anaconda Navigator</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Executing the Notebook Exercices</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">How to Run the Notebook Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_1f_packages.html">Installing Python Packages</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="module1_exercice.html">Exercice 1: check your Python version</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 2: introduction to Numpy</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module2/Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_3_Variables.html">M2: Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_4_Operations.html">M2: Arimetic and Logical Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_5_Strings.html">M2: Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_6_DataStructures.html">M2: Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_7_ConditionalBlocks.html">M2: Conditional Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_8_ErrorHandling.html">M2: Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_PracticeSheet1.html">M2: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module4/module4_outline.html">Module 4: Introduction to Pandas</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module5/intro.html">Module 5: Introduction to Data Visualization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module5/data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/module5_examples.html">importing packages</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module6/module_6_functions.html">Module 6: Introduction to Functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6a_basics.html">Module 6: Introduction to Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6b_return-vs-print.html">Module 6: Return Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6c_local-vs-global.html">Module 6: Local vs Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6d_docstrings.html">Module 6: Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6e_params-args.html">Module 6: Parameters and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6f_extras.html">Module 6: Extra (OPTIONAL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -454,7 +490,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Executing the Notebook Exercices</h1>
+    <h1>How to Run the Notebook Exercices</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -468,21 +504,32 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="executing-the-notebook-exercices">
-<h1>Executing the Notebook Exercices<a class="headerlink" href="#executing-the-notebook-exercices" title="Link to this heading">#</a></h1>
+  <div class="alert alert-block alert-success">
+<b>Section Objectives:</b><br> 
+- Learn how to execute the code in each module.<br> 
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="how-to-run-the-notebook-exercices">
+<h1>How to Run the Notebook Exercices<a class="headerlink" href="#how-to-run-the-notebook-exercices" title="Link to this heading">#</a></h1>
 <p>After each module, you can test your knowledge with a coding exercice in a jupyter notebook file.
 You can run the notebooks in three different ways, depending on your preference and setup:</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/launch_buttons.png"><img alt="jupyter launch button" class="bg-primary mb-1 align-center" src="../_images/launch_buttons.png" style="width: 500px;" />
+</a>
 <ol class="arabic simple">
-<li><p>Run in Google Colab</p></li>
+<li><p>Live Code</p></li>
 </ol>
 <ul class="simple">
 <li><p>Easiest option — no setup needed.</p></li>
+<li><p>Just click the “Live Code” button at the top of each exercice notebook page in this book.</p></li>
+<li><p>This allows you to execute the code cells in the jupyter book.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Run in Google Colab</p></li>
+</ol>
+<ul class="simple">
 <li><p>Just click the “Open in Colab” button at the top of each exercice notebook page in this book.</p></li>
 <li><p>It runs in your browser and saves changes to your Google Drive (if you sign in).</p></li>
 </ul>
-<a class="bg-primary mb-1 reference internal image-reference" href="../_images/launch_buttons.png"><img alt="jupyter launch button" class="bg-primary mb-1 align-center" src="../_images/launch_buttons.png" style="width: 500px;" />
-</a>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple" start="3">
 <li><p>Run on Binder</p></li>
 </ol>
 <ul class="simple">
@@ -491,7 +538,7 @@ You can run the notebooks in three different ways, depending on your preference 
 <li><p>Binder launches a temporary Jupyter environment.</p></li>
 <li><p>No installation required, but it takes a minute to load.</p></li>
 </ul>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="4">
 <li><p>Download and Run Locally</p></li>
 </ol>
 <ul class="simple">
@@ -539,6 +586,15 @@ You can run the notebooks in three different ways, depending on your preference 
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Python in Anaconda Navigator</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="module_1f_packages.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Installing Python Packages</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

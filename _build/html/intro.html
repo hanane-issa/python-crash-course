@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -185,11 +187,45 @@
 <li class="toctree-l2"><a class="reference internal" href="module1/module_1b_terminal.html">Python in Terminal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module1/module_1c_vscode.html">Python in VSCode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module1/module_1d_anaconda.html">Python in Anaconda Navigator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module1/module_1e_notebook-execution.html">Executing the Notebook Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module1/module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module1/module_1f_packages.html">Installing Python Packages</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="module1/module1_exercice.html">Exercice 1: check your Python version</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="module3/module3.html">Module 2: introduction to Numpy</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="module2/Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="module2/Module2_3_Variables.html">M2: Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module2/Module2_4_Operations.html">M2: Arimetic and Logical Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module2/Module2_5_Strings.html">M2: Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module2/Module2_6_DataStructures.html">M2: Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module2/Module2_7_ConditionalBlocks.html">M2: Conditional Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module2/Module2_8_ErrorHandling.html">M2: Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module2/Module2_PracticeSheet1.html">M2: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="module3/module3.html">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module4/module4_outline.html">Module 4: Introduction to Pandas</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="module5/intro.html">Module 5: Introduction to Data Visualization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="module5/data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/module5_examples.html">importing packages</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="module6/module_6_functions.html">Module 6: Introduction to Functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="module6/module_6a_basics.html">Module 6: Introduction to Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module6/module_6b_return-vs-print.html">Module 6: Return Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module6/module_6c_local-vs-global.html">Module 6: Local vs Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module6/module_6d_docstrings.html">Module 6: Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module6/module_6e_params-args.html">Module 6: Parameters and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module6/module_6f_extras.html">Module 6: Extra (OPTIONAL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module6/module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -394,7 +430,21 @@ document.write(`
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="module1/module_1a_settingup.html">Module 1: Setting Up</a></li>
-<li class="toctree-l1"><a class="reference internal" href="module3/module3.html">Module 2: introduction to Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module2/Module2_1%2C2_Intro.html">Module 2: Python Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module3/module3.html">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module4/module4_outline.html">Module 4: Introduction to Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module5/intro.html">Module 5: Introduction to Data Visualization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="module5/data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/module5_examples.html">importing packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/module5_examples.html#import-the-dataset">import the dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/module5_examples.html#a-little-bit-of-data-preprocessing">A little bit of data preprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/module5_examples.html#matplotlib-and-histogram">Matplotlib and histogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/module5_examples.html#seaborn-and-distribution-visualization">Seaborn and distribution visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/module5_examples.html#visualizing-correlation">Visualizing correlation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/module5_examples.html#linear-regression-and-line-plot">Linear regression and line plot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="module6/module_6_functions.html">Module 6: Introduction to Functions</a></li>
 </ul>
 </div>
 </section>

@@ -18,9 +18,13 @@ Objectives:
 
 By the end of this module, you will be able to:
 
-- 
--
--
+- Understand the purpose and structure of functions in Python, including how to define and call them.
+
+- Use function parameters and arguments effectively.
+
+- Differentiate between local and global variables.
+
+- Recognize and apply advanced function concepts, such as recursion, anonymous functions (lambda), and built-in functional tools like map(), filter(), and zip().
 
 ## outline
 - defining a function

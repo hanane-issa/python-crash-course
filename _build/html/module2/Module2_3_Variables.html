@@ -1,0 +1,800 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>M2: Variables &#8212; Python Crash Course</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'module2/Module2_3_Variables';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="M2: Arimetic and Logical Operations" href="Module2_4_Operations.html" />
+    <link rel="prev" title="M2: Introduction" href="Module2_1%2C2_Intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Python Crash Course - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Python Crash Course - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to this mini Python crash course
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module1/module_1a_settingup.html">Module 1: Setting Up</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1b_terminal.html">Python in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1c_vscode.html">Python in VSCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1d_anaconda.html">Python in Anaconda Navigator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1f_packages.html">Installing Python Packages</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Exercice 1: check your Python version</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">M2: Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_4_Operations.html">M2: Arimetic and Logical Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_5_Strings.html">M2: Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_6_DataStructures.html">M2: Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_7_ConditionalBlocks.html">M2: Conditional Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_8_ErrorHandling.html">M2: Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_PracticeSheet1.html">M2: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module4/module4_outline.html">Module 4: Introduction to Pandas</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module5/intro.html">Module 5: Introduction to Data Visualization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module5/data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/module5_examples.html">importing packages</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module6/module_6_functions.html">Module 6: Introduction to Functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6a_basics.html">Module 6: Introduction to Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6b_return-vs-print.html">Module 6: Return Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6c_local-vs-global.html">Module 6: Local vs Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6d_docstrings.html">Module 6: Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6e_params-args.html">Module 6: Parameters and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6f_extras.html">Module 6: Extra (OPTIONAL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module2/Module2_3_Variables.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/hanane/module2/Module2_3_Variables.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanane-issa/python-crash-course" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanane-issa/python-crash-course/issues/new?title=Issue%20on%20page%20%2Fmodule2/Module2_3_Variables.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/module2/Module2_3_Variables.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>M2: Variables</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">3. Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#declaration-and-usage">3.1. Declaration and Usage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-names">3.2. Variable names</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">3.3. Data Types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">3.4. Quick Practice</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="m2-variables">
+<h1>M2: Variables<a class="headerlink" href="#m2-variables" title="Link to this heading">#</a></h1>
+<section id="variables">
+<h2>3. Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h2>
+<p>A <strong>variable</strong> is a container for storing values. Each variable has a name, a value, and a data type.</p>
+<section id="declaration-and-usage">
+<h3>3.1. Declaration and Usage<a class="headerlink" href="#declaration-and-usage" title="Link to this heading">#</a></h3>
+<p>In python creating (declaring) a variable is very simply: you simply state its name, e.g. <code class="docutils literal notranslate"><span class="pre">age</span></code>, and assign it the value you want, e.g. <code class="docutils literal notranslate"><span class="pre">25</span></code>, by using an equal sign <code class="docutils literal notranslate"><span class="pre">=</span></code> : <code class="docutils literal notranslate"><span class="pre">age</span> <span class="pre">=</span> <span class="pre">25</span></code>. You do not need to explicitly declare the type — you simply assign a value, and Python determines the type automatically.</p>
+<p>To access the value that is stored in the variable, just state the name of the variable. So for example if you write <code class="docutils literal notranslate"><span class="pre">print(age)</span></code> it will output <code class="docutils literal notranslate"><span class="pre">25</span></code>.</p>
+<p>You can change (reassign) the values of the variables at any time. Simply assign a new value to the name the same way the variable was declared.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create information about a patient by assigning values to variables</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
+<span class="n">height</span> <span class="o">=</span> <span class="mf">5.7</span>
+<span class="n">vegetarian</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Printing the values of the variables</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Patient Information:&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Age:&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Name:&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Height:&quot;</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vegetarian:&quot;</span><span class="p">,</span> <span class="n">vegetarian</span><span class="p">)</span>
+
+<span class="c1"># Update patient information after a year</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">26</span>
+<span class="n">vegetarian</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1">#printing the updated values</span>
+<span class="nb">print</span><span class="p">()</span><span class="c1">#create empty line for better readability</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Updated Patient Information:&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Age:&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Name:&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Height:&quot;</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vegetarian:&quot;</span><span class="p">,</span> <span class="n">vegetarian</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Patient Information:
+Age: 25
+Name: Alice
+Height: 5.7
+Vegetarian: True
+
+Updated Patient Information:
+Age: 26
+Name: Alice
+Height: 5.7
+Vegetarian: False
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="variable-names">
+<h3>3.2. Variable names<a class="headerlink" href="#variable-names" title="Link to this heading">#</a></h3>
+<p>Variable names must start with a letter or an underscore (<code class="docutils literal notranslate"><span class="pre">_</span></code>) and cannot contain spaces or special punctuation (other than underscores). Python is <strong>case-sensitive</strong>. This means that <code class="docutils literal notranslate"><span class="pre">myVariable</span></code> and <code class="docutils literal notranslate"><span class="pre">myvariable</span></code> would be treated as two different names / variables.</p>
+<p>It is good practice to stick to one consistent naming style. In Python, the most common style is <em>snake_case</em>, where words are separated by underscores, for example: <code class="docutils literal notranslate"><span class="pre">my_variable</span></code>. A different style that is often used and you might come across is <em>camelCase</em>, where words are not separated and each word but the first is capitalised: <code class="docutils literal notranslate"><span class="pre">myVariable</span></code>.</p>
+<p>The same way comments are useful for understanding your code, you should also give your variables informative names about what they store/ what their purpose is. For instance, someone seeing the variables <code class="docutils literal notranslate"><span class="pre">variable_one</span></code> and <code class="docutils literal notranslate"><span class="pre">variable_two</span></code> will be a lot more confused about what they are used for than someone seeing <code class="docutils literal notranslate"><span class="pre">patients_age</span></code> and <code class="docutils literal notranslate"><span class="pre">patients_height</span></code>.</p>
+</section>
+<section id="data-types">
+<h3>3.3. Data Types<a class="headerlink" href="#data-types" title="Link to this heading">#</a></h3>
+<p>Here are some of the most common <strong>built-in</strong> data types in Python:</p>
+<ol class="arabic simple">
+<li><p><strong>Integer</strong>: Numeric type - Whole numbers, e.g., <code class="docutils literal notranslate"><span class="pre">42</span></code>, <code class="docutils literal notranslate"><span class="pre">-3</span></code>.</p></li>
+<li><p><strong>Float</strong>: Numeric type - Numbers with a decimal point, e.g., <code class="docutils literal notranslate"><span class="pre">3.14</span></code>, <code class="docutils literal notranslate"><span class="pre">-0.001</span></code>.</p></li>
+<li><p><strong>String</strong>: Text type - Sequences of characters, written inside quotes, e.g., <code class="docutils literal notranslate"><span class="pre">&quot;Hello,</span> <span class="pre">Python!&quot;</span></code>.</p></li>
+<li><p><strong>Boolean</strong>: Boolean type - Values representing <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>NoneType</strong>: None type - Represented by <code class="docutils literal notranslate"><span class="pre">None</span></code>, means “no value” or “nothing here yet”.</p></li>
+<li><p><strong>List</strong>: Sequence type - A list of various values where each value can have any data type, e.g. <code class="docutils literal notranslate"><span class="pre">[3,'Hi',True]</span></code></p></li>
+</ol>
+<p>Data types define what one can do with a variable, e.g. how you can manipulate them and what functions you can use on them. For instance, while you could multiply two integer variables, i.e. variables which values have the data type integer, you would get a <em>type error</em> if you tried the same with two string variables.</p>
+<p>If you do not know what type your variable has, you can simply use the function <code class="docutils literal notranslate"><span class="pre">type()</span></code> with the variable name being the argument (what you write inside the brackets) and its type being the output (the value you would get back from the function which you can print directly or save to a new variable).</p>
+<p>Over the next few chapters you will get introduced in more detail to each of these Data types (and other ones) and how you can manipulate them / work with them. We will start in the next chapter with Numeric types (integer, float) before moving on to strings and more complex types such as sequence types.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integers, floats, strings, booleans, and None</span>
+<span class="n">my_int</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">my_float</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="n">my_str</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="n">my_bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">my_none</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1">#Identifying the types of the variables</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">my_int</span><span class="p">))</span> <span class="c1"># &lt;class &#39;int&#39;&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">my_float</span><span class="p">))</span> <span class="c1"># &lt;class &#39;float&#39;&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">my_str</span><span class="p">))</span> <span class="c1"># &lt;class &#39;str&#39;&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">my_bool</span><span class="p">))</span> <span class="c1"># &lt;class &#39;bool&#39;&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">my_none</span><span class="p">))</span> <span class="c1"># &lt;class &#39;NoneType&#39;&gt;</span>
+
+<span class="c1">#save the type of a variable in another variable</span>
+<span class="n">my_int_type</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">my_int</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Type of my_int:&#39;</span><span class="p">,</span> <span class="n">my_int_type</span><span class="p">)</span> <span class="c1"># &lt;class &#39;int&#39;&gt;</span>
+
+<span class="c1"># Try manipulating the variables with different types</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Multiplying my_int with it self:&#39;</span><span class="p">,</span> <span class="n">my_int</span> <span class="o">*</span> <span class="n">my_int</span><span class="p">)</span> <span class="c1"># 100</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Multiplying my_str with it self:&#39;</span><span class="p">,</span> <span class="n">my_str</span> <span class="o">*</span> <span class="n">my_str</span><span class="p">)</span> <span class="c1"># Error    </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;int&#39;&gt;
+&lt;class &#39;float&#39;&gt;
+&lt;class &#39;str&#39;&gt;
+&lt;class &#39;bool&#39;&gt;
+&lt;class &#39;NoneType&#39;&gt;
+Type of my_int: &lt;class &#39;int&#39;&gt;
+Multiplying my_int with it self: 100
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">21</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="c1"># Try manipulating the variables with different types</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Multiplying my_int with it self:&#39;</span><span class="p">,</span> <span class="n">my_int</span> <span class="o">*</span> <span class="n">my_int</span><span class="p">)</span> <span class="c1"># 100</span>
+<span class="ne">---&gt; </span><span class="mi">21</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Multiplying my_str with it self:&#39;</span><span class="p">,</span> <span class="n">my_str</span> <span class="o">*</span> <span class="n">my_str</span><span class="p">)</span> <span class="c1"># Error    </span>
+
+<span class="ne">TypeError</span>: can&#39;t multiply sequence by non-int of type &#39;str&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="quick-practice">
+<h3>3.4. Quick Practice<a class="headerlink" href="#quick-practice" title="Link to this heading">#</a></h3>
+<p>Try these simple challenges:</p>
+<ul class="simple">
+<li><p>Create a variable called <code class="docutils literal notranslate"><span class="pre">city</span></code> and assign your favourite city name as a string.</p></li>
+<li><p>Create a variable called <code class="docutils literal notranslate"><span class="pre">temperature</span></code> and assign a decimal number (float).</p></li>
+<li><p>Create a variable called <code class="docutils literal notranslate"><span class="pre">is_raining</span></code> and assign either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p>Print the values and types of all your variables using the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function!</p></li>
+<li><p>Reassign the value of <code class="docutils literal notranslate"><span class="pre">temperature</span></code> and reprint it</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Defining our variables</span>
+<span class="n">city</span> <span class="o">=</span> <span class="s2">&quot;Edinburgh&quot;</span>
+<span class="n">temperature</span> <span class="o">=</span> <span class="mf">18.5</span>
+<span class="n">is_raining</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1">#Print their values and types</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;City value:&quot;</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="s2">&quot;City type:&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">city</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temperature value:&quot;</span><span class="p">,</span> <span class="n">temperature</span><span class="p">,</span> <span class="s2">&quot;Temperature type:&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">temperature</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Is it raining?&quot;</span><span class="p">,</span> <span class="n">is_raining</span><span class="p">,</span> <span class="s2">&quot;Is_raining type:&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">is_raining</span><span class="p">))</span>
+
+<span class="c1">#Change the temperature value</span>
+<span class="n">temperature</span> <span class="o">=</span> <span class="mf">15.25</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;New Temperature value:&quot;</span><span class="p">,</span> <span class="n">temperature</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanane-issa/python-crash-course",
+            ref: "hanane",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./module2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Module2_1%2C2_Intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">M2: Introduction</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Module2_4_Operations.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">M2: Arimetic and Logical Operations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">3. Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#declaration-and-usage">3.1. Declaration and Usage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-names">3.2. Variable names</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">3.3. Data Types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">3.4. Quick Practice</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By python crash course team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

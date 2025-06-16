@@ -14,15 +14,17 @@ kernelspec:
 
 # Module 1: Setting Up
 
-Objectives:
 
-By the end of this module, you will be able to:
+<div class="alert alert-block alert-success">
+<b>Module 1 Objectives:</b><br> 
+By the end of this module, you will be able to:<br><br>
 
-- Set up Python in various work environments (e.g., terminal, VSCode, Anaconda).
+- Set up Python in various work environments (e.g., terminal, VSCode, Anaconda).<br>
 
-- Understand how to execute Python scripts and work within Jupyter notebooks.
+- Understand how to execute Python scripts and work within Jupyter notebooks.<br>
 
-- Test the setup with simple Python code using the print statement.
+- Test the setup with simple Python code using the print statement.<br>
+</div>
 
 ## Why Python?
 
@@ -31,7 +33,7 @@ Python is a beginner-friendly programming language with clean, readable synthax 
 
 - Data analysis and manipulation (using libraries like Pandas, NumPy).
 - Data visualization (using libraries like Matplotlib, Seaborn, Plotly).
-- Statistical analysis and modeling (using libraries like SciPy, Statsmodels, Scikit-learn. )
+- Statistical analysis and modeling (using libraries like SciPy, Statsmodels, Scikit-learn).
 - Building and training machine learning models (using libraries like Scikit-learn, TensorFlow, Keras, PyTorch).
 
 
@@ -42,7 +44,7 @@ For beginners, this choice might seem more critical, but in the long term, learn
 
 For instance, R is highly specialized in statistical tests and models like mixed-effects models, survival analysis, or time-series forecasting, while Python is ideal for tasks related to deep learning, web development, automation, or deploying models.
 
-(source: {cite}`datacamp_python_vs_r`)
+(source: {cite}`datacamp_python_vs_r` )
 
 ## Python + Jupyter Notebook = ...?
 
@@ -67,8 +69,9 @@ N.B. Jupyter Notebook refers to both a file format and an application. You can e
 | **Interactivity**          | Linear execution, no interactive output.                  | Interactive execution with immediate feedback and outputs. |
 | **Output Visualization**   | No built-in output visualization.                         | Directly supports rich visual outputs like plots and tables. |
 | **Documentation**          | Limited to comments in the code.                          | Supports Markdown for rich documentation and formatting.   |
-| **Best For**               | Building applications, libraries, and production code.    | Data analysis, prototyping, and research.                 |
 
+
+source(: {cite}`jupyter_notebook` )
 
 ## Where can I write my Python code?
 
@@ -77,5 +80,8 @@ You can write and edit Python code through your terminal. However, you might fin
 Code editors or Integrated Development Environments (IDE) let you write Python code in .py or .ipynb format. The key difference between the two is that code editors are primarily used to writing and editing code, while IDEs integrate a suite of programming and software development tools in one interface. However, the line can get blurred as some code editors like VSCode are highly customisable thanks to community plugins. Ultimately, both code editors and IDEs can significantly boost your coding efficiency, simplify your workflow, and make debugging more effective. 
 We're using jupyter notebooks to run code so it doesn't matter what editor/environment you end up choosing. 
 
-We'll first talk about how to work with Python in a terminal before moving onto more useful tools like VS Code.
+We'll first talk about how to work with Python in a terminal before moving onto more useful tools like VS Code and Anaconda.
 
+
+References:
+```{bibliography}
