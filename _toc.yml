@@ -13,8 +13,21 @@ chapters:
   - file: module1/module_1e_notebook-execution
   - file: module1/module_1f_packages
   - file: module1/module1_exercice
-- title: "Module 2: introduction to Numpy"
+
+- title: "Module 2: Python Foundations"
+  file: module2/Module2_1,2_Intro
+  sections:
+  - file: module2/Module2_3_Variables
+  - file: module2/Module2_4_Operations
+  - file: module2/Module2_5_Strings
+  - file: module2/Module2_6_DataStructures
+  - file: module2/Module2_7_ConditionalBlocks
+  - file: module2/Module2_8_ErrorHandling
+  - file: module2/Module2_PracticeSheet1
+
+- title: "Module 3: Introduction to Numpy"
   file: module3/module3
+
 
 
 

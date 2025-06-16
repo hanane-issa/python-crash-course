@@ -20,6 +20,7 @@ latex:
 bibtex_bibfiles:
   - references.bib
 
+
 # Information about where the book exists on the web
 repository:
   url: https://github.com/hanane-issa/python-crash-course   # Online location of your book
