@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -58,7 +58,6 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'module2/Module2_3_Variables';</script>
-    <link rel="canonical" href="/python-crash-course/module2/Module2_3_Variables.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="M2: Arimetic and Logical Operations" href="Module2_4_Operations.html" />
@@ -599,7 +598,7 @@ Multiplying my_int with it self: 100
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">21</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">21</span>
 <span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="c1"># Try manipulating the variables with different types</span>
 <span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Multiplying my_int with it self:&#39;</span><span class="p">,</span> <span class="n">my_int</span> <span class="o">*</span> <span class="n">my_int</span><span class="p">)</span> <span class="c1"># 100</span>
 <span class="ne">---&gt; </span><span class="mi">21</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Multiplying my_str with it self:&#39;</span><span class="p">,</span> <span class="n">my_str</span> <span class="o">*</span> <span class="n">my_str</span><span class="p">)</span> <span class="c1"># Error    </span>
