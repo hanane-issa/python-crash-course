@@ -31,12 +31,10 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
-  
-baseurl: /python-crash-course/
-url: "https://hanane-issa.github.io"
+  extra_head:
+    - <base href="/python-crash-course/">
 
 include:
-  - _static
   - .nojekyll
 
 launch_buttons:
