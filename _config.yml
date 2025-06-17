@@ -32,7 +32,7 @@ html:
   use_issues_button: true
   use_repository_button: true
   baseurl: /python-crash-course/
-  
+
 launch_buttons:
   notebook_interface: "jupyterlab"  # or "classic"
   thebe                  : true
