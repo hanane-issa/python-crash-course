@@ -31,8 +31,9 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  baseurl: "/python-crash-course/"
   extra_head:
-    - <base href="/python-crash-course/">
+    - '<base href="/python-crash-course/">'
 
 include:
   - .nojekyll
