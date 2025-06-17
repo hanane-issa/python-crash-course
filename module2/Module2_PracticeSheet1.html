@@ -1,0 +1,1053 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>M2: Practice Sheet &#8212; Python Crash Course</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'module2/Module2_PracticeSheet1';</script>
+    <link rel="canonical" href="/python-crash-course/module2/Module2_PracticeSheet1.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Introduction to NumPy" href="../module3/module3.html" />
+    <link rel="prev" title="M2: Error Handling" href="Module2_8_ErrorHandling.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Python Crash Course - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Python Crash Course - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to the Python Crash Course 🧬🐍
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module1/module_1a_settingup.html">Module 1: Setting Up</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1b_terminal.html">Python in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1c_vscode.html">Python in VSCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1d_anaconda.html">Python in Anaconda Navigator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1f_packages.html">Installing Python Packages</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Exercice 1: check your Python version</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Module2_3_Variables.html">M2: Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_4_Operations.html">M2: Arimetic and Logical Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_5_Strings.html">M2: Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_6_DataStructures.html">M2: Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_7_ConditionalBlocks.html">M2: Conditional Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_8_ErrorHandling.html">M2: Error Handling</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">M2: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 3: Introduction to Numpy</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/main?urlpath=lab/tree/module2/Module2_PracticeSheet1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/main/module2/Module2_PracticeSheet1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanane-issa/python-crash-course" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanane-issa/python-crash-course/issues/new?title=Issue%20on%20page%20%2Fmodule2/Module2_PracticeSheet1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/module2/Module2_PracticeSheet1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>M2: Practice Sheet</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="m2-practice-sheet">
+<h1>M2: Practice Sheet<a class="headerlink" href="#m2-practice-sheet" title="Link to this heading">#</a></h1>
+<p>Congratulations, you have made it to the end of the second module!</p>
+<p>This module covered a lot of information very quickly, so this excercice sheet is to help you practice your gained knowledge. Ideally, you should either download this page or open it in GoogleColab / Binder (by clicking the spaceship icon on the top right), so that you can interact freely with it and add as many cells as you want. Other else you can also use the Live Button as before to run your code directly here.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>As a recap, here is the most important information that was covered in this module:</p>
+<ul class="simple">
+<li><p>Values can be stored in variables, making them easy to recall, use, and manipulate.</p></li>
+<li><p>Variables are defined using equal signs <code class="docutils literal notranslate"><span class="pre">=</span></code> and can be changed by reassigning a new value.</p></li>
+<li><p>Each variable has a data type defining what type of information it contains and how it can be manipulated. Python automatically infers the data type from the value.</p></li>
+<li><p>Common data types are numerical data (integers and floats), booleans, and strings.</p></li>
+<li><p>Other data types are sequence types/data structures which store multiple data points, e.g. tuples <code class="docutils literal notranslate"><span class="pre">()</span></code>, lists <code class="docutils literal notranslate"><span class="pre">[]</span></code>, sets <code class="docutils literal notranslate"><span class="pre">{}</span></code>, and dictionaries <code class="docutils literal notranslate"><span class="pre">{key:</span> <span class="pre">value}</span></code>.</p></li>
+<li><p>Each data type has specific functions, methods, and operators that can be used to manipulate them, e.g. arithmetic operators, comparison operators, and logical operators.</p></li>
+<li><p>To make manipulations easier, one can define conditional blocks, which specify which block should be carried out, how often, and with which variable values.</p></li>
+<li><p>Running into errors is normal – clear variable names, comments, print statements, and try-except statements are your best friends in identifying where they come from.</p></li>
+</ul>
+</div>
+<p>You will use the knowledge you have gained to analyse synthesised patient data. For each of our ten patients, we will know their gender, age, height, weight, smoking status, and any diseases they have. You will create data structures that contain information about different patients, and then use conditional blocks and operations to gain insights into them.</p>
+<p>Let’s start with patient 1: she is female, 25 years old, 1.75 m tall, weighs 70.9 kg, does not smoke, and has asthma and diabetes. For each of these properties, create a variable and store the corresponding value in it. The diseases she has should be stored in a tuple, and the smoking status should be saved as <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code goes here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Can you infer what type each of the variables has? First, make a guess, then print the value and the type of each variable. What type does each of the entries in the tuple (i.e. the diseases) have? Do you have an idea of how to check the type of an entry in a data structure? (Remember how we access a specific value in a tuple.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code goes here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Oh no, I made a mistake when I told you the information about the participant — their age is actually 35. Could you please update the age variable and print the new value? I’m also curious about how many diseases patient 1 has. Print this information using a function to access the number of entries in the tuple.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code goes here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Amazing, we have all the information about participant 1! However, saving each piece of information in an individual variable is quite a hassle. Let’s use a data structure to get a better overview of the values. Create a list where each entry is one of the variables in the following order: gender, age, weight, height, and smoking status.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>You can either use the actual values directly when defining the list, or use the variable names — the list will automatically include their current values.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code goes here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>I’m sorry, I completely forgot about the diseases. Please append the list with the diseases tuple. I also realised that height and weight were switched around. Reassign the value at the height position to the weight value, and the value at the weight position to the height value.</p>
+<p>The list should now consist of the following entries: gender, age, height, weight, smoking status, and diseases. Print the full list to make sure everything is correct.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Defining clinical information for participant 1</span>
+<span class="n">participant1_gender</span> <span class="o">=</span> <span class="s1">&#39;female&#39;</span>
+<span class="n">participant1_age</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">participant1_weight</span> <span class="o">=</span> <span class="mf">70.9</span>
+<span class="n">participant1_height</span> <span class="o">=</span> <span class="mf">1.75</span>
+<span class="n">participant1_smoking</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">participant1_diseases</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Asthma&#39;</span><span class="p">,</span> <span class="s1">&#39;Diabetes&#39;</span><span class="p">)</span>
+
+<span class="c1"># Print the data type of each variable</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Information about participant 1:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Their gender is </span><span class="si">{</span><span class="n">participant1_gender</span><span class="si">}</span><span class="s1"> which is of type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">participant1_gender</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Their age is </span><span class="si">{</span><span class="n">participant1_age</span><span class="si">}</span><span class="s1"> which is of type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">participant1_age</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Their weight is </span><span class="si">{</span><span class="n">participant1_weight</span><span class="si">}</span><span class="s1"> which is of type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">participant1_weight</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Their height is </span><span class="si">{</span><span class="n">participant1_height</span><span class="si">}</span><span class="s1"> which is of type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">participant1_height</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Their smoking status is </span><span class="si">{</span><span class="n">participant1_smoking</span><span class="si">}</span><span class="s1"> which is of type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">participant1_smoking</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Their diseases are </span><span class="si">{</span><span class="n">participant1_diseases</span><span class="si">}</span><span class="s1"> which is of type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">participant1_diseases</span><span class="p">)</span><span class="si">}</span><span class="s1"> with the diseases being type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">participant1_diseases</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s1"> and </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">participant1_diseases</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Changing participant&#39;s age to 35</span>
+<span class="n">participant1_age</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Their age is now </span><span class="si">{</span><span class="n">participant1_age</span><span class="si">}</span><span class="s1"> which is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">participant1_age</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Print the number of diseases</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The number of diseases is </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">participant1_diseases</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Put all the variables in a list</span>
+<span class="n">participant1_information</span> <span class="o">=</span> <span class="p">[</span><span class="n">participant1_gender</span><span class="p">,</span> <span class="n">participant1_age</span><span class="p">,</span> <span class="n">participant1_weight</span><span class="p">,</span> <span class="n">participant1_height</span><span class="p">,</span> <span class="n">participant1_smoking</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Participant 1 information is: </span><span class="si">{</span><span class="n">participant1_information</span><span class="si">}</span><span class="s1"> which is of type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">participant1_information</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Append diseases to the list</span>
+<span class="n">participant1_information</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">participant1_diseases</span><span class="p">)</span>
+
+<span class="c1"># Swap the height and weight values</span>
+<span class="n">participant1_information</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">participant1_weight</span>
+<span class="n">participant1_information</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">participant1_height</span>
+
+<span class="c1"># Print the corrected list</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;participant 1 information is now fixed: </span><span class="si">{</span><span class="n">participant1_information</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><p>Amazing — we have all the information we need from participant 1!</p>
+<p>Let’s get the information for participant 2: he is male, 40 years old, 1.79 m tall, weighs 103.4 kg, smokes, and does not have any diseases.</p>
+<p>Create a list with all the information for participant 2 in the same order as for participant 1 (i.e. gender, age, height, weight, smoking status, diseases). You can choose whether to insert the values directly into the list or to create individual variables first. Even though participant 2 does not have any diseases, we still want to include a tuple so that the list has the same number of entries as participant 1. Do you have an idea how to create an empty tuple? (See the hint if not.)</p>
+<p>Print the final list.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">You can create an empty data structure by simply defining it without any values.<br />
+For example, the diseases for participant 2 would be defined as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">participant2_diseases</span> <span class="o">=</span> <span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code goes here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Defining clinical information for participant 2</span>
+<span class="n">participant2_information</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mf">1.79</span><span class="p">,</span> <span class="mf">103.4</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">()]</span>
+
+<span class="c1"># Printing the final list</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Participant 2 information is: </span><span class="si">{</span><span class="n">participant2_information</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><p>Great, we have recorded the information for participants 1 and 2. We have ten participants in total, so eight more to go:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Participant</p></th>
+<th class="head"><p>Gender</p></th>
+<th class="head"><p>Age</p></th>
+<th class="head"><p>Height</p></th>
+<th class="head"><p>Weight</p></th>
+<th class="head"><p>Smoking?</p></th>
+<th class="head"><p>Diseases</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>male</p></td>
+<td><p>18</p></td>
+<td><p>1.75</p></td>
+<td><p>85.1</p></td>
+<td><p>True</p></td>
+<td><p>Lung cancer</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>female</p></td>
+<td><p>83</p></td>
+<td><p>1.63</p></td>
+<td><p>55.9</p></td>
+<td><p>False</p></td>
+<td><p>Cardiovascular disease, Alzheimer’s</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>female</p></td>
+<td><p>55</p></td>
+<td><p>1.68</p></td>
+<td><p>50.0</p></td>
+<td><p>False</p></td>
+<td><p>Asthma, Anxiety</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>female</p></td>
+<td><p>32</p></td>
+<td><p>1.59</p></td>
+<td><p>64.0</p></td>
+<td><p>True</p></td>
+<td><p>Diabetes</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>male</p></td>
+<td><p>21</p></td>
+<td><p>1.90</p></td>
+<td><p>92.9</p></td>
+<td><p>False</p></td>
+<td><p>Asthma, Colon cancer</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>male</p></td>
+<td><p>46</p></td>
+<td><p>1.71</p></td>
+<td><p>75.4</p></td>
+<td><p>False</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>female</p></td>
+<td><p>32</p></td>
+<td><p>1.66</p></td>
+<td><p>90.7</p></td>
+<td><p>True</p></td>
+<td><p>Depression</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>male</p></td>
+<td><p>67</p></td>
+<td><p>1.78</p></td>
+<td><p>82.3</p></td>
+<td><p>False</p></td>
+<td><p>Anxiety, Diabetes, Cardiovascular disease</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>You can either create a list for each participant in the same way you did for participant 2, or you can copy the code in the next hidden solution segment if you’d prefer not to input all the values manually.</p>
+<div class="note admonition">
+<p class="admonition-title">Note</p>
+<p>If a participant has only <strong>one disease</strong>, make sure to include a <strong>comma</strong> after the disease name when creating the tuple — for example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s1">&#39;Lung cancer&#39;</span><span class="p">,)</span>
+</pre></div>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Overview of the clinical information for each participant:</span>
+
+<span class="sd">| Participant | Gender | Age | Height | Weight | Smoking? | Diseases |</span>
+<span class="sd">|-------------|--------|-----|--------|--------|----------|----------|</span>
+<span class="sd">| 3           | male   | 18  | 1.75   | 85.1   | True     | Lung cancer |</span>
+<span class="sd">| 4           | female | 83  | 1.63   | 55.9   | False    | Cardiovascular disease, Alzheimer’s |</span>
+<span class="sd">| 5           | female | 55  | 1.68   | 50.0   | False    | Asthma, Anxiety |</span>
+<span class="sd">| 6           | female | 32  | 1.59   | 64.0   | True     | Diabetes |</span>
+<span class="sd">| 7           | male   | 21  | 1.90   | 92.9   | False    | Asthma, Colon cancer |</span>
+<span class="sd">| 8           | male   | 46  | 1.71   | 75.4   | False    | |</span>
+<span class="sd">| 9           | female | 32  | 1.66   | 90.7   | True     | Depression |</span>
+<span class="sd">| 10          | male   | 67  | 1.78   | 82.3   | False    | Anxiety, Diabetes, Cardiovascular disease |</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="c1"># Defining clinical information for each participant</span>
+<span class="n">participant3_information</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mf">1.75</span><span class="p">,</span> <span class="mf">85.1</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Lung cancer&#39;</span><span class="p">,)]</span>
+<span class="n">participant4_information</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;female&#39;</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mf">1.63</span><span class="p">,</span> <span class="mf">55.9</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Cardiovascular disease&#39;</span><span class="p">,</span> <span class="s1">&#39;Alzheimer’s&#39;</span><span class="p">)]</span>
+<span class="n">participant5_information</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;female&#39;</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mf">1.68</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Asthma&#39;</span><span class="p">,</span> <span class="s1">&#39;Anxiety&#39;</span><span class="p">)]</span>
+<span class="n">participant6_information</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;female&#39;</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mf">1.59</span><span class="p">,</span> <span class="mf">64.0</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Diabetes&#39;</span><span class="p">,)]</span>
+<span class="n">participant7_information</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mf">1.90</span><span class="p">,</span> <span class="mf">92.9</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Asthma&#39;</span><span class="p">,</span> <span class="s1">&#39;Colon cancer&#39;</span><span class="p">)]</span>
+<span class="n">participant8_information</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mf">1.71</span><span class="p">,</span> <span class="mf">75.4</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="p">()]</span>
+<span class="n">participant9_information</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;female&#39;</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mf">1.66</span><span class="p">,</span> <span class="mf">90.7</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Depression&#39;</span><span class="p">,)]</span>
+<span class="n">participant10_information</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mf">1.78</span><span class="p">,</span> <span class="mf">82.3</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;Diabetes&#39;</span><span class="p">,</span> <span class="s1">&#39;Cardiovascular disease&#39;</span><span class="p">)]</span>
+
+<span class="c1"># Example output</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participant9_information</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><p>Wow, that’s a lot of information! Even though we’ve put the properties of each patient into a list, we still have ten separate lists. Let’s create a dictionary to make it easier to access the information for each participant.</p>
+<p>Create a dictionary where each key is the participant (e.g. <code class="docutils literal notranslate"><span class="pre">participant1</span></code>) and the value is the corresponding list. Print the complete dictionary. Then, print only the information for participant 7.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code goes here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the dictionary from the individual lists</span>
+<span class="n">participants_clinical_information</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;participant1&#39;</span><span class="p">:</span> <span class="n">participant1_information</span><span class="p">,</span>
+    <span class="s1">&#39;participant2&#39;</span><span class="p">:</span> <span class="n">participant2_information</span><span class="p">,</span>
+    <span class="s1">&#39;participant3&#39;</span><span class="p">:</span> <span class="n">participant3_information</span><span class="p">,</span>
+    <span class="s1">&#39;participant4&#39;</span><span class="p">:</span> <span class="n">participant4_information</span><span class="p">,</span>
+    <span class="s1">&#39;participant5&#39;</span><span class="p">:</span> <span class="n">participant5_information</span><span class="p">,</span>
+    <span class="s1">&#39;participant6&#39;</span><span class="p">:</span> <span class="n">participant6_information</span><span class="p">,</span>
+    <span class="s1">&#39;participant7&#39;</span><span class="p">:</span> <span class="n">participant7_information</span><span class="p">,</span>
+    <span class="s1">&#39;participant8&#39;</span><span class="p">:</span> <span class="n">participant8_information</span><span class="p">,</span>
+    <span class="s1">&#39;participant9&#39;</span><span class="p">:</span> <span class="n">participant9_information</span><span class="p">,</span>
+    <span class="s1">&#39;participant10&#39;</span><span class="p">:</span> <span class="n">participant10_information</span>
+<span class="p">}</span>
+
+<span class="c1"># Print the full dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All participants&#39; clinical information:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participants_clinical_information</span><span class="p">)</span>
+
+<span class="c1"># Now we can access each participant&#39;s information using their key</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Participant 7&#39;s information:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">participants_clinical_information</span><span class="p">[</span><span class="s1">&#39;participant7&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</details><p>Great! We now have the data for all our participants saved in an easy-to-access format. Now we can finally start learning something from it.</p>
+<p>Let’s begin with something simple: we want to access and print the age of each participant. To do this, we’ll loop through our dictionary. When we use the <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">variable_name</span> <span class="pre">in</span> <span class="pre">data_structure:</span></code> statement with dictionaries, we loop through each key — in our case, the participant identifiers.</p>
+<p>We can then use the key to access the corresponding value in the dictionary (which is the list containing the participant’s medical information).</p>
+<p>To get a feel for this, start by writing a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. Inside the block, print the variable (i.e. the key) and the corresponding dictionary entry (i.e. the participant’s list of clinical information).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code goes here (should only be 2 or 3 lines long)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">participant</span> <span class="ow">in</span> <span class="n">participants_clinical_information</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">participant</span><span class="si">}</span><span class="s2">&#39;s information is: </span><span class="si">{</span><span class="n">participants_clinical_information</span><span class="p">[</span><span class="n">participant</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><p>Now that this is working, replace the print statement of the dictionary entry with a new variable called <code class="docutils literal notranslate"><span class="pre">participant_information</span></code>, which you assign to the dictionary entry for the current key. This variable now represents the list of clinical information for that participant. You can then print the <strong>age</strong>, which is the second item in the list (i.e. index 1 of the <code class="docutils literal notranslate"><span class="pre">participant_information</span></code> variable).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code goes here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">participant</span> <span class="ow">in</span> <span class="n">participants_clinical_information</span><span class="p">:</span>
+    <span class="n">participant_information</span> <span class="o">=</span> <span class="n">participants_clinical_information</span><span class="p">[</span><span class="n">participant</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">participant</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">participant_information</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> years old&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><p>Well done! Let’s try something a bit more challenging: we want to find out which diseases are common in our population. To do this, we need to identify all the <strong>unique diseases</strong> and count how often each one appears in our data.</p>
+<p>As a first step, repeat what we did above — but this time, instead of printing the age, print each participant’s <strong>diseases</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code goes here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Secondly, we will now save all of the diseases in a single list. To do this, create an empty list <strong>above</strong> the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. Then, inside the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop — after printing the diseases — add them to the list you’ve just created.</p>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">.extend(data_structure)</span></code> method instead of <code class="docutils literal notranslate"><span class="pre">.append()</span></code>, so that each entry in the tuple is added as an individual element to your list (rather than the entire tuple being added as one item).</p>
+<p>Once the loop is complete, print the final list of diseases.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code goes here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Amazing — we now have all the diseases stored in a list! Next, we want to find out which <strong>unique</strong> diseases participants have overall.</p>
+<p>Can you remember which data structure only contains unique entries? That’s right — <strong>sets</strong>.</p>
+<p>Create a new variable that is a set created from the list of diseases.</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Tip</p>
+<p>You can convert one data structure into another using the syntax <code class="docutils literal notranslate"><span class="pre">data_structure_name(data_structure_variable)</span></code>.
+In this case, <code class="docutils literal notranslate"><span class="pre">data_structure_name</span></code> is set, and <code class="docutils literal notranslate"><span class="pre">data_structure_variable</span></code> is your list of all diseases.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code goes here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we have our unique set of diseases, let’s loop through it. For each entry (i.e. each disease), print its name and how often it appears in the list of all diseases.</p>
+<p>To do this, use the <code class="docutils literal notranslate"><span class="pre">.count(value)</span></code> method — where <code class="docutils literal notranslate"><span class="pre">value</span></code> is the name of the disease. This method returns the number of times the specified value appears in the list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code goes here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an empty list to store all diseases</span>
+<span class="n">diseases_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Loop through participants and collect diseases</span>
+<span class="k">for</span> <span class="n">participant</span> <span class="ow">in</span> <span class="n">participants_clinical_information</span><span class="p">:</span>
+    <span class="n">participant_information</span> <span class="o">=</span> <span class="n">participants_clinical_information</span><span class="p">[</span><span class="n">participant</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">participant</span><span class="si">}</span><span class="s2"> has the following diseases: </span><span class="si">{</span><span class="n">participant_information</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">diseases_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">participant_information</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>  <span class="c1"># use extend to unpack the tuple</span>
+
+<span class="c1"># Print all diseases collected</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">The following diseases are present among the participants:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">diseases_list</span><span class="p">)</span>
+
+<span class="c1"># Create a set to get unique diseases</span>
+<span class="n">unique_diseases</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">diseases_list</span><span class="p">)</span>
+
+<span class="c1"># Loop through the unique diseases and count occurrences</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Occurrences of each unique disease:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">disease</span> <span class="ow">in</span> <span class="n">unique_diseases</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- </span><span class="si">{</span><span class="n">disease</span><span class="si">}</span><span class="s2"> occurs </span><span class="si">{</span><span class="n">diseases_list</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">disease</span><span class="p">)</span><span class="si">}</span><span class="s2"> time(s)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><p>Amazing — you’re already becoming an expert in <code class="docutils literal notranslate"><span class="pre">for</span></code> loops, which is fantastic as you’ll be using them a lot!</p>
+<p>Let’s return to our dictionary containing information for all participants. This time, we want to compute the BMI for each participant using the formula:
+<span class="math notranslate nohighlight">\(\begin{equation}\text{BMI} = \frac{\text{weight}}{\text{height}^2}.\end{equation}\)</span></p>
+<p>Loop through each participant, calculate their BMI, and check whether it falls into one of the following categories:</p>
+<p>• <strong>Underweight</strong>: BMI less than 18.5</p>
+<p>• <strong>Normal range</strong>: BMI between 18.5 and 25 (inclusive)</p>
+<p>• <strong>Overweight</strong>: BMI over 25</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code> statements (you should have three conditions in total).</p>
+<p>For each participant, print their number, gender, BMI value, and whether they are underweight, in the normal range, or overweight.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code goes here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">participant</span> <span class="ow">in</span> <span class="n">participants_clinical_information</span><span class="p">:</span>
+    <span class="c1"># Get the participant&#39;s information</span>
+    <span class="n">participant_information</span> <span class="o">=</span> <span class="n">participants_clinical_information</span><span class="p">[</span><span class="n">participant</span><span class="p">]</span>
+
+    <span class="c1"># Compute the BMI (BMI = weight / height²)</span>
+    <span class="n">bmi</span> <span class="o">=</span> <span class="n">participant_information</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">participant_information</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="c1"># Check BMI category and print result</span>
+    <span class="k">if</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">participant</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">participant_information</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">) is underweight with a BMI of </span><span class="si">{</span><span class="n">bmi</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="mf">18.5</span> <span class="o">&lt;=</span> <span class="n">bmi</span> <span class="o">&lt;=</span> <span class="mi">25</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">participant</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">participant_information</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">) is in the normal range with a BMI of </span><span class="si">{</span><span class="n">bmi</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">participant</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">participant_information</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">) is overweight with a BMI of </span><span class="si">{</span><span class="n">bmi</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><p>We’ve already used a for loop to go through all participants and calculate their BMI.
+Now let’s make our program a bit more flexible: we’ll let it look up and print the BMI for one participant at a time, and we’ll use a while loop to keep going until we decide to stop.</p>
+<p>Use a while loop to repeatedly:</p>
+<ol class="arabic simple">
+<li><p>Ask the user for a participant number (1–10).</p></li>
+<li><p>Look up their information in the dictionary.</p></li>
+<li><p>Calculate and print their BMI and weight category (underweight, normal range, or overweight).</p></li>
+<li><p>Stop the loop when the user types <code class="docutils literal notranslate"><span class="pre">&quot;exit&quot;</span></code>.</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">💡 New: Asking for input</p>
+<p>You can ask the user to type something in using the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function.</p>
+<p>The value returned by <code class="docutils literal notranslate"><span class="pre">input()</span></code> is always a string, even if the user types a number.<br />
+You can combine it with other code like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">participant_number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a number: &quot;</span><span class="p">)</span>
+<span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;participant&quot;</span> <span class="o">+</span> <span class="n">participant_number</span>
+</pre></div>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">user_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a participant number (1–10), or type &#39;exit&#39; to stop: &quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">user_input</span> <span class="o">==</span> <span class="s1">&#39;exit&#39;</span><span class="p">:</span>
+        <span class="k">break</span>  <span class="c1"># stop the loop</span>
+
+    <span class="n">key</span> <span class="o">=</span> <span class="s1">&#39;participant&#39;</span> <span class="o">+</span> <span class="n">user_input</span>
+
+    <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">participants_clinical_information</span><span class="p">:</span>
+        <span class="n">info</span> <span class="o">=</span> <span class="n">participants_clinical_information</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="n">bmi</span> <span class="o">=</span> <span class="n">info</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">:</span>
+            <span class="n">category</span> <span class="o">=</span> <span class="s1">&#39;underweight&#39;</span>
+        <span class="k">elif</span> <span class="n">bmi</span> <span class="o">&lt;=</span> <span class="mi">25</span><span class="p">:</span>
+            <span class="n">category</span> <span class="o">=</span> <span class="s1">&#39;in the normal range&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">category</span> <span class="o">=</span> <span class="s1">&#39;overweight&#39;</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">) has a BMI of </span><span class="si">{</span><span class="n">bmi</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> and is </span><span class="si">{</span><span class="n">category</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That participant number doesn’t exist. Please enter a number from 1 to 10.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanane-issa/python-crash-course",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./module2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Module2_8_ErrorHandling.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">M2: Error Handling</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../module3/module3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introduction to NumPy</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By python crash course team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
