@@ -28,6 +28,26 @@ chapters:
 - title: "Module 3: Introduction to Numpy"
   file: module3/module3
 
+- title: "Module 4: Introduction to Pandas"
+  file: module4/module4_outline
+
+- title: "Module 5: Introduction to Data Visualization"
+  file: module5/intro
+  sections:
+  - file: module5/data_visualization
+  - file: module5/module5_examples
+
+- title: "Module 6: Introduction to Functions"
+  file: module6/module_6_functions
+  sections:
+  - file: module6/module_6a_basics
+  - file: module6/module_6b_return-vs-print
+  - file: module6/module_6c_local-vs-global
+  - file: module6/module_6d_docstrings
+  - file: module6/module_6e_params-args
+  - file: module6/module_6f_extras
+  - file: module6/module_6g_PracticeSheet
+
 
 
 
