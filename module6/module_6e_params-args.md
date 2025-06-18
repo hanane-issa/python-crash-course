@@ -19,13 +19,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 stroke_data = pd.read_csv("../data/healthcare-dataset-stroke-data.csv")
 ```
-# Module 6: Parameters and Arguments
+# Module 6e: Parameters and Arguments
 
 <div class="alert alert-block alert-success">
 <b>Section Objectives:</b><br> 
 - Differentiate between arguments and parameters in functions.<br>
 - Recognize how the number of arguments affects function calls and definitions.<br> 
-- Implement default parameter values in function definitions.<br> 
+- Implement default parameter values in function definitions.
 </div>
 
 

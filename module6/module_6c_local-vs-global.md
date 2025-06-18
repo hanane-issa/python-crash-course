@@ -19,12 +19,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 stroke_data = pd.read_csv("../data/healthcare-dataset-stroke-data.csv")
 ```
-# Module 6: Local vs Global Variables
+# Module 6c: Local vs Global Variables
 
 
 <div class="alert alert-block alert-success">
 <b>Section Objectives:</b><br> 
-- Differentiate between local and global variables
+- Differentiate between local and global variables.
 </div>
 
 When working with functions, it’s important to understand where your variables "live" — in other words, their scope.

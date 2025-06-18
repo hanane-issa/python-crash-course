@@ -19,7 +19,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 stroke_data = pd.read_csv("../data/healthcare-dataset-stroke-data.csv")
 ```
-# Module 6: Extra (OPTIONAL)
+# Module 6f: Extra (OPTIONAL)
 
 
 <div class="alert alert-block alert-success">

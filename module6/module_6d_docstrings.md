@@ -19,11 +19,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 stroke_data = pd.read_csv("../data/healthcare-dataset-stroke-data.csv")
 ```
-# Module 6: Docstrings
+# Module 6d: Docstrings
 
 <div class="alert alert-block alert-success">
 <b>Section Objectives:</b><br> 
-- Write and utilize docstrings to document functions.<br> 
+- Write and utilize docstrings to document functions.
 </div>
 
 
