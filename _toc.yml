@@ -32,9 +32,9 @@ chapters:
   file: module4/module4_outline
 
 - title: "Module 5: Introduction to Data Visualization"
-  file: module5/intro
+  file: module5/module5_intro
   sections:
-  - file: module5/data_visualization
+  - file: module5/module5_data_visualization
   - file: module5/module5_examples
 
 - title: "Module 6: Introduction to Functions"
