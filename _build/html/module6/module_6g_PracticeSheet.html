@@ -32,9 +32,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fcab1d5" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -60,7 +61,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'module6/module_6g_PracticeSheet';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Module 6: Extra (OPTIONAL)" href="module_6f_extras.html" />
+    <link rel="prev" title="Module 6f: Extra (OPTIONAL)" href="module_6f_extras.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -186,7 +187,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1f_packages.html">Installing Python Packages</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Exercice 1: check your Python version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Module 1: Practice Sheet</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module2/Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -213,12 +214,12 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="module_6_functions.html">Module 6: Introduction to Functions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="module_6a_basics.html">Module 6: Introduction to Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6b_return-vs-print.html">Module 6: Return Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6c_local-vs-global.html">Module 6: Local vs Global Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6d_docstrings.html">Module 6: Docstrings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6e_params-args.html">Module 6: Parameters and Arguments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6f_extras.html">Module 6: Extra (OPTIONAL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6a_basics.html">Module 6a: Function Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6b_return-vs-print.html">Module 6b: Return Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6c_local-vs-global.html">Module 6c: Local vs Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6d_docstrings.html">Module 6d: Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6e_params-args.html">Module 6e: Parameters and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6f_extras.html">Module 6f: Extra (OPTIONAL)</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Module 6: Practice Sheet</a></li>
 </ul>
 </details></li>
@@ -495,10 +496,9 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-parameters-vs-arguments">Part 3: Parameters vs Arguments</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-terminology">3.1 Understanding Terminology</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-parameters">3.2 Multiple Parameters</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-parameters">3.3 Default Parameters</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#positional-and-keywords-arguments">3.4 Positional and keywords arguments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-parameters">3.1 Multiple Parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-parameters">3.2 Default Parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#positional-and-keywords-arguments">3.3 Positional and keywords arguments</a></li>
 </ul>
 </li>
 </ul>
@@ -514,26 +514,86 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="module-6-practice-sheet">
 <h1>Module 6: Practice Sheet<a class="headerlink" href="#module-6-practice-sheet" title="Link to this heading">#</a></h1>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../shared/setup.py  
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>Uncomment the code below with selecting it and clicking <code class="docutils literal notranslate"><span class="pre">CTRL</span></code>  + <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import pandas as pd</span>
+<span class="c1"># import numpy as np</span>
+<span class="c1"># import matplotlib.pyplot as plt</span>
+<span class="c1"># stroke_data = pd.read_csv(&quot;../data/healthcare-dataset-stroke-data.csv&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <section id="part-1-function-basics">
 <h2>Part 1: Function Basics<a class="headerlink" href="#part-1-function-basics" title="Link to this heading">#</a></h2>
 <section id="define-a-basic-function">
 <h3>1.1 Define a Basic Function<a class="headerlink" href="#define-a-basic-function" title="Link to this heading">#</a></h3>
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">describe_data()</span></code> that takes a DataFrame and returns its <code class="docutils literal notranslate"><span class="pre">.describe()</span></code> output. Don’t forget to add a docstring to the function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a function that returns the dataframe description info.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE </span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
+<details>
+<summary>Solution</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">describe_data</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return descriptive statistics summary of the DataFrame.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df : pandas.DataFrame</span>
+<span class="sd">        The dataset to describe.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pandas.DataFrame</span>
+<span class="sd">        Summary statistics including count, mean, std, min, quartiles, and max.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</details> </section>
 <section id="add-a-pass-statement">
 <h3>1.2 Add a Pass Statement<a class="headerlink" href="#add-a-pass-statement" title="Link to this heading">#</a></h3>
+<p>Define a function called <code class="docutils literal notranslate"><span class="pre">analyze_smoking_effect</span></code> that includes a pass statement. We will fill in the function body later.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a function called `analyze_smoking(df)` that does nothing (use `pass`).</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE </span>
 </pre></div>
 </div>
 </div>
+</div>
+<details>
+<summary>Solution</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">analyze_smoking_effect</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Analyze the effect of smoking on stroke risk in the given DataFrame.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    df (DataFrame): The DataFrame containing healthcare data.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>  <span class="c1"># Placeholder for future implementation</span>
+</pre></div>
 </div>
 </section>
 </section>
@@ -541,45 +601,261 @@ document.write(`
 <h2>Part 2: Return vs Print vs No Return<a class="headerlink" href="#part-2-return-vs-print-vs-no-return" title="Link to this heading">#</a></h2>
 <section id="return-value">
 <h3>2.1 Return Value<a class="headerlink" href="#return-value" title="Link to this heading">#</a></h3>
+<p>Write a function that returns the number of patients in the dataset who have ever smoked.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write a function that returns the number of rows in the dataset.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
 </pre></div>
 </div>
 </div>
+</div>
+<details>
+<summary>Solution</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">analyze_smoking_effect</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Analyze the effect of smoking on stroke risk in the given DataFrame.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    df (DataFrame): The DataFrame containing healthcare data. Must include </span>
+<span class="sd">                    &#39;smoking_status&#39; and &#39;stroke&#39; columns.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    smoking_rates (pandas.Series): A Series with smoking status as the index and average stroke rate as the values.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    
+    <span class="c1"># Average Stroke rate per smoking category</span>
+    <span class="n">smoking_rates</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;smoking_status&#39;</span><span class="p">)[</span><span class="s1">&#39;stroke&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">smoking_rates</span>
+</pre></div>
 </div>
 </section>
 <section id="print-statement">
 <h3>2.2 Print Statement<a class="headerlink" href="#print-statement" title="Link to this heading">#</a></h3>
+<p>Modify the <code class="docutils literal notranslate"><span class="pre">analyze_smoking_effect(df)</span></code> function to print a summary of smoking status counts and calculates stroke rates per smoking group.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write a function that prints total number of patients, stroke count, and stroke rate.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
 </pre></div>
 </div>
 </div>
+</div>
+<details>
+<summary>💡 Hints</summary>
+<p>
+The variable <code>smoking_rates</code> is a <strong>Pandas Series</strong>, where:
+</p>
+<ul>
+  <li>Each <strong>index</strong> is a smoking category (like <code>'smokes'</code>, <code>'never smoked'</code>).</li>
+  <li>Each <strong>value</strong> is the average stroke rate for that category.</li>
+</ul>
+<p>
+To print a nice summary:
+</p>
+<ul>
+  <li>Loop through <code>smoking_rates.items()</code> to access both the category and the stroke rate.</li>
+  <li>Use <code>print(f"{category}: {rate:.2%}")</code> to format the output as percentages.</li>
+</ul>
+</details>
+<details>
+<summary>Solution</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">analyze_smoking_effect</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Analyze the effect of smoking on stroke risk in the given DataFrame.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    df (DataFrame): The DataFrame containing healthcare data. Must include </span>
+<span class="sd">                    &#39;smoking_status&#39; and &#39;stroke&#39; columns.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_status&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Smoking Status Counts:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Total records: </span><span class="si">{</span><span class="n">total</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Stroke rate per smoking category</span>
+    <span class="n">smoking_rates</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;smoking_status&#39;</span><span class="p">)[</span><span class="s1">&#39;stroke&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Average stroke rate by smoking status:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">status</span><span class="p">,</span> <span class="n">rate</span> <span class="ow">in</span> <span class="n">smoking_rates</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">rate</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
 </div>
 </section>
 </section>
 <section id="part-3-parameters-vs-arguments">
 <h2>Part 3: Parameters vs Arguments<a class="headerlink" href="#part-3-parameters-vs-arguments" title="Link to this heading">#</a></h2>
-<section id="understanding-terminology">
-<h3>3.1 Understanding Terminology<a class="headerlink" href="#understanding-terminology" title="Link to this heading">#</a></h3>
+<section id="multiple-parameters">
+<h3>3.1 Multiple Parameters<a class="headerlink" href="#multiple-parameters" title="Link to this heading">#</a></h3>
+<p>Write a function that takes two parameters: a DataFrame and a column name. It should print the column’s value counts.
+You can optionally include a loop that checks whether the column exists in the DataFrame before printing its value counts.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write a function that takes two parameters: a DataFrame and a column name. Print the column&#39;s description.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="multiple-parameters">
-<h3>3.2 Multiple Parameters<a class="headerlink" href="#multiple-parameters" title="Link to this heading">#</a></h3>
+<details>
+<summary>Solution</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">col_description</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col_name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Prints the value counts of a specified column in the DataFrame.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters:</span>
+<span class="sd">    df (DataFrame): The DataFrame containing the data.</span>
+<span class="sd">    col_name (str): The name of the column to analyze.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">col_name</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col_name</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Column &#39;</span><span class="si">{</span><span class="n">col_name</span><span class="si">}</span><span class="s2">&#39; does not exist in the DataFrame.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 <section id="default-parameters">
-<h3>3.3 Default Parameters<a class="headerlink" href="#default-parameters" title="Link to this heading">#</a></h3>
+<h3>3.2 Default Parameters<a class="headerlink" href="#default-parameters" title="Link to this heading">#</a></h3>
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">flag_high_risk()</span></code> that filters the dataset for patients with stroke and other risk conditions, such as high glucose, hypertension, and optionally, smoking status. All filters should be optional using default parameters.</p>
+<details>
+<summary>💡Hints</summary>
+<ul class="simple">
+<li><p>Set a default parameter like <code class="docutils literal notranslate"><span class="pre">threshold=140</span></code></p></li>
+<li><p>Use a filter condition with:<br />
+<code class="docutils literal notranslate"><span class="pre">df['avg_glucose_level']</span> <span class="pre">&gt;</span> <span class="pre">threshold</span></code><br />
+and<br />
+<code class="docutils literal notranslate"><span class="pre">df['stroke']</span> <span class="pre">==</span> <span class="pre">1</span></code></p></li>
+<li><p>Combine them with <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> (and wrap each condition in parentheses)</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">return</span></code> to send back the filtered DataFrame</p></li>
+</ul>
+</details><details>
+<summary>Solution</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">flag_high_risk</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">glucose_threshold</span><span class="o">=</span><span class="mi">140</span><span class="p">,</span> <span class="n">check_hypertension</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">smoking_status</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return a filtered DataFrame of stroke patients who meet one or more risk criteria.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    df (DataFrame): The stroke dataset.</span>
+<span class="sd">    glucose_threshold (float): Minimum glucose level to be considered high risk. Default is 140.</span>
+<span class="sd">    check_hypertension (bool): Whether to include hypertension as a risk factor. Default is True.</span>
+<span class="sd">    smoking_status (str or None): If provided, filter for this smoking category only. </span>
+<span class="sd">                                  E.g., &#39;smokes&#39;, &#39;formerly smoked&#39;, &#39;never smoked&#39;.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    DataFrame: Filtered DataFrame of high-risk stroke patients.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">condition</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;stroke&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;avg_glucose_level&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">glucose_threshold</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">check_hypertension</span><span class="p">:</span>
+        <span class="n">condition</span> <span class="o">&amp;=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;hypertension&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">smoking_status</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">condition</span> <span class="o">&amp;=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_status&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">smoking_status</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="n">condition</span><span class="p">]</span>
+
+<span class="c1">## Default usage</span>
+<span class="c1"># flag_high_risk(stroke_data).head()</span>
+
+<span class="c1">## Include only smokers</span>
+<span class="c1"># flag_high_risk(stroke_data, smoking_status=&#39;smokes&#39;).head()</span>
+
+<span class="c1">## Use a higher glucose threshold and ignore hypertension</span>
+<span class="c1"># flag_high_risk(stroke_data, glucose_threshold=160, check_hypertension=False).head()</span>
+</pre></div>
+</div>
 </section>
 <section id="positional-and-keywords-arguments">
-<h3>3.4 Positional and keywords arguments<a class="headerlink" href="#positional-and-keywords-arguments" title="Link to this heading">#</a></h3>
+<h3>3.3 Positional and keywords arguments<a class="headerlink" href="#positional-and-keywords-arguments" title="Link to this heading">#</a></h3>
+<p>Define a function called <code class="docutils literal notranslate"><span class="pre">compare_histograms(df,</span> <span class="pre">*columns,</span> <span class="pre">**plot_options)</span></code> that allows users to plot histograms for multiple numeric columns in the dataset and customize the plot style with keyword arguments.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compare_histograms</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="o">*</span><span class="n">columns</span><span class="p">,</span> <span class="o">**</span><span class="n">plot_options</span><span class="p">):</span>
+    <span class="c1">#YOUR CODE HERE</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details>
+<summary>💡 Hints</summary>
+<details>
+  <summary>Hint 1: Loop through the column names</summary>
+  <p>Use a <code>for</code> loop to iterate over <code>columns</code>, which is a tuple of all the column names passed positionally.</p>
+  <pre><code>for col in columns:
+    ...
+</code></pre>
+</details>
+<details>
+  <summary>Hint 2: Access optional arguments from <code>**plot_options</code></summary>
+  <p>Use <code>.get()</code> to safely access values from the dictionary of keyword arguments. Set defaults like:</p>
+  <pre><code>plot_options.get("bins", 30)
+plot_options.get("alpha", 0.5)
+</code></pre>
+  <p>This lets users override defaults, but still works even if they don't.</p>
+</details>
+<details>
+  <summary>Hint 3: Customize your plot</summary>
+  <p>Use the values from <code>**plot_options</code> to set the title, figure size, etc. Examples:</p>
+  <pre><code>plt.figure(figsize=plot_options.get("figsize", (6, 4)))
+plt.title(plot_options.get("title", "Comparison"))
+</code></pre>
+</details>
+<details>
+  <summary>Hint 4: Don’t forget labels and legends</summary>
+  <p>Use <code>label=col</code> in your histogram so each column has a legend entry.</p>
+</details>
+<details>
+<summary>Solution</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compare_histograms</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="o">*</span><span class="n">columns</span><span class="p">,</span> <span class="o">**</span><span class="n">plot_options</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Plot histograms of multiple numeric columns from the DataFrame.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters:</span>
+<span class="sd">    df : pd.DataFrame</span>
+<span class="sd">        The dataset to visualize.</span>
+<span class="sd">    *columns : str</span>
+<span class="sd">        Column names to plot.</span>
+<span class="sd">    **plot_options : dict</span>
+<span class="sd">        Keyword arguments for customizing the plot (e.g., bins, alpha, figsize).</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">    None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">num_cols</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">columns</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">num_cols</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please provide at least one column to plot.&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">plot_options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;figsize&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">)))</span>
+
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span>
+            <span class="n">data</span><span class="p">,</span> 
+            <span class="n">bins</span><span class="o">=</span><span class="n">plot_options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;bins&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> 
+            <span class="n">alpha</span><span class="o">=</span><span class="n">plot_options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;alpha&quot;</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> 
+            <span class="n">label</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> 
+            <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span>
+        <span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">plot_options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="s2">&quot;Comparison of Columns&quot;</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Value&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Frequency&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1">## Example usage:</span>
+<span class="c1"># compare_histograms(stroke_data,&#39;avg_glucose_level&#39;,&#39;bmi&#39;,bins=40,alpha=0.6,title=&quot;Glucose vs BMI Distribution&quot;,figsize=(8, 5))</span>
+ 
+</pre></div>
+</div>
 </section>
 </section>
 </section>
@@ -620,7 +896,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Module 6: Extra (OPTIONAL)</p>
+        <p class="prev-next-title">Module 6f: Extra (OPTIONAL)</p>
       </div>
     </a>
 </div>
@@ -650,10 +926,9 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-parameters-vs-arguments">Part 3: Parameters vs Arguments</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-terminology">3.1 Understanding Terminology</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-parameters">3.2 Multiple Parameters</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-parameters">3.3 Default Parameters</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#positional-and-keywords-arguments">3.4 Positional and keywords arguments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-parameters">3.1 Multiple Parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-parameters">3.2 Default Parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#positional-and-keywords-arguments">3.3 Positional and keywords arguments</a></li>
 </ul>
 </li>
 </ul>
@@ -670,7 +945,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-By python crash course team
+By University of Edinburgh, School of Informatics
 </p>
 
   </div>

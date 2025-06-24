@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Module 6: Docstrings &#8212; Python Crash Course</title>
+    <title>Module 6d: Docstrings &#8212; Python Crash Course</title>
   
   
   
@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fcab1d5" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -60,8 +61,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'module6/module_6d_docstrings';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Module 6: Parameters and Arguments" href="module_6e_params-args.html" />
-    <link rel="prev" title="Module 6: Local vs Global Variables" href="module_6c_local-vs-global.html" />
+    <link rel="next" title="Module 6e: Parameters and Arguments" href="module_6e_params-args.html" />
+    <link rel="prev" title="Module 6c: Local vs Global Variables" href="module_6c_local-vs-global.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -187,7 +188,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1f_packages.html">Installing Python Packages</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Exercice 1: check your Python version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Module 1: Practice Sheet</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module2/Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -214,12 +215,12 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="module_6_functions.html">Module 6: Introduction to Functions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="module_6a_basics.html">Module 6: Introduction to Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6b_return-vs-print.html">Module 6: Return Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6c_local-vs-global.html">Module 6: Local vs Global Variables</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module 6: Docstrings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6e_params-args.html">Module 6: Parameters and Arguments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6f_extras.html">Module 6: Extra (OPTIONAL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6a_basics.html">Module 6a: Function Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6b_return-vs-print.html">Module 6b: Return Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6c_local-vs-global.html">Module 6c: Local vs Global Variables</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module 6d: Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6e_params-args.html">Module 6e: Parameters and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6f_extras.html">Module 6f: Extra (OPTIONAL)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
 </ul>
 </details></li>
@@ -277,7 +278,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module6/module_6d_docstrings.md" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module6/module_6d_docstrings.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +296,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/hanane/module6/module_6d_docstrings.md" target="_blank"
+      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/hanane/module6/module_6d_docstrings.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -392,23 +393,6 @@
       
       
       <li><a href="../_sources/module6/module_6d_docstrings.ipynb" target="_blank"
-   class="btn btn-sm btn-download-notebook-button dropdown-item"
-   title="Download notebook file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="../_sources/module6/module_6d_docstrings.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -418,7 +402,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -492,7 +476,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Module 6: Docstrings</h1>
+    <h1>Module 6d: Docstrings</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -514,19 +498,53 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell tag_remove-input docutils container">
+  <div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../shared/setup.py  
+</pre></div>
 </div>
-<section class="tex2jax_ignore mathjax_ignore" id="module-6-docstrings">
-<h1>Module 6: Docstrings<a class="headerlink" href="#module-6-docstrings" title="Link to this heading">#</a></h1>
+</div>
+</details>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="module-6d-docstrings">
+<h1>Module 6d: Docstrings<a class="headerlink" href="#module-6d-docstrings" title="Link to this heading">#</a></h1>
 <div class="alert alert-block alert-success">
 <b>Section Objectives:</b><br> 
-- Write and utilize docstrings to document functions.<br> 
+- Write and utilize docstrings to document functions.
 </div>
 <section id="docstrings">
 <h2>Docstrings<a class="headerlink" href="#docstrings" title="Link to this heading">#</a></h2>
-<p>Let’s go back to the <code class="docutils literal notranslate"><span class="pre">ount_stroke_patients()</span></code> function. Notice how we had a multi-line string in triple quotes, also called documentation string or <strong>docstring</strong> for short. The docstring links explanatory documentation to Python objects such as functions, modules, and classes. It explains the purpose of the function, as well as the parameters required,and the output/return we get.
+<p>Let’s go back to the <code class="docutils literal notranslate"><span class="pre">count_stroke_patients()</span></code> function from the first section of this module. Notice how we had a multi-line string in triple quotes, also called documentation string or <strong>docstring</strong> for short. The docstring links explanatory documentation to Python objects such as functions, modules, and classes. It explains the purpose of the function, as well as the parameters required,and the output/return we get.
 It is incredibly useful for others (as well as future you!) to develop this good practice.</p>
 <p>You can access an object’s documentation through the <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> method or <code class="docutils literal notranslate"><span class="pre">help()</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">count_stroke_patients</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the number of patients in the dataset who had a stroke.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df : pandas.DataFrame</span>
+<span class="sd">        The dataset containing patient information. Must include a &#39;stroke&#39; column</span>
+<span class="sd">        with binary values (e.g., 0 = no stroke, 1 = stroke).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        The number of patients who had a stroke.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">stroke_count</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;stroke&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">stroke_count</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Using __doc__:&quot;</span><span class="p">)</span>
@@ -539,22 +557,41 @@ It is incredibly useful for others (as well as future you!) to develop this good
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using __doc__:
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Using __doc__:&quot;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">count_stroke_patients</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Using help:&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">help</span><span class="p">(</span><span class="n">count_stroke_patients</span><span class="p">)</span>
 
-<span class="ne">NameError</span>: name &#39;count_stroke_patients&#39; is not defined
+Return the number of patients in the dataset who had a stroke.
+
+Parameters
+----------
+df : pandas.DataFrame
+    The dataset containing patient information. Must include a &#39;stroke&#39; column
+    with binary values (e.g., 0 = no stroke, 1 = stroke).
+
+Returns
+-------
+int
+    The number of patients who had a stroke.
+
+Using help:
+Help on function count_stroke_patients in module __main__:
+
+count_stroke_patients(df)
+    Return the number of patients in the dataset who had a stroke.
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        The dataset containing patient information. Must include a &#39;stroke&#39; column
+        with binary values (e.g., 0 = no stroke, 1 = stroke).
+
+    Returns
+    -------
+    int
+        The number of patients who had a stroke.
 </pre></div>
 </div>
 </div>
 </div>
-<p>For the sake of standardization, there a few conventions to follow when writing a docstring, mainly based on {cite} &#64;pep_257  and common community practices (see: {cite} &#64;python_docstrings):</p>
+<p>For the sake of standardization, there a few conventions to follow when writing a docstring, mainly based on <span id="id1">[<a class="reference internal" href="#id10" title="Python Software Foundation. Pep 257 – docstring conventions. https://peps.python.org/pep-0257/, 2001.">Foundation, 2001</a>]</span>  and common community practices (see: <span id="id2">[<a class="reference internal" href="#id11" title="GeeksforGeeks. Python docstrings. https://www.geeksforgeeks.org/python-docstrings/, 2024.">GeeksforGeeks, 2024</a>]</span>):</p>
 <ol class="arabic simple">
 <li><p>Basic Syntax Rules</p></li>
 </ol>
@@ -593,6 +630,47 @@ It is incredibly useful for others (as well as future you!) to develop this good
 <p>Example: see example function in building blocks section.</p>
 </li>
 </ul>
+<p>References:</p>
+<div class="docutils container" id="id3">
+<div role="list" class="citation-list">
+<div class="citation" id="id9" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>fed21<span class="fn-bracket">]</span></span>
+<p>fedesoriano. Stroke prediction dataset. <a class="reference external" href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset/ ">https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset/ </a>, 2021.</p>
+</div>
+<div class="citation" id="id10" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Fou01</a><span class="fn-bracket">]</span></span>
+<p>Python Software Foundation. Pep 257 – docstring conventions. <a class="reference external" href="https://peps.python.org/pep-0257/">https://peps.python.org/pep-0257/</a>, 2001.</p>
+</div>
+<div class="citation" id="id6" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Fou25<span class="fn-bracket">]</span></span>
+<p>Python Software Foundation. Beginner's guide to python. <a class="reference external" href="https://wiki.python.org/moin/BeginnersGuide">https://wiki.python.org/moin/BeginnersGuide</a>, 2025.</p>
+</div>
+<div class="citation" id="id8" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Gee<span class="fn-bracket">]</span></span>
+<p>GeeksforGeeks. Difference between parameters and arguments. <a class="reference external" href="https://www.geeksforgeeks.org/difference-between-parameters-and-arguments/">https://www.geeksforgeeks.org/difference-between-parameters-and-arguments/</a>.</p>
+</div>
+<div class="citation" id="id11" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Gee24</a><span class="fn-bracket">]</span></span>
+<p>GeeksforGeeks. Python docstrings. <a class="reference external" href="https://www.geeksforgeeks.org/python-docstrings/">https://www.geeksforgeeks.org/python-docstrings/</a>, 2024.</p>
+</div>
+<div class="citation" id="id5" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Jup15<span class="fn-bracket">]</span></span>
+<p>Project Jupyter. What is a notebook. <a class="reference external" href="https://docs.jupyter.org/en/latest/#what-is-a-notebook">https://docs.jupyter.org/en/latest/#what-is-a-notebook</a>, 2015.</p>
+</div>
+<div class="citation" id="id7" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Mic25<span class="fn-bracket">]</span></span>
+<p>Microsoft. Windows subsystem for linux. <a class="reference external" href="https://learn.microsoft.com/en-us/windows/wsl/about">https://learn.microsoft.com/en-us/windows/wsl/about</a>, 2025.</p>
+</div>
+<div class="citation" id="id12" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Sch<span class="fn-bracket">]</span></span>
+<p>W3 Schools. Global variables. <a class="reference external" href="https://www.w3schools.com/python/python_variables_global.asp">https://www.w3schools.com/python/python_variables_global.asp</a>.</p>
+</div>
+<div class="citation" id="id4" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tea22<span class="fn-bracket">]</span></span>
+<p>DataCamp Team. Python vs r for data science: which should you learn? <a class="reference external" href="https://www.datacamp.com/blog/python-vs-r-for-data-science-whats-the-difference">https://www.datacamp.com/blog/python-vs-r-for-data-science-whats-the-difference</a>, 2022.</p>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -632,7 +710,7 @@ It is incredibly useful for others (as well as future you!) to develop this good
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Module 6: Local vs Global Variables</p>
+        <p class="prev-next-title">Module 6c: Local vs Global Variables</p>
       </div>
     </a>
     <a class="right-next"
@@ -640,7 +718,7 @@ It is incredibly useful for others (as well as future you!) to develop this good
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Module 6: Parameters and Arguments</p>
+        <p class="prev-next-title">Module 6e: Parameters and Arguments</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -675,7 +753,7 @@ It is incredibly useful for others (as well as future you!) to develop this good
   <div class="footer-item">
     
 <p class="component-author">
-By python crash course team
+By University of Edinburgh, School of Informatics
 </p>
 
   </div>
