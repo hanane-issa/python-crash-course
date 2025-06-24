@@ -2,14 +2,22 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Python Crash Course
-subtitle: Introduction to Python Programming from a Biomedical Lens
-author: python crash course team
+subtitle: Introduction to Python for Biomedical Innovation
+author: University of Edinburgh, School of Informatics
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
+  exclude_output: true 
+
+remove:
+  remove_output_tags:
+    - hide-output
+  remove_input_tags:
+    - hide-input
+
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -20,17 +28,22 @@ latex:
 bibtex_bibfiles:
   - references.bib
 
+sphinx:
+  config:
+    bibtex_reference_style: author_year
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/hanane-issa/python-crash-course   # Online location of your book
-  branch: hanane # Which branch of the repository should be used when creating links (optional)
+  url: https://github.com/hanane-issa/python-crash-course  
+  branch: hanane 
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
   use_repository_button: true
+  extra_css:
+    - _static/custom.css
 
 launch_buttons:
   notebook_interface: "jupyterlab"  # or "classic"

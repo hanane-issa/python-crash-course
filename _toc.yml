@@ -40,13 +40,13 @@ chapters:
 - title: "Module 6: Introduction to Functions"
   file: module6/module_6_functions
   sections:
-  - file: module6/module_6a_basics
-  - file: module6/module_6b_return-vs-print
-  - file: module6/module_6c_local-vs-global
-  - file: module6/module_6d_docstrings
-  - file: module6/module_6e_params-args
-  - file: module6/module_6f_extras
-  - file: module6/module_6g_PracticeSheet
+  - file: module6/module_6a_basics.ipynb
+  - file: module6/module_6b_return-vs-print.ipynb
+  - file: module6/module_6c_local-vs-global.ipynb
+  - file: module6/module_6d_docstrings.ipynb
+  - file: module6/module_6e_params-args.ipynb
+  - file: module6/module_6f_extras.ipynb
+  - file: module6/module_6g_PracticeSheet.ipynb
 
 
 
