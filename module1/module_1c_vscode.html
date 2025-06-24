@@ -32,9 +32,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fcab1d5" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -58,7 +59,6 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'module1/module_1c_vscode';</script>
-    <link rel="canonical" href="/python-crash-course/module1/module_1c_vscode.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Python in Anaconda Navigator" href="module_1d_anaconda.html" />
@@ -176,7 +176,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Welcome to the Python Crash Course 🧬🐍
+                    Introduction to Python for Biomedical Innovation 🧬🐍
                 </a>
             </li>
         </ul>
@@ -188,7 +188,7 @@
 <li class="toctree-l2"><a class="reference internal" href="module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_1f_packages.html">Installing Python Packages</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="module1_exercice.html">Exercice 1: check your Python version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module1_exercice.html">Module 1: Practice Sheet</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module2/Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -202,6 +202,16 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module6/module_6_functions.html">Module 6: Introduction to Functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6a_basics.html">Module 6a: Function Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6b_return-vs-print.html">Module 6b: Return Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6c_local-vs-global.html">Module 6c: Local vs Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6d_docstrings.html">Module 6d: Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6e_params-args.html">Module 6e: Parameters and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6f_extras.html">Module 6f: Extra (OPTIONAL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -256,7 +266,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/main?urlpath=lab/tree/module1/module_1c_vscode.md" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module1/module_1c_vscode.md" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -274,7 +284,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/main/module1/module_1c_vscode.md" target="_blank"
+      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/hanane/module1/module_1c_vscode.md" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -484,7 +494,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-vscode">1. Download VSCode</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-necessary-plugins">2. Install Necessary Plugins</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-file">3. Create a New File</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-your-first-python-code">4. Writing your first Python code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-your-first-python-code-in-a-notebook">4. Writing your first Python code in a notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-your-first-python-script">5. Writing your first Python script</a></li>
 </ul>
             </nav>
         </div>
@@ -526,16 +537,21 @@ File &gt; New File</p>
 <p>You will be prompted to select a file type, for example a text file, a python file (.py) or a jupyter notebook (.ipynb).</p>
 <p>Let’s start with a new jupyter notebook file to start writing your first Python code.</p>
 </section>
-<section id="writing-your-first-python-code">
-<h2>4. Writing your first Python code<a class="headerlink" href="#writing-your-first-python-code" title="Link to this heading">#</a></h2>
+<section id="writing-your-first-python-code-in-a-notebook">
+<h2>4. Writing your first Python code in a notebook<a class="headerlink" href="#writing-your-first-python-code-in-a-notebook" title="Link to this heading">#</a></h2>
 <img src="../_static/images/vscode_firstcode.gif" alt="ipynb gif" style="width: 1200px; height: 300px"/>
 <p>As mentioned before, jupyter notebooks allow you to interactively write code (including Python code) and combine it wiht text, images, and graphs.</p>
 <p>You can add text and headers to your notebook by selecting Markdown as the programming language for your cell, or selecting “Add Markdown”. You can find more information on basic Markdown syntax <a class="reference external" href="https://www.markdownguide.org/basic-syntax/">here</a>.</p>
 <p>To begin writing Python code in your notebook, simply change the cell type to Code, or insert a new code cell with Python as the language.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># My first code</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># My first code</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello, world!
 </pre></div>
 </div>
 </div>
@@ -547,6 +563,36 @@ File &gt; New File</p>
 <p>You can press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> to run your current code cell.</p>
 </div>
 </section>
+<section id="writing-your-first-python-script">
+<h2>5. Writing your first Python script<a class="headerlink" href="#writing-your-first-python-script" title="Link to this heading">#</a></h2>
+<p>You can write the same code mentioned above in a Python script file and save it as <code class="docutils literal notranslate"><span class="pre">first_script.py</span></code>.</p>
+<p>You can then run this script in a terminal as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>first_script.py
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Make sure you’re in the same directory as your script file.</p></li>
+<li><p>If you’re using Python 3 specifically, replace <code class="docutils literal notranslate"><span class="pre">python</span></code> with <code class="docutils literal notranslate"><span class="pre">python3</span></code>.</p></li>
+</ul>
+</div>
+<p>You can also run this script in a Jupyter Notebook via two methods:</p>
+<ol class="arabic simple">
+<li><p>Using ! to call a shell command:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span><span class="n">python</span> <span class="n">first_script</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Using %run magic command:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">run</span> <span class="n">first_script</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>This will run the entire script in the notebook’s environment.
+Any variables or functions defined in the script will be accessible afterward.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -554,7 +600,7 @@ File &gt; New File</p>
         requestKernel: true,
         binderOptions: {
             repo: "hanane-issa/python-crash-course",
-            ref: "main",
+            ref: "hanane",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -616,7 +662,8 @@ File &gt; New File</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-vscode">1. Download VSCode</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-necessary-plugins">2. Install Necessary Plugins</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-file">3. Create a New File</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-your-first-python-code">4. Writing your first Python code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-your-first-python-code-in-a-notebook">4. Writing your first Python code in a notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-your-first-python-script">5. Writing your first Python script</a></li>
 </ul>
   </nav></div>
 
@@ -631,7 +678,7 @@ File &gt; New File</p>
   <div class="footer-item">
     
 <p class="component-author">
-By python crash course team
+By University of Edinburgh, School of Informatics
 </p>
 
   </div>

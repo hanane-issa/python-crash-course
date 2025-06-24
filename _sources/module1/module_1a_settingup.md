@@ -42,9 +42,7 @@ Python is a beginner-friendly programming language with clean, readable synthax 
 Python and R are both widely used in data science. We often see debates in the field about whether to use one or the other, as if they were mutually exclusive. 
 For beginners, this choice might seem more critical, but in the long term, learning both languages is often necessary. Instead of viewing them as competing options, it's better to consider them as complementary tools, each suited to different tasks or use cases. 
 
-For instance, R is highly specialized in statistical tests and models like mixed-effects models, survival analysis, or time-series forecasting, while Python is ideal for tasks related to deep learning, web development, automation, or deploying models.
-
-(source: {cite}`datacamp_python_vs_r` )
+For instance, R is highly specialized in statistical tests and models like mixed-effects models, survival analysis, or time-series forecasting, while Python is ideal for tasks related to deep learning, web development, automation, or deploying models {cite}`datacamp_python_vs_r`.
 
 ## Python + Jupyter Notebook = ...?
 
@@ -70,8 +68,7 @@ N.B. Jupyter Notebook refers to both a file format and an application. You can e
 | **Output Visualization**   | No built-in output visualization.                         | Directly supports rich visual outputs like plots and tables. |
 | **Documentation**          | Limited to comments in the code.                          | Supports Markdown for rich documentation and formatting.   |
 
-
-source(: {cite}`jupyter_notebook` )
+{cite}`jupyter_notebook`
 
 ## Where can I write my Python code?
 

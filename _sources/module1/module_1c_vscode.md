@@ -65,7 +65,7 @@ You will be prompted to select a file type, for example a text file, a python fi
 
 Let's start with a new jupyter notebook file to start writing your first Python code.
 
-## 4. Writing your first Python code
+## 4. Writing your first Python code in a notebook
 
 <img src="../_static/images/vscode_firstcode.gif" alt="ipynb gif" style="width: 1200px; height: 300px"/>
 
@@ -90,7 +90,32 @@ In your code cell, adding a dial symbol `#` before a text turns it into a commen
 You can press `Shift + Enter` to run your current code cell.
 ```
 
+## 5. Writing your first Python script
 
+You can write the same code mentioned above in a Python script file and save it as `first_script.py`.
 
+You can then run this script in a terminal as follows:
 
+```bash
+python first_script.py
+```
 
+```{note}
+- Make sure you're in the same directory as your script file.
+- If you're using Python 3 specifically, replace `python` with `python3`.
+```
+
+You can also run this script in a Jupyter Notebook via two methods:
+
+1. Using ! to call a shell command:
+```python
+!python first_script.py
+```
+
+2. Using %run magic command:
+```python
+%run first_script.py
+```
+
+This will run the entire script in the notebook's environment.
+Any variables or functions defined in the script will be accessible afterward.

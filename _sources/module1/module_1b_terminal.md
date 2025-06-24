@@ -30,7 +30,7 @@ Before we dive into fancy tools like VS Code and Anaconda, let’s start with th
 
 If you don’t have Python yet, follow these steps:
 
-Go to the official website: https://www.python.org/downloads ({cite`python_beginners_guide`})
+Go to the official website: https://www.python.org/downloads {cite}`python_beginners_guide`.
 
 Download the latest stable version (e.g., Python 3.13.2).
 
@@ -106,9 +106,11 @@ Upgrading your Python version differs across operating systems.
 
 
 ```{note}
-You can run Linux commands in Windows using [WSL](https://learn.microsoft.com/en-us/windows/wsl/about) ({cite}`wsl`).
+You can run Linux commands in Windows using WSL {cite:p}`wsl`.
 ```
 
 
 References:
 ```{bibliography}
+:style: alpha
+```

@@ -32,9 +32,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fcab1d5" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -58,10 +59,9 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'module1/module_1f_packages';</script>
-    <link rel="canonical" href="/python-crash-course/module1/module_1f_packages.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Exercice 1: check your Python version" href="module1_exercice.html" />
+    <link rel="next" title="Module 1: Practice Sheet" href="module1_exercice.html" />
     <link rel="prev" title="How to Run the Notebook Exercices" href="module_1e_notebook-execution.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -176,7 +176,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Welcome to the Python Crash Course 🧬🐍
+                    Introduction to Python for Biomedical Innovation 🧬🐍
                 </a>
             </li>
         </ul>
@@ -188,7 +188,7 @@
 <li class="toctree-l2"><a class="reference internal" href="module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Installing Python Packages</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="module1_exercice.html">Exercice 1: check your Python version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module1_exercice.html">Module 1: Practice Sheet</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module2/Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -202,6 +202,16 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module6/module_6_functions.html">Module 6: Introduction to Functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6a_basics.html">Module 6a: Function Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6b_return-vs-print.html">Module 6b: Return Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6c_local-vs-global.html">Module 6c: Local vs Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6d_docstrings.html">Module 6d: Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6e_params-args.html">Module 6e: Parameters and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6f_extras.html">Module 6f: Extra (OPTIONAL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -256,7 +266,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/main?urlpath=lab/tree/module1/module_1f_packages.md" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module1/module_1f_packages.md" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -274,7 +284,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/main/module1/module_1f_packages.md" target="_blank"
+      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/hanane/module1/module_1f_packages.md" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -503,6 +513,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-specific-items-from-packages">Importing specific items from packages</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-a-single-item">Importing a single item</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-several-items-at-once">Importing several items at once</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-custom-packages">Importing custom packages</a></li>
 </ul>
 </li>
 </ul>
@@ -557,7 +568,7 @@ You can find a list of built-in Python modules <a class="reference external" hre
 <p>You can also run this shell command in your jupyter notebook, by adding a ! or % before pip ( [see more on stackoverflow] (<a class="reference external" href="https://stackoverflow.com/questions/45784499/what-is-the-difference-between-and-in-jupyter-notebooks">https://stackoverflow.com/questions/45784499/what-is-the-difference-between-and-in-jupyter-notebooks</a>) ).</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pandas
 <span class="c1">#same as: %pip install pandas</span>
 </pre></div>
 </div>
@@ -569,7 +580,7 @@ You can find a list of built-in Python modules <a class="reference external" hre
 <p>We’ve mentioned before that, in some cases, you might be working with projects that rely on specific versions of a package. You can specify the package version you want to install:</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">2.2.3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">pandas</span><span class="o">==</span><span class="m">2</span>.2.3
 <span class="c1">#replace 2.2.3 with the version you want.</span>
 </pre></div>
 </div>
@@ -578,7 +589,7 @@ You can find a list of built-in Python modules <a class="reference external" hre
 <p>A quick way of checking and verifying your package version is via:</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#import your package</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import your package</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span> 
 
 <span class="c1">#check your package version</span>
@@ -593,7 +604,7 @@ You can find a list of built-in Python modules <a class="reference external" hre
 <p>You can also install Python packages directly from remote URLs or local files like .tar.gz and .whl using pip.</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">## from a URL (fake):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## from a URL (fake):</span>
 <span class="c1">#!pip install https://example.com/package.tar.gz</span>
 
 <span class="c1">## from a local file:</span>
@@ -627,7 +638,7 @@ numpy==2.2.4</p>
 <p>If you’ve already installed the packages in your current environment, you can automatically generate the requirements.txt file with this command:</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">freeze</span> <span class="o">&gt;</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
 </pre></div>
 </div>
 </div>
@@ -635,7 +646,7 @@ numpy==2.2.4</p>
 <p>This command lists all the installed packages and their versions in the current Python environment and saves them in requirements.txt.</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </pre></div>
 </div>
 </div>
@@ -650,15 +661,11 @@ numpy==2.2.4</p>
 <section id="id1">
 <h3>Manually<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>A simple environment YAML file has the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> extension and follows this format:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">myenv</span>
-<span class="n">dependencies</span><span class="p">:</span>
-  <span class="o">-</span> <span class="n">numpy</span>
-  <span class="o">-</span> <span class="n">pandas</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myenv</span>
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">numpy</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandas</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>You can read more about it <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually">here</a>.</p>
 </section>
@@ -707,7 +714,7 @@ If one of your core dependencies updates, you need an additional package, or you
 The basic syntax for creating an import alias is:</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="o">&lt;</span><span class="n">module_name</span><span class="o">&gt;</span> <span class="k">as</span> <span class="o">&lt;</span><span class="n">alias_name</span><span class="o">&gt;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="o">&lt;</span><span class="n">module_name</span><span class="o">&gt;</span> <span class="k">as</span> <span class="o">&lt;</span><span class="n">alias_name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -715,7 +722,7 @@ The basic syntax for creating an import alias is:</p>
 <p>Where &lt;module_name&gt; is the actual name of the package or module, and  &lt;alias_name&gt; is the shorter or more convenient name you want to use for that package.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Example: </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Example: </span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 </pre></div>
 </div>
@@ -745,7 +752,7 @@ We’ll use the <code class="docutils literal notranslate"><span class="pre">sta
 <p>Let’s say you want to calculate the Body Mass Index (BMI) of a patient. You’ll need the <code class="docutils literal notranslate"><span class="pre">pow()</span></code> function the <code class="docutils literal notranslate"><span class="pre">math</span></code> module to raise the height value to the power of 2.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="nb">pow</span>  
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="nb">pow</span>  
 
 <span class="n">weight_kg</span> <span class="o">=</span> <span class="mi">70</span>
 <span class="n">height_m</span> <span class="o">=</span> <span class="mf">1.75</span>
@@ -763,7 +770,7 @@ We’ll use the <code class="docutils literal notranslate"><span class="pre">sta
 <p>To take the previous example a step further, you want to make sure your BMI value is rounded up to the nearest whole integer using the  <code class="docutils literal notranslate"><span class="pre">ceil</span></code> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="nb">pow</span><span class="p">,</span> <span class="n">ceil</span>  
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="nb">pow</span><span class="p">,</span> <span class="n">ceil</span>  
 
 <span class="n">weight_kg</span> <span class="o">=</span> <span class="mi">70</span>
 <span class="n">height_m</span> <span class="o">=</span> <span class="mf">1.75</span>
@@ -780,6 +787,17 @@ We’ll use the <code class="docutils literal notranslate"><span class="pre">sta
 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">&lt;module_name&gt;</span> <span class="pre">import</span> <span class="pre">*</span> </code></p>
 </div>
 </section>
+<section id="importing-custom-packages">
+<h3>Importing custom packages<a class="headerlink" href="#importing-custom-packages" title="Link to this heading">#</a></h3>
+<p>You can create your own packages. In the previous sections, we saw how easy it is to create a Python script file called <code class="docutils literal notranslate"><span class="pre">first_script.py</span></code>. If this file contained functions or variables, you can reuse them by importing the file just like a Python module.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">first_script</span>
+</pre></div>
+</div>
+<p>Just like any module, you can also give it an alias.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">first_script</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">fs</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
@@ -788,7 +806,7 @@ We’ll use the <code class="docutils literal notranslate"><span class="pre">sta
         requestKernel: true,
         binderOptions: {
             repo: "hanane-issa/python-crash-course",
-            ref: "main",
+            ref: "hanane",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -827,7 +845,7 @@ We’ll use the <code class="docutils literal notranslate"><span class="pre">sta
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exercice 1: check your Python version</p>
+        <p class="prev-next-title">Module 1: Practice Sheet</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -869,6 +887,7 @@ We’ll use the <code class="docutils literal notranslate"><span class="pre">sta
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-specific-items-from-packages">Importing specific items from packages</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-a-single-item">Importing a single item</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-several-items-at-once">Importing several items at once</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-custom-packages">Importing custom packages</a></li>
 </ul>
 </li>
 </ul>
@@ -888,7 +907,7 @@ We’ll use the <code class="docutils literal notranslate"><span class="pre">sta
   <div class="footer-item">
     
 <p class="component-author">
-By python crash course team
+By University of Edinburgh, School of Informatics
 </p>
 
   </div>

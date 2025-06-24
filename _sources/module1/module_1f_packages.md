@@ -160,7 +160,7 @@ If you are using conda, you can create a `environment.yml` file.
 
 A simple environment YAML file has the `.yml` extension and follows this format:
 
-```{code-cell}
+```yaml
 name: myenv
 dependencies:
   - numpy
@@ -281,4 +281,18 @@ bmi_ceil = ceil(bmi)
 ```{note}
 While not recommended, another way to import a whole package is through the syntax:
 `from <module_name> import * `
+```
+
+### Importing custom packages
+
+You can create your own packages. In the previous sections, we saw how easy it is to create a Python script file called `first_script.py`. If this file contained functions or variables, you can reuse them by importing the file just like a Python module.
+
+```python
+import first_script
+```
+
+Just like any module, you can also give it an alias.
+
+```python
+import first_script as fs
 ```

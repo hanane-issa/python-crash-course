@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to the Python Crash Course 🧬🐍 &#8212; Python Crash Course</title>
+    <title>Introduction to Python for Biomedical Innovation 🧬🐍 &#8212; Python Crash Course</title>
   
   
   
@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6fcab1d5" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -60,7 +61,6 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
-    <link rel="canonical" href="/python-crash-course/intro.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Module 1: Setting Up" href="module1/module_1a_settingup.html" />
@@ -179,7 +179,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Welcome to the Python Crash Course 🧬🐍
+                    Introduction to Python for Biomedical Innovation 🧬🐍
                 </a>
             </li>
         </ul>
@@ -191,7 +191,7 @@
 <li class="toctree-l2"><a class="reference internal" href="module1/module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module1/module_1f_packages.html">Installing Python Packages</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="module1/module1_exercice.html">Exercice 1: check your Python version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module1/module1_exercice.html">Module 1: Practice Sheet</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="module2/Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -205,6 +205,27 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="module3/module3.html">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="module5/intro.html">Module 5: Introduction to Data Visualization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="module5/data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/module5_examples.html">importing packages</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="module6/module_6_functions.html">Module 6: Introduction to Functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="module6/module_6a_basics.html">Module 6a: Function Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module6/module_6b_return-vs-print.html">Module 6b: Return Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module6/module_6c_local-vs-global.html">Module 6c: Local vs Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module6/module_6d_docstrings.html">Module 6d: Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module6/module_6e_params-args.html">Module 6e: Parameters and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module6/module_6f_extras.html">Module 6f: Extra (OPTIONAL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module6/module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -390,7 +411,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to the Python Crash Course 🧬🐍</h1>
+    <h1>Introduction to Python for Biomedical Innovation 🧬🐍</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -412,17 +433,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-the-python-crash-course">
-<h1>Welcome to the Python Crash Course 🧬🐍<a class="headerlink" href="#welcome-to-the-python-crash-course" title="Link to this heading">#</a></h1>
-<p>This crash course is a hands-on introduction to <strong>Python programming</strong>, specifically designed for beginners in the <strong>biomedical research</strong> fields.</p>
-<p>Developed by PhD students at the University of Edinburgh, the course uses examples from biomedical science to help you learn Python in a practical, applied way.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-python-for-biomedical-innovation">
+<h1>Introduction to Python for Biomedical Innovation 🧬🐍<a class="headerlink" href="#introduction-to-python-for-biomedical-innovation" title="Link to this heading">#</a></h1>
+<p>This guide is a hands-on introduction to <strong>Python programming</strong>, specifically designed for beginners in the <strong>biomedical research</strong> fields.</p>
+<p>Developed by PhD students at the School of Informatics in the University of Edinburgh, the course uses examples from biomedical science to help you learn Python in a practical, applied way.</p>
 <p>The aim is to help you get started with Python, giving you the core skills you need to work with data and code confidently.</p>
 <section id="how-to-use-this-book">
 <h2>How to Use This Book<a class="headerlink" href="#how-to-use-this-book" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Work through the modules in order</p></li>
 <li><p>Try the practice sheets and examples</p></li>
-<li><p>Don’t worry if you get stuck—debugging is part of the learning process!</p></li>
+<li><p>Don’t worry if you get stuck; debugging is part of the learning process!</p></li>
 </ul>
 <p>IN PROGRESS</p>
 <div class="toctree-wrapper compound">
@@ -430,6 +451,18 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="module1/module_1a_settingup.html">Module 1: Setting Up</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module2/Module2_1%2C2_Intro.html">Module 2: Python Foundations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module3/module3.html">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module5/intro.html">Module 5: Introduction to Data Visualization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="module5/data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/module5_examples.html">importing packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/module5_examples.html#import-the-dataset">import the dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/module5_examples.html#a-little-bit-of-data-preprocessing">A little bit of data preprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/module5_examples.html#matplotlib-and-histogram">Matplotlib and histogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/module5_examples.html#seaborn-and-distribution-visualization">Seaborn and distribution visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/module5_examples.html#visualizing-correlation">Visualizing correlation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/module5_examples.html#linear-regression-and-line-plot">Linear regression and line plot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="module6/module_6_functions.html">Module 6: Introduction to Functions</a></li>
 </ul>
 </div>
 </section>
@@ -440,7 +473,7 @@ document.write(`
         requestKernel: true,
         binderOptions: {
             repo: "hanane-issa/python-crash-course",
-            ref: "main",
+            ref: "hanane",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -505,7 +538,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-By python crash course team
+By University of Edinburgh, School of Informatics
 </p>
 
   </div>

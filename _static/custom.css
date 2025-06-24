@@ -1,0 +1,5 @@
+/* HIDE the [XYZ] citation labels in the bibliography */
+span.label {
+  display: none !important;
+}
+
