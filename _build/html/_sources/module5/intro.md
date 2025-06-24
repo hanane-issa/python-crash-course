@@ -13,5 +13,3 @@ We will be using the [Stroke Prediction Dataset](https://www.kaggle.com/datasets
 This module assumes that you have gone through module 4 and learned how to load data and handle a dataframe in python.
 
 
-```{tableofcontents}
-```
