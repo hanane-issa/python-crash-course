@@ -34,8 +34,11 @@ Select the rocket sign on the top right side of the page to see your three optio
 ```
 
 1. Live Code
+
   - Easiest option — no setup needed.
+
   - Just click the “Live Code” button at the top of each exercice notebook page in this book.
+  
   - This allows you to execute the code cells directly in the jupyter book.
 
 2. Run in Google Colab
@@ -44,7 +47,7 @@ Select the rocket sign on the top right side of the page to see your three optio
 
   - It runs in your browser and saves changes to your Google Drive (if you sign in).
 
-  - Make sure the required packages are imported.
+  - Make sure the required packages are imported. We recommend that you run the top most cell in each notebook which will load a setup script for you.
 
 
 3. Run on Binder
@@ -56,6 +59,8 @@ Select the rocket sign on the top right side of the page to see your three optio
   - Binder launches a temporary Jupyter environment.
 
   - No installation required, but it takes a minute to load.
+  
+  - To ensure that your data and packages are imported, we recommend that you run the top most cell in each notebook which will load a setup script for you.
 
 
 4. Download and Run Locally
