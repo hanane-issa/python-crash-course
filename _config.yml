@@ -10,7 +10,6 @@ logo: logo.png
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
-  exclude_output: true 
 
 remove:
   remove_output_tags:
