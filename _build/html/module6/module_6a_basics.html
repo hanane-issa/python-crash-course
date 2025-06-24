@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Module 6: Introduction to Functions &#8212; Python Crash Course</title>
+    <title>Module 6a: Function Basics &#8212; Python Crash Course</title>
   
   
   
@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fcab1d5" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -60,7 +61,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'module6/module_6a_basics';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Module 6: Return Statements" href="module_6b_return-vs-print.html" />
+    <link rel="next" title="Module 6b: Return Statements" href="module_6b_return-vs-print.html" />
     <link rel="prev" title="Module 6: Introduction to Functions" href="module_6_functions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -187,7 +188,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1f_packages.html">Installing Python Packages</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Exercice 1: check your Python version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Module 1: Practice Sheet</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module2/Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -214,12 +215,12 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="module_6_functions.html">Module 6: Introduction to Functions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module 6: Introduction to Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6b_return-vs-print.html">Module 6: Return Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6c_local-vs-global.html">Module 6: Local vs Global Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6d_docstrings.html">Module 6: Docstrings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6e_params-args.html">Module 6: Parameters and Arguments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6f_extras.html">Module 6: Extra (OPTIONAL)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module 6a: Function Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6b_return-vs-print.html">Module 6b: Return Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6c_local-vs-global.html">Module 6c: Local vs Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6d_docstrings.html">Module 6d: Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6e_params-args.html">Module 6e: Parameters and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6f_extras.html">Module 6f: Extra (OPTIONAL)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
 </ul>
 </details></li>
@@ -277,7 +278,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module6/module_6a_basics.md" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module6/module_6a_basics.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +296,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/hanane/module6/module_6a_basics.md" target="_blank"
+      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/hanane/module6/module_6a_basics.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -392,23 +393,6 @@
       
       
       <li><a href="../_sources/module6/module_6a_basics.ipynb" target="_blank"
-   class="btn btn-sm btn-download-notebook-button dropdown-item"
-   title="Download notebook file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="../_sources/module6/module_6a_basics.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -418,7 +402,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -492,7 +476,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Module 6: Introduction to Functions</h1>
+    <h1>Module 6a: Function Basics</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -522,39 +506,59 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell tag_remove-input docutils container">
+  <div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;shared&#39;</span><span class="p">)))</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">setup_code</span>
+</pre></div>
 </div>
-<section class="tex2jax_ignore mathjax_ignore" id="module-6-introduction-to-functions">
-<h1>Module 6: Introduction to Functions<a class="headerlink" href="#module-6-introduction-to-functions" title="Link to this heading">#</a></h1>
+</div>
+</details>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="module-6a-function-basics">
+<h1>Module 6a: Function Basics<a class="headerlink" href="#module-6a-function-basics" title="Link to this heading">#</a></h1>
 <div class="alert alert-block alert-success">
 <b>Section Objectives:</b><br> 
-- Understand how to define a function in a programming language.<br> 
-- Learn how to call a function to execute its code.<br>
+- Understand the building blocks of a function.<br> 
+- Learn how to define and call a function to execute its code.<br>
 </div>
 <section id="why-write-a-function">
 <h2>Why write a function?<a class="headerlink" href="#why-write-a-function" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Reuse code easily
-As you start coding and analyzing data in Python, you’ll soon realize that some code snippets are repeated and can be reused. Instead of copying and pasting the same code again and again, you write it once as a function and use it whenever you need. This saves time and effort!</p></li>
-<li><p>Make your code cleaner and shorter
-Functions help break big problems into smaller, manageable pieces. This makes your code easier to read and understand. We often talk about avoiding ‘spaghetti code’. Just as it sounds, this describes code that is unclear, a big tangled mess that’s tough to read, understand, and work with,—kind of like a bowl of spaghetti all mixed up.</p></li>
-<li><p>Avoid mistakes
-When you reuse the same function, you only need to test and fix the code once. This reduces errors compared to copying code multiple times.</p></li>
-<li><p>Organize your work
-Functions let you give a name to a block of code, which describes what it does. This helps others (and future you!) understand your program faster.</p></li>
+<li><p>Reuse code easily:</p></li>
 </ol>
+<p>As you start coding and analyzing data in Python, you’ll soon realize that some code snippets are repeated and can be reused. Instead of copying and pasting the same code again and again, you write it once as a function and use it whenever you need. This saves time and effort!</p>
+<ol class="arabic simple" start="2">
+<li><p>Make your code cleaner and shorter:</p></li>
+</ol>
+<p>Functions help break big problems into smaller, manageable pieces. This makes your code easier to read and understand. We often talk about avoiding ‘spaghetti code’. Just as it sounds, this describes code that is unclear, a big tangled mess that’s tough to read, understand, and work with,—kind of like a bowl of spaghetti all mixed up.</p>
+<ol class="arabic simple" start="3">
+<li><p>Avoid mistakes:</p></li>
+</ol>
+<p>When you reuse the same function, you only need to test and fix the code once. This reduces errors compared to copying code multiple times.</p>
+<ol class="arabic simple" start="4">
+<li><p>Organize your work:</p></li>
+</ol>
+<p>Functions let you give a name to a block of code, which describes what it does. This helps others (and future you!) understand your program faster.</p>
 </section>
 <section id="anatomy-of-a-function">
 <h2>Anatomy of a Function<a class="headerlink" href="#anatomy-of-a-function" title="Link to this heading">#</a></h2>
 <p>So what are the building blocks of a function? What elements do we need for Python to understand that we’re defining a function?</p>
 <p>Let’s take a look at the syntax needed:</p>
 <img src="../_static/images/function_annotation.png" alt="function_explanation" style="width: 1400px; height: 300px"/>
-<p>As you can see, a function requires parameters to define the type and number of values that it can accept (source: {cite} &#64;params_vs_args). These parameters are placeholders for the actual data you want to pass when you call the function. If your function were a vending machine, then the parameters are the buttons you press to choose what comes out!</p>
+<p>As you can see, a function requires parameters to define the type and number of values that it can accept <span id="id1">[<a class="reference internal" href="module_6d_docstrings.html#id9" title="GeeksforGeeks. Difference between parameters and arguments. https://www.geeksforgeeks.org/difference-between-parameters-and-arguments/.">GeeksforGeeks, n.d.</a>]</span>. These parameters are placeholders for the actual data you want to pass when you call the function. If your function were a vending machine, then the parameters are the buttons you press to choose what comes out.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You only need to define a function once, then you can use (call) it as many times as you like.</p>
 </div>
-<p>Let’s use the Kaggle stroke data (cite) to write our first function.
+<p>Let’s use the Kaggle stroke data <span id="id2">[<a class="reference internal" href="module_6d_docstrings.html#id10" title="fedesoriano. Stroke prediction dataset. https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset/ , 2021.">fedesoriano, 2021</a>]</span> to write our first function.
 The stroke variable is binary: 1 indicates that the patient had a stroke, and 0 indicates the absence of a stroke. We can then determine the number of patients who had a stroke by calculating the sum of this column through the following function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -580,9 +584,19 @@ The stroke variable is binary: 1 indicates that the patient had a stroke, and 0 
 </div>
 </div>
 <p>To call the function, we use the syntax <code class="docutils literal notranslate"><span class="pre">function_name(arguments)</span></code>.</p>
-<div class="cell tag_remove-output docutils container">
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_stroke_patients</span><span class="p">(</span><span class="n">stroke_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">count_stroke_patients</span><span class="p">(</span><span class="n">stroke_data</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;stroke_data&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -599,8 +613,8 @@ The stroke variable is binary: 1 indicates that the patient had a stroke, and 0 
 <p>Suppose you’re planning to write a function that will analyze the relationship between smoking status and stroke, but you’re not ready to write the actual logic yet.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">analyze_smoking_effect</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-    <span class="k">pass</span>  <span class="c1"># We&#39;ll implement this later</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">count_smokers_by_category</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="k">pass</span>  <span class="c1"># We&#39;ll implement this later in the quick practice</span>
 </pre></div>
 </div>
 </div>
@@ -612,22 +626,10 @@ The stroke variable is binary: 1 indicates that the patient had a stroke, and 0 
 <p>You might also check if the smoking_status column exists, but want to fill in the logic later:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s1">&#39;smoking_status&#39;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s1">&#39;smoking_status&#39;</span> <span class="ow">in</span> <span class="n">stroke_data</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
     <span class="k">pass</span>  <span class="c1"># analysis will go here</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Column &#39;smoking_status&#39; not found.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">if</span> <span class="s1">&#39;smoking_status&#39;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="k">pass</span>  <span class="c1"># analysis will go here</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">else</span><span class="p">:</span>
-
-<span class="ne">NameError</span>: name &#39;df&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -638,7 +640,7 @@ The stroke variable is binary: 1 indicates that the patient had a stroke, and 0 
 <h3>What happens if we remove <code class="docutils literal notranslate"><span class="pre">pass</span></code>?<a class="headerlink" href="#what-happens-if-we-remove-pass" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">analyze_smoking_effect</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">count_smokers_by_category</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
     <span class="c1"># nothing here!</span>
 </pre></div>
 </div>
@@ -656,13 +658,19 @@ The stroke variable is binary: 1 indicates that the patient had a stroke, and 0 
 </ul>
 <p>The pass statement is a placeholder you can replace with real code when you’re ready.
 You can call the function to see if it works!</p>
-<p>def count_smokers_by_category(df):
-if ‘smoking_status’ in df.columns:
-pass
-### TO DO: REPLACE PASS WITH YOUR CODE ###
-else:
-pass
-### TO DO: REPLACE PASS WITH YOUR CODE ###</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">count_smokers_by_category</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="k">if</span> <span class="s1">&#39;smoking_status&#39;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="k">pass</span>
+        <span class="c1">### TO DO: REPLACE PASS WITH YOUR CODE ###</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span>
+        <span class="c1">### TO DO: REPLACE PASS WITH YOUR CODE ###</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div style="margin-bottom: 15px;">
   <details>
     <summary>
@@ -727,7 +735,7 @@ def count_smokers_by_category(df):
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Module 6: Return Statements</p>
+        <p class="prev-next-title">Module 6b: Return Statements</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -770,7 +778,7 @@ def count_smokers_by_category(df):
   <div class="footer-item">
     
 <p class="component-author">
-By python crash course team
+By University of Edinburgh, School of Informatics
 </p>
 
   </div>

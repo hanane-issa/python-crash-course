@@ -21,7 +21,8 @@ kernelspec:
 # How to Run the Notebook Exercices
 
 After each module, you can test your knowledge with a coding exercice in a jupyter notebook file.
-You can run the notebooks in three different ways, depending on your preference and setup:
+You can run the notebooks in three different ways, depending on your preference and setup. 
+Select the rocket sign on the top right side of the page to see your three options:
 
 
 
@@ -33,15 +34,20 @@ You can run the notebooks in three different ways, depending on your preference 
 ```
 
 1. Live Code
+
   - Easiest option — no setup needed.
+
   - Just click the “Live Code” button at the top of each exercice notebook page in this book.
-  - This allows you to execute the code cells in the jupyter book.
+  
+  - This allows you to execute the code cells directly in the jupyter book.
 
 2. Run in Google Colab
 
   - Just click the “Open in Colab” button at the top of each exercice notebook page in this book.
 
   - It runs in your browser and saves changes to your Google Drive (if you sign in).
+
+  - Make sure the required packages are imported. We recommend that you run the top most cell in each notebook which will load a setup script for you.
 
 
 3. Run on Binder
@@ -53,6 +59,8 @@ You can run the notebooks in three different ways, depending on your preference 
   - Binder launches a temporary Jupyter environment.
 
   - No installation required, but it takes a minute to load.
+  
+  - To ensure that your data and packages are imported, we recommend that you run the top most cell in each notebook which will load a setup script for you.
 
 
 4. Download and Run Locally
@@ -61,7 +69,7 @@ You can run the notebooks in three different ways, depending on your preference 
 
   - Download the notebook (.ipynb) from GitHub.
 
-  - Open it using your preferred code editor/IDE, e.g. VSCode.
+  - Open it using your preferred code editor/IDE.
 
 
 

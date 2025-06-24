@@ -28,16 +28,48 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-result = print_stroke_summary(df)
-print(result)  # Output: None
+%load ../shared/setup.py  
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
-[31mNameError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[3][39m[32m, line 1[39m
-[32m----> [39m[32m1[39m result = print_stroke_summary([43mdf[49m)
-[32m      2[39m [38;5;28mprint[39m(result)  [38;5;66;03m# Output: None[39;00m
+[31mSyntaxError[39m                               Traceback (most recent call last)
+[36mFile [39m[32m~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\interactiveshell.py:3876[39m, in [36mInteractiveShell.find_user_code[39m[34m(self, target, raw, py_only, skip_encoding_cookie, search_ns)[39m
+[32m   3875[39m [38;5;28;01mtry[39;00m:                                              [38;5;66;03m# User namespace[39;00m
+[32m-> [39m[32m3876[39m     codeobj = [38;5;28;43meval[39;49m[43m([49m[43mtarget[49m[43m,[49m[43m [49m[38;5;28;43mself[39;49m[43m.[49m[43muser_ns[49m[43m)[49m
+[32m   3877[39m [38;5;28;01mexcept[39;00m [38;5;167;01mException[39;00m [38;5;28;01mas[39;00m e:
 
-[31mNameError[39m: name 'df' is not defined
+[31mSyntaxError[39m: invalid syntax (<string>, line 1)
+
+The above exception was the direct cause of the following exception:
+
+[31mValueError[39m                                Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m [43mget_ipython[49m[43m([49m[43m)[49m[43m.[49m[43mrun_line_magic[49m[43m([49m[33;43m'[39;49m[33;43mload[39;49m[33;43m'[39;49m[43m,[49m[43m [49m[33;43m'[39;49m[33;43m../shared/setup.py[39;49m[33;43m'[39;49m[43m)[49m
+
+[36mFile [39m[32m~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\interactiveshell.py:2478[39m, in [36mInteractiveShell.run_line_magic[39m[34m(self, magic_name, line, _stack_depth)[39m
+[32m   2476[39m     kwargs[[33m'[39m[33mlocal_ns[39m[33m'[39m] = [38;5;28mself[39m.get_local_scope(stack_depth)
+[32m   2477[39m [38;5;28;01mwith[39;00m [38;5;28mself[39m.builtin_trap:
+[32m-> [39m[32m2478[39m     result = [43mfn[49m[43m([49m[43m*[49m[43margs[49m[43m,[49m[43m [49m[43m*[49m[43m*[49m[43mkwargs[49m[43m)[49m
+[32m   2480[39m [38;5;66;03m# The code below prevents the output from being displayed[39;00m
+[32m   2481[39m [38;5;66;03m# when using magics with decorator @output_can_be_silenced[39;00m
+[32m   2482[39m [38;5;66;03m# when the last Python token in the expression is a ';'.[39;00m
+[32m   2483[39m [38;5;28;01mif[39;00m [38;5;28mgetattr[39m(fn, magic.MAGIC_OUTPUT_CAN_BE_SILENCED, [38;5;28;01mFalse[39;00m):
+
+[36mFile [39m[32m~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\magics\code.py:361[39m, in [36mCodeMagics.load[39m[34m(self, arg_s)[39m
+[32m    359[39m opts,args = [38;5;28mself[39m.parse_options(arg_s,[33m'[39m[33myns:r:[39m[33m'[39m)
+[32m    360[39m search_ns = [33m'[39m[33mn[39m[33m'[39m [38;5;129;01min[39;00m opts
+[32m--> [39m[32m361[39m contents = [38;5;28;43mself[39;49m[43m.[49m[43mshell[49m[43m.[49m[43mfind_user_code[49m[43m([49m[43margs[49m[43m,[49m[43m [49m[43msearch_ns[49m[43m=[49m[43msearch_ns[49m[43m)[49m
+[32m    363[39m [38;5;28;01mif[39;00m [33m'[39m[33ms[39m[33m'[39m [38;5;129;01min[39;00m opts:
+[32m    364[39m     [38;5;28;01mtry[39;00m:
+
+[36mFile [39m[32m~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\interactiveshell.py:3878[39m, in [36mInteractiveShell.find_user_code[39m[34m(self, target, raw, py_only, skip_encoding_cookie, search_ns)[39m
+[32m   3876[39m     codeobj = [38;5;28meval[39m(target, [38;5;28mself[39m.user_ns)
+[32m   3877[39m [38;5;28;01mexcept[39;00m [38;5;167;01mException[39;00m [38;5;28;01mas[39;00m e:
+[32m-> [39m[32m3878[39m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(([33m"[39m[33m'[39m[38;5;132;01m%s[39;00m[33m'[39m[33m was not found in history, as a file, url, [39m[33m"[39m
+[32m   3879[39m                         [33m"[39m[33mnor in the user namespace.[39m[33m"[39m) % target) [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01me[39;00m
+[32m   3881[39m [38;5;28;01mif[39;00m [38;5;28misinstance[39m(codeobj, [38;5;28mstr[39m):
+[32m   3882[39m     [38;5;28;01mreturn[39;00m codeobj
+
+[31mValueError[39m: '../shared/setup.py' was not found in history, as a file, url, nor in the user namespace.
 

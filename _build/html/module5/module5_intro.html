@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Module 1: Practice Sheet &#8212; Python Crash Course</title>
+    <title>Welcome to Module 5 &#8212; Python Crash Course</title>
   
   
   
@@ -58,11 +58,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'module1/module1_exercice';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'module5/module5_intro';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="M2: Introduction" href="../module2/Module2_1%2C2_Intro.html" />
-    <link rel="prev" title="Installing Python Packages" href="module_1f_packages.html" />
+    <link rel="next" title="Data visualization with matpotlib and seaborn" href="module5_data_visualization.html" />
+    <link rel="prev" title="Outline for Pandas section (module 4)" href="../module4/module4_outline.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,14 +181,14 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="module_1a_settingup.html">Module 1: Setting Up</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="module_1b_terminal.html">Python in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_1c_vscode.html">Python in VSCode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_1d_anaconda.html">Python in Anaconda Navigator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_1f_packages.html">Installing Python Packages</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module1/module_1a_settingup.html">Module 1: Setting Up</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1b_terminal.html">Python in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1c_vscode.html">Python in VSCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1d_anaconda.html">Python in Anaconda Navigator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1f_packages.html">Installing Python Packages</a></li>
 
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module 1: Practice Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Module 1: Practice Sheet</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module2/Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -203,9 +203,9 @@
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 3: Introduction to Numpy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module4/module4_outline.html">Module 4: Introduction to Pandas</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../module5/intro.html">Module 5: Introduction to Data Visualization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module5/data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/module5_examples.html">importing packages</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Module 5: Introduction to Data Visualization</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="module5_data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5_examples.html">importing packages</a></li>
 
 
 
@@ -270,73 +270,6 @@
 
 
 
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module1/module1_exercice.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch on Binder"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
-  </span>
-<span class="btn__text-container">Binder</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/hanane/module1/module1_exercice.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch on Colab"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img alt="Colab logo" src="../_static/images/logo_colab.png">
-  </span>
-<span class="btn__text-container">Colab</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="btn__text-container">Live Code</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -362,7 +295,7 @@
       
       
       
-      <li><a href="https://github.com/hanane-issa/python-crash-course/issues/new?title=Issue%20on%20page%20%2Fmodule1/module1_exercice.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/hanane-issa/python-crash-course/issues/new?title=Issue%20on%20page%20%2Fmodule5/module5_intro.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -392,7 +325,7 @@
       
       
       
-      <li><a href="../_sources/module1/module1_exercice.ipynb" target="_blank"
+      <li><a href="../_sources/module5/module5_intro.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -402,7 +335,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -463,9 +396,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -476,20 +407,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Module 1: Practice Sheet</h1>
+    <h1>Welcome to Module 5</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -499,97 +421,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="module-1-practice-sheet">
-<h1>Module 1: Practice Sheet<a class="headerlink" href="#module-1-practice-sheet" title="Link to this heading">#</a></h1>
-<section id="objective">
-<h2>Objective<a class="headerlink" href="#objective" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Import the <code class="docutils literal notranslate"><span class="pre">sys</span></code> module.</p></li>
-<li><p>Print the version of Python being used.</p></li>
-<li><p>Learn how to navigate a Python module documentation.</p></li>
-</ul>
-</section>
-<section id="instructions">
-<h2>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Import the <code class="docutils literal notranslate"><span class="pre">sys</span></code> module.</p></li>
-<li><p>Check the <code class="docutils literal notranslate"><span class="pre">sys</span></code> module documentation.</p></li>
-<li><p>Print the current Python version.</p></li>
-<li><p>Print a statement combining a description and the Python version.</p></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">sys</span></code> module is a built-in tool in Python that lets you interact with the system your Python program is running on.
-It gives you access to things like Python’s version, the command-line arguments used to run the program,
-and the ability to control how your program runs.</p>
-<p>N.B. built-in modules like <code class="docutils literal notranslate"><span class="pre">sys</span></code> are part of the standard Python installation, so you don’t need to install them separately. However, they need to be imported because Python doesn’t automatically load every module into memory to save resources.</p>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#1. Import sys module</span>
-
-<span class="c1">### Your code here ###</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-module-5">
+<h1>Welcome to Module 5<a class="headerlink" href="#welcome-to-module-5" title="Link to this heading">#</a></h1>
+<p>In this module, we will go through how to visualize data using python. We will use 2 very popular package to do so: Matplotlib and Seaborn.</p>
+<p>If you have not done so already, install both Matplotlib and Seaborn by running the following command in the terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span> <span class="n">seaborn</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span> <span class="n">numpy</span> <span class="n">pandas</span>
 </pre></div>
 </div>
+<p>We will be using the <a class="reference external" href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset?resource=download">Stroke Prediction Dataset</a> on kaggle.</p>
+<p>This module assumes that you have gone through module 4 and learned how to load data and handle a dataframe in python.</p>
+<div class="toctree-wrapper compound">
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#2. Try the function that gives you the current Python version.</span>
-
-<span class="c1">### Your code here ###</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#3. Print a statement combining a description and your Python version.</span>
-
-<span class="c1">### Your code here ###</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div style="margin-bottom: 15px;">
-  <details>
-    <summary>
-      <i class="fa fa-lightbulb-o" aria-hidden="true" style="color: yellow; font-size: 20px;"></i> 
-      Hint 1
-    </summary>
-    <p style="padding-left: 20px;">
-      Check the <code>sys </code> module <a href="https://docs.python.org/3/library/sys.html" target="_blank">documentation</a> to find the function that gives you the Python version.
-    </p>
-  </details>
-</div>
-<div style="margin-bottom: 15px;">
-  <details>
-    <summary>
-      <i class="fa fa-lightbulb-o" aria-hidden="true" style="color: yellow; font-size: 20px;"></i> 
-      Hint 2
-    </summary>
-    <p style="padding-left: 20px;">
-      <code>print()</code> statements allow you to combine descriptive strings with outputs, e.g. `print("your descriptive string ", sys function)`.
-    </p>
-  </details>
-</div>
-<div style="margin-bottom: 15px;">
-  <details>
-    <summary>
-      <i class="fa fa-lightbulb" aria-hidden="true" style="color: yellow; font-size: 20px;"></i> 
-      Solution
-    </summary>
-    <p style="padding-left: 20px;">
-      To print your Python version, you can use the following code:
-    </p>
-    <pre><code class="python">
-import sys
-sys.version
-print('My Python version is ', sys.version)
-    </code></pre>
-  </details>
-</div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -605,7 +447,7 @@ print('My Python version is ', sys.version)
         },
         kernelOptions: {
             name: "python3",
-            path: "./module1"
+            path: "./module5"
         },
         predefinedOutput: true
     }
@@ -623,20 +465,20 @@ print('My Python version is ', sys.version)
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="module_1f_packages.html"
+       href="../module4/module4_outline.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Installing Python Packages</p>
+        <p class="prev-next-title">Outline for Pandas section (module 4)</p>
       </div>
     </a>
     <a class="right-next"
-       href="../module2/Module2_1%2C2_Intro.html"
+       href="module5_data_visualization.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">M2: Introduction</p>
+        <p class="prev-next-title">Data visualization with matpotlib and seaborn</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -646,22 +488,6 @@ print('My Python version is ', sys.version)
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

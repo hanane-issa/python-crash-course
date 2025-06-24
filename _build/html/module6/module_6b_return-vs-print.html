@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Module 6: Return Statements &#8212; Python Crash Course</title>
+    <title>Module 6b: Return Statements &#8212; Python Crash Course</title>
   
   
   
@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fcab1d5" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -60,8 +61,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'module6/module_6b_return-vs-print';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Module 6: Local vs Global Variables" href="module_6c_local-vs-global.html" />
-    <link rel="prev" title="Module 6: Introduction to Functions" href="module_6a_basics.html" />
+    <link rel="next" title="Module 6c: Local vs Global Variables" href="module_6c_local-vs-global.html" />
+    <link rel="prev" title="Module 6a: Function Basics" href="module_6a_basics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -187,7 +188,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1f_packages.html">Installing Python Packages</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Exercice 1: check your Python version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Module 1: Practice Sheet</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module2/Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -214,12 +215,12 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="module_6_functions.html">Module 6: Introduction to Functions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="module_6a_basics.html">Module 6: Introduction to Functions</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module 6: Return Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6c_local-vs-global.html">Module 6: Local vs Global Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6d_docstrings.html">Module 6: Docstrings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6e_params-args.html">Module 6: Parameters and Arguments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module_6f_extras.html">Module 6: Extra (OPTIONAL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6a_basics.html">Module 6a: Function Basics</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module 6b: Return Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6c_local-vs-global.html">Module 6c: Local vs Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6d_docstrings.html">Module 6d: Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6e_params-args.html">Module 6e: Parameters and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_6f_extras.html">Module 6f: Extra (OPTIONAL)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
 </ul>
 </details></li>
@@ -277,7 +278,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module6/module_6b_return-vs-print.md" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module6/module_6b_return-vs-print.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +296,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/hanane/module6/module_6b_return-vs-print.md" target="_blank"
+      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/hanane/module6/module_6b_return-vs-print.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -392,23 +393,6 @@
       
       
       <li><a href="../_sources/module6/module_6b_return-vs-print.ipynb" target="_blank"
-   class="btn btn-sm btn-download-notebook-button dropdown-item"
-   title="Download notebook file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="../_sources/module6/module_6b_return-vs-print.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -418,7 +402,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -492,7 +476,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Module 6: Return Statements</h1>
+    <h1>Module 6b: Return Statements</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -519,10 +503,71 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell tag_remove-input docutils container">
+  <div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load</span> ../shared/setup.py  
+</pre></div>
 </div>
-<section class="tex2jax_ignore mathjax_ignore" id="module-6-return-statements">
-<h1>Module 6: Return Statements<a class="headerlink" href="#module-6-return-statements" title="Link to this heading">#</a></h1>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">SyntaxError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\interactiveshell.py:3876,</span> in <span class="ni">InteractiveShell.find_user_code</span><span class="nt">(self, target, raw, py_only, skip_encoding_cookie, search_ns)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3875</span> <span class="k">try</span><span class="p">:</span>                                              <span class="c1"># User namespace</span>
+<span class="ne">-&gt; </span><span class="mi">3876</span>     <span class="n">codeobj</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_ns</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3877</span> <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="ne">SyntaxError</span>: invalid syntax (&lt;string&gt;, line 1)
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="s1">&#39;../shared/setup.py&#39;</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\interactiveshell.py:2478,</span> in <span class="ni">InteractiveShell.run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2476</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2477</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2478</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2480</span> <span class="c1"># The code below prevents the output from being displayed</span>
+<span class="g g-Whitespace">   </span><span class="mi">2481</span> <span class="c1"># when using magics with decorator @output_can_be_silenced</span>
+<span class="g g-Whitespace">   </span><span class="mi">2482</span> <span class="c1"># when the last Python token in the expression is a &#39;;&#39;.</span>
+<span class="g g-Whitespace">   </span><span class="mi">2483</span> <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">magic</span><span class="o">.</span><span class="n">MAGIC_OUTPUT_CAN_BE_SILENCED</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+
+<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\magics\code.py:361,</span> in <span class="ni">CodeMagics.load</span><span class="nt">(self, arg_s)</span>
+<span class="g g-Whitespace">    </span><span class="mi">359</span> <span class="n">opts</span><span class="p">,</span><span class="n">args</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_options</span><span class="p">(</span><span class="n">arg_s</span><span class="p">,</span><span class="s1">&#39;yns:r:&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">360</span> <span class="n">search_ns</span> <span class="o">=</span> <span class="s1">&#39;n&#39;</span> <span class="ow">in</span> <span class="n">opts</span>
+<span class="ne">--&gt; </span><span class="mi">361</span> <span class="n">contents</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">shell</span><span class="o">.</span><span class="n">find_user_code</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">search_ns</span><span class="o">=</span><span class="n">search_ns</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">363</span> <span class="k">if</span> <span class="s1">&#39;s&#39;</span> <span class="ow">in</span> <span class="n">opts</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">364</span>     <span class="k">try</span><span class="p">:</span>
+
+<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\interactiveshell.py:3878,</span> in <span class="ni">InteractiveShell.find_user_code</span><span class="nt">(self, target, raw, py_only, skip_encoding_cookie, search_ns)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3876</span>     <span class="n">codeobj</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_ns</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3877</span> <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3878</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">((</span><span class="s2">&quot;&#39;</span><span class="si">%s</span><span class="s2">&#39; was not found in history, as a file, url, &quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">3879</span>                         <span class="s2">&quot;nor in the user namespace.&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="n">target</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+<span class="g g-Whitespace">   </span><span class="mi">3881</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">codeobj</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">3882</span>     <span class="k">return</span> <span class="n">codeobj</span>
+
+<span class="ne">ValueError</span>: &#39;../shared/setup.py&#39; was not found in history, as a file, url, nor in the user namespace.
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="module-6b-return-statements">
+<h1>Module 6b: Return Statements<a class="headerlink" href="#module-6b-return-statements" title="Link to this heading">#</a></h1>
 <div class="alert alert-block alert-success">
 <b>Section Objectives:</b><br> 
 - Understand the concept of return values from functions versus functions that only print output without returning values.
@@ -565,19 +610,8 @@ return None</p>
 <p>This function prints information to the screen, but doesn’t return anything. If you tried to assign its output to a variable, you’d get:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">print_stroke_summary</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">print_stroke_summary</span><span class="p">(</span><span class="n">stroke_data</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: None</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">result</span> <span class="o">=</span> <span class="n">print_stroke_summary</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: None</span>
-
-<span class="ne">NameError</span>: name &#39;df&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -835,7 +869,7 @@ return fig
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Module 6: Introduction to Functions</p>
+        <p class="prev-next-title">Module 6a: Function Basics</p>
       </div>
     </a>
     <a class="right-next"
@@ -843,7 +877,7 @@ return fig
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Module 6: Local vs Global Variables</p>
+        <p class="prev-next-title">Module 6c: Local vs Global Variables</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -883,7 +917,7 @@ return fig
   <div class="footer-item">
     
 <p class="component-author">
-By python crash course team
+By University of Edinburgh, School of Informatics
 </p>
 
   </div>
