@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fcab1d5" />
@@ -61,7 +61,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'module3/module3';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Module 6: Introduction to Functions" href="../module6/module_6_functions.html" />
+    <link rel="next" title="Welcome to Module 5" href="../module5/intro.html" />
     <link rel="prev" title="M2: Practice Sheet" href="../module2/Module2_PracticeSheet1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -202,6 +202,17 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module5/intro.html">Module 5: Introduction to Data Visualization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module5/data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/module5_examples.html">importing packages</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module6/module_6_functions.html">Module 6: Introduction to Functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module6/module_6a_basics.html">Module 6a: Function Basics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/module_6b_return-vs-print.html">Module 6b: Return Statements</a></li>
@@ -482,7 +493,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#joining-arrays-together">Joining arrays together</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-operations-on-arrays">Mathematical operations on arrays</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-a-numpy-array-as-a-txt-file-and-loading-it">Saving a NumPy array as a txt file and loading it</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
         </div>
@@ -503,9 +513,9 @@ document.write(`
 <li><p>slice arrays,</p></li>
 <li><p>fill an array with values,</p></li>
 <li><p>perform mathematical operations on arrays,</p></li>
-<li><p>save arrays as a txt value.</p></li>
+<li><p>save arrays as a txt file.</p></li>
 </ul>
-<p>NumPy is a Python package for efficient handling of data in the form of vectors, matrices, etc. Further details about the package and its manual can be found on <a class="reference external" href="https://numpy.org">https://numpy.org</a>. NumPy provides a faster and more memory-efficient alternative to Python lists [1]. It is also compatible with many statistical packages. In this section, we will work through the fundamentals of the package.</p>
+<p>NumPy is a Python package for efficient handling of data in the form of vectors, matrices, etc. Further details about the package and its manual can be found on <a class="reference external" href="https://numpy.org">https://numpy.org</a>. NumPy provides a faster and more memory-efficient alternative to Python lists \cite[numpy_what_is]. It is also compatible with many statistical packages. In this section, we will work through the fundamentals of the package.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># let us first import the package, np is a common abbreviation</span>
@@ -738,7 +748,7 @@ The shape of the 3D array:
 </div>
 </div>
 </div>
-<p>We would like to select a subset of <code class="docutils literal notranslate"><span class="pre">larger_array</span></code> containing values 1, 2, 3, 5, 6, 7. These elements cover rows 0, 1 and columns 0, 1, 2. The interval of positions can be selected <code class="docutils literal notranslate"><span class="pre">start:end</span></code> like here:</p>
+<p>We would like to select a subset of <code class="docutils literal notranslate"><span class="pre">larger_array</span></code> containing values 1, 2, 3, 5, 6, 7. These elements cover rows 0, 1 and columns 0, 1, 2. The interval of positions can be selected <code class="docutils literal notranslate"><span class="pre">start:end</span></code> (where the <code class="docutils literal notranslate"><span class="pre">end</span></code> position is not included in your sequence) like here:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">row_start</span> <span class="o">=</span> <span class="mi">0</span>
@@ -930,7 +940,7 @@ Array with more 1s:
 </div>
 </div>
 </div>
-<p>Things get slightly trickier when you want to put an array of values into another larger array, not just a scalar value as shown above.
+<p>Things get slightly trickier when you want to put an array of values into another larger array, not just a single value of 1 as shown above.
 The selection of the range of positions is specified differently:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1312,7 +1322,7 @@ Elementwise raising to a power
 </div>
 </div>
 </div>
-<p>Any addition/subtraction/multiplication/division/raising to a power on an array with a scalar will perfom this operation on each array element.
+<p>Any addition/subtraction/multiplication/division/raising to a power on an array with a single value will perfom this operation on each array element.
 Some examples:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1544,12 +1554,6 @@ Standard deviation for all elements in arr2:
 </div>
 <p>Tab-separated and coma-separated txt files allow easier manipulation with code. Additionally, txt files are commonly used open-source human-readable formats, which enhances the reproducibility of your code analysis.</p>
 </section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p><a class="reference external" href="https://numpy.org/doc/stable/user/whatisnumpy.html">https://numpy.org/doc/stable/user/whatisnumpy.html</a></p></li>
-</ol>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1592,11 +1596,11 @@ Standard deviation for all elements in arr2:
       </div>
     </a>
     <a class="right-next"
-       href="../module6/module_6_functions.html"
+       href="../module5/intro.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Module 6: Introduction to Functions</p>
+        <p class="prev-next-title">Welcome to Module 5</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1624,7 +1628,6 @@ Standard deviation for all elements in arr2:
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#joining-arrays-together">Joining arrays together</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-operations-on-arrays">Mathematical operations on arrays</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-a-numpy-array-as-a-txt-file-and-loading-it">Saving a NumPy array as a txt file and loading it</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
 
