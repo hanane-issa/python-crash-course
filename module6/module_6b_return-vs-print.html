@@ -202,6 +202,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module4/module4.html">Module 4: Introduction to Pandas</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module5/intro.html">Module 5: Introduction to Data Visualization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module5/data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/module5_examples.html">importing packages</a></li>
@@ -553,13 +554,19 @@ document.write(`
 <li><p>You’re building exploratory tools, not reusable computations</p></li>
 </ul>
 <p>Let’s modify the smoking count function as an example. We’ll add a print statement to help us see what’s going on during execution.</p>
-<p>def count_smokers_by_category(df):
-if ‘smoking_status’ in df.columns:
-print(“Column found. Counting smoking categories…”)
-return df[‘smoking_status’].value_counts()
-else:
-print(“Column ‘smoking_status’ not found in DataFrame.”)
-return None</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">count_smokers_by_category</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="k">if</span> <span class="s1">&#39;smoking_status&#39;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Column found. Counting smoking categories...&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_status&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Column &#39;smoking_status&#39; not found in DataFrame.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p><code class="docutils literal notranslate"><span class="pre">None</span></code> represents the absence of value, and has the <code class="docutils literal notranslate"><span class="pre">NoneType</span></code> data type. You’ll see other programming languages call it <code class="docutils literal notranslate"><span class="pre">null</span></code>, <code class="docutils literal notranslate"><span class="pre">nil</span></code>, or <code class="docutils literal notranslate"><span class="pre">undefined</span></code>.</p>
 <p>Now let’s write a function that doesn’t return any value — it just prints a useful summary.</p>
 <div class="cell docutils container">
