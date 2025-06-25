@@ -29,7 +29,7 @@ chapters:
   file: module3/module3
 
 - title: "Module 4: Introduction to Pandas"
-  file: module4/module4_outline
+  file: module4/module4.ipynb
 
 - title: "Module 5: Introduction to Data Visualization"
   file: module5/intro
