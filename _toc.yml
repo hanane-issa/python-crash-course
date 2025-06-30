@@ -4,6 +4,5 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+- file: Module-8/Module8_Questions.ipynb
+- file: Module-8/Module8_Solutions.ipynb

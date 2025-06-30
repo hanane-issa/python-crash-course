@@ -1,0 +1,1464 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>M8: Final Practice: Heart Disease Dataset &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-8/Module8_Questions';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="M8: Final Practice: Heart Disease Dataset (with Solutions)" href="Module8_Solutions.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">M8: Final Practice: Heart Disease Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module8_Solutions.html">M8: Final Practice: Heart Disease Dataset (with Solutions)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/melinda_module2foundations?urlpath=tree/Module-8/Module8_Questions.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanane-issa/python-crash-course" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanane-issa/python-crash-course/issues/new?title=Issue%20on%20page%20%2FModule-8/Module8_Questions.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Module-8/Module8_Questions.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>M8: Final Practice: Heart Disease Dataset</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-exploration">Initial Exploration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-understanding-the-dataset">Exercise 1: Understanding the Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-import-the-dataset-using-the-uci-interface">Exercise 2: Import the Dataset Using the UCI Interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-explore-the-structure-of-the-dataset-object">Exercise 3: Explore the Structure of the Dataset Object</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-summarise-the-dataset-metadata">Exercise 4: Summarise the Dataset Metadata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-inspect-variable-details-and-metadata">Exercise 5: Inspect Variable Details and Metadata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-convert-data-to-dataframe-format-for-exploration">Exercise 6: Convert Data to DataFrame Format for Exploration</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning">Data Cleaning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-7-investigating-missing-values-in-the-dataset">Exercise 7: Investigating Missing Values in the Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-removing-rows-with-missing-values">Exercise 8: Removing Rows with Missing Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-9-checking-for-duplicate-rows-and-columns">Exercise 9: Checking for Duplicate Rows and Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-10-create-a-binary-target-variable">Exercise 10: Create a Binary Target Variable</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualising-the-data">Visualising the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-you-know-what-type-a-feature-is">How Do You Know What Type a Feature Is?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#two-main-types">Two Main Types</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-features">Numerical Features</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#categorical-features">Categorical Features</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#special-note-identifiers">Special Note: Identifiers</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-you-figure-this-out">How Can You Figure This Out?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-11-classify-each-variable-by-type">Exercise 11: Classify Each Variable by Type</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-explore-categorical-variable-distributions">Exercise 12: Explore Categorical Variable Distributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-compare-categorical-distributions-by-sex">Exercise 13: Compare Categorical Distributions by Sex</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-visualising-continuous-features-with-histograms">Exercise 14: Visualising Continuous Features with Histograms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-compare-continuous-features-by-sex">Exercise 15: Compare Continuous Features by Sex</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-16-boxplots-of-continuous-features-by-sex">Exercise 16: Boxplots of Continuous Features by Sex</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-17-exploring-relationships-between-continuous-features">Exercise 17: Exploring Relationships Between Continuous Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-18-spearman-correlation">Exercise 18: Spearman Correlation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-19-explore-feature-relationships-with-the-target-variable">Exercise 19: Explore Feature Relationships with the Target Variable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-20-statistical-testing-heart-disease-vs-continuous-features">Exercise 20: Statistical Testing — Heart Disease vs Continuous Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-21-exploring-categorical-features-vs-heart-disease">Exercise 21: Exploring Categorical Features vs Heart Disease</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-exercise-22-k-means-clustering-grouping-patients"><em>(Optional)</em> Exercise 22: K-Means Clustering — Grouping Patients</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="m8-final-practice-heart-disease-dataset">
+<h1>M8: Final Practice: Heart Disease Dataset<a class="headerlink" href="#m8-final-practice-heart-disease-dataset" title="Link to this heading">#</a></h1>
+<p>You have made it to the last module! Throughout the course, you have covered the fundamental knowledge and Python packages needed to apply programming in bioinformatics.</p>
+<p>The aim of this module is to help you consolidate what you have learned. We will introduce a new dataset for you to analyse and explore. You’ll be given a series of exercises designed for you to complete independently, with minimal external assistance.</p>
+<p>If you find yourself stuck, make sure to give it a proper attempt on your own first. If that doesn’t resolve the issue, revisit earlier modules to refresh your memory. And if you’re still unsure, feel free to use Google or consult the solution sheet as a last resort.</p>
+<hr class="docutils" />
+<hr class="docutils" />
+<section id="initial-exploration">
+<h2>Initial Exploration<a class="headerlink" href="#initial-exploration" title="Link to this heading">#</a></h2>
+<p>The dataset that we will be using is the <em>Heart Disease Dataset</em> from UC Irvine Machine Learning Repository: <a class="reference external" href="https://archive.ics.uci.edu/dataset/45/heart+disease">https://archive.ics.uci.edu/dataset/45/heart+disease</a></p>
+<p>This dataset is intended for a machine learning task: given a set of patient features, the goal is to predict whether the patient has been diagnosed with heart disease (the target variable). While building such a model is beyond the scope of this course, you will conduct some initial exploratory analyses to become familiar with the dataset and its contents.</p>
+<p>Exploratory analysis is often an essential first step, regardless of whether your aim is to develop a machine learning model or to pursue other kinds of investigation.</p>
+<section id="exercise-1-understanding-the-dataset">
+<h3>Exercise 1: Understanding the Dataset<a class="headerlink" href="#exercise-1-understanding-the-dataset" title="Link to this heading">#</a></h3>
+<p><em>Take a few minutes to read through the dataset description on the website and familiarise yourself with its structure and the variables it contains.</em></p>
+<hr class="docutils" />
+<p>Great! Now that you’ve had a look at the dataset description, let’s dive into the data itself.</p>
+<p>Don’t worry if you didn’t understand everything — things should become clearer as you familiarise yourself with the dataset through practice.</p>
+<p>At the top right of the website, you’ll find a button labelled <code class="docutils literal notranslate"><span class="pre">IMPORT</span> <span class="pre">IN</span> <span class="pre">PYTHON</span></code>. Clicking on it will show you which package to install and how to load the dataset using it.</p>
+</section>
+<section id="exercise-2-import-the-dataset-using-the-uci-interface">
+<h3>Exercise 2: Import the Dataset Using the UCI Interface<a class="headerlink" href="#exercise-2-import-the-dataset-using-the-uci-interface" title="Link to this heading">#</a></h3>
+<p><em>Install the required package (using any of the methods you’ve learned) and import the dataset into your Python environment.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-3-explore-the-structure-of-the-dataset-object">
+<h3>Exercise 3: Explore the Structure of the Dataset Object<a class="headerlink" href="#exercise-3-explore-the-structure-of-the-dataset-object" title="Link to this heading">#</a></h3>
+<p><em>Create an instance of the Heart Disease dataset using the <code class="docutils literal notranslate"><span class="pre">fetch_ucirepo</span></code> object. Then:</em></p>
+<ul class="simple">
+<li><p><em>Check the <strong>type</strong> of the dataset object you’ve created.</em></p></li>
+<li><p><em>Use <code class="docutils literal notranslate"><span class="pre">dir()</span></code> on the object to list its attributes.</em></p></li>
+<li><p><em>Try accessing <code class="docutils literal notranslate"><span class="pre">.metadata</span></code>, <code class="docutils literal notranslate"><span class="pre">.variables</span></code>, and <code class="docutils literal notranslate"><span class="pre">.data</span></code>. What types are these? What kind of information do they contain?</em></p></li>
+</ul>
+<p><em>This will help you understand how the dataset is structured and how to navigate it.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-4-summarise-the-dataset-metadata">
+<h3>Exercise 4: Summarise the Dataset Metadata<a class="headerlink" href="#exercise-4-summarise-the-dataset-metadata" title="Link to this heading">#</a></h3>
+<p><em>Print the metadata information about the dataset. Try to answer the following questions based on what you find:</em></p>
+<ul class="simple">
+<li><p><em>How many data points (patients) and how many features are there?</em></p></li>
+<li><p><em>What are the names of the demographic features?</em></p></li>
+<li><p><em>What is the name of the target variable?</em></p></li>
+<li><p><em>Are there any missing values in the dataset?</em></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-5-inspect-variable-details-and-metadata">
+<h3>Exercise 5: Inspect Variable Details and Metadata<a class="headerlink" href="#exercise-5-inspect-variable-details-and-metadata" title="Link to this heading">#</a></h3>
+<p><em>Print the variable information for the dataset. Try to answer the following questions based on the output:</em></p>
+<ul class="simple">
+<li><p><em>Which variables have missing values?</em></p></li>
+<li><p><em>What is the unit of <strong>resting blood pressure</strong>?</em></p></li>
+<li><p><em>How many categorical variables are there?</em></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-6-convert-data-to-dataframe-format-for-exploration">
+<h3>Exercise 6: Convert Data to DataFrame Format for Exploration<a class="headerlink" href="#exercise-6-convert-data-to-dataframe-format-for-exploration" title="Link to this heading">#</a></h3>
+<p><em>Extract the feature values and the target values into two separate variables. Print each of them.</em></p>
+<ul class="simple">
+<li><p><em>Do the number of rows and columns make sense?</em></p></li>
+<li><p><em>Are you able to understand what information they contain based on the metadata exploration?</em></p></li>
+<li><p><em>If not, revisit the website, metadata, and variable information to clarify.</em></p></li>
+</ul>
+<p><em>Next, import the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library. Combine the feature and target values into a single pandas DataFrame, where each row represents a patient and each column represents a feature, with the final column being the target variable. Display the first five rows of the resulting DataFrame.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+<hr class="docutils" />
+<section id="data-cleaning">
+<h2>Data Cleaning<a class="headerlink" href="#data-cleaning" title="Link to this heading">#</a></h2>
+<p>Now that we have everything in a single, tidy DataFrame, we need to make sure the data is properly cleaned before we begin analysing it.</p>
+<p>Let’s start with missing values. From the metadata, we already know that the variables <code class="docutils literal notranslate"><span class="pre">ca</span></code> and <code class="docutils literal notranslate"><span class="pre">thal</span></code> contain missing values.</p>
+<section id="exercise-7-investigating-missing-values-in-the-dataset">
+<h3>Exercise 7: Investigating Missing Values in the Dataset<a class="headerlink" href="#exercise-7-investigating-missing-values-in-the-dataset" title="Link to this heading">#</a></h3>
+<p><em>To decide how to handle these missing values, we first need a more detailed understanding. For both <code class="docutils literal notranslate"><span class="pre">ca</span></code> and <code class="docutils literal notranslate"><span class="pre">thal</span></code>, print the following information:</em></p>
+<ul class="simple">
+<li><p><em>The full column of values</em></p></li>
+<li><p><em>How many times each contains a <code class="docutils literal notranslate"><span class="pre">NaN</span></code> value</em></p></li>
+<li><p><em>The number of unique values in the column, and what those values are</em></p></li>
+<li><p><em>The type of each feature (use the variable information DataFrame to check this)</em></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p>You should notice that <code class="docutils literal notranslate"><span class="pre">ca</span></code> contains integer values, while <code class="docutils literal notranslate"><span class="pre">thal</span></code> is categorical, with each having four or three unique values respectively (excluding <code class="docutils literal notranslate"><span class="pre">NaN</span></code>). For this reason, it wouldn’t make sense to replace the missing values with the mean. Instead, a simple approach is to remove patients (rows) with any missing (<code class="docutils literal notranslate"><span class="pre">NaN</span></code>) values.</p>
+</section>
+<section id="exercise-8-removing-rows-with-missing-values">
+<h3>Exercise 8: Removing Rows with Missing Values<a class="headerlink" href="#exercise-8-removing-rows-with-missing-values" title="Link to this heading">#</a></h3>
+<p><em>Remove all rows (patients) that contain any <code class="docutils literal notranslate"><span class="pre">NaN</span></code> values. Then:</em></p>
+<ul class="simple">
+<li><p><em>Print the number of NaN values in each column to ensure that none remain</em></p></li>
+<li><p><em>Print the shape of the DataFrame and check whether the number of removed rows makes sense</em></p></li>
+<li><p><em>Reset the row index after dropping the rows with missing data</em></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-9-checking-for-duplicate-rows-and-columns">
+<h3>Exercise 9: Checking for Duplicate Rows and Columns<a class="headerlink" href="#exercise-9-checking-for-duplicate-rows-and-columns" title="Link to this heading">#</a></h3>
+<p><em>Check that none of the columns or rows are duplicates of one another.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p>As a final step, we want to ensure that the target variable (<code class="docutils literal notranslate"><span class="pre">num</span></code>) is in the correct format.
+According to the website, it should take five possible values: 0, 1, 2, 3, and 4.
+A value of 0 indicates no heart disease, while values 1–4 represent different categories of heart disease.</p>
+</section>
+<section id="exercise-10-create-a-binary-target-variable">
+<h3>Exercise 10: Create a Binary Target Variable<a class="headerlink" href="#exercise-10-create-a-binary-target-variable" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><em>Check the type of <code class="docutils literal notranslate"><span class="pre">num</span></code> and its unique values, as you did in earlier exercises, to confirm that the data matches the description.</em></p></li>
+<li><p><em>Create a new column at the end of the DataFrame called <code class="docutils literal notranslate"><span class="pre">heart_disease_binary</span></code>. This column should contain 0 if <code class="docutils literal notranslate"><span class="pre">num</span></code> is 0, and 1 otherwise. Use a lambda function to achieve this transformation.</em></p></li>
+<li><p><em>Print the final DataFrame to verify the result.</em></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Why we use a lambda here</p>
+<p>The lambda function allows us to create a binary indicator:</p>
+<ul class="simple">
+<li><p>0 → no heart disease</p></li>
+<li><p>1–4 → heart disease present</p></li>
+</ul>
+<p>This is often useful for binary classification tasks, or to simplify analysis.</p>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+<hr class="docutils" />
+<section id="exploratory-data-analysis-eda">
+<h2>Exploratory Data Analysis (EDA)<a class="headerlink" href="#exploratory-data-analysis-eda" title="Link to this heading">#</a></h2>
+<section id="visualising-the-data">
+<h3>Visualising the Data<a class="headerlink" href="#visualising-the-data" title="Link to this heading">#</a></h3>
+<p>Now that the dataset is clean, we can begin exploring the distributions of different types of features.</p>
+<p>Visualisation is a key part of <strong>exploratory data analysis (EDA)</strong>: it helps us detect patterns, identify outliers, and better understand the structure of our data — all of which can inform future modelling decisions.</p>
+<p>We’ll start by looking at the <strong>distribution of individual features</strong>, which helps us understand:</p>
+<ul class="simple">
+<li><p>What kind of data each column contains (categorical, continuous, etc.)</p></li>
+<li><p>Whether values are skewed, symmetric, uniform, or contain outliers</p></li>
+<li><p>Which features are best visualised as</p>
+<ul>
+<li><p><strong>histograms</strong> (for continuous values)</p></li>
+<li><p><strong>bar plots</strong> (for categorical values)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="how-do-you-know-what-type-a-feature-is">
+<h3>How Do You Know What Type a Feature Is?<a class="headerlink" href="#how-do-you-know-what-type-a-feature-is" title="Link to this heading">#</a></h3>
+<p>Different types of variables require different plots and analysis methods. Let’s walk through the main categories and how to spot them.</p>
+<section id="two-main-types">
+<h4>Two Main Types<a class="headerlink" href="#two-main-types" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>Numerical</strong> (quantities and measurements)</p></li>
+<li><p><strong>Categorical</strong> (groups, types, labels)</p></li>
+</ol>
+</section>
+<section id="numerical-features">
+<h4>Numerical Features<a class="headerlink" href="#numerical-features" title="Link to this heading">#</a></h4>
+<p>These represent measurable quantities, and they can be either:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Visualisation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Continuous</p></td>
+<td><p>Can take any value within a range</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">chol</span></code>, <code class="docutils literal notranslate"><span class="pre">oldpeak</span></code></p></td>
+<td><p>Histogram</p></td>
+</tr>
+<tr class="row-odd"><td><p>Discrete</p></td>
+<td><p>Countable whole numbers</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ca</span></code> (number of vessels)</p></td>
+<td><p>Histogram or bar plot</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Even though both types are numeric, you might treat them differently in analysis.</p>
+<p>For example, <strong>log transformations or standardisation</strong> usually make sense for continuous variables<br />
+but not for small-range discrete variables like <code class="docutils literal notranslate"><span class="pre">ca</span></code> or <code class="docutils literal notranslate"><span class="pre">slope</span></code>.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Continuous vs Discrete – Real vs Representation</p>
+<p>Some variables, like <strong>age</strong>, may appear as <strong>discrete</strong> in a dataset (e.g. whole years),<br />
+but they are <strong>inherently continuous</strong> — people can be 18.5 or 73.2 years old.<br />
+Because it spans a wide range and behaves like a measurement, <strong>age is typically analysed as continuous</strong>.</p>
+<p>In contrast, features like <strong>number of vessels (<code class="docutils literal notranslate"><span class="pre">ca</span></code>)</strong> are <strong>truly discrete</strong>:<br />
+you can’t have 2.5 vessels — it’s either 2 or 3. These are counts and must be treated accordingly.</p>
+<ul class="simple">
+<li><p>Discrete features with <strong>many unique values</strong> (like age) are often analysed as continuous.</p></li>
+<li><p>Truly discrete, <strong>count-based</strong> features are handled differently — especially in statistical models.</p></li>
+</ul>
+</div>
+</section>
+<section id="categorical-features">
+<h4>Categorical Features<a class="headerlink" href="#categorical-features" title="Link to this heading">#</a></h4>
+<p>These represent groups or labels. They can be:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Visualisation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Nominal</p></td>
+<td><p>No natural order</p></td>
+<td><p>sex, thal, chest pain type</p></td>
+<td><p>Bar plot</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ordinal</p></td>
+<td><p>Ordered categories</p></td>
+<td><p>slope (up, flat, down)</p></td>
+<td><p>Bar plot</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="special-note-identifiers">
+<h4>Special Note: Identifiers<a class="headerlink" href="#special-note-identifiers" title="Link to this heading">#</a></h4>
+<p>Some biomedical datasets include IDs (e.g., patient ID or record number). These are usually:</p>
+<ul class="simple">
+<li><p>Unique per row</p></li>
+<li><p>Not useful for prediction</p></li>
+<li><p>Should not be plotted or included in modelling</p></li>
+</ul>
+</section>
+</section>
+<section id="how-can-you-figure-this-out">
+<h3>How Can You Figure This Out?<a class="headerlink" href="#how-can-you-figure-this-out" title="Link to this heading">#</a></h3>
+<p>Try the following steps to classify your features:</p>
+<ol class="arabic simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">variables</span></code> table:
+It often indicates if a variable is “Categorical” or “Integer”.</p></li>
+<li><p>Check <code class="docutils literal notranslate"><span class="pre">.dtypes</span></code>:</p></li>
+</ol>
+<ul class="simple">
+<li><p>float64 → likely continuous</p></li>
+<li><p>int64 → might be either discrete or categorical</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">.nunique()</span></code>:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Few unique values (e.g. 2–4) → probably categorical</p></li>
+<li><p>Many unique values (30+) → likely continuous</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Use the variable descriptions:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Do they describe a measurement (e.g. blood pressure)? → Numerical</p></li>
+<li><p>Do they describe a group or type (e.g. chest pain type)? → Categorical</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>Plot to be sure:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Histograms reveal shape and spread of numerical data</p></li>
+<li><p>Bar plots show category frequencies clearly</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="exercise-11-classify-each-variable-by-type">
+<h3>Exercise 11: Classify Each Variable by Type<a class="headerlink" href="#exercise-11-classify-each-variable-by-type" title="Link to this heading">#</a></h3>
+<p><em>Before plotting or analysing features, it’s important to understand what <strong>kind of variable</strong> each column represents.</em></p>
+<p><em>Your goal is to carefully classify each feature in the dataset into a suitable variable type.</em>
+<em>This helps guide which visualisation, transformation, or statistical method to apply later.</em></p>
+<p><strong>Common Variable Types to Consider:</strong></p>
+<p><em>(Not all types may be present in this dataset)</em></p>
+<ul class="simple">
+<li><p><strong>Continuous numerical</strong> – real-valued measurements with many unique values</p></li>
+<li><p><strong>Discrete numerical</strong> – count-based integers</p></li>
+<li><p><strong>Nominal categorical</strong> – unordered categories</p>
+<ul>
+<li><p><em>Binary</em> – a special case with exactly two values</p></li>
+</ul>
+</li>
+<li><p><strong>Ordinal categorical</strong> – ordered categories</p></li>
+<li><p><strong>Identifier / metadata</strong> – e.g., patient IDs (not used in modelling)</p></li>
+</ul>
+<p><strong>Tools to Help You Decide:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.dtypes</span></code> to check each column’s data type</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.nunique()</span></code> to see how many distinct values each feature has</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">variables[['name',</span> <span class="pre">'type',</span> <span class="pre">'description']]</span></code> to understand what each column represents</p></li>
+</ul>
+<p><strong>Task:</strong></p>
+<ul class="simple">
+<li><p><em>Create a list of variables that fall into each type above (if applicable).</em></p></li>
+<li><p><em>Focus especially on identifying categorical and continuous features.</em></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-12-explore-categorical-variable-distributions">
+<h3>Exercise 12: Explore Categorical Variable Distributions<a class="headerlink" href="#exercise-12-explore-categorical-variable-distributions" title="Link to this heading">#</a></h3>
+<p><em>Your goal is to explore how categorical variables are distributed across the dataset.</em></p>
+<p><em>This can help you:</em></p>
+<ul class="simple">
+<li><p><em>Understand class balance (e.g., male vs female)</em></p></li>
+<li><p><em>Identify rare or dominant categories</em></p></li>
+<li><p><em>Spot issues like unbalanced variables, which can affect modelling</em></p></li>
+</ul>
+<p><strong>Task:</strong></p>
+<ol class="arabic simple">
+<li><p><em>Import the visualisation library</em></p></li>
+<li><p><em>Use a loop to create bar plots for each categorical feature.</em></p>
+<ul class="simple">
+<li><p><em>Use <code class="docutils literal notranslate"><span class="pre">.value_counts()</span></code> to get category counts.</em></p></li>
+<li><p><em>Use <code class="docutils literal notranslate"><span class="pre">plot(kind='bar')</span></code> to create the bar plot.</em></p></li>
+</ul>
+</li>
+<li><p><em>Try displaying all the plots in a grid of subplots for clarity.</em></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-13-compare-categorical-distributions-by-sex">
+<h3>Exercise 13: Compare Categorical Distributions by Sex<a class="headerlink" href="#exercise-13-compare-categorical-distributions-by-sex" title="Link to this heading">#</a></h3>
+<p><em>In this exercise, you’ll explore how categorical feature distributions vary between male and female patients.</em></p>
+<p><strong>Task:</strong></p>
+<ol class="arabic simple">
+<li><p><em>Use your list of categorical features.</em></p></li>
+<li><p><em>Create bar plots for each feature, stratified by sex:</em></p>
+<ul class="simple">
+<li><p><em>One bar for each category within each sex group.</em></p></li>
+</ul>
+</li>
+<li><p><em>Use <code class="docutils literal notranslate"><span class="pre">pd.crosstab()</span></code> or <code class="docutils literal notranslate"><span class="pre">df.groupby('sex')[feature].value_counts()</span></code> to count values.</em></p></li>
+<li><p><em>Plot them using <code class="docutils literal notranslate"><span class="pre">kind='bar'</span></code> or <code class="docutils literal notranslate"><span class="pre">kind='barh'</span></code> with legends and labels.</em></p></li>
+</ol>
+<div class="warning admonition">
+<p class="admonition-title">Unequal group sizes can affect your interpretations</p>
+<p>In our dataset, around <strong>68% of the patients are male</strong>, and only <strong>32% are female</strong>.<br />
+This imbalance can impact how we interpret feature distributions.</p>
+<p>For example, if a certain chest pain type appears more often in males, it may simply reflect the larger number of male patients — not a true difference in risk or symptoms.</p>
+<p>To make more meaningful comparisons, we’ll now <strong>stratify</strong> our plots by sex and compare distributions <strong>within</strong> each group.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-14-visualising-continuous-features-with-histograms">
+<h3>Exercise 14: Visualising Continuous Features with Histograms<a class="headerlink" href="#exercise-14-visualising-continuous-features-with-histograms" title="Link to this heading">#</a></h3>
+<p><em>Now let’s explore the continuous numerical features you identified earlier.</em></p>
+<p><em>Histograms are ideal for:</em></p>
+<ul class="simple">
+<li><p><em>Understanding the shape of the distribution (e.g. symmetric, skewed, bimodal)</em></p></li>
+<li><p><em>Identifying outliers or unusual values</em></p></li>
+<li><p><em>Comparing ranges and spread between features</em></p></li>
+</ul>
+<p><strong>Task:</strong></p>
+<ol class="arabic simple">
+<li><p><em>Create a list of continuous features from your earlier classification.</em></p></li>
+<li><p><em>Plot a histogram for each of them.</em></p>
+<ul class="simple">
+<li><p><em>You can use <code class="docutils literal notranslate"><span class="pre">df[feature].hist()</span></code> or <code class="docutils literal notranslate"><span class="pre">plt.hist()</span></code>.</em></p></li>
+</ul>
+</li>
+<li><p><em>Optionally, group them in subplots for clarity.</em></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">What to do with skewed distributions?</p>
+<p>Skewed variables can sometimes distort correlations or model predictions.</p>
+<p>A common fix is to apply a <strong>log transformation</strong> to make the data more normal.<br />
+This is especially helpful for positively skewed data like <code class="docutils literal notranslate"><span class="pre">oldpeak</span></code> or <code class="docutils literal notranslate"><span class="pre">chol</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;log_oldpeak&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;oldpeak&#39;</span><span class="p">])</span> <span class="c1"># log1p handles 0s safely</span>
+</pre></div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-15-compare-continuous-features-by-sex">
+<h3>Exercise 15: Compare Continuous Features by Sex<a class="headerlink" href="#exercise-15-compare-continuous-features-by-sex" title="Link to this heading">#</a></h3>
+<p><em>Let’s explore how continuous feature distributions differ between male and female patients. This can help identify:</em></p>
+<ul class="simple">
+<li><p><em>Biological or physiological differences</em></p></li>
+<li><p><em>Features that may require sex-specific modelling</em></p></li>
+<li><p><em>Whether standardisation should be stratified</em></p></li>
+</ul>
+<p><strong>Task:</strong></p>
+<ul class="simple">
+<li><p><em>Use the list of continuous features: <code class="docutils literal notranslate"><span class="pre">['age',</span> <span class="pre">'trestbps',</span> <span class="pre">'chol',</span> <span class="pre">'thalach',</span> <span class="pre">'oldpeak']</span></code></em></p></li>
+<li><p><em>For each feature, plot overlaid histograms for male and female patients</em></p></li>
+<li><p><em>Use <code class="docutils literal notranslate"><span class="pre">alpha=0.5</span></code> and different colours to distinguish the groups</em></p></li>
+<li><p><em>Add titles, axis labels, and a legend</em></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-16-boxplots-of-continuous-features-by-sex">
+<h3>Exercise 16: Boxplots of Continuous Features by Sex<a class="headerlink" href="#exercise-16-boxplots-of-continuous-features-by-sex" title="Link to this heading">#</a></h3>
+<p><em>In the previous exercise, you used <strong>stratified histograms</strong> to see how the distribution shape of each continuous variable differs between males and females.</em></p>
+<p><em>Now, you’ll use <strong>boxplots</strong> to visualise:</em></p>
+<ul class="simple">
+<li><p><em>Summary statistics (median, quartiles)</em></p></li>
+<li><p><em>Spread and skewness</em></p></li>
+<li><p><em>Outliers more clearly</em></p></li>
+</ul>
+<p><em>While histograms are better for understanding the full shape of a distribution (e.g., unimodal, skewed, bimodal), boxplots give a cleaner summary of central tendency and variability, especially for comparisons across groups.</em></p>
+<p><em>Using both gives a more complete picture and helps confirm or refine your interpretations.</em></p>
+<p><strong>Task:</strong></p>
+<ol class="arabic simple">
+<li><p><em>Import seaborn if you haven’t yet</em></p></li>
+<li><p><em>Choose a list of continuous features to explore</em></p></li>
+<li><p><em>For each feature, create a boxplot comparing the distribution for males and females</em></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-17-exploring-relationships-between-continuous-features">
+<h3>Exercise 17: Exploring Relationships Between Continuous Features<a class="headerlink" href="#exercise-17-exploring-relationships-between-continuous-features" title="Link to this heading">#</a></h3>
+<p>So far, you’ve explored each continuous variable individually. Now let’s investigate how they relate to each other.</p>
+<p>A <strong>correlation matrix</strong> is a powerful way to:</p>
+<ul class="simple">
+<li><p>Identify <strong>linear relationships</strong> (positive or negative)</p></li>
+<li><p>Detect <strong>redundant features</strong> (high correlation means similar information)</p></li>
+<li><p>Understand which variables may interact in modelling</p></li>
+</ul>
+<p><strong>Task:</strong></p>
+<ol class="arabic simple">
+<li><p><em>Create a new dataframe with only the continuous features</em></p></li>
+<li><p><em>Use <code class="docutils literal notranslate"><span class="pre">.corr()</span></code> to compute the Pearson correlation matrix</em></p></li>
+<li><p><em>Plot the matrix using <code class="docutils literal notranslate"><span class="pre">seaborn.heatmap()</span></code></em></p>
+<ul class="simple">
+<li><p><em>Set <code class="docutils literal notranslate"><span class="pre">annot=True</span></code> to show correlation values</em></p></li>
+<li><p><em>Set <code class="docutils literal notranslate"><span class="pre">cmap='coolwarm'</span></code> for intuitive colouring</em></p></li>
+</ul>
+</li>
+<li><p><em>Interpret the heatmap:</em></p>
+<ul class="simple">
+<li><p><em>Which features are positively or negatively correlated?</em></p></li>
+<li><p><em>Are any relationships strong (above <span class="math notranslate nohighlight">\(\pm0.6\)</span>)?</em></p></li>
+<li><p><em>Do any pairs look redundant or surprisingly independent?</em></p></li>
+<li><p><em>What might this imply about modelling?</em></p></li>
+</ul>
+</li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">How to interpret correlations</p>
+<ul class="simple">
+<li><p>Values near +1 mean strong positive correlation</p></li>
+<li><p>Values near –1 mean strong negative correlation</p></li>
+<li><p>Values near 0 mean no linear relationship</p></li>
+</ul>
+<p>We’ll use this to guide our understanding of which features are related and which are independent.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Why not always trust correlation blindly?</p>
+<p>Some of our continuous features are <strong>right-skewed</strong> or contain <strong>outliers</strong>.</p>
+<p><em>Pearson correlation</em> assumes normality and linearity, so in these cases it may:</p>
+<ul class="simple">
+<li><p>Underestimate a nonlinear relationship</p></li>
+<li><p>Be overly sensitive to outliers</p></li>
+</ul>
+<p>To explore this further, you could:</p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">.corr(method='spearman')</span></code> for rank-based correlation</p></li>
+<li><p>Apply transformations (e.g., log) to reduce skew before computing correlations</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-18-spearman-correlation">
+<h3>Exercise 18: Spearman Correlation<a class="headerlink" href="#exercise-18-spearman-correlation" title="Link to this heading">#</a></h3>
+<p>You’ve just explored <strong>Pearson correlation</strong>, which measures <em>linear</em> relationships.
+But some of our variables are <strong>skewed</strong>, and may violate Pearson’s assumptions.</p>
+<p>In this exercise, you’ll compute <strong>Spearman correlation</strong>, which is:</p>
+<ul class="simple">
+<li><p>Based on <strong>ranks</strong>, not raw values</p></li>
+<li><p>More <strong>robust to outliers and skew</strong></p></li>
+<li><p>Better at detecting <strong>monotonic (nonlinear)</strong> trends</p></li>
+</ul>
+<p><strong>Task:</strong></p>
+<ol class="arabic simple">
+<li><p><em>Use <code class="docutils literal notranslate"><span class="pre">.corr(method='spearman')</span></code> to compute the Spearman correlation matrix.</em></p></li>
+<li><p><em>Plot it as a heatmap (just like before).</em></p></li>
+<li><p><em>Compare it to your Pearson matrix:</em></p>
+<ul class="simple">
+<li><p><em>Which pairs change the most?</em></p></li>
+<li><p><em>Are there any new strong relationships?</em></p></li>
+<li><p><em>Do any associations disappear?</em></p></li>
+</ul>
+</li>
+</ol>
+<div class="info admonition">
+<p class="admonition-title">Why this matters</p>
+<p>Seeing how these two methods differ gives you a deeper view of your data and helps decide whether some features need <strong>transformation</strong> or <strong>nonlinear methods</strong> downstream.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-19-explore-feature-relationships-with-the-target-variable">
+<h3>Exercise 19: Explore Feature Relationships with the Target Variable<a class="headerlink" href="#exercise-19-explore-feature-relationships-with-the-target-variable" title="Link to this heading">#</a></h3>
+<p>You’ve explored relationships between features. Now it’s time to ask which features differ most between patients with and without heart disease.*</p>
+<p>This is a crucial part of exploratory analysis and feature selection. You’ll stratify patients based on the binary outcome: <code class="docutils literal notranslate"><span class="pre">heart_disease_binary</span></code> (0 = no disease, 1 = disease)</p>
+<p><strong>Task:</strong></p>
+<ol class="arabic simple">
+<li><p><em>Pick your continuous features</em></p></li>
+<li><p><em>For each one:</em></p>
+<ul class="simple">
+<li><p><em>Create a boxplot grouped by <code class="docutils literal notranslate"><span class="pre">heart_disease_binary</span></code></em></p></li>
+<li><p><em>Optionally: also create stratified histograms or violin plots</em></p></li>
+</ul>
+</li>
+<li><p><em>Observe:</em></p>
+<ul class="simple">
+<li><p><em>Which variables show clear separation between the two classes?</em></p></li>
+<li><p><em>Are there noticeable shifts in distribution or outliers?</em></p></li>
+<li><p><em>Which features might be informative for classification?</em></p></li>
+</ul>
+</li>
+</ol>
+<p><em>This step helps identify potential predictors of heart disease, builds intuition about what differences exist between groups, and sets the stage for later statistical testing or modelling.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-20-statistical-testing-heart-disease-vs-continuous-features">
+<h3>Exercise 20: Statistical Testing — Heart Disease vs Continuous Features<a class="headerlink" href="#exercise-20-statistical-testing-heart-disease-vs-continuous-features" title="Link to this heading">#</a></h3>
+<p>You’ve already visualised how the distributions of continuous variables differ depending on whether a patient has heart disease.</p>
+<p>Now you’ll perform <strong>statistical tests</strong> to check if those differences are <strong>significant</strong>.</p>
+<p><strong>Goal:</strong>
+<em>Test whether each continuous feature differs <strong>significantly</strong> between:</em></p>
+<ul class="simple">
+<li><p><em><code class="docutils literal notranslate"><span class="pre">heart_disease_binary</span> <span class="pre">=</span> <span class="pre">0</span></code> → No heart disease</em></p></li>
+<li><p><em><code class="docutils literal notranslate"><span class="pre">heart_disease_binary</span> <span class="pre">=</span> <span class="pre">1</span></code> → Heart disease present</em></p></li>
+</ul>
+<p><strong>Task:</strong></p>
+<ol class="arabic simple">
+<li><p><em>If needed, install SciPy first. Then import <code class="docutils literal notranslate"><span class="pre">ttest_ind</span></code> and <code class="docutils literal notranslate"><span class="pre">mannwhitneyu</span></code> from <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code>.</em></p></li>
+<li><p><em>Run both tests for each continuous feature:</em></p>
+<ul class="simple">
+<li><p><em>T-test: checks if means are significantly different</em></p></li>
+<li><p><em>Mann–Whitney U: non-parametric alternative for non-normal distributions</em></p></li>
+</ul>
+</li>
+<li><p><em>Print and interpret the p-values:</em></p>
+<ul class="simple">
+<li><p><em>Which features show statistically significant differences?</em></p></li>
+<li><p><em>Do results change between t-test and Mann–Whitney?</em></p></li>
+</ul>
+</li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Reminder: Check distribution shape</p>
+<p>Use your <strong>histograms and boxplots</strong> from earlier to decide which test is appropriate.</p>
+<ul class="simple">
+<li><p>If a feature is <strong>skewed</strong> or has <strong>many outliers</strong>, the <strong>Mann–Whitney U test</strong> is more reliable.</p></li>
+<li><p>If a feature is <strong>symmetric</strong> and looks normally distributed, the <strong>t-test</strong> is usually appropriate.</p></li>
+</ul>
+<p>This helps ensure you’re using valid statistical assumptions, and makes your results more trustworthy.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Takeaways</p>
+<ul class="simple">
+<li><p>Use both tests for robustness, especially with non-normal data.</p></li>
+<li><p>Several features (like <code class="docutils literal notranslate"><span class="pre">thalach</span></code> and <code class="docutils literal notranslate"><span class="pre">oldpeak</span></code>) show strong group separation — they may be useful for modelling heart disease.</p></li>
+<li><p>For features like chol, the visualisations and test disagreements suggest caution — it may require transformation or further exploration.</p></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-21-exploring-categorical-features-vs-heart-disease">
+<h3>Exercise 21: Exploring Categorical Features vs Heart Disease<a class="headerlink" href="#exercise-21-exploring-categorical-features-vs-heart-disease" title="Link to this heading">#</a></h3>
+<p>You’ve explored continuous variables in detail — now it’s time to analyse how <strong>categorical features</strong> relate to heart disease.</p>
+<p>This is especially important for features like:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cp</span></code> (chest pain type)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thal</span></code> (thalassemia type)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">slope</span></code> (slope of ST segment)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sex</span></code>, <code class="docutils literal notranslate"><span class="pre">fbs</span></code>, <code class="docutils literal notranslate"><span class="pre">restecg</span></code>, etc.</p></li>
+</ul>
+<p><strong>Part 1: Visualise Category vs. Target</strong></p>
+<p><strong>Task:</strong></p>
+<p><em>For each categorical feature:</em></p>
+<ul class="simple">
+<li><p><em>Create a <strong>grouped bar chart</strong> showing the count of heart disease (0 vs 1) per category.</em></p></li>
+<li><p><em>Use <code class="docutils literal notranslate"><span class="pre">pd.crosstab()</span></code> or <code class="docutils literal notranslate"><span class="pre">df.groupby()</span></code>.</em></p></li>
+<li><p><em>Plot with <code class="docutils literal notranslate"><span class="pre">plot(kind='bar',</span> <span class="pre">stacked=True)</span></code> or <code class="docutils literal notranslate"><span class="pre">seaborn.countplot()</span></code>.</em></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Part 2: Statistical Test — Chi-Squared</strong></p>
+<p><strong>Task:</strong></p>
+<p><em>Run a <strong>chi-squared test of independence</strong> for each categorical feature vs. heart disease.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Interpreting Chi-Squared</p>
+<ul class="simple">
+<li><p>A <strong>low p-value</strong> (e.g., &lt; 0.05) means the feature is <strong>significantly associated</strong> with heart disease.</p></li>
+<li><p>If the result is not significant, it may not be useful on its own — or it might require interaction with other features.</p></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="optional-exercise-22-k-means-clustering-grouping-patients">
+<h3><em>(Optional)</em> Exercise 22: K-Means Clustering — Grouping Patients<a class="headerlink" href="#optional-exercise-22-k-means-clustering-grouping-patients" title="Link to this heading">#</a></h3>
+<p>So far, you’ve explored individual features and compared them to heart disease status.
+Now let’s see if we can <strong>automatically group patients</strong> based on patterns in their data — without using the diagnosis label.</p>
+<p>This is known as <strong>unsupervised learning</strong>, and one of the most widely used methods is <strong>K-Means Clustering</strong>.</p>
+<p><em>In this exercise, you’ll:</em></p>
+<ul class="simple">
+<li><p><em>Select features that appear <strong>statistically informative</strong></em></p></li>
+<li><p><em><strong>Standardise</strong> them so they’re on the same scale</em></p></li>
+<li><p><em>Use <strong>K-Means</strong> to form two clusters (<span class="math notranslate nohighlight">\(K = 2\)</span>)</em></p></li>
+<li><p><em>Check how well the clusters align with actual heart disease labels</em></p></li>
+</ul>
+<p><strong>Task</strong></p>
+<ol class="arabic simple">
+<li><p><em><strong>Select features</strong>:</em>
+<em>Use a mix of continuous and categorical features that showed <strong>strong group differences</strong> earlier.</em></p>
+<ul class="simple">
+<li><p>For example:</p>
+<ul>
+<li><p>Continuous: <code class="docutils literal notranslate"><span class="pre">age</span></code>, <code class="docutils literal notranslate"><span class="pre">thalach</span></code>, <code class="docutils literal notranslate"><span class="pre">oldpeak</span></code>, <code class="docutils literal notranslate"><span class="pre">trestbps</span></code></p></li>
+<li><p>Categorical: <code class="docutils literal notranslate"><span class="pre">cp</span></code>, <code class="docutils literal notranslate"><span class="pre">thal</span></code>, <code class="docutils literal notranslate"><span class="pre">slope</span></code>, <code class="docutils literal notranslate"><span class="pre">sex</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><em><strong>One-hot encode</strong> the categorical variables using <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.get_dummies.html"><code class="docutils literal notranslate"><span class="pre">pd.get_dummies()</span></code></a></em></p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">What is One-Hot Encoding</p>
+<p>Most machine learning algorithms, including K-Means, <strong>can’t handle categorical variables directly</strong>.</p>
+<p><strong>One-hot encoding</strong> turns each category into its own <strong>binary (0 or 1)</strong> column.</p>
+<p>Example:
+If the <code class="docutils literal notranslate"><span class="pre">cp</span></code> (chest pain type) variable has 4 categories (0, 1, 2, 3), it will become 3 new columns: <code class="docutils literal notranslate"><span class="pre">cp_1</span></code>, <code class="docutils literal notranslate"><span class="pre">cp_2</span></code>, <code class="docutils literal notranslate"><span class="pre">cp_3</span></code> (we drop one to avoid redundancy).</p>
+<p>This lets the model use each category as a separate feature.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><em><strong>Standardise</strong> the continuous features using <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html"><code class="docutils literal notranslate"><span class="pre">StandardScaler</span></code></a></em></p></li>
+<li><p><em><strong>Combine</strong> the encoded categorical and scaled continuous features into one single dataset</em></p></li>
+<li><p><em><strong>Fit KMeans</strong> with <code class="docutils literal notranslate"><span class="pre">n_clusters=2</span></code> and assign cluster labels</em></p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">How to run K-Means in Python</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.cluster</span><span class="w"> </span><span class="kn">import</span> <span class="n">KMeans</span>
+
+<span class="c1"># Create a KMeans object</span>
+<span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Fit it to the data and assign cluster labels to each patient</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;cluster&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X_cluster</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p><em><strong>Compare</strong> the resulting clusters to actual <code class="docutils literal notranslate"><span class="pre">heart_disease_binary</span></code> values using:</em></p>
+<ul class="simple">
+<li><p><em>A <strong>confusion matrix</strong> (<code class="docutils literal notranslate"><span class="pre">pd.crosstab()</span></code>)</em></p></li>
+<li><p><em>An optional <strong>heatmap</strong> for visualisation</em></p></li>
+</ul>
+</li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">What is a Confusion Matrix?</p>
+<p>A <strong>confusion matrix</strong> is a table used to compare the model’s predictions with the actual values.<br />
+It shows how many patients were correctly or incorrectly assigned to each group.</p>
+<p>For example, in our case:</p>
+<ul class="simple">
+<li><p>Rows = the <strong>cluster labels</strong> assigned by K-Means (cluster 0 or 1)</p></li>
+<li><p>Columns = the <strong>true diagnosis</strong> (<code class="docutils literal notranslate"><span class="pre">heart_disease_binary</span></code> = 0 or 1)</p></li>
+</ul>
+<p>This helps you assess how well the clusters match real diagnoses.</p>
+<p>To create it in pandas:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;cluster_kmeans&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;heart_disease_binary&#39;</span><span class="p">],</span> 
+            <span class="n">rownames</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Cluster&#39;</span><span class="p">],</span> <span class="n">colnames</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Heart Disease&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanane-issa/python-crash-course",
+            ref: "melinda_module2foundations",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "pythoncc",
+            path: "./Module-8"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'pythoncc'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Module8_Solutions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">M8: Final Practice: Heart Disease Dataset (with Solutions)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-exploration">Initial Exploration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-understanding-the-dataset">Exercise 1: Understanding the Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-import-the-dataset-using-the-uci-interface">Exercise 2: Import the Dataset Using the UCI Interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-explore-the-structure-of-the-dataset-object">Exercise 3: Explore the Structure of the Dataset Object</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-summarise-the-dataset-metadata">Exercise 4: Summarise the Dataset Metadata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-inspect-variable-details-and-metadata">Exercise 5: Inspect Variable Details and Metadata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-convert-data-to-dataframe-format-for-exploration">Exercise 6: Convert Data to DataFrame Format for Exploration</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning">Data Cleaning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-7-investigating-missing-values-in-the-dataset">Exercise 7: Investigating Missing Values in the Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-removing-rows-with-missing-values">Exercise 8: Removing Rows with Missing Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-9-checking-for-duplicate-rows-and-columns">Exercise 9: Checking for Duplicate Rows and Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-10-create-a-binary-target-variable">Exercise 10: Create a Binary Target Variable</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualising-the-data">Visualising the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-you-know-what-type-a-feature-is">How Do You Know What Type a Feature Is?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#two-main-types">Two Main Types</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-features">Numerical Features</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#categorical-features">Categorical Features</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#special-note-identifiers">Special Note: Identifiers</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-you-figure-this-out">How Can You Figure This Out?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-11-classify-each-variable-by-type">Exercise 11: Classify Each Variable by Type</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-explore-categorical-variable-distributions">Exercise 12: Explore Categorical Variable Distributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-compare-categorical-distributions-by-sex">Exercise 13: Compare Categorical Distributions by Sex</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-visualising-continuous-features-with-histograms">Exercise 14: Visualising Continuous Features with Histograms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-compare-continuous-features-by-sex">Exercise 15: Compare Continuous Features by Sex</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-16-boxplots-of-continuous-features-by-sex">Exercise 16: Boxplots of Continuous Features by Sex</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-17-exploring-relationships-between-continuous-features">Exercise 17: Exploring Relationships Between Continuous Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-18-spearman-correlation">Exercise 18: Spearman Correlation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-19-explore-feature-relationships-with-the-target-variable">Exercise 19: Explore Feature Relationships with the Target Variable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-20-statistical-testing-heart-disease-vs-continuous-features">Exercise 20: Statistical Testing — Heart Disease vs Continuous Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-21-exploring-categorical-features-vs-heart-disease">Exercise 21: Exploring Categorical Features vs Heart Disease</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-exercise-22-k-means-clustering-grouping-patients"><em>(Optional)</em> Exercise 22: K-Means Clustering — Grouping Patients</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

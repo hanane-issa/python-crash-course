@@ -1,0 +1,920 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>M8: Excercise Solutions &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module-8/Module8_2_ExerciseSolution';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module8_Questions.html">M8: Final Practice: Heart Disease Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module8_Solutions.html">M8: Final Practice: Heart Disease Dataset (with Solutions)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/melinda_module2foundations?urlpath=tree/Module-8/Module8_2_ExerciseSolution.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanane-issa/python-crash-course" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanane-issa/python-crash-course/issues/new?title=Issue%20on%20page%20%2FModule-8/Module8_2_ExerciseSolution.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Module-8/Module8_2_ExerciseSolution.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>M8: Excercise Solutions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-1">Excercise 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-2">Excercise 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-3">Excercise 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-4">Excercise 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-5">Excercise 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-6">Excercise 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-7">Excercise 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excersice-8">Excersice 8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-9">Exercise 9</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="m8-excercise-solutions">
+<h1>M8: Excercise Solutions<a class="headerlink" href="#m8-excercise-solutions" title="Link to this heading">#</a></h1>
+<section id="excercise-1">
+<h2>Excercise 1<a class="headerlink" href="#excercise-1" title="Link to this heading">#</a></h2>
+<p>The website states that 14 out of 75 patient attributes are used for the classification task (determining whether a patient has heart disease). Of these, 13 are features and the 14th is the target variable. A description of each can be found in the variables table.</p>
+</section>
+<section id="excercise-2">
+<h2>Excercise 2<a class="headerlink" href="#excercise-2" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># install the library using a shell command - you could also use the terminal</span>
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>ucimlrepo
+
+<span class="c1"># import the library</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ucimlrepo</span><span class="w"> </span><span class="kn">import</span> <span class="n">fetch_ucirepo</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting ucimlrepo
+  Using cached ucimlrepo-0.0.7-py3-none-any.whl.metadata (5.5 kB)
+Requirement already satisfied: pandas&gt;=1.0.0 in /opt/miniconda3/envs/pythoncc/lib/python3.10/site-packages (from ucimlrepo) (2.2.3)
+Requirement already satisfied: certifi&gt;=2020.12.5 in /opt/miniconda3/envs/pythoncc/lib/python3.10/site-packages (from ucimlrepo) (2025.4.26)
+Requirement already satisfied: numpy&gt;=1.22.4 in /opt/miniconda3/envs/pythoncc/lib/python3.10/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2.0.1)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /opt/miniconda3/envs/pythoncc/lib/python3.10/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2.9.0.post0)
+Requirement already satisfied: pytz&gt;=2020.1 in /opt/miniconda3/envs/pythoncc/lib/python3.10/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2024.1)
+Requirement already satisfied: tzdata&gt;=2022.7 in /opt/miniconda3/envs/pythoncc/lib/python3.10/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2025.2)
+Requirement already satisfied: six&gt;=1.5 in /opt/miniconda3/envs/pythoncc/lib/python3.10/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&gt;=1.0.0-&gt;ucimlrepo) (1.17.0)
+Using cached ucimlrepo-0.0.7-py3-none-any.whl (8.0 kB)
+Installing collected packages: ucimlrepo
+Successfully installed ucimlrepo-0.0.7
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="excercise-3">
+<h2>Excercise 3<a class="headerlink" href="#excercise-3" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fetch dataset </span>
+<span class="n">heart_disease</span> <span class="o">=</span> <span class="n">fetch_ucirepo</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="c1"># print the type of the instance</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">heart_disease</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;ucimlrepo.dotdict.dotdict&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="excercise-4">
+<h2>Excercise 4<a class="headerlink" href="#excercise-4" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># metadata </span>
+<span class="n">metadata</span> <span class="o">=</span> <span class="n">heart_disease</span><span class="o">.</span><span class="n">metadata</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;uci_id&#39;: 45, &#39;name&#39;: &#39;Heart Disease&#39;, &#39;repository_url&#39;: &#39;https://archive.ics.uci.edu/dataset/45/heart+disease&#39;, &#39;data_url&#39;: &#39;https://archive.ics.uci.edu/static/public/45/data.csv&#39;, &#39;abstract&#39;: &#39;4 databases: Cleveland, Hungary, Switzerland, and the VA Long Beach&#39;, &#39;area&#39;: &#39;Health and Medicine&#39;, &#39;tasks&#39;: [&#39;Classification&#39;], &#39;characteristics&#39;: [&#39;Multivariate&#39;], &#39;num_instances&#39;: 303, &#39;num_features&#39;: 13, &#39;feature_types&#39;: [&#39;Categorical&#39;, &#39;Integer&#39;, &#39;Real&#39;], &#39;demographics&#39;: [&#39;Age&#39;, &#39;Sex&#39;], &#39;target_col&#39;: [&#39;num&#39;], &#39;index_col&#39;: None, &#39;has_missing_values&#39;: &#39;yes&#39;, &#39;missing_values_symbol&#39;: &#39;NaN&#39;, &#39;year_of_dataset_creation&#39;: 1989, &#39;last_updated&#39;: &#39;Fri Nov 03 2023&#39;, &#39;dataset_doi&#39;: &#39;10.24432/C52P4X&#39;, &#39;creators&#39;: [&#39;Andras Janosi&#39;, &#39;William Steinbrunn&#39;, &#39;Matthias Pfisterer&#39;, &#39;Robert Detrano&#39;], &#39;intro_paper&#39;: {&#39;ID&#39;: 231, &#39;type&#39;: &#39;NATIVE&#39;, &#39;title&#39;: &#39;International application of a new probability algorithm for the diagnosis of coronary artery disease.&#39;, &#39;authors&#39;: &#39;R. Detrano, A. Jánosi, W. Steinbrunn, M. Pfisterer, J. Schmid, S. Sandhu, K. Guppy, S. Lee, V. Froelicher&#39;, &#39;venue&#39;: &#39;American Journal of Cardiology&#39;, &#39;year&#39;: 1989, &#39;journal&#39;: None, &#39;DOI&#39;: None, &#39;URL&#39;: &#39;https://www.semanticscholar.org/paper/a7d714f8f87bfc41351eb5ae1e5472f0ebbe0574&#39;, &#39;sha&#39;: None, &#39;corpus&#39;: None, &#39;arxiv&#39;: None, &#39;mag&#39;: None, &#39;acl&#39;: None, &#39;pmid&#39;: &#39;2756873&#39;, &#39;pmcid&#39;: None}, &#39;additional_info&#39;: {&#39;summary&#39;: &#39;This database contains 76 attributes, but all published experiments refer to using a subset of 14 of them.  In particular, the Cleveland database is the only one that has been used by ML researchers to date.  The &quot;goal&quot; field refers to the presence of heart disease in the patient.  It is integer valued from 0 (no presence) to 4. Experiments with the Cleveland database have concentrated on simply attempting to distinguish presence (values 1,2,3,4) from absence (value 0).  \n   \nThe names and social security numbers of the patients were recently removed from the database, replaced with dummy values.\n\nOne file has been &quot;processed&quot;, that one containing the Cleveland database.  All four unprocessed files also exist in this directory.\n\nTo see Test Costs (donated by Peter Turney), please see the folder &quot;Costs&quot; &#39;, &#39;purpose&#39;: None, &#39;funded_by&#39;: None, &#39;instances_represent&#39;: None, &#39;recommended_data_splits&#39;: None, &#39;sensitive_data&#39;: None, &#39;preprocessing_description&#39;: None, &#39;variable_info&#39;: &#39;Only 14 attributes used:\r\n      1. #3  (age)       \r\n      2. #4  (sex)       \r\n      3. #9  (cp)        \r\n      4. #10 (trestbps)  \r\n      5. #12 (chol)      \r\n      6. #16 (fbs)       \r\n      7. #19 (restecg)   \r\n      8. #32 (thalach)   \r\n      9. #38 (exang)     \r\n      10. #40 (oldpeak)   \r\n      11. #41 (slope)     \r\n      12. #44 (ca)        \r\n      13. #51 (thal)      \r\n      14. #58 (num)       (the predicted attribute)\r\n\r\nComplete attribute documentation:\r\n      1 id: patient identification number\r\n      2 ccf: social security number (I replaced this with a dummy value of 0)\r\n      3 age: age in years\r\n      4 sex: sex (1 = male; 0 = female)\r\n      5 painloc: chest pain location (1 = substernal; 0 = otherwise)\r\n      6 painexer (1 = provoked by exertion; 0 = otherwise)\r\n      7 relrest (1 = relieved after rest; 0 = otherwise)\r\n      8 pncaden (sum of 5, 6, and 7)\r\n      9 cp: chest pain type\r\n        -- Value 1: typical angina\r\n        -- Value 2: atypical angina\r\n        -- Value 3: non-anginal pain\r\n        -- Value 4: asymptomatic\r\n     10 trestbps: resting blood pressure (in mm Hg on admission to the hospital)\r\n     11 htn\r\n     12 chol: serum cholestoral in mg/dl\r\n     13 smoke: I believe this is 1 = yes; 0 = no (is or is not a smoker)\r\n     14 cigs (cigarettes per day)\r\n     15 years (number of years as a smoker)\r\n     16 fbs: (fasting blood sugar &gt; 120 mg/dl)  (1 = true; 0 = false)\r\n     17 dm (1 = history of diabetes; 0 = no such history)\r\n     18 famhist: family history of coronary artery disease (1 = yes; 0 = no)\r\n     19 restecg: resting electrocardiographic results\r\n        -- Value 0: normal\r\n        -- Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of &gt; 0.05 mV)\r\n        -- Value 2: showing probable or definite left ventricular hypertrophy by Estes\&#39; criteria\r\n     20 ekgmo (month of exercise ECG reading)\r\n     21 ekgday(day of exercise ECG reading)\r\n     22 ekgyr (year of exercise ECG reading)\r\n     23 dig (digitalis used furing exercise ECG: 1 = yes; 0 = no)\r\n     24 prop (Beta blocker used during exercise ECG: 1 = yes; 0 = no)\r\n     25 nitr (nitrates used during exercise ECG: 1 = yes; 0 = no)\r\n     26 pro (calcium channel blocker used during exercise ECG: 1 = yes; 0 = no)\r\n     27 diuretic (diuretic used used during exercise ECG: 1 = yes; 0 = no)\r\n     28 proto: exercise protocol\r\n          1 = Bruce     \r\n          2 = Kottus\r\n          3 = McHenry\r\n          4 = fast Balke\r\n          5 = Balke\r\n          6 = Noughton \r\n          7 = bike 150 kpa min/min  (Not sure if &quot;kpa min/min&quot; is what was written!)\r\n          8 = bike 125 kpa min/min  \r\n          9 = bike 100 kpa min/min\r\n         10 = bike 75 kpa min/min\r\n         11 = bike 50 kpa min/min\r\n         12 = arm ergometer\r\n     29 thaldur: duration of exercise test in minutes\r\n     30 thaltime: time when ST measure depression was noted\r\n     31 met: mets achieved\r\n     32 thalach: maximum heart rate achieved\r\n     33 thalrest: resting heart rate\r\n     34 tpeakbps: peak exercise blood pressure (first of 2 parts)\r\n     35 tpeakbpd: peak exercise blood pressure (second of 2 parts)\r\n     36 dummy\r\n     37 trestbpd: resting blood pressure\r\n     38 exang: exercise induced angina (1 = yes; 0 = no)\r\n     39 xhypo: (1 = yes; 0 = no)\r\n     40 oldpeak = ST depression induced by exercise relative to rest\r\n     41 slope: the slope of the peak exercise ST segment\r\n        -- Value 1: upsloping\r\n        -- Value 2: flat\r\n        -- Value 3: downsloping\r\n     42 rldv5: height at rest\r\n     43 rldv5e: height at peak exercise\r\n     44 ca: number of major vessels (0-3) colored by flourosopy\r\n     45 restckm: irrelevant\r\n     46 exerckm: irrelevant\r\n     47 restef: rest raidonuclid (sp?) ejection fraction\r\n     48 restwm: rest wall (sp?) motion abnormality\r\n        0 = none\r\n        1 = mild or moderate\r\n        2 = moderate or severe\r\n        3 = akinesis or dyskmem (sp?)\r\n     49 exeref: exercise radinalid (sp?) ejection fraction\r\n     50 exerwm: exercise wall (sp?) motion \r\n     51 thal: 3 = normal; 6 = fixed defect; 7 = reversable defect\r\n     52 thalsev: not used\r\n     53 thalpul: not used\r\n     54 earlobe: not used\r\n     55 cmo: month of cardiac cath (sp?)  (perhaps &quot;call&quot;)\r\n     56 cday: day of cardiac cath (sp?)\r\n     57 cyr: year of cardiac cath (sp?)\r\n     58 num: diagnosis of heart disease (angiographic disease status)\r\n        -- Value 0: &lt; 50% diameter narrowing\r\n        -- Value 1: &gt; 50% diameter narrowing\r\n        (in any major vessel: attributes 59 through 68 are vessels)\r\n     59 lmt\r\n     60 ladprox\r\n     61 laddist\r\n     62 diag\r\n     63 cxmain\r\n     64 ramus\r\n     65 om1\r\n     66 om2\r\n     67 rcaprox\r\n     68 rcadist\r\n     69 lvx1: not used\r\n     70 lvx2: not used\r\n     71 lvx3: not used\r\n     72 lvx4: not used\r\n     73 lvf: not used\r\n     74 cathef: not used\r\n     75 junk: not used\r\n     76 name: last name of patient  (I replaced this with the dummy string &quot;name&quot;)&#39;, &#39;citation&#39;: None}}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Answers to the questions should all be shown in the print statement:</p>
+<ul class="simple">
+<li><p>How many data points / patients do we have and how many features?
+‘num_instances’: 303 –&gt; 303 data points
+‘num_features’: 13 –&gt; 13 features</p></li>
+<li><p>What are the names of the demographic features?
+‘demographics’: [‘Age’, ‘Sex’] –&gt; age and sex are the demographic features</p></li>
+<li><p>What is the target value called?
+‘target_col’: [‘num’] –&gt; num is the name of the target</p></li>
+<li><p>Are there any missing values in the dataset and if yes how can they be identified?
+‘has_missing_values’: ‘yes’ –&gt; there are missing values
+‘missing_values_symbol’: ‘NaN’ –&gt; they can be identified by the NaN value</p></li>
+</ul>
+</section>
+<section id="excercise-5">
+<h2>Excercise 5<a class="headerlink" href="#excercise-5" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># variable information </span>
+<span class="n">variables_information</span> <span class="o">=</span> <span class="n">heart_disease</span><span class="o">.</span><span class="n">variables</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variables_information</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        name     role         type demographic  \
+0        age  Feature      Integer         Age   
+1        sex  Feature  Categorical         Sex   
+2         cp  Feature  Categorical        None   
+3   trestbps  Feature      Integer        None   
+4       chol  Feature      Integer        None   
+5        fbs  Feature  Categorical        None   
+6    restecg  Feature  Categorical        None   
+7    thalach  Feature      Integer        None   
+8      exang  Feature  Categorical        None   
+9    oldpeak  Feature      Integer        None   
+10     slope  Feature  Categorical        None   
+11        ca  Feature      Integer        None   
+12      thal  Feature  Categorical        None   
+13       num   Target      Integer        None   
+
+                                          description  units missing_values  
+0                                                None  years             no  
+1                                                None   None             no  
+2                                                None   None             no  
+3   resting blood pressure (on admission to the ho...  mm Hg             no  
+4                                   serum cholestoral  mg/dl             no  
+5                     fasting blood sugar &gt; 120 mg/dl   None             no  
+6                                                None   None             no  
+7                         maximum heart rate achieved   None             no  
+8                             exercise induced angina   None             no  
+9   ST depression induced by exercise relative to ...   None             no  
+10                                               None   None             no  
+11  number of major vessels (0-3) colored by flour...   None            yes  
+12                                               None   None            yes  
+13                         diagnosis of heart disease   None             no  
+</pre></div>
+</div>
+</div>
+</div>
+<p>Answers for the questions:</p>
+<ul class="simple">
+<li><p>which variables have missing values? –&gt; ‘ca’ and ‘thal’</p></li>
+<li><p>what is the unit of ‘resting blood pressure’? –&gt; mm Hg</p></li>
+<li><p>how many categorial variables are there? –&gt; 7</p></li>
+</ul>
+</section>
+<section id="excercise-6">
+<h2>Excercise 6<a class="headerlink" href="#excercise-6" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># data (as pandas dataframes) </span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">heart_disease</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">features</span> 
+<span class="n">y</span> <span class="o">=</span> <span class="n">heart_disease</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">targets</span> 
+
+<span class="c1">#import pandas</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="c1">#combine the features and target into a single dataframe</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">#display the first 5 rows of the dataframe</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   age  sex  cp  trestbps  chol  fbs  restecg  thalach  exang  oldpeak  slope  \
+0   63    1   1       145   233    1        2      150      0      2.3      3   
+1   67    1   4       160   286    0        2      108      1      1.5      2   
+2   67    1   4       120   229    0        2      129      1      2.6      2   
+3   37    1   3       130   250    0        0      187      0      3.5      3   
+4   41    0   2       130   204    0        2      172      0      1.4      1   
+
+    ca  thal  num  
+0  0.0   6.0    0  
+1  3.0   3.0    2  
+2  2.0   7.0    1  
+3  0.0   3.0    0  
+4  0.0   3.0    0  
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="excercise-7">
+<h2>Excercise 7<a class="headerlink" href="#excercise-7" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#print &#39;ca&#39; collumn from df</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&quot;Ca&quot; column: &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ca&#39;</span><span class="p">])</span>
+
+<span class="c1">#count number of NaN values in &#39;ca&#39; collumn</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Number of Nan values in &quot;ca&quot;: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ca&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># count number of unique values in &#39;ca&#39; collumn</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Number of unique values in &quot;ca&quot;: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ca&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1"># print the unique values in &#39;ca&#39; collumn</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Unique values in &quot;ca&quot;: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ca&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># print data type of &#39;ca&#39; from the variables_information</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Data type of &quot;ca&quot;: </span><span class="si">{</span><span class="n">variables_information</span><span class="p">[</span><span class="n">variables_information</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;ca&quot;</span><span class="p">][</span><span class="s2">&quot;type&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+
+<span class="c1">#print &#39;thal&#39; collumn from df</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&quot;Thal&quot; column: &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;thal&#39;</span><span class="p">])</span>
+
+<span class="c1">#count number of NaN values in &#39;thal&#39; collumn</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Number of Nan values in &quot;thal&quot;: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;thal&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># count number of unique values in &#39;thal&#39; collumn</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Number of unique values in &quot;thal&quot;: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;thal&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1"># print the unique values in &#39;thal&#39; collumn</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Unique values in &quot;thal&quot;: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;thal&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># print data type of &#39;thal&#39; from the variables_information</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Data type of &quot;thal&quot;: </span><span class="si">{</span><span class="n">variables_information</span><span class="p">[</span><span class="n">variables_information</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="s2">&quot;thal&quot;</span><span class="p">][</span><span class="s2">&quot;type&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="nn">    print(f&#39;Number of Nan values</span> in <span class="ni">&quot;ca&quot;: {df[&#39;ca&#39;].isna().sum</span><span class="nt">()}&#39;)</span>
+                                               <span class="o">^</span>
+<span class="ne">SyntaxError</span>: f-string: unmatched &#39;[&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="excersice-8">
+<h2>Excersice 8<a class="headerlink" href="#excersice-8" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove rows with NaN values in &#39;ca&#39; and &#39;thal&#39; columns</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Removing rows with NaN values in &quot;ca&quot; and &quot;thal&quot; columns.&#39;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ca&#39;</span><span class="p">,</span> <span class="s1">&#39;thal&#39;</span><span class="p">])</span>
+
+<span class="c1"># Reset index after dropping rows</span>
+<span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Print number NaN values for each column</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of NaN values for each column:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="c1"># Print shape of the dataframe</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape of the dataframe:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Removing rows with NaN values in &quot;ca&quot; and &quot;thal&quot; columns.
+Number of NaN values for each column:
+age         0
+sex         0
+cp          0
+trestbps    0
+chol        0
+fbs         0
+restecg     0
+thalach     0
+exang       0
+oldpeak     0
+slope       0
+ca          0
+thal        0
+num         0
+dtype: int64
+Shape of the dataframe:
+(297, 14)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-9">
+<h2>Exercise 9<a class="headerlink" href="#exercise-9" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if any of the rows are duplicates</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Checking for duplicate rows:&#39;</span><span class="p">)</span>
+<span class="n">duplicates</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Number of duplicates: </span><span class="si">{</span><span class="n">duplicates</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Duplicate rows: </span><span class="si">{</span><span class="n">duplicates</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Check if any of the columns are duplicates</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Checking for duplicate columns:&#39;</span><span class="p">)</span>
+<span class="n">duplicates</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Duplicate columns: </span><span class="si">{</span><span class="n">duplicates</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Number of duplicate columns: </span><span class="si">{</span><span class="n">duplicates</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Checking for duplicate rows:
+Number of duplicates: 0
+Duplicate rows: 0      False
+1      False
+2      False
+3      False
+4      False
+       ...  
+292    False
+293    False
+294    False
+295    False
+296    False
+Length: 297, dtype: bool
+Checking for duplicate columns:
+Duplicate columns: age         False
+sex         False
+cp          False
+trestbps    False
+chol        False
+fbs         False
+restecg     False
+thalach     False
+exang       False
+oldpeak     False
+slope       False
+ca          False
+thal        False
+num         False
+dtype: bool
+Number of duplicate columns: 0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Excercise 10</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get type of &#39;num&#39; column</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Data type of &quot;num&quot;: </span><span class="si">{</span><span class="n">variables_information</span><span class="p">[</span><span class="n">variables_information</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;num&quot;</span><span class="p">][</span><span class="s2">&quot;type&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> 
+<span class="c1"># Get unique values of &#39;num&#39; column</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Unique values of &quot;num&quot;: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;num&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1"># Get number of unique values of &#39;num&#39; column</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Number of unique values of &quot;num&quot;: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;num&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add a new column &#39;heart_diseases_binary&#39;. For each row, the entry is 0 if &#39;num&#39; is 0 and 1 otherelse.</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;heart_diseases_binary&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;num&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Print the first 5 rows of the df</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data type of &quot;num&quot;: Integer
+Unique values of &quot;num&quot;: [0 2 1 3 4]
+Number of unique values of &quot;num&quot;: 5
+   age  sex  cp  trestbps  chol  fbs  restecg  thalach  exang  oldpeak  slope  \
+0   63    1   1       145   233    1        2      150      0      2.3      3   
+1   67    1   4       160   286    0        2      108      1      1.5      2   
+2   67    1   4       120   229    0        2      129      1      2.6      2   
+3   37    1   3       130   250    0        0      187      0      3.5      3   
+4   41    0   2       130   204    0        2      172      0      1.4      1   
+
+    ca  thal  num  heart_diseases_binary  
+0  0.0   6.0    0                      0  
+1  3.0   3.0    2                      1  
+2  2.0   7.0    1                      1  
+3  0.0   3.0    0                      0  
+4  0.0   3.0    0                      0  
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanane-issa/python-crash-course",
+            ref: "melinda_module2foundations",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "pythoncc",
+            path: "./Module-8"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'pythoncc'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-1">Excercise 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-2">Excercise 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-3">Excercise 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-4">Excercise 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-5">Excercise 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-6">Excercise 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercise-7">Excercise 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excersice-8">Excersice 8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-9">Exercise 9</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
