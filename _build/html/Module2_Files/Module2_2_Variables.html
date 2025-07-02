@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>M2: Variables &#8212; My sample book</title>
+    <title>2. Variables &#8212; My sample book</title>
   
   
   
@@ -60,8 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module2_Files/Module2_2_Variables';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="M2: Strings" href="Module2_3_Strings.html" />
-    <link rel="prev" title="M2: Introduction" href="Module2_1_Intro.html" />
+    <link rel="next" title="3 Arithmetic and Logical Operations and Expressions" href="Module2_3_Operations.html" />
+    <link rel="prev" title="M2: Python Foundations" href="Module2_1_Intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,13 +181,14 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module2 - Foundations</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Module2_1_Intro.html">M2: Introduction</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">M2: Variables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Module2_3_Strings.html">M2: Strings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Module2_4_DataStructures.html">M2: Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Module2_5_Operations.html">M2: Operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Module2_6_ConditionalBlocks.html">M2: Conditional Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Module2_7_ErrorHandling.html">M2: Error Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_1_Intro.html">1. Python Syntax</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_3_Operations.html">3 Arithmetic and Logical Operations and Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_4_Strings.html">4. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_5_DataStructures.html">5. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_6_ConditionalBlocks.html">6. Conditional Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_7_ErrorHandling.html">7. Error Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_PracticeSheet1.html">8. Practice Sheet</a></li>
 </ul>
 
     </div>
@@ -422,7 +423,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>M2: Variables</h1>
+    <h1>2. Variables</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -432,13 +433,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">3. Variables</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#declaration-and-usage">3.1. Declaration and Usage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-names">3.3. Variable names</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">3.2. Data Types</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">3.4. Quick Practice</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#declaration-and-usage">2.1. Declaration and Usage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-names">2.2. Variable names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">2.3. Data Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">2.4. Quick Practice</a></li>
 </ul>
             </nav>
         </div>
@@ -450,13 +448,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="m2-variables">
-<h1>M2: Variables<a class="headerlink" href="#m2-variables" title="Link to this heading">#</a></h1>
-<section id="variables">
-<h2>3. Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h2>
+  <section id="variables">
+<h1>2. Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h1>
 <p>A <strong>variable</strong> is a container for storing values. Each variable has a name, a value, and a data type.</p>
 <section id="declaration-and-usage">
-<h3>3.1. Declaration and Usage<a class="headerlink" href="#declaration-and-usage" title="Link to this heading">#</a></h3>
+<h2>2.1. Declaration and Usage<a class="headerlink" href="#declaration-and-usage" title="Link to this heading">#</a></h2>
 <p>In python creating (declaring) a variable is very simply: you simply state its name, e.g. <code class="docutils literal notranslate"><span class="pre">age</span></code>, and assign it the value you want, e.g. <code class="docutils literal notranslate"><span class="pre">25</span></code>, by using an equal sign <code class="docutils literal notranslate"><span class="pre">=</span></code> : <code class="docutils literal notranslate"><span class="pre">age</span> <span class="pre">=</span> <span class="pre">25</span></code>. You do not need to explicitly declare the type — you simply assign a value, and Python determines the type automatically.</p>
 <p>To access the value that is stored in the variable, just state the name of the variable. So for example if you write <code class="docutils literal notranslate"><span class="pre">print(age)</span></code> it will output <code class="docutils literal notranslate"><span class="pre">25</span></code>.</p>
 <p>You can change (reassign) the values of the variables at any time. Simply assign a new value to the name the same way the variable was declared.</p>
@@ -510,13 +506,13 @@ Vegetarian: False
 </div>
 </section>
 <section id="variable-names">
-<h3>3.3. Variable names<a class="headerlink" href="#variable-names" title="Link to this heading">#</a></h3>
+<h2>2.2. Variable names<a class="headerlink" href="#variable-names" title="Link to this heading">#</a></h2>
 <p>Variable names must start with a letter or an underscore (<code class="docutils literal notranslate"><span class="pre">_</span></code>) and cannot contain spaces or special punctuation (other than underscores). Python is <strong>case-sensitive</strong>. This means that <code class="docutils literal notranslate"><span class="pre">myVariable</span></code> and <code class="docutils literal notranslate"><span class="pre">myvariable</span></code> would be treated as two different names / variables.</p>
 <p>It is good practice to stick to one consistent naming style. In Python, the most common style is <em>snake_case</em>, where words are separated by underscores, for example: <code class="docutils literal notranslate"><span class="pre">my_variable</span></code>. A different style that is often used and you might come across is <em>camelCase</em>, where words are not separated and each word but the first is capitalised: <code class="docutils literal notranslate"><span class="pre">myVariable</span></code>.</p>
 <p>The same way comments are useful for understanding your code, you should also give your variables informative names about what they store/ what their purpose is. For instance, someone seeing the variables <code class="docutils literal notranslate"><span class="pre">variable_one</span></code> and <code class="docutils literal notranslate"><span class="pre">variable_two</span></code> will be a lot more confused about what they are used for than someone seeing <code class="docutils literal notranslate"><span class="pre">patients_age</span></code> and <code class="docutils literal notranslate"><span class="pre">patients_height</span></code>.</p>
 </section>
 <section id="data-types">
-<h3>3.2. Data Types<a class="headerlink" href="#data-types" title="Link to this heading">#</a></h3>
+<h2>2.3. Data Types<a class="headerlink" href="#data-types" title="Link to this heading">#</a></h2>
 <p>Here are some of the most common <strong>built-in</strong> data types in Python:</p>
 <ol class="arabic simple">
 <li><p><strong>Integer</strong>: Numeric type - Whole numbers, e.g., <code class="docutils literal notranslate"><span class="pre">42</span></code>, <code class="docutils literal notranslate"><span class="pre">-3</span></code>.</p></li>
@@ -567,7 +563,7 @@ Multiplying my_int with it self: 100
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">21</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">21</span>
 <span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="c1"># Try manipulating the variables with different types</span>
 <span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Multiplying my_int with it self:&#39;</span><span class="p">,</span> <span class="n">my_int</span> <span class="o">*</span> <span class="n">my_int</span><span class="p">)</span> <span class="c1"># 100</span>
 <span class="ne">---&gt; </span><span class="mi">21</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Multiplying my_str with it self:&#39;</span><span class="p">,</span> <span class="n">my_str</span> <span class="o">*</span> <span class="n">my_str</span><span class="p">)</span> <span class="c1"># Error    </span>
@@ -579,7 +575,7 @@ Multiplying my_int with it self: 100
 </div>
 </section>
 <section id="quick-practice">
-<h3>3.4. Quick Practice<a class="headerlink" href="#quick-practice" title="Link to this heading">#</a></h3>
+<h2>2.4. Quick Practice<a class="headerlink" href="#quick-practice" title="Link to this heading">#</a></h2>
 <p>Try these simple challenges:</p>
 <ul class="simple">
 <li><p>Create a variable called <code class="docutils literal notranslate"><span class="pre">city</span></code> and assign your favourite city name as a string.</p></li>
@@ -616,7 +612,6 @@ Multiplying my_int with it self: 100
 </div>
 </div>
 </details></section>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -655,15 +650,15 @@ Multiplying my_int with it self: 100
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">M2: Introduction</p>
+        <p class="prev-next-title">M2: Python Foundations</p>
       </div>
     </a>
     <a class="right-next"
-       href="Module2_3_Strings.html"
+       href="Module2_3_Operations.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">M2: Strings</p>
+        <p class="prev-next-title">3 Arithmetic and Logical Operations and Expressions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -683,13 +678,10 @@ Multiplying my_int with it self: 100
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">3. Variables</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#declaration-and-usage">3.1. Declaration and Usage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-names">3.3. Variable names</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">3.2. Data Types</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">3.4. Quick Practice</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#declaration-and-usage">2.1. Declaration and Usage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-names">2.2. Variable names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">2.3. Data Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">2.4. Quick Practice</a></li>
 </ul>
   </nav></div>
 

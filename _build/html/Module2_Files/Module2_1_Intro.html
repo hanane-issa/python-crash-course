@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>M2: Introduction &#8212; My sample book</title>
+    <title>M2: Python Foundations &#8212; My sample book</title>
   
   
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module2_Files/Module2_1_Intro';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="M2: Variables" href="Module2_2_Variables.html" />
+    <link rel="next" title="2. Variables" href="Module2_2_Variables.html" />
     <link rel="prev" title="Welcome to your Jupyter Book" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -181,13 +181,13 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module2 - Foundations</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">M2: Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Module2_2_Variables.html">M2: Variables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Module2_3_Strings.html">M2: Strings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Module2_4_DataStructures.html">M2: Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Module2_5_Operations.html">M2: Operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Module2_6_ConditionalBlocks.html">M2: Conditional Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Module2_7_ErrorHandling.html">M2: Error Handling</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Python Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_2_Variables.html">2. Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_3_Operations.html">3 Arithmetic and Logical Operations and Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_4_Strings.html">4. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_5_DataStructures.html">5. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_6_ConditionalBlocks.html">6. Conditional Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2_PracticeSheet1.html">8. Practice Sheet</a></li>
 </ul>
 
     </div>
@@ -422,7 +422,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>M2: Introduction</h1>
+    <h1>M2: Python Foundations</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -432,12 +432,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">1. What is Python?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-syntax-basics">2. Python Syntax Basics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indentation-and-code-blocks">2.1. Indentation and Code Blocks</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">2.2. Comments</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-print-statements">2.3. Basic Print Statements</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">2.4. Quick Practice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-syntax">1. Python Syntax</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indentation-and-code-blocks">1.1. Indentation and Code Blocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">1.2. Comments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-print-statements">1.3. Basic Print Statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">1.4. Quick Practice</a></li>
 </ul>
 </li>
 </ul>
@@ -451,20 +450,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="m2-introduction">
-<h1>M2: Introduction<a class="headerlink" href="#m2-introduction" title="Link to this heading">#</a></h1>
-<section id="what-is-python">
-<h2>1. What is Python?<a class="headerlink" href="#what-is-python" title="Link to this heading">#</a></h2>
-<p>Python is one of the most popular programming languages in the world today and is used across all kinds of fields, including Bioinformatics. One big reason for its popularity is its simple, easy-to-learn syntax that feels a bit like a natural language. This makes Python straightforward to write, learn, and read.</p>
-<p>Python is a general-purpose language, which means you can use it for lots of different tasks. There’s also a huge collection of free, open-source Python packages and libraries that make it even more powerful. During this course, you’ll get to know some of the ones that are especially handy for Bioinformatics, like <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
-<p>Python is also an object-oriented programming (OOP) language. This means that code is organised around “objects” (i.e., pieces of data) rather than just functions or logical steps. This way of organising things can make it much easier to manage more complex projects. If this idea doesn’t quite make sense yet, don’t worry! We’ll come back to it later in Chapter … .</p>
-<p>For now, let’s focus on getting comfortable with Python’s basic syntax and building blocks. As we go along, we’ll use examples from Bioinformatics so you can see how everything connects to real-world problems you’re interested in.</p>
-</section>
-<section id="python-syntax-basics">
-<h2>2. Python Syntax Basics<a class="headerlink" href="#python-syntax-basics" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="m2-python-foundations">
+<h1>M2: Python Foundations<a class="headerlink" href="#m2-python-foundations" title="Link to this heading">#</a></h1>
+<p>Now that you have set up everything and know how to run python code, we can get started with writing our first algorithms! In this module we will go over the basic building blocks you need to write a Python code such as variables, conditional blocks, and error handling. At the end of this module you will be able to already do some basic manipulations and calculations of biomedical data using Python code.</p>
+<section id="python-syntax">
+<h2>1. Python Syntax<a class="headerlink" href="#python-syntax" title="Link to this heading">#</a></h2>
 <p>Before we dive deeper, it’s important to get a feel for how Python code is organised — in other words, its syntax.</p>
 <section id="indentation-and-code-blocks">
-<h3>2.1. Indentation and Code Blocks<a class="headerlink" href="#indentation-and-code-blocks" title="Link to this heading">#</a></h3>
+<h3>1.1. Indentation and Code Blocks<a class="headerlink" href="#indentation-and-code-blocks" title="Link to this heading">#</a></h3>
 <p>In Python, each new statement normally starts on a new line. This means you don’t need to end each line with a semicolon <code class="docutils literal notranslate"><span class="pre">;</span></code>, unlike some other programming languages.</p>
 <p>Python also uses <strong>indentation</strong> to define blocks of code. In other languages, you might see curly braces <code class="docutils literal notranslate"><span class="pre">{}</span></code> or keywords to group code together. In Python, you just add spaces or a tab at the beginning of a line to show that it belongs to a block. One indent is usually either one tab (<kbd>Tab</kbd>) or four spaces (<kbd>Space</kbd>).</p>
 <p>When you indent a line, you’re creating a “child” of the previous line. Usually, a “parent” line ends with a colon <code class="docutils literal notranslate"><span class="pre">:</span></code> (you’ll see more examples of when colons are used when we cover conditionals later in Chapter <a class="reference internal" href="#M2-conditional-blocks-header"><code class="xref myst docutils literal notranslate"><span class="pre">M2-conditional-blocks-header</span></code></a>). You can also have multiple blocks nested inside each other.</p>
@@ -504,8 +497,8 @@ document.write(`
 </div>
 </section>
 <section id="comments">
-<h3>2.2. Comments<a class="headerlink" href="#comments" title="Link to this heading">#</a></h3>
-<p><strong>Comments</strong> are lines or parts of lines that Python does not execute. They can be used to explain your code. It is very useful to have comments throughout your code. When other people read your code (or even when you read it yourself later), it is often difficult to understand what it is trying to achieve based on the executable lines alone. Having comments alongside the code, explaining its purpose, makes understanding it a lot easier.</p>
+<h3>1.2. Comments<a class="headerlink" href="#comments" title="Link to this heading">#</a></h3>
+<p>We have already briefly introduced <strong>comments</strong> in the previous module. As a reminder,comments are lines or parts of lines that Python does not execute. They can be used to explain your code. It is very useful to have comments throughout your code. When other people read your code (or even when you read it yourself later), it is often difficult to understand what it is trying to achieve based on the executable lines alone. Having comments alongside the code, explaining its purpose, makes understanding it a lot easier.</p>
 <p>Comments are also useful when debugging, as they can be used to temporarily disable lines of code. Just remember to either uncomment or delete these lines later to keep your code neat!</p>
 <p>There are two types of comments: <strong>single-line comments</strong> and <strong>multi-line comments</strong>.</p>
 <ul class="simple">
@@ -535,8 +528,8 @@ document.write(`
 </div>
 </section>
 <section id="basic-print-statements">
-<h3>2.3. Basic Print Statements<a class="headerlink" href="#basic-print-statements" title="Link to this heading">#</a></h3>
-<p>While not technically part of the syntax rules, the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function is a very useful feature, which is why we introduce it early on. It is used to display output on the screen. In a jupyter notebook it will display everything in a print statement underneath the code cell. When running code in the terminal it will show all your print statements in the terminal. Print statements are very useful for keeping track of where you are in your code, preliminary results, and whether your code is working as expected. Note: in Jupyter notebook the last line of a cell will also always be displayed. But it is a good habit to always use a print statement and to not rely on the automatic output since your code structure can change easily.</p>
+<h3>1.3. Basic Print Statements<a class="headerlink" href="#basic-print-statements" title="Link to this heading">#</a></h3>
+<p>While not technically part of the syntax rules, the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function is a very useful feature, which is why we introduce it early on. As mentioned in the previous module, it is used to display output on the screen. In a jupyter notebook it will display everything in a print statement underneath the code cell. When running code in the terminal it will show all your print statements in the terminal. Print statements are very useful for keeping track of where you are in your code, preliminary results, and whether your code is working as expected. Note: in Jupyter notebook the last line of a cell will also always be displayed. But it is a good habit to always use a print statement and to not rely on the automatic output since your code structure can change easily.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Hello, from the first line in the cell&#39;</span> <span class="c1">#this string will not be printed</span>
@@ -548,7 +541,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello, Python!
-Hello, World!
+Hello, User!
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello, from the last line in the cell&#39;
@@ -558,7 +551,7 @@ Hello, World!
 </div>
 </section>
 <section id="quick-practice">
-<h3>2.4. Quick Practice<a class="headerlink" href="#quick-practice" title="Link to this heading">#</a></h3>
+<h3>1.4. Quick Practice<a class="headerlink" href="#quick-practice" title="Link to this heading">#</a></h3>
 <p>We have reached the end of the first chapter! You should now be able to write your first snippet of Python code. Let’s start with the standard first programme: printing ‘Hello, World!’.</p>
 <p>To practise the syntax, you will create an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement (similar to the example before). The code should have a variable called <code class="docutils literal notranslate"><span class="pre">say_hello</span></code> which is set to <code class="docutils literal notranslate"><span class="pre">True</span></code> (can be defined the same way as <code class="docutils literal notranslate"><span class="pre">age</span></code> in the above example - you will learn what variables are in the next chapter). It should have then an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement that calls the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function if <code class="docutils literal notranslate"><span class="pre">say_hello</span> <span class="pre">==</span> <span class="pre">True</span> </code>. The <code class="docutils literal notranslate"><span class="pre">print()</span></code> function should output <code class="docutils literal notranslate"><span class="pre">'Hello,</span> <span class="pre">World!'</span></code>. Try to also add both multi-line and single-line comments to explain your code.</p>
 <p>Try creating the code in the following empty code block. Remember that you can click the spaceship symbol at the top right hand side of the page and then ‘Live Code’ to be able to write and run your code directly in this book. If you get stuck or what to compare solutions, open the hidden solution code block underneath.</p>
@@ -643,7 +636,7 @@ Hello, World!
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">M2: Variables</p>
+        <p class="prev-next-title">2. Variables</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -663,12 +656,11 @@ Hello, World!
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">1. What is Python?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-syntax-basics">2. Python Syntax Basics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indentation-and-code-blocks">2.1. Indentation and Code Blocks</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">2.2. Comments</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-print-statements">2.3. Basic Print Statements</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">2.4. Quick Practice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-syntax">1. Python Syntax</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indentation-and-code-blocks">1.1. Indentation and Code Blocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">1.2. Comments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-print-statements">1.3. Basic Print Statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">1.4. Quick Practice</a></li>
 </ul>
 </li>
 </ul>

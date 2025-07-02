@@ -7,11 +7,19 @@ parts:
   - caption: Module2 - Foundations
     chapters:
     - file: Module2_Files/Module2_1_Intro
+      title: 1. Python Syntax
     - file: Module2_Files/Module2_2_Variables
+      title: 2. Variables
     - file: Module2_Files/Module2_3_Operations
+      title: 3. Arithmetic and Logical Operations and Expressions
     - file: Module2_Files/Module2_4_Strings
+      title: 4. Strings
     - file: Module2_Files/Module2_5_DataStructures
+      title: 5. Data Structures
     - file: Module2_Files/Module2_6_ConditionalBlocks
+      title: 6. Conditional Blocks
     - file: Module2_Files/Module2_7_ErrorHandling
+      title: 7. Error Handling
     - file: Module2_Files/Module2_PracticeSheet1
+      title: 8. Practice Sheet
     
