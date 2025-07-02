@@ -6,12 +6,12 @@ root: intro
 parts:
   - caption: Module2 - Foundations
     chapters:
-    - file: Module2_Files/Module2_1,2_Intro
-    - file: Module2_Files/Module2_3_Variables
-    - file: Module2_Files/Module2_4_Operations
-    - file: Module2_Files/Module2_5_Strings
-    - file: Module2_Files/Module2_6_DataStructures
-    - file: Module2_Files/Module2_7_ConditionalBlocks
-    - file: Module2_Files/Module2_8_ErrorHandling
+    - file: Module2_Files/Module2_1_Intro
+    - file: Module2_Files/Module2_2_Variables
+    - file: Module2_Files/Module2_3_Operations
+    - file: Module2_Files/Module2_4_Strings
+    - file: Module2_Files/Module2_5_DataStructures
+    - file: Module2_Files/Module2_6_ConditionalBlocks
+    - file: Module2_Files/Module2_7_ErrorHandling
     - file: Module2_Files/Module2_PracticeSheet1
     
