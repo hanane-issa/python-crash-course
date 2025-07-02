@@ -3,6 +3,10 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: Module-8/Module8_Questions.ipynb
-- file: Module-8/Module8_Solutions.ipynb
+parts:
+  - caption: Module8 - Practice Dataset
+    chapters:
+    - file: Module-8/Module8_Questions
+      title: Heart Disease Dataset - Questions
+    - file: Module-8/Module8_Solutions
+      title: Heart Disease Dataset - Solutions

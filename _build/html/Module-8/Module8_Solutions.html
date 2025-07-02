@@ -180,9 +180,10 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Module8_Questions.html">M8: Final Practice: Heart Disease Dataset</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">M8: Final Practice: Heart Disease Dataset (with Solutions)</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Module8 - Practice Dataset</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module8_Questions.html">Heart Disease Dataset - Questions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Heart Disease Dataset - Solutions</a></li>
 </ul>
 
     </div>
@@ -513,14 +514,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: ucimlrepo in /opt/miniconda3/envs/pythoncc/lib/python3.10/site-packages (0.0.7)
-Requirement already satisfied: pandas&gt;=1.0.0 in /opt/miniconda3/envs/pythoncc/lib/python3.10/site-packages (from ucimlrepo) (2.2.3)
-Requirement already satisfied: certifi&gt;=2020.12.5 in /opt/miniconda3/envs/pythoncc/lib/python3.10/site-packages (from ucimlrepo) (2025.4.26)
-Requirement already satisfied: numpy&gt;=1.22.4 in /opt/miniconda3/envs/pythoncc/lib/python3.10/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2.0.1)
-Requirement already satisfied: python-dateutil&gt;=2.8.2 in /opt/miniconda3/envs/pythoncc/lib/python3.10/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2.9.0.post0)
-Requirement already satisfied: pytz&gt;=2020.1 in /opt/miniconda3/envs/pythoncc/lib/python3.10/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2024.1)
-Requirement already satisfied: tzdata&gt;=2022.7 in /opt/miniconda3/envs/pythoncc/lib/python3.10/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2025.2)
-Requirement already satisfied: six&gt;=1.5 in /opt/miniconda3/envs/pythoncc/lib/python3.10/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&gt;=1.0.0-&gt;ucimlrepo) (1.17.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: ucimlrepo in /home/melina/anaconda3/envs/jupyter_course_venv/lib/python3.13/site-packages (0.0.7)
+Requirement already satisfied: pandas&gt;=1.0.0 in /home/melina/anaconda3/envs/jupyter_course_venv/lib/python3.13/site-packages (from ucimlrepo) (2.2.3)
+Requirement already satisfied: certifi&gt;=2020.12.5 in /home/melina/anaconda3/envs/jupyter_course_venv/lib/python3.13/site-packages (from ucimlrepo) (2025.1.31)
+Requirement already satisfied: numpy&gt;=1.26.0 in /home/melina/anaconda3/envs/jupyter_course_venv/lib/python3.13/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2.2.6)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /home/melina/anaconda3/envs/jupyter_course_venv/lib/python3.13/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2.9.0.post0)
+Requirement already satisfied: pytz&gt;=2020.1 in /home/melina/anaconda3/envs/jupyter_course_venv/lib/python3.13/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2025.2)
+Requirement already satisfied: tzdata&gt;=2022.7 in /home/melina/anaconda3/envs/jupyter_course_venv/lib/python3.13/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2025.2)
+Requirement already satisfied: six&gt;=1.5 in /home/melina/anaconda3/envs/jupyter_course_venv/lib/python3.13/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&gt;=1.0.0-&gt;ucimlrepo) (1.17.0)
 </pre></div>
 </div>
 </div>
@@ -566,7 +567,7 @@ Requirement already satisfied: six&gt;=1.5 in /opt/miniconda3/envs/pythoncc/lib/
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Type of heart_disease object: &lt;class &#39;ucimlrepo.dotdict.dotdict&#39;&gt;
 
 Attributes and methods of heart_disease:
-[&#39;__class__&#39;, &#39;__class_getitem__&#39;, &#39;__contains__&#39;, &#39;__delattr__&#39;, &#39;__delitem__&#39;, &#39;__dict__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattr__&#39;, &#39;__getattribute__&#39;, &#39;__getitem__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__ior__&#39;, &#39;__iter__&#39;, &#39;__le__&#39;, &#39;__len__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__or__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__reversed__&#39;, &#39;__ror__&#39;, &#39;__setattr__&#39;, &#39;__setitem__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;__weakref__&#39;, &#39;clear&#39;, &#39;copy&#39;, &#39;fromkeys&#39;, &#39;get&#39;, &#39;items&#39;, &#39;keys&#39;, &#39;pop&#39;, &#39;popitem&#39;, &#39;setdefault&#39;, &#39;update&#39;, &#39;values&#39;]
+[&#39;__class__&#39;, &#39;__class_getitem__&#39;, &#39;__contains__&#39;, &#39;__delattr__&#39;, &#39;__delitem__&#39;, &#39;__dict__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__firstlineno__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattr__&#39;, &#39;__getattribute__&#39;, &#39;__getitem__&#39;, &#39;__getstate__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__ior__&#39;, &#39;__iter__&#39;, &#39;__le__&#39;, &#39;__len__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__or__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__reversed__&#39;, &#39;__ror__&#39;, &#39;__setattr__&#39;, &#39;__setitem__&#39;, &#39;__sizeof__&#39;, &#39;__static_attributes__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;__weakref__&#39;, &#39;clear&#39;, &#39;copy&#39;, &#39;fromkeys&#39;, &#39;get&#39;, &#39;items&#39;, &#39;keys&#39;, &#39;pop&#39;, &#39;popitem&#39;, &#39;setdefault&#39;, &#39;update&#39;, &#39;values&#39;]
 
 Type of heart_disease.metadata: &lt;class &#39;ucimlrepo.dotdict.dotdict&#39;&gt;
 Sample metadata keys: [&#39;uci_id&#39;, &#39;name&#39;, &#39;repository_url&#39;, &#39;data_url&#39;, &#39;abstract&#39;]
@@ -1464,7 +1465,16 @@ Feature descriptions:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3f181a968d91ac9d704d324fdeddc0e140f20bff4fe572c4769811efb610fb7d.png" src="../_images/3f181a968d91ac9d704d324fdeddc0e140f20bff4fe572c4769811efb610fb7d.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Define your list of categorical features (based on your earlier classification)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">categorical_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="s1">&#39;cp&#39;</span><span class="p">,</span> <span class="s1">&#39;fbs&#39;</span><span class="p">,</span> <span class="s1">&#39;restecg&#39;</span><span class="p">,</span> <span class="s1">&#39;exang&#39;</span><span class="p">,</span> <span class="s1">&#39;slope&#39;</span><span class="p">,</span> <span class="s1">&#39;thal&#39;</span><span class="p">,</span> <span class="s1">&#39;ca&#39;</span><span class="p">]</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -2015,6 +2025,10 @@ oldpeak:
 <li><p>For features like chol, the visualisations and test disagreements suggest caution — it may require transformation or further exploration.</p></li>
 </ul>
 </div>
+<ul class="simple">
+<li><p>Several features (like <code class="docutils literal notranslate"><span class="pre">thalach</span></code> and <code class="docutils literal notranslate"><span class="pre">oldpeak</span></code>) show strong group separation — they may be useful for modelling heart disease.</p></li>
+<li><p>For features like chol, the visualisations and test disagreements suggest caution — it may require transformation or further exploration.</p></li>
+</ul>
 </section>
 <hr class="docutils" />
 <section id="exercise-21-exploring-categorical-features-vs-heart-disease">
@@ -2230,13 +2244,13 @@ It shows how many patients were correctly or incorrectly assigned to each group.
             mode: "python"
         },
         kernelOptions: {
-            name: "pythoncc",
+            name: "python3",
             path: "./Module-8"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'pythoncc'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
