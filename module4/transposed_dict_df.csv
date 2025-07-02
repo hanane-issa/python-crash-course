@@ -1,0 +1,11 @@
+gender,age,height,weight,smoking,diseases
+female,25,175,70.9,False,"('Asthma', 'Diabetes')"
+male,40,1.79,103.4,True,()
+male,18,1.75,85.1,True,"('Lung cancer',)"
+female,83,1.63,55.9,False,"('Cardio vascular disease', 'Alzheimers')"
+female,55,1.68,50.0,False,"('Asthma', 'Anxiety')"
+female,32,1.59,64.0,True,"('Diabetes',)"
+male,21,1.9,92.9,False,"('Asthma', 'Colon cancer')"
+male,46,1.71,75.4,False,()
+female,32,1.66,90.7,True,"('Depression',)"
+male,67,1.78,82.3,False,"('Anxiety', 'Diabetes', 'Cardio vascular disease')"
