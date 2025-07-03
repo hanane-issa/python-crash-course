@@ -28,14 +28,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5349f25f" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fcab1d5" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=75ac44fa" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -61,7 +61,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'module5/data_visualization';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="importing packages" href="module5_examples.html" />
+    <link rel="next" title="Importing packages" href="module5_examples.html" />
     <link rel="prev" title="Welcome to Module 5" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -212,7 +212,7 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Module 5: Introduction to Data Visualization</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Data visualization with matpotlib and seaborn</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module5_examples.html">importing packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5_examples.html">Importing packages</a></li>
 
 
 
@@ -277,6 +277,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module5/data_visualization.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/hanane/module5/data_visualization.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -332,7 +399,7 @@
       
       
       
-      <li><a href="../_sources/module5/data_visualization.md" target="_blank"
+      <li><a href="../_sources/module5/data_visualization.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +409,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -426,7 +493,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-dataset">import the dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-the-dataset">Explore the dataset</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-little-bit-of-data-preprocessing">A little bit of data preprocessing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-and-histogram">Matplotlib and histogram</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-font-size-and-plot-size">Changing font size and plot size</a></li>
@@ -439,8 +506,8 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seaborn-and-distribution-visualization">Seaborn and distribution visualization</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#box-plot">box plot</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#violin-plot">violin plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#box-plot">Box plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#violin-plot">Violin plot</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-correlation">Visualizing correlation</a><ul class="nav section-nav flex-column">
@@ -448,7 +515,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmap">Heatmap</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-and-line-plot">Linear regression and line plot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-linear-regression-and-line-plot">OPTIONAL: Linear regression and line plot</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>
             </nav>
@@ -461,55 +528,251 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="data-visualization-with-matpotlib-and-seaborn">
+  <div class="cell tag_hide-input tag_hide-output tag_thebe-init docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;shared&#39;</span><span class="p">)))</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">setup_code</span>
+<span class="n">stroke_data</span> <span class="o">=</span> <span class="n">setup_code</span><span class="o">.</span><span class="n">stroke_data</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="data-visualization-with-matpotlib-and-seaborn">
 <h1>Data visualization with matpotlib and seaborn<a class="headerlink" href="#data-visualization-with-matpotlib-and-seaborn" title="Link to this heading">#</a></h1>
 <p>To get started, in your jupyter notebook or your python environment, import the necessary packages:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </pre></div>
 </div>
-<section id="import-the-dataset">
-<h2>import the dataset<a class="headerlink" href="#import-the-dataset" title="Link to this heading">#</a></h2>
-<p>First, let’s import the dataset. Make sure the file is in your python working directory or specify the path to the file.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path_to_file</span> <span class="o">=</span> <span class="s1">&#39;/the/path/to/healthcare-dataset-stroke-data.csv&#39;</span>
-<span class="n">stroke_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path_to_file</span><span class="p">)</span>
+</div>
+</div>
+<section id="explore-the-dataset">
+<h2>Explore the dataset<a class="headerlink" href="#explore-the-dataset" title="Link to this heading">#</a></h2>
+<p>First, let’s explore the dataset. If you are running this locally, make sure to import the dataset first, paying attention to the path of your file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Display the first 5 rows of the dataset</span>
+<span class="n">stroke_data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>gender</th>
+      <th>age</th>
+      <th>hypertension</th>
+      <th>heart_disease</th>
+      <th>ever_married</th>
+      <th>work_type</th>
+      <th>Residence_type</th>
+      <th>avg_glucose_level</th>
+      <th>bmi</th>
+      <th>smoking_status</th>
+      <th>stroke</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>9046</td>
+      <td>Male</td>
+      <td>67.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>Yes</td>
+      <td>Private</td>
+      <td>Urban</td>
+      <td>228.69</td>
+      <td>36.6</td>
+      <td>formerly smoked</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>51676</td>
+      <td>Female</td>
+      <td>61.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Self-employed</td>
+      <td>Rural</td>
+      <td>202.21</td>
+      <td>NaN</td>
+      <td>never smoked</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>31112</td>
+      <td>Male</td>
+      <td>80.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>Yes</td>
+      <td>Private</td>
+      <td>Rural</td>
+      <td>105.92</td>
+      <td>32.5</td>
+      <td>never smoked</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>60182</td>
+      <td>Female</td>
+      <td>49.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Private</td>
+      <td>Urban</td>
+      <td>171.23</td>
+      <td>34.4</td>
+      <td>smokes</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1665</td>
+      <td>Female</td>
+      <td>79.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Self-employed</td>
+      <td>Rural</td>
+      <td>174.12</td>
+      <td>24.0</td>
+      <td>never smoked</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="a-little-bit-of-data-preprocessing">
 <h2>A little bit of data preprocessing<a class="headerlink" href="#a-little-bit-of-data-preprocessing" title="Link to this heading">#</a></h2>
 <p>If you check the dataframe with the following code, you will see there are missing values in the bmi.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stroke_data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stroke_data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id                     0
+gender                 0
+age                    0
+hypertension           0
+heart_disease          0
+ever_married           0
+work_type              0
+Residence_type         0
+avg_glucose_level      0
+bmi                  201
+smoking_status         0
+stroke                 0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
 <p>You should have learned how to handle missing values in module 4. For simplicity, we will replace the missing values with the mean.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">### getting the bmi mean for non-null values</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### getting the bmi mean for non-null values</span>
 <span class="n">bmi_mean</span> <span class="o">=</span> <span class="n">stroke_data</span><span class="p">[</span><span class="o">~</span><span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;bmi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()][</span><span class="s1">&#39;bmi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="c1">### filling the missing bmi values with the mean</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### filling the missing bmi values with the mean</span>
 <span class="n">na_index</span> <span class="o">=</span> <span class="n">stroke_data</span><span class="p">[</span><span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;bmi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()]</span><span class="o">.</span><span class="n">index</span>
 <span class="n">stroke_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">na_index</span><span class="p">,</span> <span class="s1">&#39;bmi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bmi_mean</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>If we check again, there should be no missing values now.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stroke_data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stroke_data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id                   0
+gender               0
+age                  0
+hypertension         0
+heart_disease        0
+ever_married         0
+work_type            0
+Residence_type       0
+avg_glucose_level    0
+bmi                  0
+smoking_status       0
+stroke               0
+dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="matplotlib-and-histogram">
 <h2>Matplotlib and histogram<a class="headerlink" href="#matplotlib-and-histogram" title="Link to this heading">#</a></h2>
 <p>Let’s start simple and try and plot a histogram. For example, if you want to check the distribution of a column e.g. avg_glucose_level, you can do so using a histogram with the following codes:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">stroke_data</span><span class="o">.</span><span class="n">avg_glucose_level</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">stroke_data</span><span class="o">.</span><span class="n">avg_glucose_level</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Value&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Probability density&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Normalized Histogram (Density)&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/9ec8108223d271e1d6b95e68d984f990594d7fe7f6cc537b95a9e7950ac1ea85.png" src="../_images/9ec8108223d271e1d6b95e68d984f990594d7fe7f6cc537b95a9e7950ac1ea85.png" />
+</div>
+</div>
 <p>We used the function <code class="docutils literal notranslate"><span class="pre">plt.hist()</span></code> from the matplotlib pacakge to make the plot. And we input the data from the dataframe <code class="docutils literal notranslate"><span class="pre">stroke_data.avg_glucose_level</span></code> as the first argument. The argument <code class="docutils literal notranslate"><span class="pre">bins</span></code> will control how many bins you want, the higher the number the more bins there are. <code class="docutils literal notranslate"><span class="pre">alpha</span></code> allows you to change the transparency of the bins. <code class="docutils literal notranslate"><span class="pre">black</span></code> will add outlines to the bins.</p>
 <p><code class="docutils literal notranslate"><span class="pre">plt.xlabel()</span></code> and <code class="docutils literal notranslate"><span class="pre">plt.ylabel()</span></code> will set the labels of your x-axis and y-axis respectively. <code class="docutils literal notranslate"><span class="pre">plt.title()</span></code> will set the title of the plot. Finally <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> will actually display the plot.</p>
-<p>If you want to know more about the <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.hist()</span></code> function and its arguments, go the the <a class="reference external" href="https://matplotlib.org/stable/">matplotlib documentation</a></p>
+<p>If you want to know more about the <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.hist()</span></code> function and its arguments, go to the <a class="reference external" href="https://matplotlib.org/stable/">matplotlib documentation</a></p>
 <section id="changing-font-size-and-plot-size">
 <h3>Changing font size and plot size<a class="headerlink" href="#changing-font-size-and-plot-size" title="Link to this heading">#</a></h3>
 <p>While we have the fairly simple example of the histogram, let’s try and change the fonts of the plot.</p>
@@ -519,8 +782,10 @@ document.write(`
 <li><p>font size of the x-axis and y-axis label</p></li>
 <li><p>font size of ticks on the x and y-axis</p></li>
 </ol>
-<p>Here are the codes:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<p>Here is how you can do this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">stroke_data</span><span class="o">.</span><span class="n">avg_glucose_level</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Value&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Probability density&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
@@ -530,6 +795,11 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/7757782bdace636cb17c2d7dae7293019f2e7de77fe98c5f069504f65d09e117.png" src="../_images/7757782bdace636cb17c2d7dae7293019f2e7de77fe98c5f069504f65d09e117.png" />
+</div>
+</div>
 <p>As you can see, it is quite straight forward. We just have to add the argument <code class="docutils literal notranslate"><span class="pre">fontsize</span></code> in some functions, the number indicate how big you want the font to be (the higher the bigger).
 The <code class="docutils literal notranslate"><span class="pre">plt.figure()</span></code> function was added at the beginning to control the size of the plot. The two numbers 6 and 4 tell python that I want the plot to be 6 inches wide and 4 inches high.</p>
 </section>
@@ -537,8 +807,17 @@ The <code class="docutils literal notranslate"><span class="pre">plt.figure()</s
 <h3>Saving the plot<a class="headerlink" href="#saving-the-plot" title="Link to this heading">#</a></h3>
 <p>Now that you have a beautiful figure, you might want to save it. You can do so by using this function <code class="docutils literal notranslate"><span class="pre">plt.savefig()</span></code>. Several formats are supported, most commonly PDF, PNG and JPEG.</p>
 <p>You can save the figure by typing:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;avg_glucose_level_histogram.pdf&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;avg_glucose_level_histogram.pdf&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
+</pre></div>
+</div>
+</div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">avg_glucose_level_histogram.pdf</span></code> is the file name you want to save as, the extension <code class="docutils literal notranslate"><span class="pre">.pdf</span></code> tells python what format you want to save as. Use <code class="docutils literal notranslate"><span class="pre">.png</span></code> if you want PNG or <code class="docutils literal notranslate"><span class="pre">.jpg</span></code> if you want JPEG.</p>
 <p><code class="docutils literal notranslate"><span class="pre">dpi</span></code> controls the resolution, the higher the number, the higher the resolution. <code class="docutils literal notranslate"><span class="pre">bbox_inches</span></code> tells python to get rid of the extra white space around the plot.</p>
@@ -549,43 +828,76 @@ The <code class="docutils literal notranslate"><span class="pre">plt.figure()</s
 <h2>Seaborn and scatter plot<a class="headerlink" href="#seaborn-and-scatter-plot" title="Link to this heading">#</a></h2>
 <p>We will now try to make a scatter plot. We will also use a new package <a class="reference external" href="https://seaborn.pydata.org/">seaborn</a>. According to the documentation, <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> ‘builds on top of matplotlib and integrates closely with <code class="docutils literal notranslate"><span class="pre">pandas</span></code> data structures’.</p>
 <p>Let us plot a scatter plot of bmi vs age by using the following codes:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">stroke_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;bmi&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Scatter Plot of bmi vs age&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/a45be41cad8ef23cf956731cebbadd134468e655beee13879811572cebedbad5.png" src="../_images/a45be41cad8ef23cf956731cebbadd134468e655beee13879811572cebedbad5.png" />
+</div>
 </div>
 <p>We used the function <code class="docutils literal notranslate"><span class="pre">sns.scatterplot()</span></code> from the <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> package. Here we can put the entire dataframe as the input, then we specify the columns on in the dataframe that we want as x-axis and y-axis like so: <code class="docutils literal notranslate"><span class="pre">x='age',</span> <span class="pre">y='bmi'</span></code></p>
 <p>An advantage of using <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> is that, we do not have to explicitly set axis labels, it is automatically done. You can stll do it if you want to customize them.</p>
 <section id="color">
 <h3>Color<a class="headerlink" href="#color" title="Link to this heading">#</a></h3>
 <p>If you want to display another information on the scatter plot, you can try by adding color to it. We can do this by adding an argument to the function like so:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">stroke_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;bmi&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;stroke&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">stroke_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;bmi&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;stroke&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;age&#39;, ylabel=&#39;bmi&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/ab28a7aeaf40b81cd19b6317494ac5cda3b018128aee58981946a36a51e04412.png" src="../_images/ab28a7aeaf40b81cd19b6317494ac5cda3b018128aee58981946a36a51e04412.png" />
+</div>
 </div>
 <p>By adding <code class="docutils literal notranslate"><span class="pre">hue='stroke</span></code>, we are telling <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> to color the dots in the scatter plot according to the information in the ‘stoke’ column.</p>
 <p>However, if you try the line of code above you will find that the dots are overlapping and we can not visualize the color well.</p>
 <p>We can try specifying the order of which the dots are plotted for better visualization. The codes are:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">stroke_data</span><span class="p">[</span><span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;stroke&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;bmi&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">stroke_data</span><span class="p">[</span><span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;stroke&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;bmi&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Scatter Plot of bmi vs Age&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/e658fc6b7101336702d8304f8a0e5c44cf87700ec688d1fcea43810b1e583680.png" src="../_images/e658fc6b7101336702d8304f8a0e5c44cf87700ec688d1fcea43810b1e583680.png" />
+</div>
+</div>
 </section>
 <section id="multiple-plots">
 <h3>Multiple plots<a class="headerlink" href="#multiple-plots" title="Link to this heading">#</a></h3>
 <p>Now, what if you have multiple plots and you want them side by side for comparison? You can do so by using the <code class="docutils literal notranslate"><span class="pre">plt.subplot()</span></code> function.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">stroke_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;bmi&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">stroke_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;avg_glucose_level&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/debbdfbd94ce4ab21d5170e1dc635768cdebf20f7746d62f05c00834f58766ad.png" src="../_images/debbdfbd94ce4ab21d5170e1dc635768cdebf20f7746d62f05c00834f58766ad.png" />
+</div>
+</div>
 <p>The first argument 2 tells <code class="docutils literal notranslate"><span class="pre">plt.subplots()</span></code> how many rows you want to organize the subplots, and the 1 means you want only 1 column. We used the <code class="docutils literal notranslate"><span class="pre">sns.scatterplot()</span></code> function twice to plot 2 figures, and we and the argument <code class="docutils literal notranslate"><span class="pre">ax=</span></code> to tell <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> where to display the subplots excatly. The rest is the same as the single figures above.</p>
 <p>If the figures have the same axis label and ticks, we can make them share the same ones to save space. And just like before, we can set the titles as well:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">stroke_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;bmi&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;scatter plot of bmmi vs age&#39;</span><span class="p">)</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">stroke_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;avg_glucose_level&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
@@ -594,6 +906,11 @@ The <code class="docutils literal notranslate"><span class="pre">plt.figure()</s
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6f421471d6003ab01dc9dbed2d98c292835cdca1297c9393d9c54478a964561b.png" src="../_images/6f421471d6003ab01dc9dbed2d98c292835cdca1297c9393d9c54478a964561b.png" />
+</div>
+</div>
 <p>As you can see, we added the argument <code class="docutils literal notranslate"><span class="pre">sharex=True</span></code> to the function <code class="docutils literal notranslate"><span class="pre">plt.subplots()</span></code> to tell python the subplots are sharing the x-axis. We also added the optional <code class="docutils literal notranslate"><span class="pre">plt.tight_layout()</span></code> to reduce spacing between the plots and improve the overall aethestic.</p>
 </section>
 </section>
@@ -601,22 +918,36 @@ The <code class="docutils literal notranslate"><span class="pre">plt.figure()</s
 <h2>Seaborn and distribution visualization<a class="headerlink" href="#seaborn-and-distribution-visualization" title="Link to this heading">#</a></h2>
 <p>If you think that the histogram is not enough to visualize the distribution, you might want to try box plot and violin plot. You can use the <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> package for that. Using <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> you can visualize another information in the figure by using color.</p>
 <section id="box-plot">
-<h3>box plot<a class="headerlink" href="#box-plot" title="Link to this heading">#</a></h3>
+<h3>Box plot<a class="headerlink" href="#box-plot" title="Link to this heading">#</a></h3>
 <p>We simply use the <code class="docutils literal notranslate"><span class="pre">sns.boxplot()</span></code> function to do the boxplot.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">stroke_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;heart_disease&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;bmi&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;stroke&quot;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">.1</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">stroke_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;heart_disease&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;bmi&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;stroke&quot;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">.1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Box Plot of BMI by Heart Disease and Stroke Status&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d84a68e427e78ab675e6703b17480bf5c62340fd99a14ce54b4d35bec6104aad.png" src="../_images/d84a68e427e78ab675e6703b17480bf5c62340fd99a14ce54b4d35bec6104aad.png" />
+</div>
+</div>
 <p>With the box plot, we can identify the outliers more easily. <code class="docutils literal notranslate"><span class="pre">fill=False</span></code> will tell <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> not to fill solid color inside the boxes, <code class="docutils literal notranslate"><span class="pre">gagp=.1</span></code> is the gap between the boxes for each category of the x axis.</p>
 </section>
 <section id="violin-plot">
-<h3>violin plot<a class="headerlink" href="#violin-plot" title="Link to this heading">#</a></h3>
+<h3>Violin plot<a class="headerlink" href="#violin-plot" title="Link to this heading">#</a></h3>
 <p>If you want to visualize the distributions another way, you might want to try violin plots. We will use <code class="docutils literal notranslate"><span class="pre">sns.violinplot()</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">stroke_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;heart_disease&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;bmi&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;stroke&quot;</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">.1</span><span class="p">,</span> <span class="n">inner</span><span class="o">=</span><span class="s2">&quot;quart&quot;</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">stroke_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;heart_disease&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;bmi&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;stroke&quot;</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">.1</span><span class="p">,</span> <span class="n">inner</span><span class="o">=</span><span class="s2">&quot;quart&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Violin Plot of BMI by Heart Disease and Stroke Status&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/fc0b8276f6373ee5223f38b012e1645a1c4d822535217d66e33f9ce9d50be5db.png" src="../_images/fc0b8276f6373ee5223f38b012e1645a1c4d822535217d66e33f9ce9d50be5db.png" />
+</div>
 </div>
 <p>If you use the argument <code class="docutils literal notranslate"><span class="pre">split=True</span></code>, only half of the violins will be plotted for easier comparison. <code class="docutils literal notranslate"><span class="pre">inner=&quot;quart&quot;</span></code> means quantiles of the data will be shown inside the violins, you may also choose <code class="docutils literal notranslate"><span class="pre">inner=&quot;box&quot;</span></code> to display box-and-whisker plot.</p>
 </section>
@@ -626,11 +957,17 @@ The <code class="docutils literal notranslate"><span class="pre">plt.figure()</s
 <section id="pairplot">
 <h3>Pairplot<a class="headerlink" href="#pairplot" title="Link to this heading">#</a></h3>
 <p>We can plot pairwise scatterplots to try and see if there is any correlations that exist between any pair of variables. This is only a preliminary visualization, but it is a good place to start. We will use <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> to help us. But first we need to subset the dataframe because there are some categorical variables. We will select all 3 numerical variables plus the ‘stroke’ column:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_pairplot</span> <span class="o">=</span> <span class="n">stroke_data</span><span class="p">[[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;bmi&#39;</span><span class="p">,</span> <span class="s1">&#39;avg_glucose_level&#39;</span><span class="p">,</span> <span class="s1">&#39;stroke&#39;</span><span class="p">]]</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_pairplot</span> <span class="o">=</span> <span class="n">stroke_data</span><span class="p">[[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;bmi&#39;</span><span class="p">,</span> <span class="s1">&#39;avg_glucose_level&#39;</span><span class="p">,</span> <span class="s1">&#39;stroke&#39;</span><span class="p">]]</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>Now, we can use the <code class="docutils literal notranslate"><span class="pre">sns.pairplot()</span></code> function to make the pairplot. We will color the datapoint according to the ‘stroke’ status.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span>
     <span class="n">df_pairplot</span><span class="p">,</span>
     <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;stroke&quot;</span><span class="p">,</span>      
     <span class="n">diag_kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">,</span>      
@@ -640,15 +977,27 @@ The <code class="docutils literal notranslate"><span class="pre">plt.figure()</s
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/fad69acd499d02807f233a7655c6b82ade04219dd182785eb1ce6ed20e71efff.png" src="../_images/fad69acd499d02807f233a7655c6b82ade04219dd182785eb1ce6ed20e71efff.png" />
+</div>
+</div>
 <p>The argument <code class="docutils literal notranslate"><span class="pre">hue=&quot;stroke&quot;</span></code> tells <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> which information it hsould use to color the data points. <code class="docutils literal notranslate"><span class="pre">diag_kind=&quot;kde&quot;</span></code> will get you kernel density estimation (kde) on the diagonal, <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> also support other types such as histogram. <code class="docutils literal notranslate"><span class="pre">markers=[&quot;o&quot;,&quot;s&quot;]</span></code> will specify what marker shapes you want. Finally, <code class="docutils literal notranslate"><span class="pre">plot_kws={'s':10}</span></code> will set the size of the data point. <code class="docutils literal notranslate"><span class="pre">sns.pairplot()</span></code> returns a <code class="docutils literal notranslate"><span class="pre">PairGrid</span></code> object, that is to say the usual <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> function <code class="docutils literal notranslate"><span class="pre">plt.title()</span></code> will not work, so we use <code class="docutils literal notranslate"><span class="pre">plt.suptitle()</span></code> to add a title for all subplots at the top.<br />
 If you want more details of the arguments of the function, please check the <a class="reference external" href="https://seaborn.pydata.org/index.html">seaborn</a> documentation.</p>
 <p>Once you have made the pairplot, you will notice that the data points of the ‘0’s are being plotted on top of the ‘1’s. We can solve this by reordering the dataframe like so:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_pairplot_reordered</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_pairplot</span><span class="p">[</span><span class="n">df_pairplot</span><span class="p">[</span><span class="s1">&#39;stroke&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">],</span><span class="n">df_pairplot</span><span class="p">[</span><span class="n">df_pairplot</span><span class="p">[</span><span class="s1">&#39;stroke&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_pairplot_reordered</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_pairplot</span><span class="p">[</span><span class="n">df_pairplot</span><span class="p">[</span><span class="s1">&#39;stroke&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">],</span>
+                                   <span class="n">df_pairplot</span><span class="p">[</span><span class="n">df_pairplot</span><span class="p">[</span><span class="s1">&#39;stroke&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
 </div>
 <p>We are subsetting the dataframe into 2, rows with ‘0’s in the ‘stroke’ column and ‘1’s, then we are merging them together putting ‘0’s first. This way when <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> make the plots, it will display rows with ‘1’s last thus they will be on top.
 Now we can make the pairplot again:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span>
     <span class="n">df_pairplot_reordered</span><span class="p">,</span>
     <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;stroke&quot;</span><span class="p">,</span>      
     <span class="n">diag_kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">,</span>      
@@ -658,21 +1007,36 @@ Now we can make the pairplot again:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/f16d44b96a85cc140274d96eebe70dfaf2b55d33328d565031214fe772214ca8.png" src="../_images/f16d44b96a85cc140274d96eebe70dfaf2b55d33328d565031214fe772214ca8.png" />
+</div>
+</div>
 <p>Now the figure looks slightly better.</p>
 </section>
 <section id="heatmap">
 <h3>Heatmap<a class="headerlink" href="#heatmap" title="Link to this heading">#</a></h3>
 <p>If we want a bit more details on their relationships, we can try getting the Pearson correlation. Since we only have 3 columns that are numerical in nature, we will exclude the other columns first by typing:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stroke_numerical</span> <span class="o">=</span> <span class="n">stroke_data</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;float64&#39;</span><span class="p">])</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stroke_numerical</span> <span class="o">=</span> <span class="n">stroke_data</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;float64&#39;</span><span class="p">])</span>
 </pre></div>
+</div>
+</div>
 </div>
 <p>We are selecting columns that with the data type being a ‘float’, which is a real number with a decimal point. The other columns contain categorical data represented as an ‘object’ or ‘int64’, so we will exclude them. We use the function that comes with a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> dataframe object <code class="docutils literal notranslate"><span class="pre">select_dtypes()</span></code> to select only <code class="docutils literal notranslate"><span class="pre">float64</span></code>.</p>
 <p>Next, we will use another <code class="docutils literal notranslate"><span class="pre">pandas</span></code> dataframe object function <code class="docutils literal notranslate"><span class="pre">corr()</span></code>. It will compute the pairwise correlation between the the columns that are in the dataframe. If you want more information about <code class="docutils literal notranslate"><span class="pre">corr()</span></code>, please visit the <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a>. We will leave every argument as default and get the pearson correlations:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">correlations_df</span> <span class="o">=</span> <span class="n">stroke_numerical</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correlations_df</span> <span class="o">=</span> <span class="n">stroke_numerical</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>We will now visualize the results using a heatmap. This can easily be done with a few lines of code, we will again be using <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> to help us.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
     <span class="n">correlations_df</span><span class="p">,</span>
     <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>        <span class="c1"># show correlation values in cells</span>
@@ -682,38 +1046,76 @@ Now we can make the pairplot again:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/04868a93a24168dcd4c3a116bc7fbec5cf0058e3d3687d01e0acf6601ce63748.png" src="../_images/04868a93a24168dcd4c3a116bc7fbec5cf0058e3d3687d01e0acf6601ce63748.png" />
+</div>
+</div>
 <p><code class="docutils literal notranslate"><span class="pre">annot=True</span></code> will display the Pearson values in the cells. <code class="docutils literal notranslate"><span class="pre">fmt=&quot;.2f&quot;</span></code> will display the values in 2 decimal places. Please check the <a class="reference external" href="https://seaborn.pydata.org/index.html">seaborn</a> documentation for more details.</p>
 </section>
 </section>
-<section id="linear-regression-and-line-plot">
-<h2>Linear regression and line plot<a class="headerlink" href="#linear-regression-and-line-plot" title="Link to this heading">#</a></h2>
+<section id="optional-linear-regression-and-line-plot">
+<h2>OPTIONAL: Linear regression and line plot<a class="headerlink" href="#optional-linear-regression-and-line-plot" title="Link to this heading">#</a></h2>
 <p>If you think 2 variables have a linear relationship, we can try fitting a linear regression model and make a line plot. We will be using packages <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> and <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p>
 <p>You will have imported <code class="docutils literal notranslate"><span class="pre">numpy</span></code> at the start of this tutorial, let us import the functions that we will use from the <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> package:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
 </pre></div>
 </div>
-<p>First, we will split the data into training and testing data to avoid overfitting. This is not too important for us because we just want to make some pretty figures! But we will do it anyway for good practice.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;bmi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
 </pre></div>
 </div>
+</div>
+</div>
+<p>First, we will split the data into training and testing data to avoid overfitting. This is not too important for us because we just want to make some pretty figures! But we will do it anyway for good practice.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;bmi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>We will now create a linear regression model object and fit the data to it:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">y_train</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 </pre></div>
+</div>
+</div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">LinearRegression()</span></code> from <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> will create a model object, then we use a function that comes with the object <code class="docutils literal notranslate"><span class="pre">fit()</span></code> to actually fit the model to the provided data. The <code class="docutils literal notranslate"><span class="pre">fit()</span></code> function takes 2D data as input, so we reshaped our data using the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> function <code class="docutils literal notranslate"><span class="pre">reshape()</span></code> to change the dimension. Typing -1 will tell numpy to infer the dimension of the data without us having to tell it manually, the second argument 1 tells <code class="docutils literal notranslate"><span class="pre">numpy</span></code> we want one column.</p>
 <p>Now that we have the fitted model, let us get the predicted values from it and make a line plot.
 We will create some values as the independent variable:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">np.linspace()</span></code> function will create an array with evenly spaced numbers, in our case we specify that we want 50 numbers ranging from 0-80. We can then put <code class="docutils literal notranslate"><span class="pre">X_values</span></code> into the function <code class="docutils literal notranslate"><span class="pre">predict()</span></code> to get the predicted bmi values.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">predicted_bmi</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predicted_bmi</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>Now we can make a line plot with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_values</span><span class="p">,</span> <span class="n">predicted_bmi</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Regression Line&#39;</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_values</span><span class="p">,</span> <span class="n">predicted_bmi</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Regression Line&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Age&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;predicted BMI&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Line plot of predicted BMI vs Age&#39;</span><span class="p">)</span>
@@ -721,9 +1123,13 @@ We will create some values as the independent variable:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>We simply use the function <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> to make the line. We are also labeling it the ‘Regression Line’, so that we when use <code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code> the line will be labeled as such in the legend.</p>
 <p>We can make a scatter plot and a line plot in the same figure by using <code class="docutils literal notranslate"><span class="pre">plt.scatter()</span></code> and <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> back to back.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;bmi&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data Points&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;bmi&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data Points&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_values</span><span class="p">,</span> <span class="n">predicted_bmi</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Regression Line&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Age&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;predicted BMI&#39;</span><span class="p">)</span>
@@ -732,11 +1138,17 @@ We will create some values as the independent variable:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>We can also use <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> to make a scatter plot and line plot with fewer lines of code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">stroke_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;bmi&quot;</span><span class="p">,</span> <span class="n">scatter_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;s&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span>  <span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">})</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">stroke_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;bmi&quot;</span><span class="p">,</span> <span class="n">scatter_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;s&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span>  <span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">})</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Line plot of predicted BMI vs Age&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="conclusion">
@@ -789,7 +1201,7 @@ We will create some values as the independent variable:</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">importing packages</p>
+        <p class="prev-next-title">Importing packages</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -809,7 +1221,7 @@ We will create some values as the independent variable:</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-dataset">import the dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-the-dataset">Explore the dataset</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-little-bit-of-data-preprocessing">A little bit of data preprocessing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-and-histogram">Matplotlib and histogram</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-font-size-and-plot-size">Changing font size and plot size</a></li>
@@ -822,8 +1234,8 @@ We will create some values as the independent variable:</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seaborn-and-distribution-visualization">Seaborn and distribution visualization</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#box-plot">box plot</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#violin-plot">violin plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#box-plot">Box plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#violin-plot">Violin plot</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-correlation">Visualizing correlation</a><ul class="nav section-nav flex-column">
@@ -831,7 +1243,7 @@ We will create some values as the independent variable:</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmap">Heatmap</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-and-line-plot">Linear regression and line plot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-linear-regression-and-line-plot">OPTIONAL: Linear regression and line plot</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>
   </nav></div>
