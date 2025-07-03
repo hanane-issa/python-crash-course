@@ -50,6 +50,7 @@ html:
   extra_css:
     - _static/custom.css
 
+
 launch_buttons:
   notebook_interface: "jupyterlab"  # or "classic"
   thebe                  : true
