@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>importing packages &#8212; Python Crash Course</title>
+    <title>Importing packages &#8212; Python Crash Course</title>
   
   
   
@@ -28,11 +28,11 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5349f25f" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fcab1d5" />
@@ -202,10 +202,17 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 3: Introduction to Numpy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module4/module4.html">Module 4: Introduction to Pandas</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module4/module4.html">Module 4: Introduction to Pandas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module4/module4a.html">Module 4a: Creating a pandas dataframe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/module4b.html">Module 4b: Selecting rows and columns in pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/module4c.html">Module 4b: Expanding dataframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/module4d.html">Module 4d: Saving and loading a dataframe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/module4e.html">Module 4e: Exploratory data analysis</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Module 5: Introduction to Data Visualization</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">importing packages</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Importing packages</a></li>
 
 
 
@@ -476,7 +483,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>importing packages</h1>
+    <h1>Importing packages</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -486,8 +493,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">importing packages</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-dataset">import the dataset</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Importing packages</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-the-dataset">Explore the dataset</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-little-bit-of-data-preprocessing">A little bit of data preprocessing</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-and-histogram">Matplotlib and histogram</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-font-size-and-plot-size">Changing font size and plot size</a></li>
@@ -520,8 +527,25 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="importing-packages">
-<h1>importing packages<a class="headerlink" href="#importing-packages" title="Link to this heading">#</a></h1>
+  <div class="cell tag_hide-input tag_hide-output tag_thebe-init docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;shared&#39;</span><span class="p">)))</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">setup_code</span>
+<span class="n">stroke_data</span> <span class="o">=</span> <span class="n">setup_code</span><span class="o">.</span><span class="n">stroke_data</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<section id="importing-packages">
+<h1>Importing packages<a class="headerlink" href="#importing-packages" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
@@ -533,82 +557,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="import-the-dataset">
-<h1>import the dataset<a class="headerlink" href="#import-the-dataset" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path_to_file</span> <span class="o">=</span> <span class="s1">&#39;/home/kenny/Documents/miso/Ian_Hanane_python/healthcare-dataset-stroke-data.csv&#39;</span>
-
-<span class="n">stroke_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path_to_file</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">path_to_file</span> <span class="o">=</span> <span class="s1">&#39;/home/kenny/Documents/miso/Ian_Hanane_python/healthcare-dataset-stroke-data.csv&#39;</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">stroke_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path_to_file</span><span class="p">)</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\parsers\readers.py:1026,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1013</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1014</span>     <span class="n">dialect</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1015</span>     <span class="n">delimiter</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>   <span class="mi">1022</span>     <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1023</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1024</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1026</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\parsers\readers.py:620,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">617</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">619</span> <span class="c1"># Create the parser.</span>
-<span class="ne">--&gt; </span><span class="mi">620</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">622</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">623</span>     <span class="k">return</span> <span class="n">parser</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\parsers\readers.py:1620,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1617</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1619</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="ne">-&gt; </span><span class="mi">1620</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\parsers\readers.py:1880,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1878</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1879</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1880</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1881</span>     <span class="n">f</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1882</span>     <span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1883</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1884</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1885</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1886</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1887</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1888</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1889</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1890</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">   </span><span class="mi">1891</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\common.py:873,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">868</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">869</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
-<span class="g g-Whitespace">    </span><span class="mi">870</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
-<span class="g g-Whitespace">    </span><span class="mi">871</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">872</span>         <span class="c1"># Encoding</span>
-<span class="ne">--&gt; </span><span class="mi">873</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">874</span>             <span class="n">handle</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">875</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">876</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">877</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">878</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">879</span>         <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">880</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">881</span>         <span class="c1"># Binary mode</span>
-<span class="g g-Whitespace">    </span><span class="mi">882</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/home/kenny/Documents/miso/Ian_Hanane_python/healthcare-dataset-stroke-data.csv&#39;
-</pre></div>
-</div>
-</div>
-</div>
+<section id="explore-the-dataset">
+<h1>Explore the dataset<a class="headerlink" href="#explore-the-dataset" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stroke_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -810,7 +760,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/07951f874a2b72249d3c88f7c0cfb05ee37aaf637e8877bbdb1ad51d033506b6.png" src="../_images/07951f874a2b72249d3c88f7c0cfb05ee37aaf637e8877bbdb1ad51d033506b6.png" />
+<img alt="../_images/9ec8108223d271e1d6b95e68d984f990594d7fe7f6cc537b95a9e7950ac1ea85.png" src="../_images/9ec8108223d271e1d6b95e68d984f990594d7fe7f6cc537b95a9e7950ac1ea85.png" />
 </div>
 </div>
 <section id="changing-font-size-and-plot-size">
@@ -829,7 +779,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d1f9f177b94333a4b4fdb0244d5b920660086d1a271956c3de118822f0a468a0.png" src="../_images/d1f9f177b94333a4b4fdb0244d5b920660086d1a271956c3de118822f0a468a0.png" />
+<img alt="../_images/7757782bdace636cb17c2d7dae7293019f2e7de77fe98c5f069504f65d09e117.png" src="../_images/7757782bdace636cb17c2d7dae7293019f2e7de77fe98c5f069504f65d09e117.png" />
 </div>
 </div>
 </section>
@@ -851,7 +801,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d1f9f177b94333a4b4fdb0244d5b920660086d1a271956c3de118822f0a468a0.png" src="../_images/d1f9f177b94333a4b4fdb0244d5b920660086d1a271956c3de118822f0a468a0.png" />
+<img alt="../_images/7757782bdace636cb17c2d7dae7293019f2e7de77fe98c5f069504f65d09e117.png" src="../_images/7757782bdace636cb17c2d7dae7293019f2e7de77fe98c5f069504f65d09e117.png" />
 </div>
 </div>
 </section>
@@ -867,7 +817,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ae544e38cdd4bb518cae041152a7062d16198c16fc884f697f9571a025e6d084.png" src="../_images/ae544e38cdd4bb518cae041152a7062d16198c16fc884f697f9571a025e6d084.png" />
+<img alt="../_images/2ecb5dfea3f99cf445feb474dbb34dea3670771d578dcc3048e824b0c1ce4d89.png" src="../_images/2ecb5dfea3f99cf445feb474dbb34dea3670771d578dcc3048e824b0c1ce4d89.png" />
 </div>
 </div>
 </section>
@@ -883,7 +833,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/153ceecc39298f5d8de61e4e203765151019ac60febc39702e0b1fa1aeba05f9.png" src="../_images/153ceecc39298f5d8de61e4e203765151019ac60febc39702e0b1fa1aeba05f9.png" />
+<img alt="../_images/dd463b69f3b4f7e28fe75c2db01491c694c5578d0f98656afedbbd9ffdbbb416.png" src="../_images/dd463b69f3b4f7e28fe75c2db01491c694c5578d0f98656afedbbd9ffdbbb416.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -897,7 +847,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e67e3fdc9dabb79b55bd8aed25647ca7d0130bc4c7020a43ae92f379d34f9282.png" src="../_images/e67e3fdc9dabb79b55bd8aed25647ca7d0130bc4c7020a43ae92f379d34f9282.png" />
+<img alt="../_images/e658fc6b7101336702d8304f8a0e5c44cf87700ec688d1fcea43810b1e583680.png" src="../_images/e658fc6b7101336702d8304f8a0e5c44cf87700ec688d1fcea43810b1e583680.png" />
 </div>
 </div>
 </section>
@@ -916,7 +866,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4a2389eb0e9d0e9877efff6b608113d7c0fe147a882e0ac4b347946472c89be9.png" src="../_images/4a2389eb0e9d0e9877efff6b608113d7c0fe147a882e0ac4b347946472c89be9.png" />
+<img alt="../_images/debbdfbd94ce4ab21d5170e1dc635768cdebf20f7746d62f05c00834f58766ad.png" src="../_images/debbdfbd94ce4ab21d5170e1dc635768cdebf20f7746d62f05c00834f58766ad.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -935,7 +885,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4166cd30962fe39b86473fea306c7f881b310224201d3268d56cf4a02d38a151.png" src="../_images/4166cd30962fe39b86473fea306c7f881b310224201d3268d56cf4a02d38a151.png" />
+<img alt="../_images/6f421471d6003ab01dc9dbed2d98c292835cdca1297c9393d9c54478a964561b.png" src="../_images/6f421471d6003ab01dc9dbed2d98c292835cdca1297c9393d9c54478a964561b.png" />
 </div>
 </div>
 </section>
@@ -953,7 +903,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7f901a2f114334a9e7cc1afc222599af235202b147cd3684b213d123ff186c9f.png" src="../_images/7f901a2f114334a9e7cc1afc222599af235202b147cd3684b213d123ff186c9f.png" />
+<img alt="../_images/d84a68e427e78ab675e6703b17480bf5c62340fd99a14ce54b4d35bec6104aad.png" src="../_images/d84a68e427e78ab675e6703b17480bf5c62340fd99a14ce54b4d35bec6104aad.png" />
 </div>
 </div>
 </section>
@@ -968,7 +918,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/defeee30e2b9a416aa0e048e736051937361bdec67f8c0e56163c5e7faadfff7.png" src="../_images/defeee30e2b9a416aa0e048e736051937361bdec67f8c0e56163c5e7faadfff7.png" />
+<img alt="../_images/fc0b8276f6373ee5223f38b012e1645a1c4d822535217d66e33f9ce9d50be5db.png" src="../_images/fc0b8276f6373ee5223f38b012e1645a1c4d822535217d66e33f9ce9d50be5db.png" />
 </div>
 </div>
 </section>
@@ -1117,7 +1067,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1872081f312d8eee7799b3caa7eec1cc0236c77fe07114166b4e4d8a77fbb5de.png" src="../_images/1872081f312d8eee7799b3caa7eec1cc0236c77fe07114166b4e4d8a77fbb5de.png" />
+<img alt="../_images/fad69acd499d02807f233a7655c6b82ade04219dd182785eb1ce6ed20e71efff.png" src="../_images/fad69acd499d02807f233a7655c6b82ade04219dd182785eb1ce6ed20e71efff.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1212,7 +1162,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/09569bdd8954f29a42346f6973e220003db8ba746c5ba3cd67d50f2780fdca0c.png" src="../_images/09569bdd8954f29a42346f6973e220003db8ba746c5ba3cd67d50f2780fdca0c.png" />
+<img alt="../_images/f16d44b96a85cc140274d96eebe70dfaf2b55d33328d565031214fe772214ca8.png" src="../_images/f16d44b96a85cc140274d96eebe70dfaf2b55d33328d565031214fe772214ca8.png" />
 </div>
 </div>
 </section>
@@ -1312,7 +1262,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/163803e105513057ed478c90a0c5d19ae44a6c696aee64b42f510e4160161787.png" src="../_images/163803e105513057ed478c90a0c5d19ae44a6c696aee64b42f510e4160161787.png" />
+<img alt="../_images/04868a93a24168dcd4c3a116bc7fbec5cf0058e3d3687d01e0acf6601ce63748.png" src="../_images/04868a93a24168dcd4c3a116bc7fbec5cf0058e3d3687d01e0acf6601ce63748.png" />
 </div>
 </div>
 </section>
@@ -1323,6 +1273,17 @@ dtype: int64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">28</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
 </pre></div>
 </div>
 </div>
@@ -1480,8 +1441,8 @@ dtype: int64
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">importing packages</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-dataset">import the dataset</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Importing packages</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-the-dataset">Explore the dataset</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-little-bit-of-data-preprocessing">A little bit of data preprocessing</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-and-histogram">Matplotlib and histogram</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-font-size-and-plot-size">Changing font size and plot size</a></li>
