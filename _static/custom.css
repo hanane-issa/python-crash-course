@@ -2,8 +2,3 @@
 span.label {
   display: none !important;
 }
-
-body[data-theme="dark"] .thebe-cell {
-  background-color: #263238 !important;  /* material dark bg */
-  color: #eceff1 !important;             /* light text */
-}
