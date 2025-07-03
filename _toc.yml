@@ -29,13 +29,13 @@ chapters:
   file: module3/module3
 
 - title: "Module 4: Introduction to Pandas"
-  file: module4/module4.ipynb
+  file: module4/module4
   sections:
-  - module4/module4a.ipynb
-  - module4/module4b.ipynb
-  - module4/module4c.ipynb
-  - module4/module4d.ipynb
-  - module4/module4e.ipynb
+  - file: module4/module4a
+  - file: module4/module4b
+  - file: module4/module4c
+  - file: module4/module4d
+  - file: module4/module4e
 
 - title: "Module 5: Introduction to Data Visualization"
   file: module5/intro
