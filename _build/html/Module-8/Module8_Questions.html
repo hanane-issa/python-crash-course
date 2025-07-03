@@ -429,7 +429,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-exploration">Initial Exploration</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-dataset">Loading the Dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-understanding-the-dataset">Exercise 1: Understanding the Dataset</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-import-the-dataset-using-the-uci-package">Exercise 2: Import the Dataset Using the UCI Package</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-explore-the-structure-of-the-dataset-object">Exercise 3: Explore the Structure of the Dataset Object</a></li>
@@ -478,10 +478,10 @@ document.write(`
 <p>If you find yourself stuck, make sure to give it a proper attempt on your own first. If that doesn’t resolve the issue, revisit earlier modules to refresh your memory. And if you’re still unsure, feel free to use Google. Indeed, knowing how to use Google to look up code/ functions to accomplish a task is an important skill on its own. As a last resort you can use the solution sheet.</p>
 <hr class="docutils" />
 <hr class="docutils" />
-<section id="initial-exploration">
-<h2>Initial Exploration<a class="headerlink" href="#initial-exploration" title="Link to this heading">#</a></h2>
+<section id="loading-the-dataset">
+<h2>Loading the Dataset<a class="headerlink" href="#loading-the-dataset" title="Link to this heading">#</a></h2>
 <p>The dataset that we will be using is the <em>Heart Disease Dataset</em> from UC Irvine Machine Learning Repository: <a class="reference external" href="https://archive.ics.uci.edu/dataset/45/heart+disease">https://archive.ics.uci.edu/dataset/45/heart+disease</a></p>
-<p>This dataset is intended for a machine learning task: given a set of patient features, the goal is to predict whether the patient has been diagnosed with heart disease (the target variable). While building such a model is beyond the scope of this course, you will conduct some initial exploratory analyses to become familiar with the dataset and its contents.</p>
+<p>This dataset is intended for a machine learning task: given a set of patient features, the goal is to predict whether the patient has been diagnosed with a heart disease (the target variable). While building such a model is beyond the scope of this course, you will conduct some initial exploratory analyses to become familiar with the dataset and its contents.</p>
 <p>These exploratory analyses are often an essential first step, regardless of whether your aim to develop a machine learning model or to pursue other kinds of investigation.</p>
 <hr class="docutils" />
 <section id="exercise-1-understanding-the-dataset">
@@ -493,16 +493,16 @@ document.write(`
 <p>At the top right-hand side of the datasets’s website, you’ll find a button labelled <code class="docutils literal notranslate"><span class="pre">IMPORT</span> <span class="pre">IN</span> <span class="pre">PYTHON</span></code>. Clicking on it will show you which package to install and how to load the dataset.</p>
 <p><img alt="Overview of the website" src="../_images/websitescreenshot_overview.png" /></p>
 <p><img alt="Import overview" src="../_images/websitescreenshot_import.png" /></p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>For the first part of the exercises, you mainly just need to follow this example code from the website.</p>
+<p>Take your time going through the initial code, it will help you begin exploring the dataset and understanding what is being provided and how to work with it.</p>
+</div>
 </section>
 <hr class="docutils" />
 <section id="exercise-2-import-the-dataset-using-the-uci-package">
 <h3>Exercise 2: Import the Dataset Using the UCI Package<a class="headerlink" href="#exercise-2-import-the-dataset-using-the-uci-package" title="Link to this heading">#</a></h3>
 <p><em>Install the required package (using any of the methods you’ve learned) and import the package into your code.</em></p>
-<div class="tip admonition">
-<p class="admonition-title">Tip</p>
-<p>For the first part of the exercises, you mainly just need to follow the example code provided on the website.</p>
-<p>Take your time going through the initial code, it will help you begin exploring the dataset and understanding what is being provided and how to work with it.</p>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
@@ -514,12 +514,12 @@ document.write(`
 <hr class="docutils" />
 <section id="exercise-3-explore-the-structure-of-the-dataset-object">
 <h3>Exercise 3: Explore the Structure of the Dataset Object<a class="headerlink" href="#exercise-3-explore-the-structure-of-the-dataset-object" title="Link to this heading">#</a></h3>
-<p><em>Create a Heart Disease dataset object by using <code class="docutils literal notranslate"><span class="pre">fetch_ucirepo(id=45)</span></code>. Then:</em></p>
-<ul class="simple">
+<ol class="arabic simple">
+<li><p><em>Create a Heart Disease dataset object by using <code class="docutils literal notranslate"><span class="pre">fetch_ucirepo(id=45)</span></code>.</em></p></li>
 <li><p><em>Check the <strong>type</strong> of the dataset object you’ve created.</em></p></li>
 <li><p><em>Use <code class="docutils literal notranslate"><span class="pre">dir()</span></code> on the object to list its attributes.</em></p></li>
 <li><p><em>Try accessing <code class="docutils literal notranslate"><span class="pre">.metadata</span></code>, <code class="docutils literal notranslate"><span class="pre">.variables</span></code>, and <code class="docutils literal notranslate"><span class="pre">.data</span></code>. What kind of information do they contain? What type are they?</em></p></li>
-</ul>
+</ol>
 <p><em>This will help you understand how the dataset is structured and how to navigate it.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -533,12 +533,12 @@ document.write(`
 <section id="exercise-4-summarise-the-metadata">
 <h3>Exercise 4: Summarise the Metadata<a class="headerlink" href="#exercise-4-summarise-the-metadata" title="Link to this heading">#</a></h3>
 <p><em>Print the metadata information about the dataset. Try to answer the following questions based on what you find:</em></p>
-<ul class="simple">
+<ol class="arabic simple">
 <li><p><em>How many data points (patients) and how many features are there?</em></p></li>
 <li><p><em>What are the names of the demographic features?</em></p></li>
 <li><p><em>What is the name of the target variable?</em></p></li>
 <li><p><em>Are there any missing values in the dataset? How can you identify them?</em></p></li>
-</ul>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
@@ -550,12 +550,12 @@ document.write(`
 <hr class="docutils" />
 <section id="exercise-5-inspect-variable-details-and-metadata">
 <h3>Exercise 5: Inspect Variable Details and Metadata<a class="headerlink" href="#exercise-5-inspect-variable-details-and-metadata" title="Link to this heading">#</a></h3>
-<p><em>Print the variable information for the dataset. Try to answer the following questions based on the output:</em></p>
-<ul class="simple">
+<ol class="arabic simple">
+<li><p><em>Print the variable information for the dataset.</em></p></li>
 <li><p><em>Which variables have missing values?</em></p></li>
 <li><p><em>What is the unit of <strong>resting blood pressure</strong>?</em></p></li>
 <li><p><em>How many categorical variables are there?</em></p></li>
-</ul>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
@@ -567,14 +567,21 @@ document.write(`
 <hr class="docutils" />
 <section id="exercise-6-convert-data-to-dataframe-format-for-exploration">
 <h3>Exercise 6: Convert Data to DataFrame Format for Exploration<a class="headerlink" href="#exercise-6-convert-data-to-dataframe-format-for-exploration" title="Link to this heading">#</a></h3>
-<p><em>Extract the feature values and the target values into two separate variables. Print each of them.</em></p>
-<ul class="simple">
+<ol class="arabic simple">
+<li><p><em>Extract the feature values and the target values into two separate variables. Print each of them.</em></p></li>
 <li><p><em>Do the number of rows and columns make sense?</em></p></li>
-<li><p><em>Are you able to understand what information they contain based on the metadata exploration?</em></p></li>
-<li><p><em>If not, revisit the website, metadata, and variable information to clarify.</em></p></li>
-</ul>
-<p><em>Next, import the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library. Combine the feature and target values into a single pandas DataFrame, where each row represents a patient and each column represents a feature, with the final column being the target variable. Display the first five rows of the resulting DataFrame.</em></p>
-<div class="cell docutils container">
+<li><p><em>Are you able to understand what information they contain based on the metadata exploration? If not, revisit the website, metadata, and variable information to clarify.</em></p></li>
+<li><p><em>Import the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library.</em></p></li>
+<li><p><em>Combine the feature and target values into a single pandas DataFrame, where each row represents a patient and each column represents a feature, with the final column being the target variable.</em></p></li>
+<li><p><em>Display the first five rows of the resulting DataFrame.</em></p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Tip</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If you’re unsure how best to combine the features and target, start by checking their types. You’ll see that they are already both in the pandas framework, so you’ll need to use a pandas command to combine the two into the required layout — this should only require one line of code.</p>
+<p class="sd-card-text">Whenever you’re unsure how to manipulate the data, the first step should always be to check its type. This will help you better understand what operations are available.</p>
+</div>
+</details><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
 </pre></div>
@@ -593,13 +600,13 @@ document.write(`
 <section id="exercise-7-investigating-missing-values-in-the-dataset">
 <h3>Exercise 7: Investigating Missing Values in the Dataset<a class="headerlink" href="#exercise-7-investigating-missing-values-in-the-dataset" title="Link to this heading">#</a></h3>
 <p><em>To decide how to handle these missing values, we first need a more detailed understanding. For both <code class="docutils literal notranslate"><span class="pre">ca</span></code> and <code class="docutils literal notranslate"><span class="pre">thal</span></code>, print the following information:</em></p>
-<ul class="simple">
-<li><p><em>The full column of values</em></p></li>
-<li><p><em>How many times each contains a <code class="docutils literal notranslate"><span class="pre">NaN</span></code> value</em></p></li>
-<li><p><em>The number of unique values in the column, and what those values are</em></p></li>
-<li><p><em>The type of each feature (use the variable information DataFrame to check this)</em>
-<em>Based on these results, think about what the best way to handle the missing data is.</em></p></li>
-</ul>
+<ol class="arabic simple">
+<li><p><em>The full column of values.</em></p></li>
+<li><p><em>How many times each contains a <code class="docutils literal notranslate"><span class="pre">NaN</span></code> value.</em></p></li>
+<li><p><em>The number of unique values in the column, and what those values are.</em></p></li>
+<li><p><em>The type of each feature (use the variable information DataFrame to check this).</em></p></li>
+<li><p><em>Based on these results, think about what the best way to handle the missing data is.</em></p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
@@ -608,17 +615,17 @@ document.write(`
 </div>
 </div>
 <hr class="docutils" />
-<p>You should notice that <code class="docutils literal notranslate"><span class="pre">ca</span></code> contains integer values, while <code class="docutils literal notranslate"><span class="pre">thal</span></code> is categorical, with each having four or three unique values respectively (excluding <code class="docutils literal notranslate"><span class="pre">NaN</span></code>). For this reason, it wouldn’t make sense to replace the missing values with the mean. We could replace it with the mode (the category / integer that is most common for that feature). However, since only a maximum of 6 patients out of the 303 have missing values (4 for <code class="docutils literal notranslate"><span class="pre">ca</span></code> and 2 for <code class="docutils literal notranslate"><span class="pre">thal</span></code>) we can instead also just remove patients (rows) with any missing (<code class="docutils literal notranslate"><span class="pre">NaN</span></code>) values without loosing to much data.</p>
+<p>You should notice that <code class="docutils literal notranslate"><span class="pre">ca</span></code> contains integer values, while <code class="docutils literal notranslate"><span class="pre">thal</span></code> is categorical, with each having four or three unique values respectively (excluding <code class="docutils literal notranslate"><span class="pre">NaN</span></code>). For this reason, it wouldn’t make sense to replace the missing values with the mean. We could replace it with the mode (the category / integer that is most common for that feature). However, since only a maximum of six patients out of the 303 have missing values (four for <code class="docutils literal notranslate"><span class="pre">ca</span></code> and two for <code class="docutils literal notranslate"><span class="pre">thal</span></code>) we can instead also just remove patients (rows) with any missing (<code class="docutils literal notranslate"><span class="pre">NaN</span></code>) values without loosing to much data.</p>
 </section>
 <hr class="docutils" />
 <section id="exercise-8-removing-rows-with-missing-values">
 <h3>Exercise 8: Removing Rows with Missing Values<a class="headerlink" href="#exercise-8-removing-rows-with-missing-values" title="Link to this heading">#</a></h3>
-<p><em>Remove all rows (patients) that contain any <code class="docutils literal notranslate"><span class="pre">NaN</span></code> values. Then:</em></p>
-<ul class="simple">
-<li><p><em>Print the number of NaN values in each column to ensure that none remain</em></p></li>
-<li><p><em>Print the shape of the DataFrame and check whether the number of rows makes sense</em></p></li>
-<li><p><em>Reset the row index after dropping the rows with missing data</em></p></li>
-</ul>
+<ol class="arabic simple">
+<li><p><em>Remove all rows (patients) that contain any <code class="docutils literal notranslate"><span class="pre">NaN</span></code> values.</em></p></li>
+<li><p><em>Print the number of NaN values in each column to ensure that none remain.</em></p></li>
+<li><p><em>Print the shape of the DataFrame and check whether the number of rows makes sense.</em></p></li>
+<li><p><em>Reset the row index after dropping the rows with missing data.</em></p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
@@ -644,7 +651,7 @@ document.write(`
 <p>As a final step, we want to ensure that the target variable (<code class="docutils literal notranslate"><span class="pre">num</span></code>) is in the correct format.
 According to the website, it should take five possible values: 0, 1, 2, 3, and 4.
 A value of 0 indicates no heart disease, while values 1–4 represent different categories of heart disease.
-For your analyses you might only be interested in whether the patient has he disease or not but not what type. For instance for binary classification tasks or to simplify analysis. So the target values need to be converted into binary:</p>
+For your analyses you might only be interested in whether the patient has the disease or not but not what type. For instance, for binary classification tasks or to simplify analysis. So the target values need to be converted into binary:</p>
 <ul class="simple">
 <li><p>0 → no heart disease  (False / 0)</p></li>
 <li><p>1–4 → heart disease present (True / 1)</p></li>
@@ -653,11 +660,11 @@ For your analyses you might only be interested in whether the patient has he dis
 <hr class="docutils" />
 <section id="exercise-10-create-a-binary-target-variable">
 <h3>Exercise 10: Create a Binary Target Variable<a class="headerlink" href="#exercise-10-create-a-binary-target-variable" title="Link to this heading">#</a></h3>
-<ul class="simple">
+<ol class="arabic simple">
 <li><p><em>Check the type of <code class="docutils literal notranslate"><span class="pre">num</span></code> and its unique values, as you did in earlier exercises, to confirm that the data matches the description.</em></p></li>
 <li><p><em>Create a new column at the end of the DataFrame called <code class="docutils literal notranslate"><span class="pre">heart_disease_binary</span></code>. This column should contain 0 if <code class="docutils literal notranslate"><span class="pre">num</span></code> is 0, and 1 otherwise. Use a lambda function to achieve this transformation.</em></p></li>
 <li><p><em>Print the final DataFrame to verify the result.</em></p></li>
-</ul>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
@@ -671,13 +678,14 @@ For your analyses you might only be interested in whether the patient has he dis
 <hr class="docutils" />
 <section id="exploratory-data-analysis-eda">
 <h2>Exploratory Data Analysis (EDA)<a class="headerlink" href="#exploratory-data-analysis-eda" title="Link to this heading">#</a></h2>
-<p>Now that the dataset is clean, we can begin exploring the distributions of different features.</p>
-<p>Visualisation is a key part of <strong>exploratory data analysis (EDA)</strong>: it helps us detect patterns, identify outliers, and better understand the structure of our data — all of which can inform future modelling decisions. We’ll start by plotting the <strong>distribution of individual features</strong> to understand how they are skewed and distributed before investigating the relationships between them.</p>
+<p>Now that the dataset is clean, we can begin exploring the different features.</p>
+<p>Visualisation is a key part of <strong>exploratory data analysis (EDA)</strong>: it helps us detect patterns, identify outliers, and better understand the structure of our data — all of which can inform future modelling decisions. We’ll start by plotting the <strong>individual features</strong> to understand their distribution.</p>
 <p>Depending on the type of the feature different plots and analysis methods need to be used. There are two main types:</p>
 <ul class="simple">
 <li><p>Numerical (quantities and measurements)</p></li>
 <li><p>Categorical (groups, types, labels)</p></li>
 </ul>
+<p>(Note that this type might not perfectly align with the type python asigns to a value. We will refer to whether the feature is numerical or categorical as <strong>feature type</strong> and the type you get from Python when using <code class="docutils literal notranslate"><span class="pre">type()</span></code> as <strong>Python type</strong>.)</p>
 <p><strong>Numerical Features</strong></p>
 <p>These represent measurable quantities, and they can be either:</p>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -1271,7 +1279,7 @@ It shows how many patients were correctly or incorrectly assigned to each group.
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-exploration">Initial Exploration</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-dataset">Loading the Dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-understanding-the-dataset">Exercise 1: Understanding the Dataset</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-import-the-dataset-using-the-uci-package">Exercise 2: Import the Dataset Using the UCI Package</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-explore-the-structure-of-the-dataset-object">Exercise 3: Explore the Structure of the Dataset Object</a></li>
