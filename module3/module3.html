@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fcab1d5" />
@@ -61,7 +61,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'module3/module3';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Welcome to Module 5" href="../module5/intro.html" />
+    <link rel="next" title="Module 4: Introduction to pandas" href="../module4/module4.html" />
     <link rel="prev" title="M2: Practice Sheet" href="../module2/Module2_PracticeSheet1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -202,6 +202,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module4/module4.html">Module 4: Introduction to Pandas</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module5/intro.html">Module 5: Introduction to Data Visualization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module5/data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/module5_examples.html">importing packages</a></li>
@@ -515,10 +516,15 @@ document.write(`
 <li><p>perform mathematical operations on arrays,</p></li>
 <li><p>save arrays as a txt file.</p></li>
 </ul>
-<p>NumPy is a Python package for efficient handling of data in the form of vectors, matrices, etc. Further details about the package and its manual can be found on <a class="reference external" href="https://numpy.org">https://numpy.org</a>. NumPy provides a faster and more memory-efficient alternative to Python lists \cite[numpy_what_is]. It is also compatible with many statistical packages. In this section, we will work through the fundamentals of the package.</p>
+<p>NumPy is a Python package for efficient handling of data in the form of vectors, matrices, etc. Further details about the package and its manual can be found on <a class="reference external" href="https://numpy.org">https://numpy.org</a>. NumPy provides a faster and more memory-efficient alternative to Python lists <span id="id1">[<a class="reference internal" href="../module6/module_6d_docstrings.html#id8" title="NumPy Developers. What is numpy? Accessed: 27-04-2025. URL: https://numpy.org/doc/stable/user/whatisnumpy.html.">NumPyDevelopers</a>]</span>. It is also compatible with many statistical packages. In this section, we will work through the fundamentals of the package.</p>
+<p>You have not installed NumPy yet, just run this command in terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>numpy
+</pre></div>
+</div>
+<p>Once you’ve done so, let us then import the package in Jupyter notebook:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># let us first import the package, np is a common abbreviation</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># np is a common abbreviation for NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </pre></div>
 </div>
@@ -1596,11 +1602,11 @@ Standard deviation for all elements in arr2:
       </div>
     </a>
     <a class="right-next"
-       href="../module5/intro.html"
+       href="../module4/module4.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Welcome to Module 5</p>
+        <p class="prev-next-title">Module 4: Introduction to pandas</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
