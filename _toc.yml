@@ -40,8 +40,8 @@ chapters:
 - title: "Module 5: Introduction to Data Visualization"
   file: module5/intro
   sections:
-  - file: module5/data_visualization
-  - file: module5/module5_examples
+  - file: module5/data_visualization.ipynb
+  - file: module5/module5_examples.ipynb
 
 - title: "Module 6: Introduction to Functions"
   file: module6/module_6_functions
