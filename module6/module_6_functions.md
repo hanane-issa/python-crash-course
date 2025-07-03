@@ -28,7 +28,7 @@ By the end of this module, you will be able to:<br><br>
 - Implement default parameter values in function definitions.<br> 
 </div>
 
-In the previous sections, we've talked about several built-in functions like `print()` and `input()`, as well as functions from installed packages like numpy's `array()` and pandas' `read_csv()`.
+In the previous sections, we've talked about several built-in functions like `print()` and `input()`, as well as functions from installed packages like NumPy's `array()` and pandas' `read_csv()`.
 
 Now we'll talk about how you can write your own functions.
 
