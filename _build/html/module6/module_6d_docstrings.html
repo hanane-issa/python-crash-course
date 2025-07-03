@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fcab1d5" />
@@ -498,37 +498,18 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell tag_hide-input tag_hide-output docutils container">
+  <div class="cell tag_hide-input tag_hide-output tag_thebe-init docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input above-output-prompt docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;shared&#39;</span><span class="p">)))</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">setup_code</span>
 <span class="n">stroke_data</span> <span class="o">=</span> <span class="n">setup_code</span><span class="o">.</span><span class="n">stroke_data</span>
-</pre></div>
-</div>
-</div>
-</details>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;shared&#39;</span><span class="p">)))</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">setup_code</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">stroke_data</span> <span class="o">=</span> <span class="n">setup_code</span><span class="o">.</span><span class="n">stroke_data</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;setup_code&#39;
 </pre></div>
 </div>
 </div>
@@ -545,6 +526,13 @@ document.write(`
 <p>Let’s go back to the <code class="docutils literal notranslate"><span class="pre">count_stroke_patients()</span></code> function from the first section of this module. Notice how we had a multi-line string in triple quotes, also called documentation string or <strong>docstring</strong> for short. The docstring links explanatory documentation to Python objects such as functions, modules, and classes. It explains the purpose of the function, as well as the parameters required,and the output/return we get.
 It is incredibly useful for others (as well as future you!) to develop this good practice.</p>
 <p>You can access an object’s documentation through the <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> method or <code class="docutils literal notranslate"><span class="pre">help()</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stroke_data</span> <span class="o">=</span> <span class="n">setup_code</span><span class="o">.</span><span class="n">stroke_data</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">count_stroke_patients</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
@@ -578,8 +566,43 @@ It is incredibly useful for others (as well as future you!) to develop this good
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using __doc__:
+
+Return the number of patients in the dataset who had a stroke.
+
+Parameters
+----------
+df : pandas.DataFrame
+    The dataset containing patient information. Must include a &#39;stroke&#39; column
+    with binary values (e.g., 0 = no stroke, 1 = stroke).
+
+Returns
+-------
+int
+    The number of patients who had a stroke.
+
+Using help:
+Help on function count_stroke_patients in module __main__:
+
+count_stroke_patients(df)
+    Return the number of patients in the dataset who had a stroke.
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        The dataset containing patient information. Must include a &#39;stroke&#39; column
+        with binary values (e.g., 0 = no stroke, 1 = stroke).
+
+    Returns
+    -------
+    int
+        The number of patients who had a stroke.
+</pre></div>
 </div>
-<p>For the sake of standardization, there a few conventions to follow when writing a docstring, mainly based on <span id="id1">[<a class="reference internal" href="#id11" title="Python Software Foundation. Pep 257 – docstring conventions. https://peps.python.org/pep-0257/, 2001.">Foundation, 2001</a>]</span>  and common community practices (see: <span id="id2">[<a class="reference internal" href="#id12" title="GeeksforGeeks. Python docstrings. https://www.geeksforgeeks.org/python-docstrings/, 2024.">GeeksforGeeks, 2024</a>]</span>):</p>
+</div>
+</div>
+<p>For the sake of standardization, there a few conventions to follow when writing a docstring, mainly based on <span id="id1">[<a class="reference internal" href="#id12" title="Python Software Foundation. Pep 257 – docstring conventions. https://peps.python.org/pep-0257/, 2001.">Fou01</a>]</span>  and common community practices (see: <span id="id2">[<a class="reference internal" href="#id13" title="GeeksforGeeks. Python docstrings. https://www.geeksforgeeks.org/python-docstrings/, 2024.">Gee24</a>]</span>):</p>
 <ol class="arabic simple">
 <li><p>Basic Syntax Rules</p></li>
 </ol>
@@ -621,11 +644,11 @@ It is incredibly useful for others (as well as future you!) to develop this good
 <p>References:</p>
 <div class="docutils container" id="id3">
 <div role="list" class="citation-list">
-<div class="citation" id="id10" role="doc-biblioentry">
+<div class="citation" id="id11" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>fed21<span class="fn-bracket">]</span></span>
 <p>fedesoriano. Stroke prediction dataset. <a class="reference external" href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset/ ">https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset/ </a>, 2021.</p>
 </div>
-<div class="citation" id="id11" role="doc-biblioentry">
+<div class="citation" id="id12" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Fou01</a><span class="fn-bracket">]</span></span>
 <p>Python Software Foundation. Pep 257 – docstring conventions. <a class="reference external" href="https://peps.python.org/pep-0257/">https://peps.python.org/pep-0257/</a>, 2001.</p>
 </div>
@@ -633,11 +656,11 @@ It is incredibly useful for others (as well as future you!) to develop this good
 <span class="label"><span class="fn-bracket">[</span>Fou25<span class="fn-bracket">]</span></span>
 <p>Python Software Foundation. Beginner's guide to python. <a class="reference external" href="https://wiki.python.org/moin/BeginnersGuide">https://wiki.python.org/moin/BeginnersGuide</a>, 2025.</p>
 </div>
-<div class="citation" id="id9" role="doc-biblioentry">
+<div class="citation" id="id10" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Gee<span class="fn-bracket">]</span></span>
 <p>GeeksforGeeks. Difference between parameters and arguments. <a class="reference external" href="https://www.geeksforgeeks.org/difference-between-parameters-and-arguments/">https://www.geeksforgeeks.org/difference-between-parameters-and-arguments/</a>.</p>
 </div>
-<div class="citation" id="id12" role="doc-biblioentry">
+<div class="citation" id="id13" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Gee24</a><span class="fn-bracket">]</span></span>
 <p>GeeksforGeeks. Python docstrings. <a class="reference external" href="https://www.geeksforgeeks.org/python-docstrings/">https://www.geeksforgeeks.org/python-docstrings/</a>, 2024.</p>
 </div>
@@ -649,13 +672,17 @@ It is incredibly useful for others (as well as future you!) to develop this good
 <span class="label"><span class="fn-bracket">[</span>Mic25<span class="fn-bracket">]</span></span>
 <p>Microsoft. Windows subsystem for linux. <a class="reference external" href="https://learn.microsoft.com/en-us/windows/wsl/about">https://learn.microsoft.com/en-us/windows/wsl/about</a>, 2025.</p>
 </div>
-<div class="citation" id="id13" role="doc-biblioentry">
+<div class="citation" id="id14" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Sch<span class="fn-bracket">]</span></span>
 <p>W3 Schools. Global variables. <a class="reference external" href="https://www.w3schools.com/python/python_variables_global.asp">https://www.w3schools.com/python/python_variables_global.asp</a>.</p>
 </div>
 <div class="citation" id="id4" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Tea22<span class="fn-bracket">]</span></span>
 <p>DataCamp Team. Python vs r for data science: which should you learn? <a class="reference external" href="https://www.datacamp.com/blog/python-vs-r-for-data-science-whats-the-difference">https://www.datacamp.com/blog/python-vs-r-for-data-science-whats-the-difference</a>, 2022.</p>
+</div>
+<div class="citation" id="id8" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>NumPyDevelopers<span class="fn-bracket">]</span></span>
+<p>NumPy Developers. What is numpy? Accessed: 27-04-2025. URL: <a class="reference external" href="https://numpy.org/doc/stable/user/whatisnumpy.html">https://numpy.org/doc/stable/user/whatisnumpy.html</a>.</p>
 </div>
 </div>
 </div>
