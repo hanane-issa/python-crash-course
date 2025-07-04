@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fcab1d5" />
@@ -222,6 +222,10 @@
 <li class="toctree-l2"><a class="reference internal" href="module_6e_params-args.html">Module 6e: Parameters and Arguments</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Module 6f: Extra (OPTIONAL)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module8/Module8_Questions.html">Module 8: Final Exercice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module8/Module8_Solutions.html">M8: Final Practice on a Heart Disease Dataset (with Solutions)</a></li>
 </ul>
 </details></li>
 </ul>
@@ -505,60 +509,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell tag_hide-input tag_hide-output docutils container">
+  <div class="cell tag_hide-input tag_hide-output tag_thebe-init docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../shared/setup.py  
-</pre></div>
-</div>
-</div>
-</details>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\magics\execution.py:727,</span> in <span class="ni">ExecutionMagics.run</span><span class="nt">(self, parameter_s, runner, file_finder)</span>
-<span class="g g-Whitespace">    </span><span class="mi">726</span>     <span class="n">fpath</span> <span class="o">=</span> <span class="n">arg_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="ne">--&gt; </span><span class="mi">727</span>     <span class="n">filename</span> <span class="o">=</span> <span class="n">file_finder</span><span class="p">(</span><span class="n">fpath</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">728</span> <span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\utils\path.py:90,</span> in <span class="ni">get_py_filename</span><span class="nt">(name)</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>         <span class="k">return</span> <span class="n">py_name</span>
-<span class="ne">---&gt; </span><span class="mi">90</span> <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;File `</span><span class="si">%r</span><span class="s2">` not found.&quot;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
-
-<span class="ne">OSError</span>: File `&#39;../shared/setup.py&#39;` not found.
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">Exception</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;run&#39;</span><span class="p">,</span> <span class="s1">&#39;../shared/setup.py&#39;</span><span class="p">)</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\interactiveshell.py:2478,</span> in <span class="ni">InteractiveShell.run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2476</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2477</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">2478</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2480</span> <span class="c1"># The code below prevents the output from being displayed</span>
-<span class="g g-Whitespace">   </span><span class="mi">2481</span> <span class="c1"># when using magics with decorator @output_can_be_silenced</span>
-<span class="g g-Whitespace">   </span><span class="mi">2482</span> <span class="c1"># when the last Python token in the expression is a &#39;;&#39;.</span>
-<span class="g g-Whitespace">   </span><span class="mi">2483</span> <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">magic</span><span class="o">.</span><span class="n">MAGIC_OUTPUT_CAN_BE_SILENCED</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\magics\execution.py:738,</span> in <span class="ni">ExecutionMagics.run</span><span class="nt">(self, parameter_s, runner, file_finder)</span>
-<span class="g g-Whitespace">    </span><span class="mi">736</span>     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;nt&#39;</span> <span class="ow">and</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^&#39;.*&#39;$&quot;</span><span class="p">,</span><span class="n">fpath</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">737</span>         <span class="n">warn</span><span class="p">(</span><span class="s1">&#39;For Windows, use double quotes to wrap a filename: </span><span class="si">%r</span><span class="s1">un &quot;mypath</span><span class="se">\\</span><span class="s1">myfile.py&quot;&#39;</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">738</span>     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
-<span class="g g-Whitespace">    </span><span class="mi">739</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">740</span>     <span class="k">if</span> <span class="n">fpath</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">meta_path</span><span class="p">:</span>
-
-<span class="ne">Exception</span>: File `&#39;../shared/setup.py&#39;` not found.
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup code; make sure to run this if using Binder or Colab</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;shared&#39;</span><span class="p">)))</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">setup_code</span>
+<span class="n">stroke_data</span> <span class="o">=</span> <span class="n">setup_code</span><span class="o">.</span><span class="n">stroke_data</span>
 </pre></div>
 </div>
 </div>
@@ -570,10 +533,11 @@ document.write(`
 <b>Section Objectives:</b><br> 
 - Learn some useful functions we use often.
 </div>
-<p>These are some bonus concepts that aren’t essential for day-to-day data analysis but are useful to know — and often come up in more advanced tasks and code reading.</p>
+<p>These are some bonus concepts that aren’t essential for day-to-day data analysis but are useful to know — and can come up in more advanced tasks and code reading.</p>
 <section id="recursion">
 <h2>Recursion<a class="headerlink" href="#recursion" title="Link to this heading">#</a></h2>
-<p>A recursive function is a function that calls itself to solve a problem step by step. Recursion is not commonly used for DataFrame operations, but it helps you understand how some algorithms work.</p>
+<p>A recursive function is a function that calls itself to solve a problem by breaking it down into smaller parts. In contrast, an iteration (like a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop) repeats a task step by step — for example, looping through rows or columns in a DataFrame.</p>
+<p>Most of the time, iteration is preferred because it’s more efficient and easier to understand for straightforward tasks. Recursion isn’t commonly used in day-to-day DataFrame operations, but it’s a powerful concept that helps you understand how certain algorithms (e.g. decision trees) work.</p>
 <p>Let’s say we want to calculate a factorial:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -590,11 +554,19 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>Be careful! Recursive functions must always have a base case (a stopping condition), or they’ll go on forever.</p>
 </div>
+<p>Using our stroke dataset for the next example, let’s see how recursion can be useful:</p>
+<p>Without going into the details of what a decision tree is, imagine you want to sort patients into groups based on a question like, “Is the patient older than 60?”</p>
+<p>You ask this question and split the patients into two groups:</p>
+<p>Group A: Patients older than 60</p>
+<p>Group B: Patients 60 or younger</p>
+<p>For each group, you then ask another question to split it further, for example, “Does the patient have hypertension?”</p>
+<p>You keep splitting groups like this — recursively breaking down the problem — until the groups are small enough or you’ve asked enough questions.</p>
 </section>
 <section id="anonymous-lambda-functions">
 <h2>Anonymous (Lambda) Functions<a class="headerlink" href="#anonymous-lambda-functions" title="Link to this heading">#</a></h2>
-<p>A lambda function is a quick way to define a simple function in one line, without using <code class="docutils literal notranslate"><span class="pre">def</span></code>. It’s very useful with <code class="docutils literal notranslate"><span class="pre">.apply()</span></code> in pandas.
-Let’s label patients with a bmi_status column, based on their BMI:</p>
+<p>A lambda function is a quick way to define a quick and simple function in one line, without using <code class="docutils literal notranslate"><span class="pre">def</span></code>. It’s very useful with <code class="docutils literal notranslate"><span class="pre">.apply()</span></code> in pandas. It’s an anonymous function because you create the function on the spot, without naming it.</p>
+<p>The general syntax of a lambda function is as follows: <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">arguments:</span> <span class="pre">expression</span></code>, where lambda is the keyword to define an anonymous function, arguments are the function inputs, and expression is the single expression whose result is returned automatically.</p>
+<p>Let’s label patients with a bmi_status column, based on their BMI:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;bmi_status&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;bmi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;high&#39;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">30</span> <span class="k">else</span> <span class="s1">&#39;normal&#39;</span><span class="p">)</span>
@@ -614,6 +586,15 @@ The code above is the same as writing the following:</p>
 </div>
 </div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When to use lambda instead of a regular function?</p>
+<ul class="simple">
+<li><p>When your function is short and simple, like a quick calculation or condition.</p></li>
+<li><p>When you want to pass a function as an argument (e.g., inside <code class="docutils literal notranslate"><span class="pre">.apply()</span></code>, <code class="docutils literal notranslate"><span class="pre">.map()</span></code>, or <code class="docutils literal notranslate"><span class="pre">sorted()</span></code>).</p></li>
+<li><p>When you don’t need to reuse the function elsewhere.</p></li>
+</ul>
+</div>
 </section>
 <section id="useful-built-in-functions-map-filter-and-zip">
 <h2>Useful Built-in Functions: <code class="docutils literal notranslate"><span class="pre">map</span></code>, <code class="docutils literal notranslate"><span class="pre">filter</span></code>, and <code class="docutils literal notranslate"><span class="pre">zip</span></code><a class="headerlink" href="#useful-built-in-functions-map-filter-and-zip" title="Link to this heading">#</a></h2>
@@ -623,16 +604,37 @@ The code above is the same as writing the following:</p>
 <p>Useful to apply a function to every item in a list or Series.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Example: Let’s get stroke status labels (string) for each patient.</span>
-<span class="n">stroke_flags</span> <span class="o">=</span> <span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;stroke&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;Yes&#39;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="s1">&#39;No&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Example: Let’s convert categorical gender labels into numeric codes.</span>
+<span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;gender_code&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stroke_data</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Female&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Other&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>From the examples so far, you might have noticed that <code class="docutils literal notranslate"><span class="pre">.map</span></code> and <code class="docutils literal notranslate"><span class="pre">.apply</span></code> work similarly.</p>
+<p>The main difference is that:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.map()</span></code> is designed for element-wise value mapping on a single pandas Series, often using dictionaries for fast replacements.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.apply()</span></code> is more flexible, working on both pandas Series and DataFrames to apply functions that can operate on elements, rows, or columns, including aggregations.</p></li>
+</ul>
+<p>You can read more about the differences from this <a class="reference external" href="https://stackoverflow.com/questions/19798153/difference-between-map-applymap-and-apply-methods-in-pandas">stackoverflow Q&amp;A</a>.</p>
 </section>
 <section id="filter-function-iterable">
 <h3><code class="docutils literal notranslate"><span class="pre">filter(function,</span> <span class="pre">iterable)</span></code><a class="headerlink" href="#filter-function-iterable" title="Link to this heading">#</a></h3>
-<p>Filters a list by a condition that returns True.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Filters</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">by</span> <span class="n">a</span> <span class="n">condition</span> <span class="n">that</span> <span class="n">returns</span> <span class="kc">True</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="n">Filters</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">by</span> <span class="n">a</span> <span class="n">condition</span> <span class="n">that</span> <span class="n">returns</span> <span class="kc">True</span><span class="o">.</span>
+            <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Example: Get a list of patient ages 80 or older</span>

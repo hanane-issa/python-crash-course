@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fcab1d5" />
@@ -61,6 +61,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'module6/module_6g_PracticeSheet';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="M8: Final Practice on a Heart Disease Dataset" href="../module8/Module8_Questions.html" />
     <link rel="prev" title="Module 6f: Extra (OPTIONAL)" href="module_6f_extras.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -221,6 +222,10 @@
 <li class="toctree-l2"><a class="reference internal" href="module_6e_params-args.html">Module 6e: Parameters and Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_6f_extras.html">Module 6f: Extra (OPTIONAL)</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module8/Module8_Questions.html">Module 8: Final Exercice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module8/Module8_Solutions.html">M8: Final Practice on a Heart Disease Dataset (with Solutions)</a></li>
 </ul>
 </details></li>
 </ul>
@@ -538,7 +543,11 @@ document.write(`
 <p>Write a function called <code class="docutils literal notranslate"><span class="pre">describe_data()</span></code> that takes a DataFrame and returns its <code class="docutils literal notranslate"><span class="pre">.describe()</span></code> output. Don’t forget to add a docstring to the function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stroke_data</span> <span class="o">=</span> <span class="n">setup_code</span><span class="o">.</span><span class="n">stroke_data</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">describe_data</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="k">pass</span>
+    <span class="c1"># YOUR CODE HERE </span>
 </pre></div>
 </div>
 </div>
@@ -594,39 +603,44 @@ document.write(`
 <h2>Part 2: Return vs Print vs No Return<a class="headerlink" href="#part-2-return-vs-print-vs-no-return" title="Link to this heading">#</a></h2>
 <section id="return-value">
 <h3>2.1 Return Value<a class="headerlink" href="#return-value" title="Link to this heading">#</a></h3>
-<p>Write a function that returns the number of patients in the dataset who have ever smoked.</p>
+<p>Write a function that returns the proportion of patients with stroke (stroke prevalence) per smoking status category.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_smoking_prevalence</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="k">pass</span>
+    <span class="c1"># YOUR CODE HERE</span>
 </pre></div>
 </div>
 </div>
 </div>
 <details>
+<summary>💡Hint</summary>
+Since the stroke column uses 1 for “had a stroke” and 0 for “no stroke,” calculating the average gives us the proportion of patients who had a stroke in each group.
+</details>
+<details>
 <summary>Solution</summary>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">analyze_smoking_effect</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_smoking_prevalence</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Analyze the effect of smoking on stroke risk in the given DataFrame.</span>
+<span class="sd">    Calculate the proportion of patients with stroke (stroke prevalence) for each smoking status category in the given DataFrame.</span>
 
 <span class="sd">    Parameters:</span>
-<span class="sd">    df (DataFrame): The DataFrame containing healthcare data. Must include </span>
-<span class="sd">                    &#39;smoking_status&#39; and &#39;stroke&#39; columns.</span>
+<span class="sd">    df (pandas.DataFrame): The DataFrame containing healthcare data. Must include </span>
+<span class="sd">                           &#39;smoking_status&#39; and &#39;stroke&#39; columns.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">    smoking_rates (pandas.Series): A Series with smoking status as the index and average stroke rate as the values.</span>
+<span class="sd">    pandas.Series: A Series with smoking status as the index and the proportion of patients with stroke as the values.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-
-    
-    <span class="c1"># Average Stroke rate per smoking category</span>
+    <span class="c1"># Calculate stroke prevalence per smoking category</span>
     <span class="n">smoking_rates</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;smoking_status&#39;</span><span class="p">)[</span><span class="s1">&#39;stroke&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
     
     <span class="k">return</span> <span class="n">smoking_rates</span>
+
 </pre></div>
 </div>
 </section>
 <section id="print-statement">
 <h3>2.2 Print Statement<a class="headerlink" href="#print-statement" title="Link to this heading">#</a></h3>
-<p>Modify the <code class="docutils literal notranslate"><span class="pre">analyze_smoking_effect(df)</span></code> function to print a summary of smoking status counts and calculates stroke rates per smoking group.</p>
+<p>Modify the <code class="docutils literal notranslate"><span class="pre">get_smoking_prevalence(df)</span></code> function to print a summary of smoking status counts in addition to the stroke prevalence per smoking group.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
@@ -637,29 +651,29 @@ document.write(`
 <details>
 <summary>💡 Hints</summary>
 <p>
-The variable <code>smoking_rates</code> is a <strong>Pandas Series</strong>, where:
+The variable <code>smoking_prevalence</code> is a <strong>Pandas Series</strong>, where:
 </p>
 <ul>
   <li>Each <strong>index</strong> is a smoking category (like <code>'smokes'</code>, <code>'never smoked'</code>).</li>
-  <li>Each <strong>value</strong> is the average stroke rate for that category.</li>
+  <li>Each <strong>value</strong> is the stroke proportion for that category.</li>
 </ul>
 <p>
 To print a nice summary:
 </p>
 <ul>
-  <li>Loop through <code>smoking_rates.items()</code> to access both the category and the stroke rate.</li>
-  <li>Use <code>print(f"{category}: {rate:.2%}")</code> to format the output as percentages.</li>
+  <li>Loop through <code>smoking_prevalence.items()</code> to access both the category and the stroke prevalence.</li>
+  <li>Use <code>print(f"{category}: {prevalence:.2%}")</code> to format the output as percentages.</li>
 </ul>
 </details>
 <details>
 <summary>Solution</summary>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">analyze_smoking_effect</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_smoking_prevalence</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Analyze the effect of smoking on stroke risk in the given DataFrame.</span>
+<span class="sd">    Print summary statistics on smoking status and stroke prevalence in the DataFrame.</span>
 
 <span class="sd">    Parameters:</span>
-<span class="sd">    df (DataFrame): The DataFrame containing healthcare data. Must include </span>
-<span class="sd">                    &#39;smoking_status&#39; and &#39;stroke&#39; columns.</span>
+<span class="sd">    df (pandas.DataFrame): The DataFrame containing healthcare data. Must include </span>
+<span class="sd">                           &#39;smoking_status&#39; and &#39;stroke&#39; columns.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">    None</span>
@@ -671,12 +685,12 @@ To print a nice summary:
     <span class="nb">print</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Total records: </span><span class="si">{</span><span class="n">total</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     
-    <span class="c1"># Stroke rate per smoking category</span>
-    <span class="n">smoking_rates</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;smoking_status&#39;</span><span class="p">)[</span><span class="s1">&#39;stroke&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="c1"># Stroke prevalence per smoking category</span>
+    <span class="n">smoking_prevalence</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;smoking_status&#39;</span><span class="p">)[</span><span class="s1">&#39;stroke&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
     
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Average stroke rate by smoking status:&quot;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">status</span><span class="p">,</span> <span class="n">rate</span> <span class="ow">in</span> <span class="n">smoking_rates</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">rate</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Stroke prevalence by smoking status:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">status</span><span class="p">,</span> <span class="n">prevalence</span> <span class="ow">in</span> <span class="n">smoking_prevalence</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">prevalence</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -722,7 +736,7 @@ You can optionally include a loop that checks whether the column exists in the D
 <code class="docutils literal notranslate"><span class="pre">df['avg_glucose_level']</span> <span class="pre">&gt;</span> <span class="pre">threshold</span></code><br />
 and<br />
 <code class="docutils literal notranslate"><span class="pre">df['stroke']</span> <span class="pre">==</span> <span class="pre">1</span></code></p></li>
-<li><p>Combine them with <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> (and wrap each condition in parentheses)</p></li>
+<li><p>To combine conditions, use <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> between them (remember to wrap each condition in parentheses). The syntax looks like this: <code class="docutils literal notranslate"><span class="pre">condition_var</span> <span class="pre">=</span> <span class="pre">(cond1)</span> <span class="pre">&amp;</span> <span class="pre">(cond2)</span></code>. Alternatively, you can use <code class="docutils literal notranslate"><span class="pre">&amp;=</span></code> to update an existing condition by adding another one with AND logic; the syntax looks like this: <code class="docutils literal notranslate"><span class="pre">condition_var</span> <span class="pre">&amp;=</span> <span class="pre">(cond3)</span></code>. This is a shorthand for <code class="docutils literal notranslate"><span class="pre">condition_var</span> <span class="pre">=</span> <span class="pre">condition_var</span> <span class="pre">&amp;</span> <span class="pre">(cond3)</span></code>.</p></li>
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">return</span></code> to send back the filtered DataFrame</p></li>
 </ul>
 </details><details>
@@ -789,7 +803,7 @@ and<br />
   <pre><code>plot_options.get("bins", 30)
 plot_options.get("alpha", 0.5)
 </code></pre>
-  <p>This lets users override defaults, but still works even if they don't.</p>
+  <p>This allows users to optionally change parameters. If they skip them, the function uses the defaults you set.</p>
 </details>
 <details>
   <summary>Hint 3: Customize your plot</summary>
@@ -891,6 +905,15 @@ plt.title(plot_options.get("title", "Comparison"))
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Module 6f: Extra (OPTIONAL)</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../module8/Module8_Questions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">M8: Final Practice on a Heart Disease Dataset</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

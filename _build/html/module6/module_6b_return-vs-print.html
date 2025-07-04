@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fcab1d5" />
@@ -222,6 +222,10 @@
 <li class="toctree-l2"><a class="reference internal" href="module_6e_params-args.html">Module 6e: Parameters and Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_6f_extras.html">Module 6f: Extra (OPTIONAL)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module8/Module8_Questions.html">Module 8: Final Exercice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module8/Module8_Solutions.html">M8: Final Practice on a Heart Disease Dataset (with Solutions)</a></li>
 </ul>
 </details></li>
 </ul>
@@ -503,64 +507,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell tag_hide-input tag_hide-output docutils container">
+  <div class="cell tag_hide-input tag_hide-output tag_thebe-init docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load</span> ../shared/setup.py  
-</pre></div>
-</div>
-</div>
-</details>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">SyntaxError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\interactiveshell.py:3876,</span> in <span class="ni">InteractiveShell.find_user_code</span><span class="nt">(self, target, raw, py_only, skip_encoding_cookie, search_ns)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3875</span> <span class="k">try</span><span class="p">:</span>                                              <span class="c1"># User namespace</span>
-<span class="ne">-&gt; </span><span class="mi">3876</span>     <span class="n">codeobj</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_ns</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3877</span> <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-
-<span class="ne">SyntaxError</span>: invalid syntax (&lt;string&gt;, line 1)
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="s1">&#39;../shared/setup.py&#39;</span><span class="p">)</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\interactiveshell.py:2478,</span> in <span class="ni">InteractiveShell.run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2476</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2477</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">2478</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2480</span> <span class="c1"># The code below prevents the output from being displayed</span>
-<span class="g g-Whitespace">   </span><span class="mi">2481</span> <span class="c1"># when using magics with decorator @output_can_be_silenced</span>
-<span class="g g-Whitespace">   </span><span class="mi">2482</span> <span class="c1"># when the last Python token in the expression is a &#39;;&#39;.</span>
-<span class="g g-Whitespace">   </span><span class="mi">2483</span> <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">magic</span><span class="o">.</span><span class="n">MAGIC_OUTPUT_CAN_BE_SILENCED</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\magics\code.py:361,</span> in <span class="ni">CodeMagics.load</span><span class="nt">(self, arg_s)</span>
-<span class="g g-Whitespace">    </span><span class="mi">359</span> <span class="n">opts</span><span class="p">,</span><span class="n">args</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_options</span><span class="p">(</span><span class="n">arg_s</span><span class="p">,</span><span class="s1">&#39;yns:r:&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">360</span> <span class="n">search_ns</span> <span class="o">=</span> <span class="s1">&#39;n&#39;</span> <span class="ow">in</span> <span class="n">opts</span>
-<span class="ne">--&gt; </span><span class="mi">361</span> <span class="n">contents</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">shell</span><span class="o">.</span><span class="n">find_user_code</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">search_ns</span><span class="o">=</span><span class="n">search_ns</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">363</span> <span class="k">if</span> <span class="s1">&#39;s&#39;</span> <span class="ow">in</span> <span class="n">opts</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">364</span>     <span class="k">try</span><span class="p">:</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\interactiveshell.py:3878,</span> in <span class="ni">InteractiveShell.find_user_code</span><span class="nt">(self, target, raw, py_only, skip_encoding_cookie, search_ns)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3876</span>     <span class="n">codeobj</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_ns</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3877</span> <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3878</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">((</span><span class="s2">&quot;&#39;</span><span class="si">%s</span><span class="s2">&#39; was not found in history, as a file, url, &quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">3879</span>                         <span class="s2">&quot;nor in the user namespace.&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="n">target</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
-<span class="g g-Whitespace">   </span><span class="mi">3881</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">codeobj</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">3882</span>     <span class="k">return</span> <span class="n">codeobj</span>
-
-<span class="ne">ValueError</span>: &#39;../shared/setup.py&#39; was not found in history, as a file, url, nor in the user namespace.
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup code; make sure to run this if using Binder or Colab</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;shared&#39;</span><span class="p">)))</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">setup_code</span>
+<span class="n">stroke_data</span> <span class="o">=</span> <span class="n">setup_code</span><span class="o">.</span><span class="n">stroke_data</span>
 </pre></div>
 </div>
 </div>
@@ -581,13 +540,19 @@ document.write(`
 <li><p>You’re building exploratory tools, not reusable computations</p></li>
 </ul>
 <p>Let’s modify the smoking count function as an example. We’ll add a print statement to help us see what’s going on during execution.</p>
-<p>def count_smokers_by_category(df):
-if ‘smoking_status’ in df.columns:
-print(“Column found. Counting smoking categories…”)
-return df[‘smoking_status’].value_counts()
-else:
-print(“Column ‘smoking_status’ not found in DataFrame.”)
-return None</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">count_smokers_by_category</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="k">if</span> <span class="s1">&#39;smoking_status&#39;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Column found. Counting smoking categories...&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_status&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Column &#39;smoking_status&#39; not found in DataFrame.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p><code class="docutils literal notranslate"><span class="pre">None</span></code> represents the absence of value, and has the <code class="docutils literal notranslate"><span class="pre">NoneType</span></code> data type. You’ll see other programming languages call it <code class="docutils literal notranslate"><span class="pre">null</span></code>, <code class="docutils literal notranslate"><span class="pre">nil</span></code>, or <code class="docutils literal notranslate"><span class="pre">undefined</span></code>.</p>
 <p>Now let’s write a function that doesn’t return any value — it just prints a useful summary.</p>
 <div class="cell docutils container">
@@ -615,6 +580,16 @@ return None</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Stroke Summary Report:
+Total records: 5110
+Stroke cases: 249
+No stroke cases: 4861
+Stroke rate: 4.87%
+None
+</pre></div>
+</div>
+</div>
 </div>
 <p>When your function ends with a print statement or doesn’t have a return statement, Python adds <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">None</span></code> behind the scenes. This is also the case when you use the <code class="docutils literal notranslate"><span class="pre">return</span></code> keyword by itself without any value added to the statement.</p>
 <p>We’ve seen a similar behavior with loops; when you write a <code class="docutils literal notranslate"><span class="pre">for</span></code> or <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, Python implicitly adds a <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement.
@@ -626,7 +601,7 @@ return None</p>
 <p>This is common in:</p>
 <ul class="simple">
 <li><p>Plotting and visualization</p></li>
-<li><p>Functions designed for side effects (like writing to a file or showing a chart)</p></li>
+<li><p>Functions designed for purposes that don’t require a returned object, such as writing to a file or showing a chart</p></li>
 </ul>
 <p>In module 5, you learned how to write code to plot a histogram for the average glucose level. Let’s reuse that code, but turn it into a general-purpose display-only function which plots the histogram of any passed column.</p>
 <div class="cell docutils container">
@@ -638,7 +613,7 @@ return None</p>
 <span class="sd">    Parameters:</span>
 <span class="sd">        df (pd.DataFrame): The dataset.</span>
 <span class="sd">        column (str): The name of the numeric column to plot.</span>
-<span class="sd">        bins (int): Number of bins for the histogram (default 30).</span>
+<span class="sd">        bins (int): Number of bins (ranges that group data) for the histogram (default 30).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -680,7 +655,7 @@ return None</p>
 <section id="functions-that-return-multiple-variables">
 <h3>Functions that return multiple variables<a class="headerlink" href="#functions-that-return-multiple-variables" title="Link to this heading">#</a></h3>
 <p>So far, we’ve seen functions that return one value — like a number or a string. But what if you need to return multiple results from a single function?</p>
-<p>In Python, you can do that easily using tuples (see Module _).  When you return multiple values from a function, Python automatically creates a tuple behind the scenes.</p>
+<p>In Python, you can do that easily using tuples (see Module 2).  When you return multiple values from a function, Python automatically creates a tuple behind the scenes.</p>
 <p>🔹 Why would you return multiple values?
 Sometimes a function does more than one thing and needs to give back multiple pieces of information. For example:</p>
 <p>Suppose you have a dataset of patients. You want a function that counts how many are adults (age 18 or older) and how many are minors (under 18).</p>
@@ -712,12 +687,17 @@ Sometimes a function does more than one thing and needs to give back multiple pi
 </div>
 </div>
 <p>What the function actually returns is the tuple (adults, minors).
-Python automatically unpacks it into two variables: <code class="docutils literal notranslate"><span class="pre">adult_count</span></code> and <code class="docutils literal notranslate"><span class="pre">minor_count</span></code>.</p>
-<p>You could assign the tuple to a variable first:</p>
+Python unpacks it into two variables: <code class="docutils literal notranslate"><span class="pre">adult_count</span></code> and <code class="docutils literal notranslate"><span class="pre">minor_count</span></code>.</p>
+<p>You could assign the tuple to a single variable first:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">count_adults_and_minors</span><span class="p">(</span><span class="n">stroke_data</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4254, 856)
 </pre></div>
 </div>
 </div>
@@ -727,6 +707,12 @@ Python automatically unpacks it into two variables: <code class="docutils litera
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># adults</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># minors</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4254
+856
 </pre></div>
 </div>
 </div>
@@ -741,61 +727,79 @@ Python automatically unpacks it into two variables: <code class="docutils litera
 <li><p>Plots a bar chart to visualize those averages (check Module 5 or official documentation if you’ve forgotten how to do this!).</p></li>
 <li><p>Optional: returns the plot object so you can store or save it later.</p></li>
 </ul>
-<p>def plot_stroke_by_smoking(df):
-“””
-Show average stroke rate by smoking status group.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Parameters:
-    df (pd.DataFrame): The stroke dataset.
-
-Returns:
-    matplotlib.figure.Figure: The figure object for further use (e.g. saving).
-&quot;&quot;&quot;
-# Step 1: Group by smoking status and calculate average stroke rate
-
-
-# Step 2: Print summary
-
-
-# Step 3: Plot
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plot_stroke_by_smoking</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Show average stroke rate by smoking status group.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters:</span>
+<span class="sd">        df (pd.DataFrame): The stroke dataset.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        matplotlib.figure.Figure: The figure object for further use (e.g. saving).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Step 1: Group by smoking status and calculate average stroke rate</span>
 
 
-# Step 4: Return figure
+    <span class="c1"># Step 2: Print summary</span>
 
-pass
+
+    <span class="c1"># Step 3: Plot</span>
+
+
+    <span class="c1"># Step 4: Return figure</span>
+
+    <span class="k">pass</span>
+    
 </pre></div>
 </div>
-<div style="margin-bottom: 15px;">
-  <details>
-    <summary>
-      <i class="fa fa-lightbulb-o" aria-hidden="true" style="color: yellow; font-size: 20px;"></i> 
-      Hint 1
-    </summary>
-    <p style="padding-left: 20px;">
-    To calculate the average of a column grouped by categories in another column, you can use this pattern:<\br>
-    grouped_averages = df.groupby('grouping_column')['value_column'].mean() <\br>
-    You’ll get a Series where the index contains each unique group from the grouping column, and the values are the calculated averages for each group from the value column.
-    </p>
-  </details>
 </div>
-<div style="margin-bottom: 15px;">
-  <details>
-    <summary>
-      <i class="fa fa-lightbulb-o" aria-hidden="true" style="color: yellow; font-size: 20px;"></i> 
-      Hint 2
-    </summary>
-    <p style="padding-left: 20px;">
-    Use plt.bar() or sns.barplot() to create the chart.
-    </p>
-  </details>
 </div>
-<div style="margin-bottom: 15px;">
-  <details>
-    <summary>
-      <i class="fa fa-lightbulb" aria-hidden="true" style="color: yellow; font-size: 20px;"></i> 
-      Solution
-    </summary>
-    <p style="padding-left: 20px;">
-    <pre><code class="python">
+<details>
+  <summary>
+    <i class="fa fa-lightbulb-o" aria-hidden="true" style="color: yellow; font-size: 20px;"></i> 
+    Hint 1
+  </summary>
+  <div style="padding-left: 20px;">
+    To calculate the average of a column grouped by categories in another column, you can use this pattern:
+    <pre><code>grouped_averages = df.groupby('grouping_column')['value_column'].mean()</code></pre>
+    You’ll get a pandas Series object (see <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html" target="_blank">pandas.Series documentation</a>) where the index contains each unique group from the grouping column, and the values are the calculated averages for each group from the value column.
+  </div>
+</details>
+<br>
+<details>
+  <summary>
+    <i class="fa fa-lightbulb-o" aria-hidden="true" style="color: yellow; font-size: 20px;"></i> 
+    Hint 2
+  </summary>
+  <p style="padding-left: 20px;">
+  You can loop through a Series using the <code>.items()</code> method, which gives you each index-value pair.<br>
+  Example:<br>
+  <code>
+  for group, average in grouped_averages.items():<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;print(f"{group}: {average:.2f}")
+  </code>
+  </p>
+</details>
+<br>
+<details>
+  <summary>
+    <i class="fa fa-lightbulb-o" aria-hidden="true" style="color: yellow; font-size: 20px;"></i> 
+    Hint 3
+  </summary>
+  <p style="padding-left: 20px;">
+  Use <code>plt.bar()</code> or <code>sns.barplot()</code> to create the chart.
+  </p>
+</details>
+<br>
+<details>
+  <summary>
+    <i class="fa fa-lightbulb" aria-hidden="true" style="color: yellow; font-size: 20px;"></i> 
+    Solution
+  </summary>
+  <p style="padding-left: 20px;">
+  <pre><code class="language-python">
 def plot_stroke_by_smoking(df):
     """
     Show average stroke rate by smoking status group.
@@ -825,11 +829,12 @@ plt.show()
 
 # Step 4: Return figure
 return fig
-&lt;/code&gt;&lt;/pre&gt;
 </pre></div>
 </div>
-  </details>
-</div></section>
+<p></code></pre></p>
+  </p>
+</details>
+</section>
 </section>
 </section>
 

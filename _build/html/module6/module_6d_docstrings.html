@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fcab1d5" />
@@ -222,6 +222,10 @@
 <li class="toctree-l2"><a class="reference internal" href="module_6e_params-args.html">Module 6e: Parameters and Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_6f_extras.html">Module 6f: Extra (OPTIONAL)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module8/Module8_Questions.html">Module 8: Final Exercice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module8/Module8_Solutions.html">M8: Final Practice on a Heart Disease Dataset (with Solutions)</a></li>
 </ul>
 </details></li>
 </ul>
@@ -498,60 +502,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell tag_hide-input tag_hide-output docutils container">
+  <div class="cell tag_hide-input tag_hide-output tag_thebe-init docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../shared/setup.py  
-</pre></div>
-</div>
-</div>
-</details>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\magics\execution.py:727,</span> in <span class="ni">ExecutionMagics.run</span><span class="nt">(self, parameter_s, runner, file_finder)</span>
-<span class="g g-Whitespace">    </span><span class="mi">726</span>     <span class="n">fpath</span> <span class="o">=</span> <span class="n">arg_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="ne">--&gt; </span><span class="mi">727</span>     <span class="n">filename</span> <span class="o">=</span> <span class="n">file_finder</span><span class="p">(</span><span class="n">fpath</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">728</span> <span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\utils\path.py:90,</span> in <span class="ni">get_py_filename</span><span class="nt">(name)</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>         <span class="k">return</span> <span class="n">py_name</span>
-<span class="ne">---&gt; </span><span class="mi">90</span> <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;File `</span><span class="si">%r</span><span class="s2">` not found.&quot;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
-
-<span class="ne">OSError</span>: File `&#39;../shared/setup.py&#39;` not found.
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">Exception</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;run&#39;</span><span class="p">,</span> <span class="s1">&#39;../shared/setup.py&#39;</span><span class="p">)</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\interactiveshell.py:2478,</span> in <span class="ni">InteractiveShell.run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2476</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2477</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">2478</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2480</span> <span class="c1"># The code below prevents the output from being displayed</span>
-<span class="g g-Whitespace">   </span><span class="mi">2481</span> <span class="c1"># when using magics with decorator @output_can_be_silenced</span>
-<span class="g g-Whitespace">   </span><span class="mi">2482</span> <span class="c1"># when the last Python token in the expression is a &#39;;&#39;.</span>
-<span class="g g-Whitespace">   </span><span class="mi">2483</span> <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">magic</span><span class="o">.</span><span class="n">MAGIC_OUTPUT_CAN_BE_SILENCED</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\magics\execution.py:738,</span> in <span class="ni">ExecutionMagics.run</span><span class="nt">(self, parameter_s, runner, file_finder)</span>
-<span class="g g-Whitespace">    </span><span class="mi">736</span>     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;nt&#39;</span> <span class="ow">and</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^&#39;.*&#39;$&quot;</span><span class="p">,</span><span class="n">fpath</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">737</span>         <span class="n">warn</span><span class="p">(</span><span class="s1">&#39;For Windows, use double quotes to wrap a filename: </span><span class="si">%r</span><span class="s1">un &quot;mypath</span><span class="se">\\</span><span class="s1">myfile.py&quot;&#39;</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">738</span>     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
-<span class="g g-Whitespace">    </span><span class="mi">739</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">740</span>     <span class="k">if</span> <span class="n">fpath</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">meta_path</span><span class="p">:</span>
-
-<span class="ne">Exception</span>: File `&#39;../shared/setup.py&#39;` not found.
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup code; make sure to run this if using Binder or Colab</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;shared&#39;</span><span class="p">)))</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">setup_code</span>
+<span class="n">stroke_data</span> <span class="o">=</span> <span class="n">setup_code</span><span class="o">.</span><span class="n">stroke_data</span>
 </pre></div>
 </div>
 </div>
@@ -565,7 +528,7 @@ document.write(`
 </div>
 <section id="docstrings">
 <h2>Docstrings<a class="headerlink" href="#docstrings" title="Link to this heading">#</a></h2>
-<p>Let’s go back to the <code class="docutils literal notranslate"><span class="pre">count_stroke_patients()</span></code> function from the first section of this module. Notice how we had a multi-line string in triple quotes, also called documentation string or <strong>docstring</strong> for short. The docstring links explanatory documentation to Python objects such as functions, modules, and classes. It explains the purpose of the function, as well as the parameters required,and the output/return we get.
+<p>Let’s go back to the <code class="docutils literal notranslate"><span class="pre">count_stroke_patients()</span></code> function from the first section of this module. Notice how we had a multi-line string in triple quotes, also called documentation string or <strong>docstring</strong> for short. The docstring links explanatory documentation to Python objects such as functions, modules, and classes (see Module 7 for Classes). It explains the purpose of the function, as well as the parameters required, and the output/return we get.
 It is incredibly useful for others (as well as future you!) to develop this good practice.</p>
 <p>You can access an object’s documentation through the <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> method or <code class="docutils literal notranslate"><span class="pre">help()</span></code> function.</p>
 <div class="cell docutils container">
@@ -601,15 +564,50 @@ It is incredibly useful for others (as well as future you!) to develop this good
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using __doc__:
+
+Return the number of patients in the dataset who had a stroke.
+
+Parameters
+----------
+df : pandas.DataFrame
+    The dataset containing patient information. Must include a &#39;stroke&#39; column
+    with binary values (e.g., 0 = no stroke, 1 = stroke).
+
+Returns
+-------
+int
+    The number of patients who had a stroke.
+
+Using help:
+Help on function count_stroke_patients in module __main__:
+
+count_stroke_patients(df)
+    Return the number of patients in the dataset who had a stroke.
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        The dataset containing patient information. Must include a &#39;stroke&#39; column
+        with binary values (e.g., 0 = no stroke, 1 = stroke).
+
+    Returns
+    -------
+    int
+        The number of patients who had a stroke.
+</pre></div>
 </div>
-<p>For the sake of standardization, there a few conventions to follow when writing a docstring, mainly based on <span id="id1">[<a class="reference internal" href="#id11" title="Python Software Foundation. Pep 257 – docstring conventions. https://peps.python.org/pep-0257/, 2001.">Foundation, 2001</a>]</span>  and common community practices (see: <span id="id2">[<a class="reference internal" href="#id12" title="GeeksforGeeks. Python docstrings. https://www.geeksforgeeks.org/python-docstrings/, 2024.">GeeksforGeeks, 2024</a>]</span>):</p>
+</div>
+</div>
+<p>For the sake of standardization, there a few conventions to follow when writing a docstring, mainly based on <span id="id1">[<a class="reference internal" href="#id11" title="Python Software Foundation. Pep 257 – docstring conventions. https://peps.python.org/pep-0257/, 2001.">Fou01</a>]</span>  and common community practices (see: <span id="id2">[<a class="reference internal" href="#id12" title="GeeksforGeeks. Python docstrings. https://www.geeksforgeeks.org/python-docstrings/, 2024.">Gee24</a>]</span>):</p>
 <ol class="arabic simple">
 <li><p>Basic Syntax Rules</p></li>
 </ol>
 <ul class="simple">
 <li><p>Use “””triple double quotes””” even for one-liners.</p></li>
 <li><p>Place the docstring immediately after the def or class line.</p></li>
-<li><p>For raw strings (e.g., with backslashes), use r”””insert raw docstring here”””.</p></li>
+<li><p>For raw strings (e.g., when your string includes backslashes like \n or file paths), use r”…” so Python doesn’t treat backslashes as special characters. For multiline raw strings, use r”””…”””.</p></li>
 <li><p>Stick to one format, for example the Numpydoc Style used in the <code class="docutils literal notranslate"><span class="pre">count_stroke_patients()</span></code> function.</p></li>
 </ul>
 <ol class="arabic simple" start="2">
@@ -638,7 +636,7 @@ It is incredibly useful for others (as well as future you!) to develop this good
 <li><p>Optional: detailed description (behavior, arguments, exceptions, return).</p></li>
 <li><p>Closing “”” on its own line if the docstring spans multiple lines.</p></li>
 </ul>
-<p>Example: see example function in building blocks section.</p>
+<p>Example: scroll up to see the docstring for the <code class="docutils literal notranslate"><span class="pre">count_stroke_patients(df)</span></code> function.</p>
 </li>
 </ul>
 <p>References:</p>

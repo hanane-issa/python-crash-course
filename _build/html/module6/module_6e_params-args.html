@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fcab1d5" />
@@ -222,6 +222,10 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Module 6e: Parameters and Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_6f_extras.html">Module 6f: Extra (OPTIONAL)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module8/Module8_Questions.html">Module 8: Final Exercice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module8/Module8_Solutions.html">M8: Final Practice on a Heart Disease Dataset (with Solutions)</a></li>
 </ul>
 </details></li>
 </ul>
@@ -509,60 +513,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell tag_hide-input tag_hide-output docutils container">
+  <div class="cell tag_hide-input tag_hide-output tag_thebe-init docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
 <span class="expanded">Hide code cell source</span>
 </summary>
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../shared/setup.py  
-</pre></div>
-</div>
-</div>
-</details>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\magics\execution.py:727,</span> in <span class="ni">ExecutionMagics.run</span><span class="nt">(self, parameter_s, runner, file_finder)</span>
-<span class="g g-Whitespace">    </span><span class="mi">726</span>     <span class="n">fpath</span> <span class="o">=</span> <span class="n">arg_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="ne">--&gt; </span><span class="mi">727</span>     <span class="n">filename</span> <span class="o">=</span> <span class="n">file_finder</span><span class="p">(</span><span class="n">fpath</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">728</span> <span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\utils\path.py:90,</span> in <span class="ni">get_py_filename</span><span class="nt">(name)</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>         <span class="k">return</span> <span class="n">py_name</span>
-<span class="ne">---&gt; </span><span class="mi">90</span> <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;File `</span><span class="si">%r</span><span class="s2">` not found.&quot;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
-
-<span class="ne">OSError</span>: File `&#39;../shared/setup.py&#39;` not found.
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">Exception</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;run&#39;</span><span class="p">,</span> <span class="s1">&#39;../shared/setup.py&#39;</span><span class="p">)</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\interactiveshell.py:2478,</span> in <span class="ni">InteractiveShell.run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2476</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2477</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">2478</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2480</span> <span class="c1"># The code below prevents the output from being displayed</span>
-<span class="g g-Whitespace">   </span><span class="mi">2481</span> <span class="c1"># when using magics with decorator @output_can_be_silenced</span>
-<span class="g g-Whitespace">   </span><span class="mi">2482</span> <span class="c1"># when the last Python token in the expression is a &#39;;&#39;.</span>
-<span class="g g-Whitespace">   </span><span class="mi">2483</span> <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">magic</span><span class="o">.</span><span class="n">MAGIC_OUTPUT_CAN_BE_SILENCED</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\magics\execution.py:738,</span> in <span class="ni">ExecutionMagics.run</span><span class="nt">(self, parameter_s, runner, file_finder)</span>
-<span class="g g-Whitespace">    </span><span class="mi">736</span>     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;nt&#39;</span> <span class="ow">and</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^&#39;.*&#39;$&quot;</span><span class="p">,</span><span class="n">fpath</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">737</span>         <span class="n">warn</span><span class="p">(</span><span class="s1">&#39;For Windows, use double quotes to wrap a filename: </span><span class="si">%r</span><span class="s1">un &quot;mypath</span><span class="se">\\</span><span class="s1">myfile.py&quot;&#39;</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">738</span>     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
-<span class="g g-Whitespace">    </span><span class="mi">739</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">740</span>     <span class="k">if</span> <span class="n">fpath</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">meta_path</span><span class="p">:</span>
-
-<span class="ne">Exception</span>: File `&#39;../shared/setup.py&#39;` not found.
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup code; make sure to run this if using Binder or Colab</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;shared&#39;</span><span class="p">)))</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">setup_code</span>
+<span class="n">stroke_data</span> <span class="o">=</span> <span class="n">setup_code</span><span class="o">.</span><span class="n">stroke_data</span>
 </pre></div>
 </div>
 </div>
@@ -606,7 +569,7 @@ An <strong>argument</strong> is the actual variable or value you pass in the fun
 </div>
 </div>
 <p>When we defined this function, we used <strong>df</strong> as the parameter. It isn’t a real dataset; it is an indicator for you to know that the function requires a dataframe that will be used in its code.
-(Source: {cite} &#64;params_vs_args)</p>
+(Source: <span id="id1">[<a class="reference internal" href="module_6d_docstrings.html#id9" title="GeeksforGeeks. Difference between parameters and arguments. https://www.geeksforgeeks.org/difference-between-parameters-and-arguments/.">Gee</a>]</span>)</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_stroke_patients</span><span class="p">(</span><span class="n">stroke_data</span><span class="p">)</span>
@@ -643,6 +606,12 @@ When you call the function, you must provide the same number of arguments (unles
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">patient_summary</span><span class="p">(</span><span class="n">stroke_data</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">)</span>
 <span class="n">patient_summary</span><span class="p">(</span><span class="n">stroke_data</span><span class="p">,</span> <span class="s2">&quot;avg_glucose_level&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The average age is 43.23
+The average avg_glucose_level is 106.15
 </pre></div>
 </div>
 </div>
@@ -686,6 +655,221 @@ When you call the function, you must provide the same number of arguments (unles
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>gender</th>
+      <th>age</th>
+      <th>hypertension</th>
+      <th>heart_disease</th>
+      <th>ever_married</th>
+      <th>work_type</th>
+      <th>Residence_type</th>
+      <th>avg_glucose_level</th>
+      <th>bmi</th>
+      <th>smoking_status</th>
+      <th>stroke</th>
+      <th>glucose_status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>9046</td>
+      <td>Male</td>
+      <td>67.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>Yes</td>
+      <td>Private</td>
+      <td>Urban</td>
+      <td>228.69</td>
+      <td>36.6</td>
+      <td>formerly smoked</td>
+      <td>1</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>51676</td>
+      <td>Female</td>
+      <td>61.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Self-employed</td>
+      <td>Rural</td>
+      <td>202.21</td>
+      <td>NaN</td>
+      <td>never smoked</td>
+      <td>1</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>31112</td>
+      <td>Male</td>
+      <td>80.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>Yes</td>
+      <td>Private</td>
+      <td>Rural</td>
+      <td>105.92</td>
+      <td>32.5</td>
+      <td>never smoked</td>
+      <td>1</td>
+      <td>normal</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>60182</td>
+      <td>Female</td>
+      <td>49.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Private</td>
+      <td>Urban</td>
+      <td>171.23</td>
+      <td>34.4</td>
+      <td>smokes</td>
+      <td>1</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1665</td>
+      <td>Female</td>
+      <td>79.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Self-employed</td>
+      <td>Rural</td>
+      <td>174.12</td>
+      <td>24.0</td>
+      <td>never smoked</td>
+      <td>1</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>5105</th>
+      <td>18234</td>
+      <td>Female</td>
+      <td>80.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Private</td>
+      <td>Urban</td>
+      <td>83.75</td>
+      <td>NaN</td>
+      <td>never smoked</td>
+      <td>0</td>
+      <td>normal</td>
+    </tr>
+    <tr>
+      <th>5106</th>
+      <td>44873</td>
+      <td>Female</td>
+      <td>81.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Self-employed</td>
+      <td>Urban</td>
+      <td>125.20</td>
+      <td>40.0</td>
+      <td>never smoked</td>
+      <td>0</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>5107</th>
+      <td>19723</td>
+      <td>Female</td>
+      <td>35.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Self-employed</td>
+      <td>Rural</td>
+      <td>82.99</td>
+      <td>30.6</td>
+      <td>never smoked</td>
+      <td>0</td>
+      <td>normal</td>
+    </tr>
+    <tr>
+      <th>5108</th>
+      <td>37544</td>
+      <td>Male</td>
+      <td>51.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Private</td>
+      <td>Rural</td>
+      <td>166.29</td>
+      <td>25.6</td>
+      <td>formerly smoked</td>
+      <td>0</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>5109</th>
+      <td>44679</td>
+      <td>Female</td>
+      <td>44.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Govt_job</td>
+      <td>Urban</td>
+      <td>85.28</td>
+      <td>26.2</td>
+      <td>Unknown</td>
+      <td>0</td>
+      <td>normal</td>
+    </tr>
+  </tbody>
+</table>
+<p>5110 rows × 13 columns</p>
+</div></div></div>
 </div>
 <p>But you can override it by passing your own value:</p>
 <div class="cell docutils container">
@@ -694,6 +878,221 @@ When you call the function, you must provide the same number of arguments (unles
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>gender</th>
+      <th>age</th>
+      <th>hypertension</th>
+      <th>heart_disease</th>
+      <th>ever_married</th>
+      <th>work_type</th>
+      <th>Residence_type</th>
+      <th>avg_glucose_level</th>
+      <th>bmi</th>
+      <th>smoking_status</th>
+      <th>stroke</th>
+      <th>glucose_status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>9046</td>
+      <td>Male</td>
+      <td>67.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>Yes</td>
+      <td>Private</td>
+      <td>Urban</td>
+      <td>228.69</td>
+      <td>36.6</td>
+      <td>formerly smoked</td>
+      <td>1</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>51676</td>
+      <td>Female</td>
+      <td>61.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Self-employed</td>
+      <td>Rural</td>
+      <td>202.21</td>
+      <td>NaN</td>
+      <td>never smoked</td>
+      <td>1</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>31112</td>
+      <td>Male</td>
+      <td>80.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>Yes</td>
+      <td>Private</td>
+      <td>Rural</td>
+      <td>105.92</td>
+      <td>32.5</td>
+      <td>never smoked</td>
+      <td>1</td>
+      <td>normal</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>60182</td>
+      <td>Female</td>
+      <td>49.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Private</td>
+      <td>Urban</td>
+      <td>171.23</td>
+      <td>34.4</td>
+      <td>smokes</td>
+      <td>1</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1665</td>
+      <td>Female</td>
+      <td>79.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Self-employed</td>
+      <td>Rural</td>
+      <td>174.12</td>
+      <td>24.0</td>
+      <td>never smoked</td>
+      <td>1</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>5105</th>
+      <td>18234</td>
+      <td>Female</td>
+      <td>80.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Private</td>
+      <td>Urban</td>
+      <td>83.75</td>
+      <td>NaN</td>
+      <td>never smoked</td>
+      <td>0</td>
+      <td>normal</td>
+    </tr>
+    <tr>
+      <th>5106</th>
+      <td>44873</td>
+      <td>Female</td>
+      <td>81.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Self-employed</td>
+      <td>Urban</td>
+      <td>125.20</td>
+      <td>40.0</td>
+      <td>never smoked</td>
+      <td>0</td>
+      <td>normal</td>
+    </tr>
+    <tr>
+      <th>5107</th>
+      <td>19723</td>
+      <td>Female</td>
+      <td>35.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Self-employed</td>
+      <td>Rural</td>
+      <td>82.99</td>
+      <td>30.6</td>
+      <td>never smoked</td>
+      <td>0</td>
+      <td>normal</td>
+    </tr>
+    <tr>
+      <th>5108</th>
+      <td>37544</td>
+      <td>Male</td>
+      <td>51.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Private</td>
+      <td>Rural</td>
+      <td>166.29</td>
+      <td>25.6</td>
+      <td>formerly smoked</td>
+      <td>0</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>5109</th>
+      <td>44679</td>
+      <td>Female</td>
+      <td>44.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Govt_job</td>
+      <td>Urban</td>
+      <td>85.28</td>
+      <td>26.2</td>
+      <td>Unknown</td>
+      <td>0</td>
+      <td>normal</td>
+    </tr>
+  </tbody>
+</table>
+<p>5110 rows × 13 columns</p>
+</div></div></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -708,7 +1107,7 @@ When you call the function, you must provide the same number of arguments (unles
 <h2>Positional vs Keyword arguments<a class="headerlink" href="#positional-vs-keyword-arguments" title="Link to this heading">#</a></h2>
 <section id="using-positional-arguments">
 <h3>Using positional arguments<a class="headerlink" href="#using-positional-arguments" title="Link to this heading">#</a></h3>
-<p>You might have noticed by now that,even without default arguments, the order of called arguments matters.
+<p>You might have noticed by now that, even without default arguments, the order of called arguments matters.
 Arguments are matched to parameters based on their position — first with first, second with second, and so on.
 You must pass them in the same sequence the function expects.
 Let’s take a look at the following function:</p>
@@ -755,12 +1154,24 @@ Let’s take a look at the following function:</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Patient #10: 81.0-year-old Female.
+Has hypertension.
+</pre></div>
+</div>
+</div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">stroke_data</span></code> goes to <code class="docutils literal notranslate"><span class="pre">df</span></code>, <code class="docutils literal notranslate"><span class="pre">10</span></code> goes to 10 goes to <code class="docutils literal notranslate"><span class="pre">index</span></code>, <code class="docutils literal notranslate"><span class="pre">age</span></code> goes to <code class="docutils literal notranslate"><span class="pre">age_col</span></code>, <code class="docutils literal notranslate"><span class="pre">gender</span></code> goes to <code class="docutils literal notranslate"><span class="pre">gender_col</span></code>, and <code class="docutils literal notranslate"><span class="pre">hypertension</span></code> goes to <code class="docutils literal notranslate"><span class="pre">hypertension_col</span></code>.</p>
 <p>What happens if we swap the arguments <code class="docutils literal notranslate"><span class="pre">'age'</span></code> and <code class="docutils literal notranslate"><span class="pre">'gender'</span></code>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">describe_patient</span><span class="p">(</span><span class="n">stroke_data</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;hypertension&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Patient #10: Female-year-old 81.0.
+Has hypertension.
 </pre></div>
 </div>
 </div>
@@ -779,6 +1190,12 @@ Let’s take a look at the following function:</p>
     <span class="n">gender_col</span><span class="o">=</span><span class="s1">&#39;gender&#39;</span><span class="p">,</span>
     <span class="n">hypertension_col</span><span class="o">=</span><span class="s1">&#39;hypertension&#39;</span>
 <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Patient #10: 81.0-year-old Female.
+Has hypertension.
 </pre></div>
 </div>
 </div>
@@ -814,6 +1231,14 @@ Let’s take a look at the following function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">show_patient_columns</span><span class="p">(</span><span class="n">stroke_data</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;bmi&#39;</span><span class="p">,</span> <span class="s1">&#39;avg_glucose_level&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Patient #10 data:
+age: 81.0
+bmi: 29.7
+avg_glucose_level: 80.43
 </pre></div>
 </div>
 </div>
@@ -868,6 +1293,14 @@ Arguments are passed as key=value pairs, and the function accesses them by key n
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Summary for patient #7:
+Age: 69.0
+Gender: Female
+Smoker: never smoked
+</pre></div>
+</div>
+</div>
 </div>
 <p>Here, info is a dictionary: {‘age’: ‘age’, ‘gender’: ‘gender’, ‘smoker’: ‘smoking_status’}.</p>
 </section>
@@ -917,7 +1350,7 @@ Arguments are passed as key=value pairs, and the function accesses them by key n
 </section>
 <section id="quick-practice">
 <h2>Quick Practice<a class="headerlink" href="#quick-practice" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> not mutually exclusive. You can combine both in a function!</p>
+<p><code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> are not mutually exclusive. You can combine both in a function!</p>
 <p>Write a function named patient_report that:</p>
 <ol class="arabic simple">
 <li><p>Takes these parameters:</p>
@@ -966,7 +1399,6 @@ Arguments are passed as key=value pairs, and the function accesses them by key n
     </summary>
     <p style="padding-left: 20px;">
     <pre><code class="python">
-```{code-cell} python
 def patient_report(df, index, *columns, **extra_info):
     """
     Print a detailed report for a specific patient in the DataFrame.
@@ -994,12 +1426,9 @@ for key, val in extra_info.items():
     print(f&quot;{key.capitalize()}: {val}&quot;)
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-  <span class="o">&lt;/</span><span class="n">details</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-</section>
+<p></code></pre></p>
+  </details>
+</div></section>
 </section>
 
     <script type="text/x-thebe-config">
