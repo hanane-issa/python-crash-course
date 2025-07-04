@@ -48,6 +48,10 @@ chapters:
   - file: module6/module_6f_extras.ipynb
   - file: module6/module_6g_PracticeSheet.ipynb
 
+- title: "Module 8: Final Exercice"
+  file: module8/Module8_Questions
+  sections:
+  - file: module8/Module8_Solutions
 
 
 
