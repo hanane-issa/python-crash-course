@@ -212,6 +212,17 @@ plt.show()
 
 If you use the argument `split=True`, only half of the violins will be plotted for easier comparison. `inner="quart"` means quantiles of the data will be shown inside the violins, you may also choose `inner="box"` to display box-and-whisker plot.
 
+### Bar plot
+
+If you want to visualize different categories on the x axis, we could use a bar plot. 
+
+```
+sns.barplot(stroke_data, x="gender", y="age", hue="stroke" ,errorbar=None)
+plt.title('Bar Plot of gender and age')
+plt.show()
+```
+
+If you want the error bars, just delete the parameter `errorbar=None`, the error bars are on by default.
 
 ## Visualizing correlation
 
