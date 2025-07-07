@@ -12,17 +12,18 @@ chapters:
   - file: module1/module_1d_anaconda
   - file: module1/module_1e_notebook-execution
   - file: module1/module_1f_packages
+  - file: module1/module_1g_githubissue
   - file: module1/module1_exercice
 
 - title: "Module 2: Python Foundations"
-  file: module2/Module2_1,2_Intro
+  file: module2/Module2_1_Intro
   sections:
-  - file: module2/Module2_3_Variables
-  - file: module2/Module2_4_Operations
-  - file: module2/Module2_5_Strings
-  - file: module2/Module2_6_DataStructures
-  - file: module2/Module2_7_ConditionalBlocks
-  - file: module2/Module2_8_ErrorHandling
+  - file: module2/Module2_2_Variables
+  - file: module2/Module2_3_Operations
+  - file: module2/Module2_4_Strings
+  - file: module2/Module2_5_DataStructures
+  - file: module2/Module2_6_ConditionalBlocks
+  - file: module2/Module2_7_ErrorHandling
   - file: module2/Module2_PracticeSheet1
 
 - title: "Module 3: Introduction to Numpy"
@@ -55,7 +56,7 @@ chapters:
   - file: module6/module_6g_PracticeSheet.ipynb
 
 - title: "Module 7: Introduction to Classes"
-  file: module7_intro-to-classes.ipynb
+  file: module7/module7_intro-to-classes.ipynb
   sections:
   - file: module7/module7_practicesheet.ipynb
 
