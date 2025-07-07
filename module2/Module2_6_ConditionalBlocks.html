@@ -1,0 +1,1120 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6. Conditional Blocks &#8212; Python Crash Course</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5349f25f" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=75ac44fa" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'module2/Module2_6_ConditionalBlocks';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. Error Handling" href="Module2_7_ErrorHandling.html" />
+    <link rel="prev" title="5. Data Structures" href="Module2_5_DataStructures.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Python Crash Course - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Python Crash Course - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction to Python for Biomedical Innovation 🧬🐍
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module1/module_1a_settingup.html">Module 1: Setting Up</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1b_terminal.html">Python in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1c_vscode.html">Python in VSCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1d_anaconda.html">Python in Anaconda Navigator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1f_packages.html">Installing Python Packages</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1g_githubissue.html">💬 Need Help? Create a GitHub Issue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Module 1: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Module2_1_Intro.html">Module 2: Python Foundations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Module2_2_Variables.html">2. Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_3_Operations.html">3 Arithmetic and Logical Operations and Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_4_Strings.html">4. Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_5_DataStructures.html">5. Data Structures</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">6. Conditional Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_7_ErrorHandling.html">7. Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module2_PracticeSheet1.html">8. Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module4/module4.html">Module 4: Introduction to Pandas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module4/module4a.html">Module 4a: Creating a pandas dataframe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/module4b.html">Module 4b: Selecting rows and columns in pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/module4c.html">Module 4b: Expanding dataframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/module4d.html">Module 4d: Saving and loading a dataframe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/module4e.html">Module 4e: Exploratory data analysis</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module5/intro.html">Module 5: Introduction to Data Visualization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module5/data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/module5_examples.html">Importing packages</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module6/module_6_functions.html">Module 6: Introduction to Functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6a_basics.html">Module 6a: Function Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6b_return-vs-print.html">Module 6b: Return Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6c_local-vs-global.html">Module 6c: Local vs Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6d_docstrings.html">Module 6d: Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6e_params-args.html">Module 6e: Parameters and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6f_extras.html">Module 6f: Extra (OPTIONAL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module8/Module8_Questions.html">Module 8: Final Exercice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module8/Module8_Solutions.html">M8: Final Practice on a Heart Disease Dataset (with Solutions)</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module2/Module2_6_ConditionalBlocks.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/hanane/module2/Module2_6_ConditionalBlocks.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanane-issa/python-crash-course" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanane-issa/python-crash-course/issues/new?title=Issue%20on%20page%20%2Fmodule2/Module2_6_ConditionalBlocks.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/module2/Module2_6_ConditionalBlocks.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>6. Conditional Blocks</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-conditional-block">6.1. What is a Conditional Block?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-if-else-statement">6.2. The <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">-</span> <span class="pre">else</span></code> Statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-while-loop">6.3. The <code class="docutils literal notranslate"><span class="pre">while</span></code> Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-for-loop">6.4. The <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-conditionals">6.5. Nested Conditionals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stopping-loops">6.6. Stopping loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">6.7. Quick Practice</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="conditional-blocks">
+<h1>6. Conditional Blocks<a class="headerlink" href="#conditional-blocks" title="Link to this heading">#</a></h1>
+<section id="what-is-a-conditional-block">
+<h2>6.1. What is a Conditional Block?<a class="headerlink" href="#what-is-a-conditional-block" title="Link to this heading">#</a></h2>
+<p>Conditional blocks allow your programme to make decisions. They control the flow of execution depending on whether a certain condition is <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. You can either have conditional statement, where a block is carried out once if a condition is met, or a conditional loop where the block is carried out repeatedly as long as the condition is true.</p>
+<p>The most common conditional blocks are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">if-else</span></code> statement: carries the block out if a condition is <code class="docutils literal notranslate"><span class="pre">True</span></code> and other else (perhaps) another block</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> loop : carries out the block repetitively in a loop as long as some condition is true</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">for</span></code> loop: carries out the same block for different variables</p></li>
+</ul>
+<p>A conditional block consists of the condition and the body. The condition is defined by the key word (<code class="docutils literal notranslate"><span class="pre">if</span></code>,<code class="docutils literal notranslate"><span class="pre">for</span></code>, and <code class="docutils literal notranslate"><span class="pre">while</span></code>) + the condition (using conditional operators) + colon <code class="docutils literal notranslate"><span class="pre">:</span></code>. Afterwards the body, which is the code block that should be executed, is given, which is indented to show that it is the child of the condition. The body stops when the code is no longer indented but on the same line as the condition again.</p>
+<p>You have already seen an example of such a block in the first chapter: the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement to check the patient’s age.</p>
+<div class="tip admonition">
+<p class="admonition-title">Remainder About Indentation</p>
+<p>Indentation is crucial in Python.<br />
+Lines that are part of a block must be indented, usually by 4 spaces or 1 tab.</p>
+</div>
+</section>
+<section id="the-if-else-statement">
+<h2>6.2. The <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">-</span> <span class="pre">else</span></code> Statement<a class="headerlink" href="#the-if-else-statement" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement checks a condition. If the condition is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the block of code underneath it (properly indented) will run. Once the block is finished, it will carry on to the next block of code underneath.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is an adult.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The patient is an adult.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sometimes you want to run one block of code if a condition is <code class="docutils literal notranslate"><span class="pre">True</span></code>, and a different block if it is <code class="docutils literal notranslate"><span class="pre">False</span></code>. You can use the <code class="docutils literal notranslate"><span class="pre">else</span></code> statement for this. After the end of the <code class="docutils literal notranslate"><span class="pre">if</span></code> block, create a new block with the same indentation as the <code class="docutils literal notranslate"><span class="pre">if</span></code> but with the key <code class="docutils literal notranslate"><span class="pre">else</span></code> followed by a colon (i.e., <code class="docutils literal notranslate"><span class="pre">else:</span></code>). No conditional statement is needed since it just runs if the statement above is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">16</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is an adult.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is a minor.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The patient is a minor.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sometimes you do not only have a binary choice but you have several possible code blocks to run. For these cases, the <code class="docutils literal notranslate"><span class="pre">elif</span></code> (short for “else if”) key exists to test for additional conditions after the initial <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. You can have as many <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements as you want, each with a different condition, as long as they are after the <code class="docutils literal notranslate"><span class="pre">if</span></code> and before the <code class="docutils literal notranslate"><span class="pre">else</span></code>. Python checks each condition from top to bottom and runs the first block where the condition is <code class="docutils literal notranslate"><span class="pre">True</span></code> (all other blocks are ignored). If none of the <code class="docutils literal notranslate"><span class="pre">if</span></code> or <code class="docutils literal notranslate"><span class="pre">elif</span></code> conditions are met, then the <code class="docutils literal notranslate"><span class="pre">else</span></code> block is run (if it exists - otherwise none of the blocks are run).</p>
+<p>Try to play around with different ages and see which block will be run in the following example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">70</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">13</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is a child.&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is a teenager.&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">65</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is an adult.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is a senior.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The patient is a senior.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-while-loop">
+<h2>6.3. The <code class="docutils literal notranslate"><span class="pre">while</span></code> Loop<a class="headerlink" href="#the-while-loop" title="Link to this heading">#</a></h2>
+<p>A <code class="docutils literal notranslate"><span class="pre">while</span></code> loop repeatedly executes a block of code as long as a given condition is <code class="docutils literal notranslate"><span class="pre">True</span></code>. Unlike an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, which runs the block just once if the condition is satisfied, the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop returns to the condition after each execution of the block. If the condition is still <code class="docutils literal notranslate"><span class="pre">True</span></code>, it runs the block again. This process continues until the condition becomes <code class="docutils literal notranslate"><span class="pre">False</span></code>. The condition itself is written similarly to an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement and typically involves checking the value of a predefined variable.</p>
+<div class="tip admonition">
+<p class="admonition-title">Infinite loops</p>
+<p>Make sure you update the value of the variable somewhere in the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop body.</p>
+<p>Otherwise your variable is never changed (i.e., it remains <code class="docutils literal notranslate"><span class="pre">True</span></code> forever) and the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop is stuck in an infinite loop. This often leads to the code eventually crashing.</p>
+<p>If you ever run some code with a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop and it takes surprisingly long, it is probably stuck. Force the code to stop and double check your block. Check how your variable gets updated and print it at the end of the block to see how it changes through each iteration.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">while</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Another year until adulthood: the patient is currently&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+    <span class="n">age</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update the age!</span>
+
+<span class="c1"># Left the while loop once age &gt;= 18</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is an adult. They are&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="s2">&quot;years old.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Another year until adulthood: the patient is currently 1
+Another year until adulthood: the patient is currently 2
+Another year until adulthood: the patient is currently 3
+Another year until adulthood: the patient is currently 4
+Another year until adulthood: the patient is currently 5
+Another year until adulthood: the patient is currently 6
+Another year until adulthood: the patient is currently 7
+Another year until adulthood: the patient is currently 8
+Another year until adulthood: the patient is currently 9
+Another year until adulthood: the patient is currently 10
+Another year until adulthood: the patient is currently 11
+Another year until adulthood: the patient is currently 12
+Another year until adulthood: the patient is currently 13
+Another year until adulthood: the patient is currently 14
+Another year until adulthood: the patient is currently 15
+Another year until adulthood: the patient is currently 16
+Another year until adulthood: the patient is currently 17
+The patient is an adult. They are 18 years old.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-for-loop">
+<h2>6.4. The <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop<a class="headerlink" href="#the-for-loop" title="Link to this heading">#</a></h2>
+<p>Like the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, the body of a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop runs multiple times. However, instead of manually updating a variable inside the loop, the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop defines in advance which values the variable should take. Each time the loop runs, the variable is automatically updated to the next value in a sequence, and the loop ends when all values have been used.</p>
+<p>The loop header follows the pattern: variable + <code class="docutils literal notranslate"><span class="pre">in</span></code> + data structure — for example, <code class="docutils literal notranslate"><span class="pre">age</span> <span class="pre">in</span> <span class="pre">['child',</span> <span class="pre">'adult']</span></code>. You don’t need to define the variable beforehand, because the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop automatically creates and assigns it the first value from the data structure when the loop begins.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Iterate over a list</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Iterating over a list&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;child&#39;</span><span class="p">,</span> <span class="s1">&#39;teenager&#39;</span><span class="p">,</span> <span class="s1">&#39;adult&#39;</span><span class="p">,</span> <span class="s1">&#39;senior&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is a(n)&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Iterating over a set&#39;</span><span class="p">)</span>
+<span class="c1"># Iterate over a set - remember that sets are unordered so the variable is assigned randomly to each value</span>
+<span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;child&#39;</span><span class="p">,</span> <span class="s1">&#39;teenager&#39;</span><span class="p">,</span> <span class="s1">&#39;adult&#39;</span><span class="p">,</span> <span class="s1">&#39;senior&#39;</span><span class="p">}:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is a(n)&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterating over a list
+The patient is a(n) child
+The patient is a(n) teenager
+The patient is a(n) adult
+The patient is a(n) senior
+
+Iterating over a set
+The patient is a(n) teenager
+The patient is a(n) senior
+The patient is a(n) child
+The patient is a(n) adult
+</pre></div>
+</div>
+</div>
+</div>
+<p>To be able to interate through a range of numbers, we can use the <code class="docutils literal notranslate"><span class="pre">range(start,</span> <span class="pre">end,</span> <span class="pre">step)</span></code> function. It returns a list of integers. It takes in as an argument:</p>
+<ul class="simple">
+<li><p>the <strong>starting</strong> value: optional (default to 0) - The first value the variable is set to</p></li>
+<li><p>the <strong>end</strong> value: mandatory - The loop is carried out as long as the variable is less than this value (not less than or equal to!)</p></li>
+<li><p>the <strong>step size</strong>: optional (defaults to 1) -  For every loop this value is added to the variable</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Normale range function&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="s2">&quot;years old.&quot;</span><span class="p">)</span> 
+
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Range without defined step size (default is 1) or start value (default is 0)&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="s2">&quot;years old.&quot;</span><span class="p">)</span> <span class="c1"># Note that the last number is not included in the range</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Normale range function
+The patient is 1 years old.
+The patient is 3 years old.
+The patient is 5 years old.
+
+Range without defined step size (default is 1) or start value (default is 0)
+The patient is 0 years old.
+The patient is 1 years old.
+The patient is 2 years old.
+The patient is 3 years old.
+The patient is 4 years old.
+The patient is 5 years old.
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also iterate through a dictionaries keys or values. Using the <code class="docutils literal notranslate"><span class="pre">in</span></code> condition as for lists would iterate through the dictionaries keys. The keys can then be used to access the corresponding value. Or you can use the method <code class="docutils literal notranslate"><span class="pre">.values()</span></code> on the dictionary when using the <code class="docutils literal notranslate"><span class="pre">in</span></code> condition to directly loop through its values. Lastly, to iterate through keys and values at the same time you can use the <code class="docutils literal notranslate"><span class="pre">.items()</span></code> method. Note that since we get two entries for each loop, you need to define two variables in the <code class="docutils literal notranslate"><span class="pre">for</span></code> condition block:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a dictionary</span>
+<span class="n">age_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;child&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="s1">&#39;teenager&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+    <span class="s1">&#39;adult&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s1">&#39;senior&#39;</span><span class="p">:</span> <span class="mi">70</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The dictionary is:&quot;</span><span class="p">,</span> <span class="n">age_dict</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Iterating over a dictionary keys:&quot;</span><span class="p">)</span>
+<span class="c1"># Iterate through the dictionary keys</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">age_dict</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is a(n)&quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;They are&quot;</span><span class="p">,</span> <span class="n">age_dict</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="s2">&quot;years old.&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Iterating over a dictionary values:&quot;</span><span class="p">)</span>
+<span class="c1"># Iterate through the dictionary values</span>
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">age_dict</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="s2">&quot;years old.&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Iterating over a dictionary keys and values at the same time:&quot;</span><span class="p">)</span>
+<span class="c1"># Iterate through the dictionary keys and values</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">age_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is a(n)&quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;They are&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="s2">&quot;years old.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The dictionary is: {&#39;child&#39;: 10, &#39;teenager&#39;: 16, &#39;adult&#39;: 30, &#39;senior&#39;: 70}
+
+Iterating over a dictionary keys:
+The patient is a(n) child
+They are 10 years old.
+The patient is a(n) teenager
+They are 16 years old.
+The patient is a(n) adult
+They are 30 years old.
+The patient is a(n) senior
+They are 70 years old.
+
+Iterating over a dictionary values:
+The patient is 10 years old.
+The patient is 16 years old.
+The patient is 30 years old.
+The patient is 70 years old.
+
+Iterating over a dictionary keys and values at the same time:
+The patient is a(n) child
+They are 10 years old.
+The patient is a(n) teenager
+They are 16 years old.
+The patient is a(n) adult
+They are 30 years old.
+The patient is a(n) senior
+They are 70 years old.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">.items()</span></code> method on the dictionary allowed you to loop through keys and values simultaneously. The function <code class="docutils literal notranslate"><span class="pre">zip</span></code> offers a generalisation of this approach for any multiple data structure that you want to loop through at the same time. For instance, imagine that you have two lists and in the first iteration you need the first value in each of the lists, then the second, and so on. You can simply call <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">variable_1,variable_2</span> <span class="pre">in</span> <span class="pre">zip(list_1,list_2):</span></code>. The first variable maps to the first entry in the <code class="docutils literal notranslate"><span class="pre">zip</span></code> function and the second variable to the second entry. You can loop through as many data structures at the same time as you want using this approach, just make sure the number of variables and inputs into <code class="docutils literal notranslate"><span class="pre">zip</span></code> are the same.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a list of ages</span>
+<span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="c1"># Define a list of age groups</span>
+<span class="n">age_groups</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;child&#39;</span><span class="p">,</span> <span class="s1">&#39;teenager&#39;</span><span class="p">,</span> <span class="s1">&#39;adult&#39;</span><span class="p">,</span> <span class="s1">&#39;senior&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">age</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ages</span><span class="p">,</span> <span class="n">age_groups</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="s2">&quot;years old.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;They are a(n)&quot;</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The patient is 9 years old.
+They are a(n) child
+The patient is 14 years old.
+They are a(n) teenager
+The patient is 20 years old.
+They are a(n) adult
+The patient is 90 years old.
+They are a(n) senior
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="nested-conditionals">
+<h2>6.5. Nested Conditionals<a class="headerlink" href="#nested-conditionals" title="Link to this heading">#</a></h2>
+<p>Sometimes you may need to check another condition <strong>inside</strong> a conditional block.
+This is called a <strong>nested conditional</strong>.</p>
+<p>In the following example:</p>
+<ul class="simple">
+<li><p>First we loop through different ages using the for loop</p></li>
+<li><p>Then inside the block we check they are at least 18</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="s2">&quot;years old.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is an adult.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is a minor.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The patient is 12 years old.
+The patient is a minor.
+
+The patient is 14 years old.
+The patient is a minor.
+
+The patient is 16 years old.
+The patient is a minor.
+
+The patient is 18 years old.
+The patient is an adult.
+
+The patient is 20 years old.
+The patient is an adult.
+
+The patient is 22 years old.
+The patient is an adult.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Tip About Readibility</p>
+<p>Avoid nesting too many conditionals inside each other.<br />
+Deeply nested code can become hard to read.<br />
+Sometimes it is better to reorganise your conditions to keep your code clean and understandable.</p>
+</div>
+</section>
+<section id="stopping-loops">
+<h2>6.6. Stopping loops<a class="headerlink" href="#stopping-loops" title="Link to this heading">#</a></h2>
+<p>Sometimes you want your loops to stop prematurely. For this you can use the <code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> statements. <code class="docutils literal notranslate"><span class="pre">Break</span></code> fully stops the loop and moves on to the next code block. In contrast, <code class="docutils literal notranslate"><span class="pre">continue</span></code> stops the current iteration and moves on to the start of the loop for the next iteration step. These statements are very useful in combination with if-statements and when you might get stuck in an infinite loop. Compare the two examples that only differ in whether we use <code class="docutils literal notranslate"><span class="pre">break</span></code> or <code class="docutils literal notranslate"><span class="pre">continue</span></code> to better understand their difference:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using a break statement to stop the loop</span>
+<span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="s2">&quot;years old.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+        <span class="k">break</span> <span class="c1"># Stop the loop here</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is a minor.&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Finished iterating over the ages.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The patient is 12 years old.
+The patient is a minor.
+
+The patient is 14 years old.
+The patient is a minor.
+
+The patient is 16 years old.
+The patient is a minor.
+
+The patient is 18 years old.
+
+Finished iterating over the ages.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using a continue statement to stop the loop (iteration)</span>
+<span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="s2">&quot;years old.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+        <span class="k">continue</span> <span class="c1"># Stop the current iteration and move on to the next one</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The patient is a minor.&quot;</span><span class="p">)</span> <span class="c1"># this line is skipped if age &gt;= 18</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Finished iterating over the ages.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The patient is 12 years old.
+The patient is a minor.
+
+The patient is 14 years old.
+The patient is a minor.
+
+The patient is 16 years old.
+The patient is a minor.
+
+The patient is 18 years old.
+
+The patient is 20 years old.
+
+The patient is 22 years old.
+
+Finished iterating over the ages.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="quick-practice">
+<h2>6.7. Quick Practice<a class="headerlink" href="#quick-practice" title="Link to this heading">#</a></h2>
+<p>Try this combined challenge:</p>
+<ul class="simple">
+<li><p>Create a variable <code class="docutils literal notranslate"><span class="pre">temperature</span></code> with a value of your choice.</p></li>
+<li><p>Write an <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code> block:</p>
+<ul>
+<li><p>Print <code class="docutils literal notranslate"><span class="pre">&quot;It's</span> <span class="pre">cold!&quot;</span></code> if the temperature is below 10 degrees.</p></li>
+<li><p>Print <code class="docutils literal notranslate"><span class="pre">&quot;It's</span> <span class="pre">moderate!&quot;</span></code> if the temperature is between 10 and 20 degrees (inclusive).</p></li>
+<li><p>Otherwise, print <code class="docutils literal notranslate"><span class="pre">&quot;It's</span> <span class="pre">warm!&quot;</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Add <strong>nested conditionals</strong>:</p>
+<ul>
+<li><p>Inside the <code class="docutils literal notranslate"><span class="pre">&quot;It's</span> <span class="pre">warm!&quot;</span></code> block, check if the temperature is greater than 30 degrees.</p>
+<ul>
+<li><p>If so, print an additional message: <code class="docutils literal notranslate"><span class="pre">&quot;It's</span> <span class="pre">hot!&quot;</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Put the whole <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code> block inside a while loop:</p>
+<ul>
+<li><p>Set a maximum temperature (greater than 30) that your temperature should get to in the conditional statement</p></li>
+<li><p>After the if blocks at the end (but still inside) the while block update the temperature by 5 degrees plus</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">temperature</span> <span class="o">=</span> <span class="mi">9</span>
+
+<span class="k">while</span> <span class="n">temperature</span> <span class="o">&lt;</span> <span class="mi">40</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">temperature</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;It&#39;s cold!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">temperature</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;It&#39;s moderate!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;It&#39;s warm!&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;It&#39;s hot!&quot;</span><span class="p">)</span>
+    
+    <span class="n">temperature</span> <span class="o">=</span> <span class="n">temperature</span> <span class="o">+</span> <span class="mi">5</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The temperature is now&quot;</span><span class="p">,</span> <span class="n">temperature</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanane-issa/python-crash-course",
+            ref: "hanane",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./module2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Module2_5_DataStructures.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">5. Data Structures</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Module2_7_ErrorHandling.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">7. Error Handling</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-conditional-block">6.1. What is a Conditional Block?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-if-else-statement">6.2. The <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">-</span> <span class="pre">else</span></code> Statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-while-loop">6.3. The <code class="docutils literal notranslate"><span class="pre">while</span></code> Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-for-loop">6.4. The <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-conditionals">6.5. Nested Conditionals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stopping-loops">6.6. Stopping loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">6.7. Quick Practice</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By University of Edinburgh, School of Informatics
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

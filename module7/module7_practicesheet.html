@@ -1,0 +1,1128 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Module 7 Practice Sheet &#8212; Python Crash Course</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5349f25f" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=75ac44fa" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'module7/module7_practicesheet';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Python Crash Course - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Python Crash Course - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction to Python for Biomedical Innovation 🧬🐍
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module1/module_1a_settingup.html">Module 1: Setting Up</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1b_terminal.html">Python in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1c_vscode.html">Python in VSCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1d_anaconda.html">Python in Anaconda Navigator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1f_packages.html">Installing Python Packages</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Module 1: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 3: Introduction to Numpy</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module4/module4.html">Module 4: Introduction to Pandas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module4/module4a.html">Module 4a: Creating a pandas dataframe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/module4b.html">Module 4b: Selecting rows and columns in pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/module4c.html">Module 4b: Expanding dataframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/module4d.html">Module 4d: Saving and loading a dataframe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/module4e.html">Module 4e: Exploratory data analysis</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module5/intro.html">Module 5: Introduction to Data Visualization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module5/data_visualization.html">Data visualization with matpotlib and seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/module5_examples.html">Importing packages</a></li>
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module6/module_6_functions.html">Module 6: Introduction to Functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6a_basics.html">Module 6a: Function Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6b_return-vs-print.html">Module 6b: Return Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6c_local-vs-global.html">Module 6c: Local vs Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6d_docstrings.html">Module 6d: Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6e_params-args.html">Module 6e: Parameters and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6f_extras.html">Module 6f: Extra (OPTIONAL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module8/Module8_Questions.html">Module 8: Final Exercice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module8/Module8_Solutions.html">M8: Final Practice on a Heart Disease Dataset (with Solutions)</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/hanane-issa/python-crash-course/hanane?urlpath=lab/tree/module7/module7_practicesheet.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/hanane-issa/python-crash-course/blob/hanane/module7/module7_practicesheet.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanane-issa/python-crash-course" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanane-issa/python-crash-course/issues/new?title=Issue%20on%20page%20%2Fmodule7/module7_practicesheet.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/module7/module7_practicesheet.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Module 7 Practice Sheet</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-subset-the-dataset">Step 1: Subset the dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-define-the-class">Step 2: Define the class</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task">Task:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-add-a-method-to-display-info">Step 3: Add a method to display info</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-add-a-method-to-evaluate-stroke-risk">Step 4: Add a method to evaluate stroke risk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-create-a-helper-function-to-extract-data-from-a-row">Step 5: Create a helper function to extract data from a row</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-test-your-class">Step 6: Test your class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-child-classes-and-inheritance">Step 7: Child Classes and Inheritance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-create-a-class-method-to-improve-the-code">🌟 OPTIONAL: Create a Class Method to Improve the Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-patient-class-with-class-method">Step 1: Patient class with class method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-extension-to-child-classes">Step 2: extension to child classes</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="module-7-practice-sheet">
+<h1>Module 7 Practice Sheet<a class="headerlink" href="#module-7-practice-sheet" title="Link to this heading">#</a></h1>
+<p>This notebook will guide you step-by-step to create a Python class to represent a patient from the Kaggle Stroke Prediction dataset.</p>
+<p>You will:</p>
+<ul class="simple">
+<li><p>Filter the dataset to the relevant columns</p></li>
+<li><p>Create a class <code class="docutils literal notranslate"><span class="pre">Patient</span></code></p></li>
+<li><p>Add attributes and methods</p></li>
+<li><p>Create objects from DataFrame rows</p></li>
+<li><p>Analyze patients for stroke risk</p></li>
+</ul>
+<p>This Patient class represents a single row in the dataset — i.e., one individual patient’s health profile.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup code; make sure to run this if using Binder or Colab</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;shared&#39;</span><span class="p">)))</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">setup_code</span>
+<span class="n">stroke_data</span> <span class="o">=</span> <span class="n">setup_code</span><span class="o">.</span><span class="n">stroke_data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="step-1-subset-the-dataset">
+<h2>Step 1: Subset the dataset<a class="headerlink" href="#step-1-subset-the-dataset" title="Link to this heading">#</a></h2>
+<p>We’re already loaded the dataset as <code class="docutils literal notranslate"><span class="pre">stroke_data</span></code>. Subset it to the following columns:</p>
+<ul class="simple">
+<li><p>id</p></li>
+<li><p>gender</p></li>
+<li><p>age</p></li>
+<li><p>hypertension</p></li>
+<li><p>heart_disease</p></li>
+<li><p>avg_glucose_level</p></li>
+<li><p>bmi</p></li>
+<li><p>smoking_status</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details><summary>Solution</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">stroke_data_filtered</span> <span class="o">=</span> <span class="n">stroke_data</span><span class="p">[[</span>
+    <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;hypertension&#39;</span><span class="p">,</span> <span class="s1">&#39;heart_disease&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;avg_glucose_level&#39;</span><span class="p">,</span> <span class="s1">&#39;bmi&#39;</span><span class="p">,</span> <span class="s1">&#39;smoking_status&#39;</span><span class="p">]]</span>
+
+<span class="n">stroke_data_filtered</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="step-2-define-the-class">
+<h2>Step 2: Define the class<a class="headerlink" href="#step-2-define-the-class" title="Link to this heading">#</a></h2>
+<p>Create a class called <code class="docutils literal notranslate"><span class="pre">Patient</span></code> that stores these 8 attributes. Each of these attributes should be an input into the constructor. Do not add methods yet.</p>
+<section id="task">
+<h3>Task:<a class="headerlink" href="#task" title="Link to this heading">#</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">__init__</span></code> to initialize the class with 8 attributes: id, gender, age, hypertension, heart_disease, avg_glucose_level, bmi, and smoking_status.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details><summary>Solution</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Patient</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">gender</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">hypertension</span><span class="p">,</span> <span class="n">heart_disease</span><span class="p">,</span> <span class="n">avg_glucose_level</span><span class="p">,</span> <span class="n">bmi</span><span class="p">,</span> <span class="n">smoking_status</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gender</span> <span class="o">=</span> <span class="n">gender</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hypertension</span> <span class="o">=</span> <span class="n">hypertension</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">heart_disease</span> <span class="o">=</span> <span class="n">heart_disease</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">avg_glucose_level</span> <span class="o">=</span> <span class="n">avg_glucose_level</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bmi</span> <span class="o">=</span> <span class="n">bmi</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">smoking_status</span> <span class="o">=</span> <span class="n">smoking_status</span>       
+</pre></div>
+</div>
+</section>
+</section>
+<section id="step-3-add-a-method-to-display-info">
+<h2>Step 3: Add a method to display info<a class="headerlink" href="#step-3-add-a-method-to-display-info" title="Link to this heading">#</a></h2>
+<p>Add a method <code class="docutils literal notranslate"><span class="pre">display_info(self)</span></code> that prints all attributes of the patient in a readable format.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details><summary>Solution</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Patient ID: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Gender: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">gender</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Age: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hypertension: </span><span class="si">{</span><span class="s1">&#39;Yes&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">hypertension</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;No&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Heart Disease: </span><span class="si">{</span><span class="s1">&#39;Yes&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">heart_disease</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;No&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average Glucose Level: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">avg_glucose_level</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BMI: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">bmi</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Smoking Status: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">smoking_status</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="step-4-add-a-method-to-evaluate-stroke-risk">
+<h2>Step 4: Add a method to evaluate stroke risk<a class="headerlink" href="#step-4-add-a-method-to-evaluate-stroke-risk" title="Link to this heading">#</a></h2>
+<p>Add a method <code class="docutils literal notranslate"><span class="pre">is_high_risk(self)</span></code> that returns True if any of the following conditions are met:</p>
+<ul class="simple">
+<li><p>age &gt; 60</p></li>
+<li><p>hypertension == 1</p></li>
+<li><p>heart_disease == 1</p></li>
+<li><p>avg_glucose_level &gt; 150</p></li>
+<li><p>bmi &gt; 30 (and not missing)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details><summary>Solution</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">is_high_risk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">60</span> <span class="ow">or</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">hypertension</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">heart_disease</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">avg_glucose_level</span> <span class="o">&gt;</span> <span class="mi">150</span> <span class="ow">or</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bmi</span> <span class="o">!=</span> <span class="s2">&quot;N/A&quot;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">)</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="step-5-create-a-helper-function-to-extract-data-from-a-row">
+<h2>Step 5: Create a helper function to extract data from a row<a class="headerlink" href="#step-5-create-a-helper-function-to-extract-data-from-a-row" title="Link to this heading">#</a></h2>
+<p>Create a helper function outside the class that takes a row from the DataFrame and a class (default: Patient) as input, and returns an instance of that class.</p>
+<p>This makes the function flexible and reusable with child classes later on.</p>
+<p>The function should:</p>
+<ul class="simple">
+<li><p>take in a row of the filtered stroke dataset,</p></li>
+<li><p>check whether the row has a BMI value,</p></li>
+<li><p>set the BMI to “N/A” if it’s missing,</p></li>
+<li><p>and return an instance of the specified class using the row’s values.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details><summary>Solution</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Helper function to extract data from row</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">create_patient_from_row</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">Patient</span><span class="p">):</span>
+    <span class="n">bmi</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;bmi&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">bmi</span><span class="p">):</span>
+        <span class="n">bmi</span> <span class="o">=</span> <span class="s2">&quot;N/A&quot;</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;hypertension&#39;</span><span class="p">],</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;heart_disease&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;avg_glucose_level&#39;</span><span class="p">],</span> <span class="n">bmi</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;smoking_status&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="step-6-test-your-class">
+<h2>Step 6: Test your class<a class="headerlink" href="#step-6-test-your-class" title="Link to this heading">#</a></h2>
+<p>Now that you have all elements of your <code class="docutils literal notranslate"><span class="pre">Patient</span></code> class, make sure to combine them to get the code running properly. You can also click on the code below to see it.</p>
+<p>Afterwards, use the helper function to create an instance from a DataFrame row.</p>
+<details><summary>Full code for Patient class</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Patient class without class method</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Patient</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">gender</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">hypertension</span><span class="p">,</span> <span class="n">heart_disease</span><span class="p">,</span> <span class="n">avg_glucose_level</span><span class="p">,</span> <span class="n">bmi</span><span class="p">,</span> <span class="n">smoking_status</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gender</span> <span class="o">=</span> <span class="n">gender</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hypertension</span> <span class="o">=</span> <span class="n">hypertension</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">heart_disease</span> <span class="o">=</span> <span class="n">heart_disease</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">avg_glucose_level</span> <span class="o">=</span> <span class="n">avg_glucose_level</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bmi</span> <span class="o">=</span> <span class="n">bmi</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">smoking_status</span> <span class="o">=</span> <span class="n">smoking_status</span>   
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Patient ID: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Gender: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">gender</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Age: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hypertension: </span><span class="si">{</span><span class="s1">&#39;Yes&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">hypertension</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;No&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Heart Disease: </span><span class="si">{</span><span class="s1">&#39;Yes&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">heart_disease</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;No&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average Glucose Level: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">avg_glucose_level</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BMI: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">bmi</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Smoking Status: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">smoking_status</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">is_high_risk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">60</span> <span class="ow">or</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">hypertension</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">heart_disease</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">avg_glucose_level</span> <span class="o">&gt;</span> <span class="mi">150</span> <span class="ow">or</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bmi</span> <span class="o">!=</span> <span class="s2">&quot;N/A&quot;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">)</span>
+        <span class="p">)</span>
+
+<span class="c1"># Separate function for patient row extraction</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_patient_from_row</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">Patient</span><span class="p">):</span>
+    <span class="n">bmi</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;bmi&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">bmi</span><span class="p">):</span>
+        <span class="n">bmi</span> <span class="o">=</span> <span class="s2">&quot;N/A&quot;</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">],</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">],</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;hypertension&#39;</span><span class="p">],</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;heart_disease&#39;</span><span class="p">],</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;avg_glucose_level&#39;</span><span class="p">],</span>
+        <span class="n">bmi</span><span class="p">,</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;smoking_status&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+<p>To test your code, use the first row of the DataFrame to create a <code class="docutils literal notranslate"><span class="pre">Patient</span></code> object using <code class="docutils literal notranslate"><span class="pre">create_patient_from_row(row)</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details><summary>Solution </summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">row1</span> <span class="o">=</span> <span class="n">stroke_data_filtered</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">patient1</span> <span class="o">=</span> <span class="n">create_patient_from_row</span><span class="p">(</span><span class="n">row1</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">Patient</span><span class="p">)</span>      
+<span class="n">patient1</span><span class="o">.</span><span class="n">display_info</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">High Risk:&quot;</span><span class="p">,</span> <span class="n">patient1</span><span class="o">.</span><span class="n">is_high_risk</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="step-7-child-classes-and-inheritance">
+<h2>Step 7: Child Classes and Inheritance<a class="headerlink" href="#step-7-child-classes-and-inheritance" title="Link to this heading">#</a></h2>
+<p>Now that you’ve created a Patient class, let’s explore how you can use inheritance to create specialized patient types.</p>
+<ol class="arabic simple">
+<li><p>Create two child classes that inherit from Patient:</p></li>
+</ol>
+<ul class="simple">
+<li><p>MalePatient</p></li>
+<li><p>FemalePatient</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Override the display_info method in each child class to add a custom message:</p></li>
+</ol>
+<ul class="simple">
+<li><p>For MalePatient, after displaying info, print:
+“Note: This is a male patient.”</p></li>
+<li><p>For FemalePatient, after displaying info, print:
+“Note: This is a female patient.”</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>(Optional) Let’s assume that the threshold for BMI risk might be different for female patients.
+Override the is_high_risk method in FemalePatient to be a bit stricter by adding this condition:
+Return True if BMI &gt; 28 (instead of 30), in addition to the original conditions.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details><summary>Solution</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MalePatient</span><span class="p">(</span><span class="n">Patient</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">display_info</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Note: This is a male patient.&quot;</span><span class="p">)</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">FemalePatient</span><span class="p">(</span><span class="n">Patient</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">display_info</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Note: This is a female patient.&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">is_high_risk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">original_risk</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">is_high_risk</span><span class="p">()</span>
+        <span class="n">stricter_bmi</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bmi</span> <span class="o">!=</span> <span class="s2">&quot;N/A&quot;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">28</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">original_risk</span> <span class="ow">or</span> <span class="n">stricter_bmi</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">create_patient_from_row</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">Patient</span><span class="p">):</span>
+    <span class="n">bmi</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;bmi&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">bmi</span><span class="p">):</span>
+        <span class="n">bmi</span> <span class="o">=</span> <span class="s2">&quot;N/A&quot;</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;hypertension&#39;</span><span class="p">],</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;heart_disease&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;avg_glucose_level&#39;</span><span class="p">],</span> <span class="n">bmi</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;smoking_status&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+<p>Test your child classes to make sure the code works properly.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details><summary>Solution</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">row_male</span> <span class="o">=</span> <span class="n">stroke_data_filtered</span><span class="p">[</span><span class="n">stroke_data_filtered</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Male&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">row_female</span> <span class="o">=</span> <span class="n">stroke_data_filtered</span><span class="p">[</span><span class="n">stroke_data_filtered</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Female&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">male_patient</span> <span class="o">=</span> <span class="n">create_patient_from_row</span><span class="p">(</span><span class="n">row_male</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">MalePatient</span><span class="p">)</span>
+<span class="n">female_patient</span> <span class="o">=</span> <span class="n">create_patient_from_row</span><span class="p">(</span><span class="n">row_female</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">FemalePatient</span><span class="p">)</span>
+
+<span class="n">male_patient</span><span class="o">.</span><span class="n">display_info</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;High Risk:&quot;</span><span class="p">,</span> <span class="n">male_patient</span><span class="o">.</span><span class="n">is_high_risk</span><span class="p">())</span>
+
+<span class="n">female_patient</span><span class="o">.</span><span class="n">display_info</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;High Risk:&quot;</span><span class="p">,</span> <span class="n">female_patient</span><span class="o">.</span><span class="n">is_high_risk</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="optional-create-a-class-method-to-improve-the-code">
+<h2>🌟 OPTIONAL: Create a Class Method to Improve the Code<a class="headerlink" href="#optional-create-a-class-method-to-improve-the-code" title="Link to this heading">#</a></h2>
+<p>To make the code more structured and object-oriented, we moved the logic from the external helper function <code class="docutils literal notranslate"><span class="pre">create_patient_from_row()</span></code> into the class itself using a <code class="docutils literal notranslate"><span class="pre">&#64;classmethod</span></code>.</p>
+<p>Both approaches do the same job:
+They handle missing BMI values and construct an instance of Patient (or a child class like FemalePatient) from a row in the DataFrame.</p>
+<p>Why a class method? It keeps the data-related logic inside the class, making the code easier to maintain and extend—especially when working with child classes.</p>
+<p>Your tasks:</p>
+<ol class="arabic">
+<li><p>Add a method to the <code class="docutils literal notranslate"><span class="pre">Patient</span></code> class called <code class="docutils literal notranslate"><span class="pre">from_dataframe_row</span></code> that takes a row from the DataFrame and returns an instance of the class.</p>
+<p>This will allow you to write:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">patient</span> <span class="o">=</span> <span class="n">Patient</span><span class="o">.</span><span class="n">from_dataframe_row</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Extend this method in the child classes if needed.</p></li>
+</ol>
+<p>Check the Hint to learn more about class methods.</p>
+<details>
+<summary>💡 Hint</summary>
+<p>The <code class="docutils literal notranslate"><span class="pre">&#64;classmethod</span></code> decorator allows us to create methods that are called <strong>on the class itself</strong>, not on an instance.<br />
+The first parameter, <code class="docutils literal notranslate"><span class="pre">cls</span></code>, refers to the <strong>class</strong> — just like <code class="docutils literal notranslate"><span class="pre">self</span></code> refers to an <strong>instance</strong> (a specific object).</p>
+<p>Think of it like this:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> is “me” — the specific patient object</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cls</span></code> is “the blueprint” — the class that builds new patient objects</p></li>
+</ul>
+<hr class="docutils" />
+<p>This class method is useful when you want to create an object from data that isn’t in the usual parameter format — for example, a row from a DataFrame.</p>
+<hr class="docutils" />
+<p><strong>How does this compare to <code class="docutils literal notranslate"><span class="pre">__init__</span></code>?</strong><br />
+The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method initializes the object from explicit parameters you provide.<br />
+But sometimes your input is more complex (like a DataFrame row), so the class method helps by extracting and preparing data before calling <code class="docutils literal notranslate"><span class="pre">__init__</span></code>.</p>
+<hr class="docutils" />
+<p>You can learn more about the differences between instance methods, class methods, and static methods here:<br />
+<a class="reference external" href="https://realpython.com/instance-class-and-static-methods-demystified/">Real Python: Instance, Class, and Static Methods Demystified</a></p>
+</details>
+<section id="step-1-patient-class-with-class-method">
+<h3>Step 1: Patient class with class method<a class="headerlink" href="#step-1-patient-class-with-class-method" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here for STEP 1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details><summary>Class Method Solution</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_dataframe_row</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
+        <span class="n">bmi</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;bmi&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">bmi</span><span class="p">):</span>
+            <span class="n">bmi</span> <span class="o">=</span> <span class="s2">&quot;N/A&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">row</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">],</span>
+            <span class="n">row</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">],</span>
+            <span class="n">row</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span>
+            <span class="n">row</span><span class="p">[</span><span class="s1">&#39;hypertension&#39;</span><span class="p">],</span>
+            <span class="n">row</span><span class="p">[</span><span class="s1">&#39;heart_disease&#39;</span><span class="p">],</span>
+            <span class="n">row</span><span class="p">[</span><span class="s1">&#39;avg_glucose_level&#39;</span><span class="p">],</span>
+            <span class="n">bmi</span><span class="p">,</span>
+            <span class="n">row</span><span class="p">[</span><span class="s1">&#39;smoking_status&#39;</span><span class="p">]</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+<details><summary>Solution for complete new Patient class</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Patient</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">gender</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">hypertension</span><span class="p">,</span> <span class="n">heart_disease</span><span class="p">,</span> <span class="n">avg_glucose_level</span><span class="p">,</span> <span class="n">bmi</span><span class="p">,</span> <span class="n">smoking_status</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gender</span> <span class="o">=</span> <span class="n">gender</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hypertension</span> <span class="o">=</span> <span class="n">hypertension</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">heart_disease</span> <span class="o">=</span> <span class="n">heart_disease</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">avg_glucose_level</span> <span class="o">=</span> <span class="n">avg_glucose_level</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bmi</span> <span class="o">=</span> <span class="n">bmi</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">smoking_status</span> <span class="o">=</span> <span class="n">smoking_status</span>   
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Patient ID: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Gender: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">gender</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Age: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hypertension: </span><span class="si">{</span><span class="s1">&#39;Yes&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">hypertension</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;No&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Heart Disease: </span><span class="si">{</span><span class="s1">&#39;Yes&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">heart_disease</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;No&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average Glucose Level: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">avg_glucose_level</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BMI: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">bmi</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Smoking Status: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">smoking_status</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">is_high_risk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">60</span> <span class="ow">or</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">hypertension</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">heart_disease</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">avg_glucose_level</span> <span class="o">&gt;</span> <span class="mi">150</span> <span class="ow">or</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bmi</span> <span class="o">!=</span> <span class="s2">&quot;N/A&quot;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">)</span>
+        <span class="p">)</span>
+    
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_dataframe_row</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
+        <span class="n">bmi</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;bmi&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">bmi</span><span class="p">):</span>
+            <span class="n">bmi</span> <span class="o">=</span> <span class="s2">&quot;N/A&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">row</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">],</span>
+            <span class="n">row</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">],</span>
+            <span class="n">row</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span>
+            <span class="n">row</span><span class="p">[</span><span class="s1">&#39;hypertension&#39;</span><span class="p">],</span>
+            <span class="n">row</span><span class="p">[</span><span class="s1">&#39;heart_disease&#39;</span><span class="p">],</span>
+            <span class="n">row</span><span class="p">[</span><span class="s1">&#39;avg_glucose_level&#39;</span><span class="p">],</span>
+            <span class="n">bmi</span><span class="p">,</span>
+            <span class="n">row</span><span class="p">[</span><span class="s1">&#39;smoking_status&#39;</span><span class="p">]</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+<p>Test your new Patient class to make sure it works correctly.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details><summary>Test code for new Patient class</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">row1</span> <span class="o">=</span> <span class="n">stroke_data_filtered</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">patient1</span> <span class="o">=</span> <span class="n">Patient</span><span class="o">.</span><span class="n">from_dataframe_row</span><span class="p">(</span><span class="n">row1</span><span class="p">)</span>
+<span class="n">patient1</span><span class="o">.</span><span class="n">display_info</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">High Risk:&quot;</span><span class="p">,</span> <span class="n">patient1</span><span class="o">.</span><span class="n">is_high_risk</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="step-2-extension-to-child-classes">
+<h3>Step 2: extension to child classes<a class="headerlink" href="#step-2-extension-to-child-classes" title="Link to this heading">#</a></h3>
+<p>Next, try to extend this to your child classes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code for STEP 2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<details><summary>Solution for new child classes</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">FemalePatient</span><span class="p">(</span><span class="n">Patient</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">display_info</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Note: This is a female patient.&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">is_high_risk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">original_risk</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">is_high_risk</span><span class="p">()</span>
+        <span class="n">stricter_bmi</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bmi</span> <span class="o">!=</span> <span class="s2">&quot;N/A&quot;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">28</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">original_risk</span> <span class="ow">or</span> <span class="n">stricter_bmi</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_dataframe_row</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Patient</span><span class="o">.</span><span class="n">from_dataframe_row</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MalePatient</span><span class="p">(</span><span class="n">Patient</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">display_info</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Note: This is a male patient.&quot;</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_dataframe_row</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Patient</span><span class="o">.</span><span class="n">from_dataframe_row</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<details><summary>Test code for new child classes</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">row_male</span> <span class="o">=</span> <span class="n">stroke_data_filtered</span><span class="p">[</span><span class="n">stroke_data_filtered</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Male&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">row_female</span> <span class="o">=</span> <span class="n">stroke_data_filtered</span><span class="p">[</span><span class="n">stroke_data_filtered</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Female&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">male_patient</span> <span class="o">=</span> <span class="n">MalePatient</span><span class="o">.</span><span class="n">from_dataframe_row</span><span class="p">(</span><span class="n">row_male</span><span class="p">)</span>
+<span class="n">female_patient</span> <span class="o">=</span> <span class="n">FemalePatient</span><span class="o">.</span><span class="n">from_dataframe_row</span><span class="p">(</span><span class="n">row_female</span><span class="p">)</span>
+
+<span class="n">male_patient</span><span class="o">.</span><span class="n">display_info</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;High Risk:&quot;</span><span class="p">,</span> <span class="n">male_patient</span><span class="o">.</span><span class="n">is_high_risk</span><span class="p">())</span>
+
+<span class="n">female_patient</span><span class="o">.</span><span class="n">display_info</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;High Risk:&quot;</span><span class="p">,</span> <span class="n">female_patient</span><span class="o">.</span><span class="n">is_high_risk</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanane-issa/python-crash-course",
+            ref: "hanane",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./module7"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-subset-the-dataset">Step 1: Subset the dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-define-the-class">Step 2: Define the class</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task">Task:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-add-a-method-to-display-info">Step 3: Add a method to display info</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-add-a-method-to-evaluate-stroke-risk">Step 4: Add a method to evaluate stroke risk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-create-a-helper-function-to-extract-data-from-a-row">Step 5: Create a helper function to extract data from a row</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-test-your-class">Step 6: Test your class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-child-classes-and-inheritance">Step 7: Child Classes and Inheritance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-create-a-class-method-to-improve-the-code">🌟 OPTIONAL: Create a Class Method to Improve the Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-patient-class-with-class-method">Step 1: Patient class with class method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-extension-to-child-classes">Step 2: extension to child classes</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By University of Edinburgh, School of Informatics
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

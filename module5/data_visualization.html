@@ -191,16 +191,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Module 1: Practice Sheet</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../module2/Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_3_Variables.html">M2: Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_4_Operations.html">M2: Arimetic and Logical Operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_5_Strings.html">M2: Strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_6_DataStructures.html">M2: Data Structures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_7_ConditionalBlocks.html">M2: Conditional Blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_8_ErrorHandling.html">M2: Error Handling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module2/Module2_PracticeSheet1.html">M2: Practice Sheet</a></li>
-</ul>
-</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 3: Introduction to Numpy</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module4/module4.html">Module 4: Introduction to Pandas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module4/module4a.html">Module 4a: Creating a pandas dataframe</a></li>
@@ -229,6 +219,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../module6/module_6e_params-args.html">Module 6e: Parameters and Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/module_6f_extras.html">Module 6f: Extra (OPTIONAL)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module8/Module8_Questions.html">Module 8: Final Exercice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module8/Module8_Solutions.html">M8: Final Practice on a Heart Disease Dataset (with Solutions)</a></li>
 </ul>
 </details></li>
 </ul>
@@ -507,6 +501,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seaborn-and-distribution-visualization">Seaborn and distribution visualization</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#box-plot">Box plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-plot">Bar plot</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#violin-plot">Violin plot</a></li>
 </ul>
 </li>
@@ -916,7 +911,7 @@ The <code class="docutils literal notranslate"><span class="pre">plt.figure()</s
 </section>
 <section id="seaborn-and-distribution-visualization">
 <h2>Seaborn and distribution visualization<a class="headerlink" href="#seaborn-and-distribution-visualization" title="Link to this heading">#</a></h2>
-<p>If you think that the histogram is not enough to visualize the distribution, you might want to try box plot and violin plot. You can use the <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> package for that. Using <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> you can visualize another information in the figure by using color.</p>
+<p>If you think that the histogram is not enough to visualize the distribution, you might want to try box plot, bar plot, or violin plot. You can use the <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> package for that. Using <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> you can visualize another information in the figure by using color.</p>
 <section id="box-plot">
 <h3>Box plot<a class="headerlink" href="#box-plot" title="Link to this heading">#</a></h3>
 <p>We simply use the <code class="docutils literal notranslate"><span class="pre">sns.boxplot()</span></code> function to do the boxplot.</p>
@@ -933,6 +928,23 @@ The <code class="docutils literal notranslate"><span class="pre">plt.figure()</s
 </div>
 </div>
 <p>With the box plot, we can identify the outliers more easily. <code class="docutils literal notranslate"><span class="pre">fill=False</span></code> will tell <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> not to fill solid color inside the boxes, <code class="docutils literal notranslate"><span class="pre">gagp=.1</span></code> is the gap between the boxes for each category of the x axis.</p>
+</section>
+<section id="bar-plot">
+<h3>Bar plot<a class="headerlink" href="#bar-plot" title="Link to this heading">#</a></h3>
+<p>If you want to visualize different categories on the x axis, we could use a bar plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">stroke_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;gender&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;stroke&quot;</span> <span class="p">,</span><span class="n">errorbar</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Bar Plot of gender and age&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/24f0bd91f638f3ca526b953c8ad9d6128ca7d2047298f7f4f7b77c150da5abc3.png" src="../_images/24f0bd91f638f3ca526b953c8ad9d6128ca7d2047298f7f4f7b77c150da5abc3.png" />
+</div>
+</div>
+<p>If you want the error bars, just delete the parameter <code class="docutils literal notranslate"><span class="pre">errorbar=None</span></code>, the error bars are on by default.</p>
 </section>
 <section id="violin-plot">
 <h3>Violin plot<a class="headerlink" href="#violin-plot" title="Link to this heading">#</a></h3>
@@ -1068,7 +1080,7 @@ Now we can make the pairplot again:</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
 
@@ -1235,6 +1247,7 @@ We will create some values as the independent variable:</p>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seaborn-and-distribution-visualization">Seaborn and distribution visualization</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#box-plot">Box plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-plot">Bar plot</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#violin-plot">Violin plot</a></li>
 </ul>
 </li>

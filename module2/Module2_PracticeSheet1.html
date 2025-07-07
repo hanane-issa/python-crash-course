@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>M2: Practice Sheet &#8212; Python Crash Course</title>
+    <title>8. Practice Sheet &#8212; Python Crash Course</title>
   
   
   
@@ -63,8 +63,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'module2/Module2_PracticeSheet1';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction to NumPy" href="../module3/module3.html" />
-    <link rel="prev" title="M2: Error Handling" href="Module2_8_ErrorHandling.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -127,6 +125,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -182,7 +182,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module1/module_1a_settingup.html">Module 1: Setting Up</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1b_terminal.html">Python in Terminal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1c_vscode.html">Python in VSCode</a></li>
@@ -191,16 +191,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1f_packages.html">Installing Python Packages</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Module 1: Practice Sheet</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Module2_1%2C2_Intro.html">Module 2: Python Foundations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Module2_3_Variables.html">M2: Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Module2_4_Operations.html">M2: Arimetic and Logical Operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Module2_5_Strings.html">M2: Strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Module2_6_DataStructures.html">M2: Data Structures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Module2_7_ConditionalBlocks.html">M2: Conditional Blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Module2_8_ErrorHandling.html">M2: Error Handling</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">M2: Practice Sheet</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../module3/module3.html">Module 3: Introduction to Numpy</a></li>
@@ -231,6 +221,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../module6/module_6e_params-args.html">Module 6e: Parameters and Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/module_6f_extras.html">Module 6f: Extra (OPTIONAL)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/module_6g_PracticeSheet.html">Module 6: Practice Sheet</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module8/Module8_Questions.html">Module 8: Final Exercice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module8/Module8_Solutions.html">M8: Final Practice on a Heart Disease Dataset (with Solutions)</a></li>
 </ul>
 </details></li>
 </ul>
@@ -483,7 +477,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>M2: Practice Sheet</h1>
+    <h1>8. Practice Sheet</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -497,8 +491,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="m2-practice-sheet">
-<h1>M2: Practice Sheet<a class="headerlink" href="#m2-practice-sheet" title="Link to this heading">#</a></h1>
+  <section id="practice-sheet">
+<h1>8. Practice Sheet<a class="headerlink" href="#practice-sheet" title="Link to this heading">#</a></h1>
 <p>Congratulations, you have made it to the end of the second module!</p>
 <p>This module covered a lot of information very quickly, so this excercice sheet is to help you practice your gained knowledge. Ideally, you should either download this page or open it in GoogleColab / Binder (by clicking the spaceship icon on the top right), so that you can interact freely with it and add as many cells as you want. Other else you can also use the Live Button as before to run your code directly here.</p>
 <div class="tip admonition">
@@ -553,7 +547,7 @@ document.write(`
 </div>
 </div>
 <p>I’m sorry, I completely forgot about the diseases. Please append the list with the diseases tuple. I also realised that height and weight were switched around. Reassign the value at the height position to the weight value, and the value at the weight position to the height value.</p>
-<p>The list should now consist of the following entries: gender, age, height, weight, smoking status, and diseases. Print the full list to make sure everything is correct.</p>
+<p>The list should now consist of the following entries: <code class="docutils literal notranslate"><span class="pre">gender</span></code>, <code class="docutils literal notranslate"><span class="pre">age</span></code>, <code class="docutils literal notranslate"><span class="pre">height</span></code>, <code class="docutils literal notranslate"><span class="pre">weight</span></code>, <code class="docutils literal notranslate"><span class="pre">smoking</span> <span class="pre">status</span></code>, and <code class="docutils literal notranslate"><span class="pre">diseases</span></code>. Print the full list to make sure everything is correct.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">💡 Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -1005,24 +999,6 @@ You can combine it with other code like this:</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="Module2_8_ErrorHandling.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">M2: Error Handling</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../module3/module3.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction to NumPy</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
