@@ -14,7 +14,7 @@ kernelspec:
 
 
 
-## 💬 Need Help? Create a GitHub Issue
+## Need Help? Create a GitHub Issue
 
 If you run into **any problems** — whether it's with the notebook, the Jupyter Book, live coding, or instructions — you can **let us know by opening a GitHub issue**.
 
@@ -40,11 +40,11 @@ If you run into **any problems** — whether it's with the notebook, the Jupyter
    👉 \[[HERE](https://github.com/hanane-issa/python-crash-course)]
 
 
-![github_issues_tab]({static}/images/github-issue1.png)
+![github_issues_tab](/_static/images/github-issue1.png)
 2. Click on the **"Issues"** tab.
 
 
-![github_issues_create]({static}/images/github-issue2.png)
+![github_issues_create](/_static/images/github-issue2.png)
 3. Click **"New issue"** (green button).
 
 4. Add a **clear title**, like:
