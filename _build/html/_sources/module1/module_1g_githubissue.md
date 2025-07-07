@@ -36,7 +36,7 @@ If you run into **any problems** — whether it's with the notebook, the Jupyter
 
 ![locate_repo](/_static/images/locate_repo.png)
 
-1. Go to our course GitHub repository:
+1. Select the repository button from the upper right GitHub button, or click on our course GitHub repository link:
    👉 \[[HERE](https://github.com/hanane-issa/python-crash-course)]
 
 
