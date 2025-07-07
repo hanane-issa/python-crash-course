@@ -24,11 +24,11 @@ If you run into **any problems** — whether it's with the notebook, the Jupyter
    👉 \[[HERE](https://github.com/hanane-issa/python-crash-course)]
 
 
-![github_issues_tab](../_static/images/githus-issue1.png)
+![github_issues_tab]({static}/images/githus-issue1.png)
 2. Click on the **"Issues"** tab.
 
 
-![github_issues_create](../_static/images/githus-issue2.png)
+![github_issues_create]({static}/images/githus-issue2.png)
 3. Click **"New issue"** (green button).
 
 4. Add a **clear title**, like:
