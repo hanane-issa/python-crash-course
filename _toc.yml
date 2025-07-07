@@ -54,6 +54,13 @@ chapters:
   - file: module6/module_6f_extras.ipynb
   - file: module6/module_6g_PracticeSheet.ipynb
 
+- title: "Module 7: Introduction to Classes"
+  file: module7_intro-to-classes.ipynb
+  sections:
+  - file: module7/module7_practicesheet.ipynb
 
-
+- title: "Module 8: Final Exercice"
+  file: module8/Module8_Questions
+  sections:
+  - file: module8/Module8_Solutions
 
