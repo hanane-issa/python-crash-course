@@ -20,7 +20,7 @@ If you run into **any problems** — whether it's with the notebook, the Jupyter
 
 ### Method 1: from the Jupyter Book
 
-![open_issue]({static}/images/open_issue.png)
+![open_issue](/_static/images/open_issue.png)
 
 1. From the Jupyter book, you can navigate to the top bar where the GitHub icon is, and click on "Open Issue".
 
@@ -34,7 +34,7 @@ If you run into **any problems** — whether it's with the notebook, the Jupyter
 
 ### Method 2: via the Repository
 
-![locate_repo]({static}/images/locate_repo.png)
+![locate_repo](/_static/images/locate_repo.png)
 
 1. Go to our course GitHub repository:
    👉 \[[HERE](https://github.com/hanane-issa/python-crash-course)]
