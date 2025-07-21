@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=75ac44fa" />
@@ -188,7 +188,7 @@
 <li class="toctree-l2"><a class="reference internal" href="module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module_1f_packages.html">Installing Python Packages</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="module_1g_githubissue.html">💬 Need Help? Create a GitHub Issue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module_1g_githubissue.html">Need Help? Create a GitHub Issue</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module1_exercice.html">Module 1: Practice Sheet</a></li>
 </ul>
 </details></li>
@@ -550,7 +550,7 @@ document.write(`
 <section id="install-python">
 <h2>1. Install Python<a class="headerlink" href="#install-python" title="Link to this heading">#</a></h2>
 <p>If you don’t have Python yet, follow these steps:</p>
-<p>Go to the official website: <a class="reference external" href="https://www.python.org/downloads">https://www.python.org/downloads</a> <span id="id1">[<a class="reference internal" href="../module6/module_6d_docstrings.html#id6" title="Python Software Foundation. Beginner's guide to python. https://wiki.python.org/moin/BeginnersGuide, 2025.">Foundation, 2025</a>]</span>.</p>
+<p>Go to the official website: <a class="reference external" href="https://www.python.org/downloads">https://www.python.org/downloads</a> <span id="id1">[<a class="reference internal" href="../module6/module_6d_docstrings.html#id4" title="Python Software Foundation. Beginner's guide to python. https://wiki.python.org/moin/BeginnersGuide, 2025.">Python Software Foundation, 2025</a>]</span>.</p>
 <p>Download the latest stable version (e.g., Python 3.13.2).</p>
 <p>On Windows, make sure you check the box that says:</p>
 <p>✅ “Add Python to PATH”</p>
@@ -580,7 +580,7 @@ In this case, use “python3” instead of “python”.</p>
 You should see something like “Python 3.13.2….”
 The <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> sign indicates that the interpreter is ready to accept input.</p>
 <p>You can run any simple code to test the REPL. Notice how it immediately shows you the output (the lines without <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>):</p>
-<img src="../_static/images/repl_example.png" alt="python_repl"/>
+<img alt="python_repl" src="../_images/repl_example.png" />
 <p>To quit, simply type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>exit<span class="o">()</span>
 </pre></div>
@@ -650,50 +650,18 @@ The <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</s
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can run Linux commands in Windows using WSL <span id="id2">[<a class="reference internal" href="../module6/module_6d_docstrings.html#id7" title="Microsoft. Windows subsystem for linux. https://learn.microsoft.com/en-us/windows/wsl/about, 2025.">Microsoft, 2025</a>]</span>.</p>
+<p>You can run Linux commands in Windows using WSL <span id="id2">[<a class="reference internal" href="../module6/module_6d_docstrings.html#id5" title="Microsoft. Windows subsystem for linux. https://learn.microsoft.com/en-us/windows/wsl/about, 2025.">Microsoft, 2025</a>]</span>.</p>
 </div>
 <p>References:</p>
 <div class="docutils container" id="id3">
 <div role="list" class="citation-list">
-<div class="citation" id="id11" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>fed21<span class="fn-bracket">]</span></span>
-<p>fedesoriano. Stroke prediction dataset. <a class="reference external" href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset/ ">https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset/ </a>, 2021.</p>
-</div>
-<div class="citation" id="id12" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>Fou01<span class="fn-bracket">]</span></span>
-<p>Python Software Foundation. Pep 257 – docstring conventions. <a class="reference external" href="https://peps.python.org/pep-0257/">https://peps.python.org/pep-0257/</a>, 2001.</p>
-</div>
-<div class="citation" id="id6" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Fou25</a><span class="fn-bracket">]</span></span>
-<p>Python Software Foundation. Beginner's guide to python. <a class="reference external" href="https://wiki.python.org/moin/BeginnersGuide">https://wiki.python.org/moin/BeginnersGuide</a>, 2025.</p>
-</div>
-<div class="citation" id="id10" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>Gee<span class="fn-bracket">]</span></span>
-<p>GeeksforGeeks. Difference between parameters and arguments. <a class="reference external" href="https://www.geeksforgeeks.org/difference-between-parameters-and-arguments/">https://www.geeksforgeeks.org/difference-between-parameters-and-arguments/</a>.</p>
-</div>
-<div class="citation" id="id13" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>Gee24<span class="fn-bracket">]</span></span>
-<p>GeeksforGeeks. Python docstrings. <a class="reference external" href="https://www.geeksforgeeks.org/python-docstrings/">https://www.geeksforgeeks.org/python-docstrings/</a>, 2024.</p>
-</div>
-<div class="citation" id="id5" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>Jup15<span class="fn-bracket">]</span></span>
-<p>Project Jupyter. What is a notebook. <a class="reference external" href="https://docs.jupyter.org/en/latest/#what-is-a-notebook">https://docs.jupyter.org/en/latest/#what-is-a-notebook</a>, 2015.</p>
-</div>
 <div class="citation" id="id7" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Mic25</a><span class="fn-bracket">]</span></span>
 <p>Microsoft. Windows subsystem for linux. <a class="reference external" href="https://learn.microsoft.com/en-us/windows/wsl/about">https://learn.microsoft.com/en-us/windows/wsl/about</a>, 2025.</p>
 </div>
-<div class="citation" id="id14" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>Sch<span class="fn-bracket">]</span></span>
-<p>W3 Schools. Global variables. <a class="reference external" href="https://www.w3schools.com/python/python_variables_global.asp">https://www.w3schools.com/python/python_variables_global.asp</a>.</p>
-</div>
-<div class="citation" id="id4" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>Tea22<span class="fn-bracket">]</span></span>
-<p>DataCamp Team. Python vs r for data science: which should you learn? <a class="reference external" href="https://www.datacamp.com/blog/python-vs-r-for-data-science-whats-the-difference">https://www.datacamp.com/blog/python-vs-r-for-data-science-whats-the-difference</a>, 2022.</p>
-</div>
-<div class="citation" id="id8" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>NumPyDevelopers<span class="fn-bracket">]</span></span>
-<p>NumPy Developers. What is numpy? Accessed: 27-04-2025. URL: <a class="reference external" href="https://numpy.org/doc/stable/user/whatisnumpy.html">https://numpy.org/doc/stable/user/whatisnumpy.html</a>.</p>
+<div class="citation" id="id6" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">PythonSFoundation25</a><span class="fn-bracket">]</span></span>
+<p>Python Software Foundation. Beginner's guide to python. <a class="reference external" href="https://wiki.python.org/moin/BeginnersGuide">https://wiki.python.org/moin/BeginnersGuide</a>, 2025.</p>
 </div>
 </div>
 </div>
@@ -798,7 +766,7 @@ By University of Edinburgh, School of Informatics
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2025.
       <br/>
     
   </p>

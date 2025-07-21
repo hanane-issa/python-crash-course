@@ -5,6 +5,7 @@ title: Python Crash Course
 subtitle: Introduction to Python for Biomedical Innovation
 author: University of Edinburgh, School of Informatics
 logo: logo.png
+copyright: "2025"
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -24,6 +25,19 @@ latex:
   latex_documents:
     targetname: book.tex
 
+parse:
+  myst_enable_extensions:
+    - linkify
+    - colon_fence
+    - dollarmath
+    - amsmath
+    - deflist
+    - html_admonition
+    - html_image
+    - smartquotes
+    - substitution
+
+
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
   - references.bib
@@ -31,11 +45,14 @@ bibtex_bibfiles:
 sphinx:
   extra_extensions:
     - sphinx_thebe
+    - myst_nb
   config:
     bibtex_reference_style: author_year
     pygments_style: monokai
     theme_options:
       default_mode: dark
+  extra:
+    copyright: "2025"
 
 # Information about where the book exists on the web
 repository:

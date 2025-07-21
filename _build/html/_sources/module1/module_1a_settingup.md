@@ -55,7 +55,7 @@ Jupyter notebook files (previously known as Ipython notebook) allow you to creat
 
 In other words,  it's interactive, which allows for step-by-step code execution and for viewing your outputs. It's great for data exploration and analysis since you can easily experiment with Python code and visualize results, as well as add text-based explanations (Markdown).
 
-We'll be using Jupyter Notebook files for exercices, and we'll eventually learn how to use both when required.
+We'll be using Jupyter Notebook files for exercices, and we'll eventually learn how to use both when required {cite}`jupyter_notebook`.
 
 N.B. Jupyter Notebook refers to both a file format and an application. You can edit .ipynb files in any code editor or IDE!
 
@@ -68,7 +68,7 @@ N.B. Jupyter Notebook refers to both a file format and an application. You can e
 | **Output Visualization**   | No built-in output visualization.                         | Directly supports rich visual outputs like plots and tables. |
 | **Documentation**          | Limited to comments in the code.                          | Supports Markdown for rich documentation and formatting.   |
 
-{cite}`jupyter_notebook`
+
 
 ## Where can I write my Python code?
 
@@ -82,3 +82,4 @@ We'll first talk about how to work with Python in a terminal before moving onto 
 
 References:
 ```{bibliography}
+```

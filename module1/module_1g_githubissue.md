@@ -14,11 +14,11 @@ kernelspec:
 
 
 
-## Need Help? Create a GitHub Issue
+# Need Help? Create a GitHub Issue
 
 If you run into **any problems** — whether it's with the notebook, the Jupyter Book, live coding, or instructions — you can **let us know by opening a GitHub issue**.
 
-### Method 1: from the Jupyter Book
+## Method 1: from the Jupyter Book
 
 ![open_issue](/_static/images/open_issue.png)
 
@@ -32,11 +32,11 @@ If you run into **any problems** — whether it's with the notebook, the Jupyter
    * Where you encountered it (e.g. module, notebook, or section name)
    * A screenshot or code snippet if possible
 
-### Method 2: via the Repository
+## Method 2: via the Repository
 
 ![locate_repo](/_static/images/locate_repo.png)
 
-1. Go to our course GitHub repository:
+1. Select the repository button from the upper right GitHub button, or click on our course GitHub repository link:
    👉 \[[HERE](https://github.com/hanane-issa/python-crash-course)]
 
 
@@ -62,6 +62,5 @@ If you run into **any problems** — whether it's with the notebook, the Jupyter
 
 📣 **Don't worry if it's small!** Even small typos, broken links, or confusing instructions are super helpful for us to fix.
 
----
 
 

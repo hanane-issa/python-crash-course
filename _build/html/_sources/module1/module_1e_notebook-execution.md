@@ -35,7 +35,9 @@ Select the rocket sign on the top right side of the page to see your three optio
 
 1. Live Code
   - Easiest option — no setup needed.
-  - Just click the “Live Code” button at the top of each exercice notebook page in this book.
+
+  - Just click the “Live Code” button at the top of each exercice notebook page in this book. Wait until you see the following: "Launching from mybinder.org: **ready** ".
+  
   - This allows you to execute the code cells directly in the jupyter book.
 
 2. Run in Google Colab
