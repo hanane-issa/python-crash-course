@@ -199,7 +199,7 @@ conda env update --file environment.yml  --prune
 The `--prune` option tells conda to remove any dependencies you no longer require in your environment.
 ```
 
-You can learn more about commands to manage your conda environments [here] (https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
+You can learn more about commands to manage your conda environments [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
 # Importing Python Packages
 

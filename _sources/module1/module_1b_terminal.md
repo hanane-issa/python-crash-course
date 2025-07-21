@@ -106,11 +106,12 @@ Upgrading your Python version differs across operating systems.
 
 
 ```{note}
-You can run Linux commands in Windows using WSL {cite:p}`wsl`.
+You can run Linux commands in Windows using WSL {cite}`wsl`.
 ```
 
 
 References:
+
 ```{bibliography}
-:style: alpha
+:filter: docname in docnames
 ```

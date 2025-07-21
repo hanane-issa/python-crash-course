@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=75ac44fa" />
@@ -188,7 +188,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1f_packages.html">Installing Python Packages</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../module1/module_1g_githubissue.html">💬 Need Help? Create a GitHub Issue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1g_githubissue.html">Need Help? Create a GitHub Issue</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Module 1: Practice Sheet</a></li>
 </ul>
 </details></li>
@@ -520,10 +520,10 @@ document.write(`
                 <article class="bd-article">
                   
   <div class="cell tag_hide-input tag_hide-output tag_thebe-init docutils container">
-<details class="hide above-input">
+<details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
@@ -603,8 +603,7 @@ None
 </div>
 </div>
 <p>When your function ends with a print statement or doesn’t have a return statement, Python adds <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">None</span></code> behind the scenes. This is also the case when you use the <code class="docutils literal notranslate"><span class="pre">return</span></code> keyword by itself without any value added to the statement.</p>
-<p>We’ve seen a similar behavior with loops; when you write a <code class="docutils literal notranslate"><span class="pre">for</span></code> or <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, Python implicitly adds a <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement.
-(source: <a class="reference external" href="https://automatetheboringstuff.com/2e/chapter3/">https://automatetheboringstuff.com/2e/chapter3/</a> )</p>
+<p>We’ve seen a similar behavior with loops; when you write a <code class="docutils literal notranslate"><span class="pre">for</span></code> or <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, Python implicitly adds a <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement [&#64;automatetheboringstuff_ch3].</p>
 </section>
 <section id="functions-with-no-return-statement">
 <h2>Functions with no return statement<a class="headerlink" href="#functions-with-no-return-statement" title="Link to this heading">#</a></h2>
@@ -666,7 +665,7 @@ None
 <section id="functions-that-return-multiple-variables">
 <h3>Functions that return multiple variables<a class="headerlink" href="#functions-that-return-multiple-variables" title="Link to this heading">#</a></h3>
 <p>So far, we’ve seen functions that return one value — like a number or a string. But what if you need to return multiple results from a single function?</p>
-<p>In Python, you can do that easily using tuples (see Module _).  When you return multiple values from a function, Python automatically creates a tuple behind the scenes.</p>
+<p>In Python, you can do that easily using tuples (see Module 2).  When you return multiple values from a function, Python automatically creates a tuple behind the scenes.</p>
 <p>🔹 Why would you return multiple values?
 Sometimes a function does more than one thing and needs to give back multiple pieces of information. For example:</p>
 <p>Suppose you have a dataset of patients. You want a function that counts how many are adults (age 18 or older) and how many are minors (under 18).</p>
@@ -738,28 +737,33 @@ Python automatically unpacks it into two variables: <code class="docutils litera
 <li><p>Plots a bar chart to visualize those averages (check Module 5 or official documentation if you’ve forgotten how to do this!).</p></li>
 <li><p>Optional: returns the plot object so you can store or save it later.</p></li>
 </ul>
-<p>def plot_stroke_by_smoking(df):
-“””
-Show average stroke rate by smoking status group.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Parameters:
-    df (pd.DataFrame): The stroke dataset.
-
-Returns:
-    matplotlib.figure.Figure: The figure object for further use (e.g. saving).
-&quot;&quot;&quot;
-# Step 1: Group by smoking status and calculate average stroke rate
-
-
-# Step 2: Print summary
-
-
-# Step 3: Plot
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plot_stroke_by_smoking</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Show average stroke rate by smoking status group.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters:</span>
+<span class="sd">        df (pd.DataFrame): The stroke dataset.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        matplotlib.figure.Figure: The figure object for further use (e.g. saving).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Step 1: Group by smoking status and calculate average stroke rate</span>
 
 
-# Step 4: Return figure
+    <span class="c1"># Step 2: Print summary</span>
 
-pass
+
+    <span class="c1"># Step 3: Plot</span>
+
+
+    <span class="c1"># Step 4: Return figure</span>
+
+    <span class="k">pass</span>
 </pre></div>
+</div>
+</div>
 </div>
 <div style="margin-bottom: 15px;">
   <details>
@@ -768,9 +772,9 @@ pass
       Hint 1
     </summary>
     <p style="padding-left: 20px;">
-    To calculate the average of a column grouped by categories in another column, you can use this pattern:<\br>
-    grouped_averages = df.groupby('grouping_column')['value_column'].mean() <\br>
-    You’ll get a Series where the index contains each unique group from the grouping column, and the values are the calculated averages for each group from the value column.
+      To calculate the average of a column grouped by categories in another column, you can use this pattern:<br><br>
+      <code>grouped_averages = df.groupby('grouping_column')['value_column'].mean()</code><br><br>
+      You’ll get a Series where the index contains each unique group from the grouping column, and the values are the calculated averages for each group from the value column.
     </p>
   </details>
 </div>
@@ -781,50 +785,45 @@ pass
       Hint 2
     </summary>
     <p style="padding-left: 20px;">
-    Use plt.bar() or sns.barplot() to create the chart.
+      Use <code>plt.bar()</code> or <code>sns.barplot()</code> to create the chart.
     </p>
   </details>
-</div>
-<div style="margin-bottom: 15px;">
+</div><div style="margin-bottom: 15px;">
   <details>
     <summary>
       <i class="fa fa-lightbulb" aria-hidden="true" style="color: yellow; font-size: 20px;"></i> 
       Solution
     </summary>
     <p style="padding-left: 20px;">
+      To print the average stroke rate grouped by smoking status and plot it as a bar chart, you can use:
+    </p>
     <pre><code class="python">
 def plot_stroke_by_smoking(df):
     """
     Show average stroke rate by smoking status group.
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Parameters:
-    df (pd.DataFrame): The stroke dataset.
-
-Returns:
-    matplotlib.figure.Figure: The figure object for further use (e.g. saving).
-&quot;&quot;&quot;
-# Step 1: Group by smoking status and calculate average stroke rate
-stroke_rates = df.groupby(&#39;smoking_status&#39;)[&#39;stroke&#39;].mean()
-
-# Step 2: Print summary
-print(&quot;Average stroke rate by smoking status:&quot;)
-for group, rate in stroke_rates.items():
-    print(f&quot;- {group}: {rate:.3f}&quot;)
-
-# Step 3: Plot
-fig = plt.figure(figsize=(6, 4))
-stroke_rates.plot(kind=&#39;bar&#39;, color=&#39;teal&#39;, edgecolor=&#39;black&#39;)
-plt.title(&quot;Stroke Rate by Smoking Status&quot;)
-plt.ylabel(&quot;Average Stroke Rate&quot;)
-plt.xlabel(&quot;Smoking Status&quot;)
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.show()
-
-# Step 4: Return figure
-return fig
-&lt;/code&gt;&lt;/pre&gt;
-</pre></div>
-</div>
+    Parameters:
+        df (pd.DataFrame): The stroke dataset.
+    Returns:
+        matplotlib.figure.Figure: The figure object for further use (e.g. saving).
+    """
+    # Step 1: Group by smoking status and calculate average stroke rate
+    stroke_rates = df.groupby('smoking_status')['stroke'].mean()
+    # Step 2: Print summary
+    print("Average stroke rate by smoking status:")
+    for group, rate in stroke_rates.items():
+        print(f"- {group}: {rate:.3f}")
+    # Step 3: Plot
+    fig = plt.figure(figsize=(6, 4))
+    stroke_rates.plot(kind='bar', color='teal', edgecolor='black')
+    plt.title("Stroke Rate by Smoking Status")
+    plt.ylabel("Average Stroke Rate")
+    plt.xlabel("Smoking Status")
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
+    # Step 4: Return figure
+    return fig
+    </code></pre>
   </details>
 </div></section>
 </section>
@@ -924,7 +923,7 @@ By University of Edinburgh, School of Informatics
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2025.
       <br/>
     
   </p>

@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=75ac44fa" />
@@ -188,7 +188,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1e_notebook-execution.html">How to Run the Notebook Exercices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/module_1f_packages.html">Installing Python Packages</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../module1/module_1g_githubissue.html">💬 Need Help? Create a GitHub Issue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module_1g_githubissue.html">Need Help? Create a GitHub Issue</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/module1_exercice.html">Module 1: Practice Sheet</a></li>
 </ul>
 </details></li>
@@ -513,7 +513,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arbitrary-positional-arguments-args">Arbitrary positional arguments (<code class="docutils literal notranslate"><span class="pre">*args</span></code>)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arbitrary-keywords-arguments-kwargs">Arbitrary keywords arguments (<code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#args-vs-kwargs"><code class="docutils literal notranslate"><span class="pre">*args</span></code> vs <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">Quick Practice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">Quick Practice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -526,10 +529,10 @@ document.write(`
                 <article class="bd-article">
                   
   <div class="cell tag_hide-input tag_hide-output tag_thebe-init docutils container">
-<details class="hide above-input">
+<details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
@@ -586,8 +589,7 @@ An <strong>argument</strong> is the actual variable or value you pass in the fun
 </div>
 </div>
 </div>
-<p>When we defined this function, we used <strong>df</strong> as the parameter. It isn’t a real dataset; it is an indicator for you to know that the function requires a dataframe that will be used in its code.
-(Source: {cite} &#64;params_vs_args)</p>
+<p>When we defined this function, we used <strong>df</strong> as the parameter. It isn’t a real dataset; it is an indicator for you to know that the function requires a dataframe that will be used in its code [&#64;params_vs_args].</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_stroke_patients</span><span class="p">(</span><span class="n">stroke_data</span><span class="p">)</span>
@@ -1417,39 +1419,35 @@ Smoker: never smoked
     </summary>
     <p style="padding-left: 20px;">
     <pre><code class="python">
-```{code-cell} python
 def patient_report(df, index, *columns, **extra_info):
     """
     Print a detailed report for a specific patient in the DataFrame.
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Parameters
-----------
-df : pandas.DataFrame
-    The stroke dataset containing patient data.
-index : int
-    The row index of the patient in the DataFrame.
-*columns : str
-    Variable length argument list of column names to display values for.
-**extra_info : dict
-    Arbitrary keyword arguments representing additional labeled information to include in the report.
-
-Returns
--------
-None
-    This function prints the patient report directly and does not return a value.
-&quot;&quot;&quot;
-patient = df.iloc[index]
-print(f&quot;Patient #{index} report:&quot;)
-for col in columns:
-    print(f&quot;{col}: {patient[col]}&quot;)
-for key, val in extra_info.items():
-    print(f&quot;{key.capitalize()}: {val}&quot;)
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-  <span class="o">&lt;/</span><span class="n">details</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
-</pre></div>
-</div>
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        The stroke dataset containing patient data.
+    index : int
+        The row index of the patient in the DataFrame.
+    *columns : str
+        Variable length argument list of column names to display values for.
+    **extra_info : dict
+        Arbitrary keyword arguments representing additional labeled information to include in the report.
+    Returns
+    -------
+    None
+        This function prints the patient report directly and does not return a value.
+    """
+    patient = df.iloc[index]
+    print(f"Patient #{index} report:")
+    for col in columns:
+        print(f"{col}: {patient[col]}")
+    for key, val in extra_info.items():
+        print(f"{key.capitalize()}: {val}")
+    </code></pre>
+  </details>
+</div><section id="references">
+<h3>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h3>
+<span class="target" id="id1"></span></section>
 </section>
 </section>
 
@@ -1528,7 +1526,10 @@ for key, val in extra_info.items():
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arbitrary-positional-arguments-args">Arbitrary positional arguments (<code class="docutils literal notranslate"><span class="pre">*args</span></code>)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arbitrary-keywords-arguments-kwargs">Arbitrary keywords arguments (<code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#args-vs-kwargs"><code class="docutils literal notranslate"><span class="pre">*args</span></code> vs <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">Quick Practice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-practice">Quick Practice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -1553,7 +1554,7 @@ By University of Edinburgh, School of Informatics
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2025.
       <br/>
     
   </p>
