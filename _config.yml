@@ -57,7 +57,7 @@ sphinx:
 # Information about where the book exists on the web
 repository:
   url: https://github.com/hanane-issa/python-crash-course  
-  branch: main 
+  branch: hanane 
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
