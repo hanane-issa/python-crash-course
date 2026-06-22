@@ -669,6 +669,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 25.1.1 -&gt; 26.1.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: ucimlrepo in c:\users\hanan\appdata\local\programs\python\python313\lib\site-packages (0.0.7)
 Requirement already satisfied: pandas&gt;=1.0.0 in c:\users\hanan\appdata\local\programs\python\python313\lib\site-packages (from ucimlrepo) (2.2.3)
 Requirement already satisfied: certifi&gt;=2020.12.5 in c:\users\hanan\appdata\local\programs\python\python313\lib\site-packages (from ucimlrepo) (2025.1.31)
@@ -677,10 +681,6 @@ Requirement already satisfied: python-dateutil&gt;=2.8.2 in c:\users\hanan\appda
 Requirement already satisfied: pytz&gt;=2020.1 in c:\users\hanan\appdata\local\programs\python\python313\lib\site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2025.2)
 Requirement already satisfied: tzdata&gt;=2022.7 in c:\users\hanan\appdata\local\programs\python\python313\lib\site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2025.2)
 Requirement already satisfied: six&gt;=1.5 in c:\users\hanan\appdata\local\programs\python\python313\lib\site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&gt;=1.0.0-&gt;ucimlrepo) (1.17.0)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 25.1.1 -&gt; 26.1.2
-[notice] To update, run: python.exe -m pip install --upgrade pip
 </pre></div>
 </div>
 </div>
@@ -1286,7 +1286,9 @@ No duplicate rows found.
 -----------------------------
 
 Checking for duplicate columns:
-Number of duplicate columns: 0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of duplicate columns: 0
 No duplicate columns found.
 </pre></div>
 </div>
@@ -1529,8 +1531,9 @@ thal                    float64
 num                       int64
 heart_disease_binary      int64
 dtype: object
-
-Number of unique values:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of unique values:
  age                      41
 sex                       2
 cp                        4
