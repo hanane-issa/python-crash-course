@@ -524,9 +524,17 @@ document.write(`
 <p class="expanded admonition-title">Hide code cell source</p>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>wget<span class="w"> </span>-q<span class="w"> </span>https://raw.githubusercontent.com/hanane-issa/python-crash-course/main/shared/setup_code.py
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;python-crash-course&quot;</span><span class="p">):</span>
+    <span class="o">!</span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/hanane-issa/python-crash-course.git
+
+<span class="o">%</span><span class="k">cd</span> python-crash-course
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;shared&quot;</span><span class="p">)</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">setup_code</span>
+<span class="n">stroke_data</span> <span class="o">=</span> <span class="n">setup_code</span><span class="o">.</span><span class="n">stroke_data</span>
 </pre></div>
 </div>
 </div>
@@ -537,17 +545,7 @@ document.write(`
 <p class="expanded admonition-title">Hide code cell output</p>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;wget&#39; is not recognized as an internal or external command,
-operable program or batch file.
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;wget -q https://raw.githubusercontent.com/hanane-issa/python-crash-course/main/shared/setup_code.py&#39;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">setup_code</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;setup_code&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\hanan\Documents\course_book\python-crash-course\module6\python-crash-course
 </pre></div>
 </div>
 </div>
@@ -601,6 +599,41 @@ It is incredibly useful for others (as well as future you!) to develop this good
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Using help:&quot;</span><span class="p">)</span>
 <span class="n">help</span><span class="p">(</span><span class="n">count_stroke_patients</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using __doc__:
+
+Return the number of patients in the dataset who had a stroke.
+
+Parameters
+----------
+df : pandas.DataFrame
+    The dataset containing patient information. Must include a &#39;stroke&#39; column
+    with binary values (e.g., 0 = no stroke, 1 = stroke).
+
+Returns
+-------
+int
+    The number of patients who had a stroke.
+
+Using help:
+Help on function count_stroke_patients in module __main__:
+
+count_stroke_patients(df)
+    Return the number of patients in the dataset who had a stroke.
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        The dataset containing patient information. Must include a &#39;stroke&#39; column
+        with binary values (e.g., 0 = no stroke, 1 = stroke).
+
+    Returns
+    -------
+    int
+        The number of patients who had a stroke.
 </pre></div>
 </div>
 </div>
