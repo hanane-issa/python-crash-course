@@ -529,9 +529,17 @@ document.write(`
 <p class="expanded admonition-title">Hide code cell source</p>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>wget<span class="w"> </span>-q<span class="w"> </span>https://raw.githubusercontent.com/hanane-issa/python-crash-course/main/shared/setup_code.py
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;python-crash-course&quot;</span><span class="p">):</span>
+    <span class="o">!</span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/hanane-issa/python-crash-course.git
+
+<span class="o">%</span><span class="k">cd</span> python-crash-course
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;shared&quot;</span><span class="p">)</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">setup_code</span>
+<span class="n">stroke_data</span> <span class="o">=</span> <span class="n">setup_code</span><span class="o">.</span><span class="n">stroke_data</span>
 </pre></div>
 </div>
 </div>
@@ -542,17 +550,68 @@ document.write(`
 <p class="expanded admonition-title">Hide code cell output</p>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;wget&#39; is not recognized as an internal or external command,
-operable program or batch file.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cloning into &#39;python-crash-course&#39;...
+Updating files:  45% (343/755)
+Updating files:  46% (348/755)
+Updating files:  47% (355/755)
+Updating files:  48% (363/755)
+Updating files:  49% (370/755)
+Updating files:  50% (378/755)
+Updating files:  51% (386/755)
+Updating files:  52% (393/755)
+Updating files:  53% (401/755)
+Updating files:  54% (408/755)
+Updating files:  55% (416/755)
+Updating files:  56% (423/755)
+Updating files:  57% (431/755)
+Updating files:  58% (438/755)
+Updating files:  59% (446/755)
+Updating files:  60% (453/755)
+Updating files:  61% (461/755)
+Updating files:  62% (469/755)
+Updating files:  63% (476/755)
+Updating files:  64% (484/755)
+Updating files:  65% (491/755)
+Updating files:  66% (499/755)
+Updating files:  67% (506/755)
+Updating files:  68% (514/755)
+Updating files:  69% (521/755)
+Updating files:  70% (529/755)
+Updating files:  71% (537/755)
+Updating files:  72% (544/755)
+Updating files:  73% (552/755)
+Updating files:  74% (559/755)
+Updating files:  75% (567/755)
+Updating files:  76% (574/755)
+Updating files:  77% (582/755)
+Updating files:  78% (589/755)
+Updating files:  79% (597/755)
+Updating files:  80% (604/755)
+Updating files:  81% (612/755)
+Updating files:  82% (620/755)
+Updating files:  83% (627/755)
+Updating files:  84% (635/755)
+Updating files:  85% (642/755)
+Updating files:  86% (650/755)
+Updating files:  87% (657/755)
+Updating files:  88% (665/755)
+Updating files:  89% (672/755)
+Updating files:  90% (680/755)
+Updating files:  91% (688/755)
+Updating files:  92% (695/755)
+Updating files:  93% (703/755)
+Updating files:  94% (710/755)
+Updating files:  95% (718/755)
+Updating files:  96% (725/755)
+Updating files:  96% (730/755)
+Updating files:  97% (733/755)
+Updating files:  98% (740/755)
+Updating files:  99% (748/755)
+Updating files: 100% (755/755)
+Updating files: 100% (755/755), done.
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;wget -q https://raw.githubusercontent.com/hanane-issa/python-crash-course/main/shared/setup_code.py&#39;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">setup_code</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;setup_code&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\hanan\Documents\course_book\python-crash-course\module6\python-crash-course
 </pre></div>
 </div>
 </div>
@@ -633,6 +692,11 @@ The stroke variable is binary: 1 indicates that the patient had a stroke, and 0 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(249)
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="the-pass-statement-a-placeholder-for-code">
@@ -675,6 +739,14 @@ The stroke variable is binary: 1 indicates that the patient had a stroke, and 0 
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">count_smokers_by_category</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
     <span class="c1"># nothing here!</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+    <span class="c1"># nothing here!</span>
+                   <span class="o">^</span>
+<span class="ne">_IncompleteInputError</span>: incomplete input
 </pre></div>
 </div>
 </div>
