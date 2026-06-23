@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=75ac44fa" />
@@ -535,20 +535,14 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;python-crash-course&quot;</span><span class="p">):</span>
-    <span class="o">!</span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/hanane-issa/python-crash-course.git
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
 
-<span class="o">%</span><span class="k">cd</span> python-crash-course
+<span class="n">URL</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/hanane-issa/python-crash-course/main/data/healthcare-dataset-stroke-data.csv&quot;</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;shared&quot;</span><span class="p">)</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">setup_code</span>
-<span class="n">stroke_data</span> <span class="o">=</span> <span class="n">setup_code</span><span class="o">.</span><span class="n">stroke_data</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\hanan\Documents\course_book\python-crash-course\module6\python-crash-course
+<span class="n">stroke_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -565,6 +559,18 @@ document.write(`
 <span class="k">def</span><span class="w"> </span><span class="nf">describe_data</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
     <span class="k">pass</span>
     <span class="c1"># YOUR CODE HERE </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">stroke_data</span> <span class="o">=</span> <span class="n">setup_code</span><span class="o">.</span><span class="n">stroke_data</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">def</span><span class="w"> </span><span class="nf">describe_data</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="k">pass</span>
+
+<span class="ne">NameError</span>: name &#39;setup_code&#39; is not defined
 </pre></div>
 </div>
 </div>

@@ -28,14 +28,14 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-def count_smokers_by_category(df):
-    # nothing here!
+stroke_data = setup_code.stroke_data
 ------------------
 
 
-  [36mCell[39m[36m [39m[32mIn[7][39m[32m, line 2[39m
-[31m    [39m[31m# nothing here![39m
-                   ^
-[31m_IncompleteInputError[39m[31m:[39m incomplete input
+[31m---------------------------------------------------------------------------[39m
+[31mNameError[39m                                 Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[2][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m stroke_data = [43msetup_code[49m.stroke_data
 
+[31mNameError[39m: name 'setup_code' is not defined
 
