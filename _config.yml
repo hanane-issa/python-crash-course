@@ -76,3 +76,6 @@ launch_buttons:
   colab_url: "https://colab.research.google.com"
 
 
+exclude_patterns:
+  - _build
+  - .jupyter_cache
